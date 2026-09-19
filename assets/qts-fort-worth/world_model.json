@@ -1,0 +1,24 @@
+{
+  "name": "QTS Fort Worth FTW1 world model",
+  "note": "World Labs Marble is not connected in this environment. This JSON is the scene graph the GLB instantiates, geolocated on Cesium-style WGS84.",
+  "crs": "WGS84 + local ENU meters",
+  "origin": { "lat": 32.988821338095235, "lon": -97.25934441904762, "up": "Z in Blender, Y in glTF" },
+  "imagery": {
+    "provider": "Esri World Imagery WMTS",
+    "role": "Cesium imagery substitute (not Google Maps API)",
+    "zoom": 18,
+    "mosaic": "ref/qts-ftw1-esri-mosaic.jpg"
+  },
+  "elevations": {
+    "role": "Nano Banana-style 2x2 architectural elevations used to set facade, gensets, HVAC",
+    "grid": "ref/qts-ftw1-nanobanana-2x2.jpg",
+    "order": ["front", "right", "back", "left"]
+  },
+  "nodes": [
+    { "id": "FTW1_DC1_OSM", "source": "OSM way 507673437 QTS Data Center", "height_m": 14 },
+    { "id": "FTW1_DC2_IndustrialOSM", "source": "OSM way 1432175159 industrial south of DC1", "height_m": 14 },
+    { "id": "FTW1_OfficeHeadhouse", "source": "left/front elevations + satellite glass corner" },
+    { "id": "FTW1_GeneratorYard", "source": "Esri tile south + back elevation", "count": 42 },
+    { "id": "FTW1_OnSiteSubstation", "source": "QTS published on-site substation" }
+  ]
+}

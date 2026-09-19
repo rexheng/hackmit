@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>North Texas DC campus (composite)</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #1a1a2e;
+        color: #ddd;
+        font: 13px/1.4 ui-sans-serif, system-ui;
+      }
+      canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      #hud {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        max-width: 28rem;
+        background: #0008;
+        padding: 10px 12px;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hud">
+      Composite North Texas hyperscale campus — not a real facility.
+      Drag to orbit, scroll to zoom.
+    </div>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.172.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module">
+      import * as THREE from "three";
+      import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+      import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x87a0b4);
+      scene.fog = new THREE.FogExp2(0x87a0b4, 0.0022);
+
+      const camera = new THREE.PerspectiveCamera(
+        45,
+        innerWidth / innerHeight,
+        0.5,
+        2000
+      );
+      camera.position.set(140, 90, 160);
+
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(innerWidth, innerHeight);
+      renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.15;
+      document.body.appendChild(renderer.domElement);
+
+      const controls = new OrbitControls(camera, renderer.domElement);
+      controls.target.set(8, 8, -6);
+      controls.maxPolarAngle = Math.PI * 0.49;
+      controls.update();
+
+      scene.add(new THREE.HemisphereLight(0xcfe6ff, 0x4a4030, 0.9));
+      const sun = new THREE.DirectionalLight(0xfff1d0, 1.6);
+      sun.position.set(-80, 140, 60);
+      scene.add(sun);
+
+      new GLTFLoader().load(
+        "./north-texas-dc-campus.glb",
+        (gltf) => {
+          scene.add(gltf.scene);
+        },
+        undefined,
+        (err) => {
+          document.getElementById("hud").textContent = String(err);
+        }
+      );
+
+      addEventListener("resize", () => {
+        camera.aspect = innerWidth / innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(innerWidth, innerHeight);
+      });
+
+      (function tick() {
+        requestAnimationFrame(tick);
+        controls.update();
+        renderer.render(scene, camera);
+      })();
+    </script>
+  </body>
+</html>
