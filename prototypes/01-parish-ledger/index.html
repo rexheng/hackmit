@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Parish Ledger — Saturday, September 19, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;500;600;700&family=Special+Elite&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #d8c7a1;
+      --paper-deep: #c9b58a;
+      --ink: #16110c;
+      --ink-soft: #2a2218;
+      --oxblood: #7a1616;
+      --oxblood-wet: #5c1010;
+      --cyan: #00b4c8;
+      --manila: #e8d3a0;
+      --rule: 1px solid #16110c;
+      --desk: #2b1d14;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+
+    body {
+      background:
+        repeating-linear-gradient(90deg, rgba(0,0,0,.07) 0 1px, transparent 1px 7px),
+        repeating-linear-gradient(0deg, rgba(80,40,10,.12) 0 2px, transparent 2px 11px),
+        linear-gradient(180deg, #3a281c 0%, #241810 100%);
+      color: var(--ink);
+      font-family: "Old Standard TT", "Times New Roman", Times, serif;
+      font-size: 17px;
+      line-height: 1.38;
+      cursor: default;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 8;
+      opacity: .18;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--oxblood);
+      outline-offset: 3px;
+    }
+
+    .skip {
+      position: absolute;
+      left: -999px;
+      top: 8px;
+    }
+    .skip:focus {
+      left: 12px;
+      z-index: 20;
+      background: var(--paper);
+      color: var(--ink);
+      padding: .3rem .6rem;
+      border: var(--rule);
+    }
+
+    .desk {
+      min-height: 100vh;
+      padding: 2.2rem 1rem 4rem;
+    }
+
+    .sheet {
+      --w: min(1080px, 96vw);
+      width: var(--w);
+      margin: 0 auto;
+      background:
+        linear-gradient(180deg, rgba(22,17,12,.035), transparent 18%),
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(90,60,20,.03) 3px),
+        var(--paper);
+      color: var(--ink);
+      border: 1px solid #8a7350;
+      box-shadow:
+        0 1px 0 #efe3c4 inset,
+        0 18px 40px rgba(0,0,0,.45),
+        0 2px 0 rgba(0,0,0,.2);
+      padding: 1.1rem 1.35rem 1.6rem;
+      position: relative;
+      transform-origin: 50% 0;
+      animation: drop .85s cubic-bezier(.2,.7,.2,1) both;
+    }
+
+    .showthrough {
+      position: absolute;
+      inset: 8% 6%;
+      font-family: "Old Standard TT", Times, serif;
+      font-size: 2.1rem;
+      line-height: 1.7;
+      color: var(--ink);
+      opacity: .045;
+      transform: scaleX(-1) rotate(180deg);
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .sheet > * { position: relative; z-index: 1; }
+
+    @keyframes drop {
+      0% { transform: translateY(-46px) rotate(-1.4deg); opacity: 0; filter: blur(1.5px); }
+      62% { transform: translateY(6px) rotate(.25deg); opacity: 1; filter: blur(.2px); }
+      100% { transform: translateY(0) rotate(-.18deg); opacity: 1; filter: blur(0); }
+    }
+
+    @keyframes ink-in {
+      from { opacity: .35; letter-spacing: .04em; }
+      to { opacity: 1; letter-spacing: 0; }
+    }
+
+    .reg {
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      width: 16px;
+      height: 16px;
+      z-index: 3;
+    }
+    .reg::before, .reg::after {
+      content: "";
+      position: absolute;
+      background: var(--cyan);
+    }
+    .reg::before { left: 7px; top: 0; width: 2px; height: 16px; }
+    .reg::after { top: 7px; left: 0; height: 2px; width: 16px; }
+    .reg i {
+      position: absolute;
+      inset: 3px;
+      border: 2px solid var(--cyan);
+      border-radius: 50%;
+    }
+
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: .68rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      border-bottom: var(--rule);
+      padding: .15rem 1.4rem .35rem;
+      animation: ink-in 1.1s ease both;
+    }
+
+    .mast {
+      text-align: center;
+      padding: .15rem 0 .35rem;
+      border-bottom: 3px solid var(--ink);
+    }
+    .mast .est {
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: .62rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      margin: .25rem 0 0;
+    }
+    .mast h1 {
+      font-family: UnifrakturCook, "Old English Text MT", "Times New Roman", serif;
+      font-weight: 700;
+      font-size: clamp(4.4rem, 13.5vw, 8.4rem);
+      line-height: .72;
+      margin: .05rem 0 .15rem;
+      text-shadow: .4px 0 0 var(--ink), -.3px 0 0 rgba(22,17,12,.35);
+      animation: ink-in 1.4s ease .1s both;
+    }
+    .mast blockquote {
+      margin: 0;
+      font-style: italic;
+      font-size: 1.02rem;
+    }
+    .mast .volume {
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: .7rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-top: .35rem;
+      border-top: var(--rule);
+      border-bottom: 2px solid var(--ink);
+      padding: .28rem 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .editions {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 3px double var(--ink);
+    }
+    .editions button {
+      appearance: none;
+      background: transparent;
+      border: 0;
+      border-right: var(--rule);
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: .72rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: .55rem .4rem .5rem;
+      color: var(--ink);
+      cursor: pointer;
+    }
+    .editions button:last-child { border-right: 0; }
+    .editions button:hover { background: rgba(122,22,22,.08); }
+    .editions button[aria-current="true"] {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .skyline {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0 1rem;
+      padding: .55rem 0 .5rem;
+      border-bottom: var(--rule);
+    }
+    .skyline article {
+      padding: 0 .2rem;
+      border-right: var(--rule);
+      min-width: 0;
+    }
+    .skyline article:last-child { border-right: 0; }
+    .skyline article:hover { animation: offset .16s steps(2) 2; }
+    .kicker {
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: .62rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--oxblood);
+      margin: 0 0 .15rem;
+    }
+    .skyline h3 {
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: .95rem;
+      line-height: 1.05;
+      margin: 0 0 .25rem;
+      text-transform: uppercase;
+    }
+    .skyline p { margin: 0; font-size: .92rem; }
+
+    .front {
+      display: grid;
+      grid-template-columns: 1fr 1.55fr 1.12fr;
+      gap: 0 1.15rem;
+      padding-top: .7rem;
+    }
+
+    .col {
+      min-width: 0;
+      border-right: var(--rule);
+      padding-right: 1.05rem;
+    }
+    .col:last-child { border-right: 0; padding-right: 0; }
+    .col:hover { animation: offset .18s ease; }
+
+    @keyframes offset {
+      0%, 100% { border-right-color: #16110c; }
+      40% { transform: translateX(.45px); border-right-color: #3a2a20; }
+    }
+
+    .wire {
+      font-family: Special Elite, "Courier New", monospace;
+      font-size: .72rem;
+      letter-spacing: .04em;
+      border: var(--rule);
+      padding: .35rem .45rem;
+      margin: 0 0 .7rem;
+      background: rgba(22,17,12,.04);
+    }
+
+    .briefs h2, .lead h2, .desk-col h2, .letters-block h2, .class-block h2 {
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: .7rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin: 0 0 .45rem;
+      border-bottom: var(--rule);
+      padding-bottom: .2rem;
+    }
+
+    .brief {
+      margin: 0 0 .7rem;
+      padding: 0;
+      background: none;
+      border: 0;
+      width: 100%;
+      text-align: left;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+    }
+    .brief h3 {
+      font-size: 1.02rem;
+      line-height: 1.12;
+      margin: 0 0 .2rem;
+    }
+    .brief:hover h3, .story:hover .hed, [data-story]:hover .hed {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .jump {
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: .62rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--oxblood);
+    }
+
+    .lead .tomb {
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-weight: 700;
+      font-size: clamp(2.1rem, 4.4vw, 3.15rem);
+      line-height: .92;
+      text-transform: uppercase;
+      margin: 0 0 .45rem;
+    }
+    .lead .dek {
+      font-style: italic;
+      font-size: 1.12rem;
+      margin: 0 0 .5rem;
+      padding-bottom: .45rem;
+      border-bottom: var(--rule);
+    }
+    .byline {
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: .68rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin: 0 0 .45rem;
+    }
+    .lead-body {
+      column-count: 2;
+      column-gap: 1rem;
+      column-rule: 1px solid var(--ink);
+      text-align: justify;
+      hyphens: auto;
+      font-size: .98rem;
+    }
+    .lead-body p { margin: 0 0 .7em; }
+    .lead-body p:first-child::first-letter {
+      font-family: UnifrakturCook, "Old English Text MT", serif;
+      font-size: 3.1rem;
+      float: left;
+      line-height: .7;
+      padding: .12rem .25rem 0 0;
+    }
+
+    .flagged {
+      position: relative;
+      padding: .45rem .4rem .35rem;
+      margin: 0 0 .65rem;
+      background: transparent;
+      border: 0;
+      width: 100%;
+      text-align: left;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+    }
+    .flagged .grease {
+      position: absolute;
+      inset: -4px -6px;
+      border: 2.6px solid var(--oxblood);
+      border-radius: 48% 42% 55% 40%;
+      transform: rotate(-8deg);
+      box-shadow: 1px 1px 0 var(--oxblood-wet);
+      pointer-events: none;
+      opacity: .88;
+    }
+    .flagged .grease::after {
+      content: "";
+      position: absolute;
+      right: 8%;
+      top: -10%;
+      width: 18px;
+      height: 7px;
+      border-bottom: 2.4px solid var(--oxblood);
+      transform: rotate(28deg);
+    }
+    .flagged:hover .grease, .flagged:focus-visible .grease {
+      opacity: 1;
+      filter: contrast(1.1);
+    }
+    .flagged h3 {
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      margin: 0 0 .15rem;
+      line-height: 1.05;
+    }
+    .flagged p { margin: 0; font-size: .9rem; }
+
+    .city-note {
+      font-size: .88rem;
+      font-style: italic;
+      margin: 0 0 .7rem;
+    }
+
+    .below {
+      margin-top: 1rem;
+      border-top: 3px double var(--ink);
+      padding-top: .7rem;
+      display: grid;
+      grid-template-columns: 1.35fr .85fr;
+      gap: 1.15rem;
+    }
+
+    .letters {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem 1rem;
+    }
+    .letter {
+      border-top: var(--rule);
+      padding-top: .4rem;
+    }
+    .letter .from {
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: .62rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin: 0 0 .2rem;
+    }
+    .letter p { margin: 0 0 .35rem; font-size: .92rem; }
+    .letter .sign {
+      font-style: italic;
+      margin: 0;
+    }
+    .letter.fresh {
+      position: relative;
+      background: rgba(255,250,235,.25);
+    }
+
+    .postmark {
+      position: absolute;
+      right: 0;
+      top: -6px;
+      width: 62px;
+      height: 62px;
+      border: 2px solid var(--oxblood);
+      border-radius: 50%;
+      transform: rotate(12deg);
+      font-family: Special Elite, "Courier New", monospace;
+      font-size: .48rem;
+      letter-spacing: .04em;
+      text-align: center;
+      line-height: 1.15;
+      display: grid;
+      place-content: center;
+      color: var(--oxblood);
+      opacity: .8;
+      pointer-events: none;
+    }
+
+    .compose label {
+      display: block;
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: .62rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin: .35rem 0 .15rem;
+    }
+    .compose input, .compose textarea {
+      width: 100%;
+      background: transparent;
+      border: 0;
+      border-bottom: var(--rule);
+      border-radius: 0;
+      font-family: "Old Standard TT", Times, serif;
+      font-size: 1rem;
+      color: var(--ink);
+      padding: .25rem 0;
+      resize: vertical;
+    }
+    .compose textarea { min-height: 88px; border: var(--rule); padding: .4rem; }
+    .compose button, .press-btn {
+      appearance: none;
+      background: var(--ink);
+      color: var(--paper);
+      border: 2px solid var(--ink);
+      border-radius: 0;
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-size: .68rem;
+      padding: .45rem .7rem;
+      margin-top: .5rem;
+      cursor: pointer;
+    }
+    .compose button:hover, .press-btn:hover {
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .makeup {
+      border: 2px solid var(--ink);
+      padding: .55rem .65rem .65rem;
+      background: repeating-linear-gradient(0deg, transparent, transparent 13px, rgba(22,17,12,.05) 14px);
+    }
+    .makeup .slug {
+      font-family: Special Elite, "Courier New", monospace;
+      font-size: .72rem;
+      margin: 0 0 .4rem;
+    }
+    .makeup ol, .makeup ul { margin: .2rem 0 .5rem 1.1rem; padding: 0; }
+    .makeup li { margin: .15rem 0; }
+    .lock-slug {
+      appearance: none;
+      width: 100%;
+      background: transparent;
+      border: 1px dashed var(--oxblood);
+      color: var(--oxblood);
+      font-family: Special Elite, "Courier New", monospace;
+      font-size: .78rem;
+      padding: .55rem;
+      cursor: pointer;
+      text-align: left;
+    }
+    .lock-slug:hover { background: rgba(122,22,22,.08); }
+    .hidden { display: none !important; }
+
+    .class-block {
+      margin-top: 1rem;
+      border-top: 3px solid var(--ink);
+      padding-top: .55rem;
+    }
+    .classifieds {
+      column-count: 3;
+      column-gap: 1rem;
+      column-rule: 1px solid var(--ink);
+      font-size: .88rem;
+    }
+    .ad {
+      break-inside: avoid;
+      margin: 0 0 .7rem;
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: 0;
+      border-top: var(--rule);
+      padding: .4rem 0 0;
+      font: inherit;
+      color: inherit;
+      cursor: default;
+    }
+    .ad.coupon {
+      cursor: pointer;
+      border: 2px dashed var(--ink);
+      padding: .45rem;
+      background: rgba(0,180,200,.06);
+    }
+    .ad.coupon:hover { animation: offset .16s steps(2) 2; background: rgba(122,22,22,.08); }
+    .ad strong {
+      display: block;
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: .68rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: .15rem;
+    }
+
+    .scrim {
+      position: fixed;
+      inset: 0;
+      background: rgba(20,12,8,.55);
+      z-index: 12;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .scrim.open { display: flex; animation: drop .45s ease both; }
+
+    .clip, .backpage {
+      width: min(720px, 96vw);
+      max-height: 90vh;
+      overflow: auto;
+      background: var(--manila);
+      color: var(--ink);
+      border: 1px solid #6a5430;
+      box-shadow: 8px 10px 0 rgba(0,0,0,.25);
+      padding: 1rem 1.2rem 1.3rem;
+      position: relative;
+    }
+    .clip h2, .backpage h2 {
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 1.35rem;
+      margin: .2rem 0 .4rem;
+      line-height: 1.05;
+    }
+    .clip .meta {
+      font-family: Special Elite, "Courier New", monospace;
+      font-size: .75rem;
+      margin: 0 0 .6rem;
+    }
+    .clip dl {
+      display: grid;
+      grid-template-columns: 8.5rem 1fr;
+      gap: .25rem .6rem;
+      margin: 0 0 .7rem;
+      font-size: .95rem;
+    }
+    .clip dt {
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: .68rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .clip dd { margin: 0; }
+    .close {
+      position: absolute;
+      top: .4rem;
+      right: .5rem;
+      appearance: none;
+      background: none;
+      border: var(--rule);
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-size: .62rem;
+      padding: .25rem .4rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+    .close:hover { background: var(--ink); color: var(--paper); }
+
+    .tools { display: flex; gap: .4rem; flex-wrap: wrap; margin: .4rem 0 .6rem; }
+    .tools button {
+      appearance: none;
+      border: var(--rule);
+      background: transparent;
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-size: .65rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .35rem .5rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+    .tools button[aria-pressed="true"], .tools button:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .parcel-wrap {
+      border: var(--rule);
+      background: #e4d3aa;
+      position: relative;
+    }
+    #parcel {
+      display: block;
+      width: 100%;
+      height: auto;
+      cursor: crosshair;
+    }
+    .parcel-help {
+      font-size: .88rem;
+      font-style: italic;
+      margin: .4rem 0 0;
+    }
+
+    .live { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+    @media (max-width: 860px) {
+      .front, .below, .skyline, .editions, .letters, .classifieds, .mast .volume {
+        display: block;
+      }
+      .col { border-right: 0; padding-right: 0; border-bottom: var(--rule); padding-bottom: .8rem; margin-bottom: .8rem; }
+      .editions button { display: block; width: 100%; border-right: 0; border-bottom: var(--rule); }
+      .lead-body { column-count: 1; }
+      .mast h1 { font-size: 3.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#letters">Skip to letters</a>
+  <div class="live" id="live" aria-live="polite"></div>
+
+  <div class="desk">
+    <article class="sheet" id="sheet">
+      <div class="showthrough" aria-hidden="true">CONTINUED FROM PAGE B3  the supervisors met in executive session after midnight and did not vote  WATER TABLE  the well logs are a public record if you know which drawer  CLASSIFIED  lost sow, answers to Lucy  CHURCH SUPPER Thursday in the fellowship hall</div>
+      <div class="reg" aria-hidden="true"><i></i></div>
+      <div class="folio">
+        <span id="folio-left">VOL. CXLII NO. 38</span>
+        <span>SATURDAY, SEPTEMBER 19, 2026</span>
+        <span>FIFTEEN CENTS</span>
+      </div>
+
+      <header class="mast">
+        <p class="est">Established 1884 · The county paper that learned to read a substation</p>
+        <h1>The Parish Ledger</h1>
+        <blockquote>“Democracy is the referee for social impact.”</blockquote>
+        <div class="volume">
+          <span>Serving the counties that host the cloud</span>
+          <span id="weather">Ashburn — 78° / haze from the diesels</span>
+          <span>Page 1 · City Desk</span>
+        </div>
+      </header>
+
+      <nav class="editions" aria-label="Parish editions">
+        <button type="button" data-ed="nova" aria-current="true">Northern Virginia<br />Data Center Alley</button>
+        <button type="button" data-ed="georgia">Rural Georgia<br />Newton &amp; Walton</button>
+        <button type="button" data-ed="washington">Central Washington<br />Grant County</button>
+        <button type="button" data-ed="texas">West Texas<br />Crane &amp; Abilene</button>
+      </nav>
+
+      <div id="press"></div>
+    </article>
+  </div>
+
+  <div class="scrim" id="clip-scrim" role="dialog" aria-modal="true" aria-labelledby="clip-title" hidden>
+    <div class="clip">
+      <button class="close" type="button" data-close="clip">Spike</button>
+      <p class="kicker">City desk · clip file</p>
+      <h2 id="clip-title"></h2>
+      <p class="meta" id="clip-meta"></p>
+      <dl id="clip-dl"></dl>
+      <p id="clip-graf"></p>
+      <p class="jump" id="clip-jump"></p>
+    </div>
+  </div>
+
+  <div class="scrim" id="plan-scrim" role="dialog" aria-modal="true" aria-labelledby="plan-title" hidden>
+    <div class="backpage">
+      <button class="close" type="button" data-close="plan">Back to page 1</button>
+      <p class="kicker">Classified · Real estate · Page B8</p>
+      <h2 id="plan-title">Wanted: a better site plan</h2>
+      <p>Stamp the parcel the way a planning board should have. Cooling to the lee, water where the draw already is, setbacks a child could measure from the schoolhouse. This desk sets type, not girders — the civic construction twin is another shop. We print what you mark.</p>
+      <div class="tools" role="toolbar" aria-label="Site stamps">
+        <button type="button" data-tool="tower" aria-pressed="true">Cooling tower</button>
+        <button type="button" data-tool="pond">Holding pond</button>
+        <button type="button" data-tool="setback">Setback</button>
+        <button type="button" data-tool="erase">Scratch out</button>
+      </div>
+      <div class="parcel-wrap">
+        <svg id="parcel" viewBox="0 0 640 360" role="img" aria-label="Parcel diagram. Click to place the selected stamp.">
+          <rect x="0" y="0" width="640" height="360" fill="#e4d3aa" />
+          <path d="M0 292 H640" stroke="#16110c" stroke-width="10" />
+          <text x="12" y="282" font-family="Oswald, sans-serif" font-size="11" letter-spacing="1.5">COUNTY ROAD 12</text>
+          <path d="M78 20 C 110 80, 90 140, 130 190 S 90 280, 120 300" fill="none" stroke="#16110c" stroke-width="3" stroke-dasharray="4 3" />
+          <text x="88" y="88" font-family="Old Standard TT, serif" font-size="12" transform="rotate(72 100 100)">creek</text>
+          <rect x="470" y="40" width="88" height="58" fill="none" stroke="#16110c" stroke-width="1.5" />
+          <text x="478" y="74" font-family="Oswald, sans-serif" font-size="11">SCHOOL</text>
+          <rect x="210" y="96" width="170" height="110" fill="none" stroke="#7a1616" stroke-width="1.4" stroke-dasharray="5 4" />
+          <text x="228" y="154" font-family="Oswald, sans-serif" font-size="12" fill="#7a1616">PROPOSED HALL</text>
+          <text x="12" y="24" font-family="Special Elite, monospace" font-size="11">SCALE: 1 in = 200 ft · setback from school is the fight</text>
+          <g id="stamps"></g>
+        </svg>
+      </div>
+      <p class="parcel-help" id="parcel-help">Selected: cooling tower. Click the dirt.</p>
+      <button class="press-btn" type="button" id="print-plan">Print it in tomorrow’s paper</button>
+    </div>
+  </div>
+
+  <script>
+    const EDITIONS = {
+      nova: {
+        weather: "Ashburn — 78° / haze from the diesels",
+        folio: "LOUDOUN & PRINCE WILLIAM",
+        wire: "WIRE 02:14 — Night desk reading machine ingested 847 items since 2 a.m. Printed four. Flagged three campuses in grease pencil.",
+        skyline: [
+          { k: "Dominion", h: "New 230-kV tap at Broad Run", t: "The utility filed Tuesday for a tap that would feed another 240 megawatts into the Ashburn loop. Hearing Oct. 7." },
+          { k: "Loudoun Water", h: "AWS asks 4.2 million gallons a day", t: "The Broad Run plant is already near its summer cap. The authority’s own memo says the creek cannot invent water." },
+          { k: "Yorkshire", h: "Night pour, then the calls", t: "QTS Manassas poured slab after 11. The sheriff logged 19 noise complaints and one lost dog that came home." }
+        ],
+        lead: {
+          k: "Prince William · School board",
+          h: "School board trades the levy for 180 megawatts",
+          dek: "Supervisors, 5–3 at 12:40 a.m., granted Digital Realty a fifteen-year abatement on Gainesville Crossing. The superintendent told this newspaper the lost levy is twenty-two teaching posts.",
+          by: "By Hattie Rowan · City desk",
+          body: [
+            "GAINESVILLE — They voted after the cameras left. The abatement covers the Gainesville Crossing campus, 180 megawatts nameplate, on the old sod-farm tract west of Route 29. Digital Realty’s counsel called it “a generation of construction wages.” The schools’ numbers man, speaking on the record in the hallway, called it “a generation of portable classrooms.”",
+            "The motion had been tabled twice. What moved it was a letter from the state’s economic office — not a statute, a mood — warning that Northern Virginia could “lose the pipeline to Ohio.” Ohio, for the record, is not in this parish.",
+            "Board chair Lila Voss said the county cannot be a museum. Member Andre Peck, who taught shop at Osbourn, said a museum at least keeps the lights on for the children who live here. Peck lost.",
+            "This paper has covered water rights and school boards since Cleveland was president. A data hall is a factory that does not smell. It still drinks, still bargains, still asks the levy to look the other way. Continued on A7."
+          ]
+        },
+        briefs: [
+          { h: "Broad Run campus files for a second hall", t: "Amazon Web Services amended its site plan: another 90 MW behind the existing shed. The creek is the same creek.", jump: "Clip file · Broad Run" },
+          { h: "IBEW local 26 on double overtime", t: "Linemen say the Ashburn loop is a Christmas tree in August. Transformers are on 40-week lead times.", jump: "Letters · Delgado" },
+          { h: "Tax rolls, if you can find them", t: "The commissioner of the revenue posted the abatement schedule after we asked three times. It was in a drawer marked MISC.", jump: "A4" }
+        ],
+        flags: [
+          { id: "broad", name: "Broad Run Campus", op: "Amazon Web Services", mw: "240 MW nameplate (90 MW proposed)", water: "4.2 million gal/day requested from Loudoun Water", tax: "Existing machinery-and-tools exemption; second-hall amendment pending", vote: "Planning commission Oct. 14. No school-board vote — Loudoun already spent that coin.", graf: "The night desk circled this one because the water request and the new tap landed in the same 18-hour window. That is not coincidence. That is a queue.", jump: "See also: Dominion filing, Loudoun Water memo 2026-0912." },
+          { id: "gaines", name: "Gainesville Crossing", op: "Digital Realty", mw: "180 MW", water: "Closed-loop claim; still needs 0.6 MGD for makeup", tax: "15-year abatement, passed 5–3 Sept. 18", vote: "Prince William supervisors. Schools superintendent estimates 22 posts.", graf: "The lead story. The clip file holds the hallway quotes the cameras missed and the state’s ‘Ohio’ letter, which is two pages of weather.", jump: "Lead, page 1. Letters close at noon Monday." },
+          { id: "bull", name: "Bull Run Yard", op: "QTS / Blackstone", mw: "96 MW in the ground, 48 MW promised", water: "Wells on the Yorkshire side; neighbors clock tanker trucks at dawn", tax: "Older deal, 2019, still live", vote: "No new vote. Noise ordinance hearing Sept. 24.", graf: "We flagged it for the night pour and the wells, not the megawatts. A campus can be quiet on the tax roll and loud at 11:40 p.m.", jump: "Police blotter, B2." }
+        ],
+        letters: [
+          { from: "Hay & wells", body: "My well at Aldie dropped four feet since June. The extension agent says drought. The creek says Broad Run. I can count trucks. I cannot count gallons because nobody posts them on a barn door.", sign: "Mabel Hensley · Aldie" },
+          { from: "Fourth grade", body: "They say the campus brings jobs. My class has 29 and a ceiling stain shaped like Ohio. If the levy goes to Gainesville Crossing, send the portable to my room. I will teach in it.", sign: "Keisha Brown · Manassas Park" },
+          { from: "The line", body: "I have been up the pole in Ashburn since 2004. We are past overtime and into folklore. You cannot vote a transformer into existence. You can vote to stop stacking halls on the same tap.", sign: "Roy Delgado · IBEW Local 26" },
+          { from: "The dais", body: "We cannot be a museum. The children of this county will work in a world that runs on these halls. I will not apologize for 180 megawatts.", sign: "C. Alan Witt · Supervisor, Gainesville" },
+          { from: "Stone Bridge, 11th", body: "My town is a plug. The fields I walked in middle school are a fence and a diesel. I am not against the cloud. I am against being told it is weather.", sign: "Juniper Cole · 17" },
+          { from: "Operator, on letterhead", body: "Amazon Web Services is a responsible neighbor. Our Broad Run request is consistent with Loudoun Water’s long-range plan. We welcome dialogue in the proper forum.", sign: "Community Affairs · AWS" }
+        ],
+        consensus: {
+          agree: [
+            "The existing taps cannot take another hall without a public accounting of the queue.",
+            "School levies are not a tip jar for megawatts.",
+            "Water withdrawals belong on a barn door — a meter the parish can read — not in a press packet."
+          ],
+          fight: [
+            "Whether any new campus should be poured in the Broad Run watershed at all.",
+            "Whether the county is “too late” to say no, or only tired."
+          ]
+        },
+        ads: [
+          { k: "Church supper", t: "Thursday, 6 p.m., Aldie fellowship hall. Ham, slaw, and a map of the new tap. Bring a folding chair." },
+          { k: "Lost", t: "Sow, answers to Lucy. Last seen near the QTS fence. Reward: a pie and an apology to the sheriff." },
+          { k: "Legal notice", t: "Commissioner of the revenue will post abatement schedules in the lobby, not in MISC, starting Monday." }
+        ]
+      },
+      georgia: {
+        weather: "Social Circle — 86° / cicadas louder than the switchyard",
+        folio: "NEWTON & WALTON",
+        wire: "WIRE 03:01 — 612 items ingested. The machine keeps renaming Project Cypress. We printed the name the school board used.",
+        skyline: [
+          { k: "Alcovy River", h: "Permit to take 2.1 million gallons", t: "Microsoft’s Covington campus wants summer makeup water from the Alcovy. The riverkeeper filed at dawn." },
+          { k: "Walton schools", h: "Abatement on the agenda again", t: "Project Cypress — Meta’s hall on the old poultry tract — asks ten years off the roll. Vote Tuesday." },
+          { k: "Jackson EMC", h: "Substation in a pecan grove", t: "The co-op posted a plat. Six trees marked with orange. The grower says they still bear." }
+        ],
+        lead: {
+          k: "Covington · Tuesday’s vote",
+          h: "Cypress asks the schools to wait ten years",
+          dek: "Meta’s Project Cypress, 150 megawatts on Highway 278, wants the levy frozen while the hall ramps. The superintendent can count. The board is not sure it is allowed to.",
+          by: "By June Calder · Newton bureau",
+          body: [
+            "COVINGTON — They named it Cypress so it would sound like a tree. It is a concrete hall the length of a pecan row, promised to draw 150 megawatts when the last transformer lands. The company’s letter to the Walton board says the jobs come first and the taxes come “when the campus is mature.” Mature, in this usage, means after the children now in third grade have graduated.",
+            "Board member Ruthie Colquitt asked whether the county had ever given a poultry plant a decade. Nobody could remember a plant that asked. The attorney said data halls are “a different class of neighbor.” Different class is not a statute.",
+            "Microsoft’s older campus by the Alcovy is already in the water fight. Two halls, one river, one school board that meets in a room with a drop ceiling and a portrait of a man who never heard the word megawatt.",
+            "This paper covered the chicken houses when they were the new thing. The smell was honest. A data hall smells like nothing and bargains like a railroad. Continued on A6."
+          ]
+        },
+        briefs: [
+          { h: "Riverkeeper posts the intake numbers", t: "The 2.1 MGD request is not a rumor. It is Exhibit B, typed, stamped, and sitting on our desk.", jump: "Clip file · Alcovy" },
+          { h: "Pecan grower marks six trunks", t: "Orange tape on the Jackson EMC plat. He says fruit is a crop and a substation is a bet.", jump: "B1" },
+          { h: "State road crew, then the fiber", t: "DOT widened 278 last year. The fiber followed like a thought. Cypress followed the fiber.", jump: "A3" }
+        ],
+        flags: [
+          { id: "cypress", name: "Project Cypress", op: "Meta Platforms", mw: "150 MW promised", water: "Closed-loop on paper; sanitary to the city plant", tax: "10-year school-levy freeze requested; vote Tuesday", vote: "Walton County Board of Education, 6 p.m., still in the drop-ceiling room.", graf: "Flagged because the vote is this week and the name is a tree. The clip has the company’s letter and Colquitt’s poultry question, which did not get an answer.", jump: "Lead, page 1." },
+          { id: "alcovy", name: "Alcovy Campus", op: "Microsoft", mw: "220 MW in two halls", water: "2.1 MGD summer makeup from the Alcovy", tax: "2018 deal, still the template everyone points at", vote: "EPD hearing Oct. 2 in Atlanta — not here.", graf: "The river is here. The hearing is not. We circled it for that reason.", jump: "Riverkeeper filing, city desk." },
+          { id: "pecan", name: "Pecan Grove Tap", op: "Jackson EMC (for a tenant not yet named)", mw: "80 MW reserved", water: "None yet — the grove drinks rain", tax: "No abatement filed. The plat is the tell.", vote: "Co-op member meeting Sept. 28.", graf: "A tap without a tenant is a rumor with a fence. The orange tape is not a rumor.", jump: "Plat on file at the co-op." }
+        ],
+        letters: [
+          { from: "The grove", body: "Six pecans. I did not vote to host the cloud. I voted to keep the co-op honest. Orange tape is not consultation.", sign: "Ellis Ward · Social Circle" },
+          { from: "Third grade", body: "If Cypress is a tree, plant it at the school. We need shade. We do not need a frozen levy. I can do long division. Ten years is long.", sign: "Amantha Ruiz · teacher, Walnut Grove" },
+          { from: "The line", body: "EMC crews are not villains. We string what the board signs. Sign slower.", sign: "Daryl Moss · lineman, Jackson EMC" },
+          { from: "The dais", body: "I will vote yes on Cypress. Poultry left. The cloud is what showed up. I would like a better bargain. I will not vote for an empty tract.", sign: "Harlan Peeples · Walton commissioner" },
+          { from: "Newton High", body: "We livestream graduation on a network that lives in a building my uncle cannot enter. Tell me again who the neighbor is.", sign: "Caleb Johns · 16" },
+          { from: "Operator, on letterhead", body: "Microsoft is proud of our Covington campus and of our water stewardship. The Alcovy request reflects a dry-year contingency, not a daily habit.", sign: "Datacenter Community · Microsoft" }
+        ],
+        consensus: {
+          agree: [
+            "Hearings about this river should be held in this county, not in Atlanta.",
+            "A school levy is not a ripening period for a campus.",
+            "Name the tenant before you mark the trees."
+          ],
+          fight: [
+            "Whether Cypress is the last hall or the invitation.",
+            "Whether “jobs that showed up” outrank the grove that was already working."
+          ]
+        },
+        ads: [
+          { k: "Revival", t: "New Hope, Sunday night. The preacher has opinions about Cypress. So does the choir." },
+          { k: "Pecans", t: "Halves and pieces, Social Circle shed. Cash. No data halls on the invoice." },
+          { k: "Legal notice", t: "EPD hearing, Alcovy intake, Oct. 2, Atlanta. The river will not be in attendance." }
+        ]
+      },
+      washington: {
+        weather: "Quincy — 71° / wind off the canal, dust off the pads",
+        folio: "GRANT COUNTY",
+        wire: "WIRE 01:47 — 704 items. Half of them were BPA notices. We set the ones with orchard addresses.",
+        skyline: [
+          { k: "Columbia", h: "BPA posts a winter curtailment drill", t: "The grid can freeze a hall when the river is asked to be a battery. Microsoft says it has diesels. The orchard does not." },
+          { k: "Quincy", h: "Vantage wants a third building", t: "Another 64 MW on the Port campus. The port commission meets with the irrigation district in the same week. That is the story." },
+          { k: "Ephrata", h: "School levy holds — for now", t: "No new abatement on the calendar. The superintendent still watches the port the way she watches frost." }
+        ],
+        lead: {
+          k: "Quincy · Port & ditch",
+          h: "The ditch was here first. The hall would like a third helping.",
+          dek: "Vantage’s third building at the Port of Quincy is 64 megawatts and a new claim on canal water for evaporative cooling. The irrigation district’s minutes are public. The company’s water model is not.",
+          by: "By Nils Berger · Grant County",
+          body: [
+            "QUINCY — The Columbia Basin Project did not sign up to cool computers. It signed up to grow potatoes, apples, and a civic idea that water could be moved and still belong to a district. Vantage Data Centers filed last week for Building C: 64 megawatts, evaporative, a number in a footnote about “non-potable makeup.”",
+            "Port commissioner Elena Ruiz said the port’s job is cargo, and electrons are cargo. Irrigation director Tom Halvorsen said cargo does not get a senior right because it arrived with a press kit. Their meeting is Thursday. The chairs will be the same chairs used for the fair board.",
+            "Microsoft’s older halls already sit on the west pads. Sabey’s are to the south. The town is a map of logos visible from the canal road. A third building is not a novelty. It is a habit asking to be mistaken for weather.",
+            "This paper used to print the ditch tender’s hours on page 2. We still will. The hall can buy an advertisement. It cannot buy the prior appropriation without a fight in English. Continued on A5."
+          ]
+        },
+        briefs: [
+          { h: "Sabey night testing, again", t: "Generators at 2 a.m. The sheriff knows the sound. So do the dogs on Road L SW.", jump: "Blotter" },
+          { h: "Apple shed vs. plume", t: "Growers on the east side say late-summer steam lies on the fruit. The company says science. The shed says laundry.", jump: "Clip file · Port" },
+          { h: "Long-range, if you can find it", t: "OECD-style indicators for regional compute landed in a footnote on longtermwiki and nowhere on the county site.", jump: "Editorial, A8" }
+        ],
+        flags: [
+          { id: "vantage", name: "Port of Quincy, Building C", op: "Vantage Data Centers", mw: "64 MW proposed", water: "Evaporative makeup from the canal — volume in a footnote", tax: "Port lease; no new school abatement filed", vote: "Port commission + irrigation district, Thursday.", graf: "Flagged because two public bodies meet about the same wet dirt in one week and the model is still “proprietary.”", jump: "Lead, page 1." },
+          { id: "msft", name: "West Pads", op: "Microsoft", mw: "300 MW class, three halls", water: "Existing canal contract; diesel on the curtailment drill", tax: "Older port deal", vote: "No vote. BPA drill is the news.", graf: "Circled for the winter drill. A hall that can island is a neighbor with a generator. An orchard is a neighbor with a prayer.", jump: "BPA notice, city desk." },
+          { id: "sabey", name: "South Campus", op: "Sabey", mw: "120 MW", water: "Towers; plume complaints in August", tax: "Quiet on the roll", vote: "Noise and hours, city council Sept. 22.", graf: "The dogs on Road L SW do not file comment letters. We did it for them.", jump: "Blotter, B2." }
+        ],
+        letters: [
+          { from: "The ditch", body: "I have walked this canal since 1979. Non-potable is still water. Footnotes are still numbers. Print the number in type I can read without a lawyer.", sign: "Tom Halvorsen · writing as a ratepayer, not the director" },
+          { from: "Kindergarten", body: "We had a good levy year. I am not naïve. I am a person who buys crayons. Keep the port off the school agenda and I will keep my voice down.", sign: "Priya Nand · Quincy Elementary" },
+          { from: "The line", body: "BPA calls, we climb. Curtailment is not a metaphor. If they want to be a battery, say so on the masthead.", sign: "Chris Alvarez · lineman, Grant PUD" },
+          { from: "The port", body: "Electrons are cargo. Building C is a ship we can see. I will vote the lease if the ditch gets a number, not a vibe.", sign: "Elena Ruiz · port commissioner" },
+          { from: "Quincy High", body: "We tour the halls on career day and sign an NDA to look at a hallway. That is not a field trip. That is a joke with a badge.", sign: "Noah Berg · 17" },
+          { from: "Operator, on letterhead", body: "Vantage designs for water efficiency and community partnership. Building C’s cooling strategy will be disclosed in the appropriate environmental process.", sign: "External Affairs · Vantage" }
+        ],
+        consensus: {
+          agree: [
+            "Canal makeup is a number, and the number belongs in this paper before it belongs in a model.",
+            "The school levy is not, this month, a bargaining chip — keep it that way.",
+            "A curtailment drill is civic news, not a trade secret."
+          ],
+          fight: [
+            "Whether a third building is cargo or a habit.",
+            "Whether evaporative cooling is still sane on a ditch with senior orchard rights."
+          ]
+        },
+        ads: [
+          { k: "Fair board", t: "Same chairs, Thursday, after the port. Pie in the kitchen. Bring the canal minutes." },
+          { k: "Apples", t: "Jonagold, Road M. Honor box. If the plume is on them I will tell you before you bite." },
+          { k: "Legal notice", t: "BPA winter drill schedule posted at the PUD. Diesels are not a secret if they have a stack." }
+        ]
+      },
+      texas: {
+        weather: "Crane — 94° / dust, then the smell of a flare",
+        folio: "CRANE COUNTY & ABILENE FRINGE",
+        wire: "WIRE 04:22 — 931 items, most of them gas prices. We kept the ones with school names and water trucks.",
+        skyline: [
+          { k: "McCamey ISD", h: "Lancium asks the board to call it ‘pilot’", t: "A 120-megawatt interruptible hall by the flare line wants a five-year hold on the new equipment. Pilot is doing a lot of work." },
+          { k: "Ogallala talk", h: "Water trucks before breakfast", t: "Crusoe’s Crane pad is air-cooled on the brochure. The trucks are not a brochure. We counted twelve before 8 a.m." },
+          { k: "ERCOT", h: "West load pocket is a rumor with a queue", t: "The interconnect list grew again. Nobody in Crane is on the distribution list. This newspaper is, as of this morning." }
+        ],
+        lead: {
+          k: "McCamey · Monday night",
+          h: "They want the school board to say ‘pilot’ with a straight face",
+          dek: "Lancium’s interruptible campus — 120 megawatts that promise to die when the grid coughs — asked McCamey ISD for a five-year equipment holiday. The superintendent asked what happens to the holiday if the campus does not die when asked.",
+          by: "By Reyes Molina · West bureau",
+          body: [
+            "MCCAMEY — The flare was visible from the parking lot. Inside, the company’s man used the word flexible eleven times and the word water once. The water once was “minimal.” The trucks on 385 did not attend the meeting.",
+            "Board president Alma Gutierrez said she has voted mineral settlements that paid for a band hall. She has not voted a cloud. She wanted to know who owns the hall if the gas play dries and the computers stay. Counsel said that was “a corporate question.” Corporate questions are still questions.",
+            "Crusoe’s pad outside Crane already runs on gas that would have been flared. That is the sermon. The parish has heard sermons. It would like a truck log and a well log and a sentence about the Ogallala that is not a shrug.",
+            "This paper covered casinghead and football on the same page for forty years. A data hall that bargains like an oilfield and votes in a school cafeteria is not a new species. It is an old one with better letterhead. Continued on A4."
+          ]
+        },
+        briefs: [
+          { h: "Twelve trucks before eight", t: "We stood on 385. We used a notebook, not a feeling. Crusoe may write in.", jump: "Clip file · Crane pad" },
+          { h: "Abilene fringe plat", t: "A second operator, not yet letterheaded, filed a dirt work permit by the county line.", jump: "B3" },
+          { k: "aim", h: "The indicators, elsewhere", t: "OECD.AI talks about compute like a weather map. Crane talks about it like a lease. Both can be true. Only one is on our streets.", jump: "A8" }
+        ],
+        flags: [
+          { id: "lancium", name: "McCamey Interruptible", op: "Lancium", mw: "120 MW, claims it will drop on ERCOT signal", water: "“Minimal” in testimony; no daily figure", tax: "5-year equipment holiday requested of McCamey ISD", vote: "School board, Monday. Open session first.", graf: "Flagged because ‘pilot’ and ‘holiday’ are doing legislative work in a cafeteria. The clip has the eleven flexibles and the one water.", jump: "Lead, page 1." },
+          { id: "crusoe", name: "Crane Flare Pad", op: "Crusoe Energy", mw: "40 MW on stranded gas", water: "Air-cooled on the brochure; 12 tanker trucks before 8 a.m. Wednesday", tax: "Industrial, no school deal filed", vote: "No vote. The trucks are the vote.", graf: "We circled what we could count. If the brochure is right, write us. The address is on the masthead.", jump: "Notebook, city desk." },
+          { id: "fringe", name: "County Line Dirt", op: "Tenant not yet named (permit by Redlands Compute LLC)", mw: "Reserved interconnect: 80 MW", water: "Unknown — permit is dirt and culverts", tax: "None filed", vote: "Commissioners’ court, plat only, Oct. 6.", graf: "A dirt permit is how a campus enters a parish without saying its name. We prefer names.", jump: "County clerk, volume 88." }
+        ],
+        letters: [
+          { from: "The caliche", body: "I run cattle on the Crane side. The pad does not smell like a flare anymore. It smells like a shop. Shops use water. Print the trucks or stop telling me it is air.", sign: "Bud Ellison · Crane" },
+          { from: "Band hall", body: "Minerals paid for our trombones. I am not romantic about that. I am exact. A holiday for equipment is a holiday from the kids who play them.", sign: "Renee Salas · McCamey ISD, music" },
+          { from: "The line", body: "On-call for the co-op. Interruptible means I still drive in the dark when they fail to interrupt. Say that in the cafeteria.", sign: "Miguel Ornelas · lineman" },
+          { from: "The court", body: "I will not vote a name I cannot pronounce onto the tax roll. File the tenant. Then we talk holiday.", sign: "W. J. Crowe · county judge" },
+          { from: "McCamey High", body: "Career day was a video about flexibility. I wanted to know if I can work there without leaving town. They said remotely. I live here.", sign: "Ivy Mendoza · 18" },
+          { from: "Operator, on letterhead", body: "Lancium’s mission is to make compute a flexible load that strengthens ERCOT. We look forward to partnering with McCamey ISD on a responsible pilot.", sign: "Public Affairs · Lancium" }
+        ],
+        consensus: {
+          agree: [
+            "If it takes a water truck, it is not only air-cooled.",
+            "School-board language like ‘pilot’ and ‘holiday’ should mean what it means in a classroom.",
+            "Name the tenant before the dirt work becomes a hall."
+          ],
+          fight: [
+            "Whether burning flare gas on-site is a gift to the climate or a gift to a queue.",
+            "Whether interruptible is a promise this parish can enforce after dark."
+          ]
+        },
+        ads: [
+          { k: "Friday lights", t: "McCamey vs. Rankin. The flare will be in the sky whether we win or not. Come anyway." },
+          { k: "Water hauling", t: "Reyes Trucking. We are in the notebook. We would rather be on a meter." },
+          { k: "Legal notice", t: "Commissioners’ court, Oct. 6, plat for Redlands Compute LLC. Names, please." }
+        ]
+      }
+    };
+
+    const state = {
+      ed: "nova",
+      locked: { nova: false, georgia: false, washington: false, texas: false },
+      extraLetters: { nova: [], georgia: [], washington: [], texas: [] },
+      extraAds: { nova: [], georgia: [], washington: [], texas: [] },
+      tool: "tower",
+      stamps: [],
+      storyIndex: 0
+    };
+
+    const press = document.getElementById("press");
+    const live = document.getElementById("live");
+
+    function announce(msg) { live.textContent = msg; }
+
+    function render() {
+      const e = EDITIONS[state.ed];
+      document.getElementById("weather").textContent = e.weather;
+      document.getElementById("folio-left").textContent = e.folio + " · VOL. CXLII NO. 38";
+
+      const letters = e.letters.concat(state.extraLetters[state.ed]);
+      const ads = state.extraAds[state.ed].concat(e.ads);
+      const locked = state.locked[state.ed];
+
+      press.innerHTML = `
+        <section class="skyline" aria-label="Above the fold">
+          ${e.skyline.map((s, i) => `
+            <article class="story" data-story tabindex="0">
+              <p class="kicker">${s.k}</p>
+              <h3 class="hed">${s.h}</h3>
+              <p>${s.t}</p>
+            </article>`).join("")}
+        </section>
+        <section class="front">
+          <div class="col briefs">
+            <p class="wire">${e.wire}</p>
+            <h2>In this parish</h2>
+            ${e.briefs.map(b => `
+              <button class="brief story" data-story type="button">
+                <h3 class="hed">${b.h}</h3>
+                <p>${b.t}</p>
+                <span class="jump">${b.jump}</span>
+              </button>`).join("")}
+          </div>
+          <div class="col lead">
+            <p class="kicker">${e.lead.k}</p>
+            <h2 class="tomb hed story" data-story tabindex="0">${e.lead.h}</h2>
+            <p class="dek">${e.lead.dek}</p>
+            <p class="byline">${e.lead.by}</p>
+            <div class="lead-body">${e.lead.body.map(p => `<p>${p}</p>`).join("")}</div>
+          </div>
+          <div class="col desk-col">
+            <h2>City desk has flagged</h2>
+            <p class="city-note">Grease pencil on the campus list. Click a circle. The clip file is the record, not the press kit.</p>
+            ${e.flags.map(f => `
+              <button class="flagged story" data-story data-flag="${f.id}" type="button" aria-label="Open clip file for ${f.name}">
+                <span class="grease" aria-hidden="true"></span>
+                <h3 class="hed">${f.name}</h3>
+                <p>${f.op} · ${f.mw}</p>
+              </button>`).join("")}
+          </div>
+        </section>
+        <section class="below">
+          <div class="letters-block" id="letters">
+            <h2>Letters to the editor</h2>
+            <div class="letters" id="letter-column">
+              ${letters.map((L, i) => `
+                <article class="letter${L.fresh ? " fresh" : ""}" data-story tabindex="0">
+                  ${L.fresh ? `<span class="postmark">PARISH LEDGER<br>SEP 19 2026<br>PAID</span>` : ""}
+                  <p class="from">${L.from}</p>
+                  <p>${L.body}</p>
+                  <p class="sign">— ${L.sign}</p>
+                </article>`).join("")}
+            </div>
+            <form class="compose" id="letter-form">
+              <label for="who">Your name and place</label>
+              <input id="who" name="who" required maxlength="80" placeholder="e.g. A. Reader · the parish" />
+              <label for="letter">Set your letter</label>
+              <textarea id="letter" name="letter" required minlength="20" placeholder="The night desk will set this in type. Be specific: water, levy, the road you live on."></textarea>
+              <button type="submit">Set it in type</button>
+            </form>
+          </div>
+          <aside class="makeup" aria-label="Parish consensus">
+            <h2>What the parish actually agrees on</h2>
+            ${locked ? `
+              <p class="slug">FROM THE COMPOSING ROOM — not a poll. A reading of the letters. Hidden consensus, set in type.</p>
+              <p class="from" style="font-family:Oswald,sans-serif;letter-spacing:.12em;font-size:.62rem;">THE PARISH WILL STAND ON</p>
+              <ol>${e.consensus.agree.map(x => `<li>${x}</li>`).join("")}</ol>
+              <p class="from" style="font-family:Oswald,sans-serif;letter-spacing:.12em;font-size:.62rem;">STILL FIGHTING IN THE AISLE</p>
+              <ul>${e.consensus.fight.map(x => `<li>${x}</li>`).join("")}</ul>
+              <p class="slug">Set this or spike it. — night editor</p>
+            ` : `
+              <button type="button" class="lock-slug" id="lock-page">MAKEUP DESK — ${letters.length} letters in. Lock the page and set the reading?</button>
+              <p class="city-note">Jigsaw-style sensemaking: the machine already clustered the letters. We do not print a pie. We print what the parish will stand on, and what it will not.</p>
+            `}
+          </aside>
+        </section>
+        <section class="class-block">
+          <h2>Classifieds &amp; notices</h2>
+          <div class="classifieds">
+            <button class="ad coupon" type="button" id="open-plan" data-story>
+              <strong>Wanted: a better site plan</strong>
+              Clip this coupon. Mark the parcel — towers, ponds, setbacks — and we will print your plan in tomorrow’s paper. Civic construction, in ink.
+            </button>
+            ${ads.map(a => `
+              <article class="ad${a.fresh ? " fresh" : ""}">
+                <strong>${a.k}</strong>
+                ${a.t}
+              </article>`).join("")}
+          </div>
+        </section>
+      `;
+
+      bindPress();
+    }
+
+    function bindPress() {
+      press.querySelectorAll("[data-flag]").forEach(btn => {
+        btn.addEventListener("click", () => openClip(btn.dataset.flag));
+      });
+      document.getElementById("letter-form").addEventListener("submit", onLetter);
+      const lock = document.getElementById("lock-page");
+      if (lock) lock.addEventListener("click", lockPage);
+      document.getElementById("open-plan").addEventListener("click", openPlan);
+    }
+
+    function collectStories() {
+      return [...press.querySelectorAll("[data-story]")];
+    }
+
+    function onLetter(ev) {
+      ev.preventDefault();
+      const who = document.getElementById("who").value.trim();
+      const body = document.getElementById("letter").value.trim();
+      state.extraLetters[state.ed].push({
+        from: "Just set",
+        body,
+        sign: who,
+        fresh: true
+      });
+      state.locked[state.ed] = true;
+      announce("Letter set in type. Makeup desk locked the consensus.");
+      render();
+      document.getElementById("letters").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function lockPage() {
+      state.locked[state.ed] = true;
+      announce("Composing room set the parish reading.");
+      render();
+    }
+
+    function openClip(id) {
+      const f = EDITIONS[state.ed].flags.find(x => x.id === id);
+      if (!f) return;
+      document.getElementById("clip-title").textContent = f.name;
+      document.getElementById("clip-meta").textContent = "CLIP · " + EDITIONS[state.ed].folio + " · SEP 19 2026 · NOT FOR THE PRESS KIT";
+      document.getElementById("clip-dl").innerHTML = `
+        <dt>Operator</dt><dd>${f.op}</dd>
+        <dt>Power</dt><dd>${f.mw}</dd>
+        <dt>Water</dt><dd>${f.water}</dd>
+        <dt>Tax</dt><dd>${f.tax}</dd>
+        <dt>The vote</dt><dd>${f.vote}</dd>
+      `;
+      document.getElementById("clip-graf").textContent = f.graf;
+      document.getElementById("clip-jump").textContent = f.jump;
+      showScrim("clip-scrim");
+      announce("Clip file open: " + f.name);
+    }
+
+    function showScrim(id) {
+      const el = document.getElementById(id);
+      el.hidden = false;
+      el.classList.add("open");
+      el.querySelector(".close").focus();
+    }
+    function hideScrim(id) {
+      const el = document.getElementById(id);
+      el.classList.remove("open");
+      el.hidden = true;
+    }
+
+    function openPlan() {
+      showScrim("plan-scrim");
+      announce("Back page open. Stamp the parcel.");
+    }
+
+    function stampAt(x, y) {
+      if (state.tool === "erase") {
+        state.stamps = state.stamps.filter(s => Math.hypot(s.x - x, s.y - y) > 22);
+        drawStamps();
+        return;
+      }
+      state.stamps.push({ tool: state.tool, x, y });
+      drawStamps();
+    }
+
+    function drawStamps() {
+      const g = document.getElementById("stamps");
+      g.innerHTML = state.stamps.map(s => {
+        if (s.tool === "tower") {
+          return `<g transform="translate(${s.x},${s.y})">
+            <ellipse cx="0" cy="10" rx="12" ry="5" fill="none" stroke="#16110c" stroke-width="1.6"/>
+            <path d="M-10 10 L-7 -16 H7 L10 10" fill="none" stroke="#16110c" stroke-width="1.6"/>
+            <path d="M-4 -16 C-2 -24 2 -24 4 -16" fill="none" stroke="#16110c" stroke-width="1.4"/>
+          </g>`;
+        }
+        if (s.tool === "pond") {
+          return `<ellipse cx="${s.x}" cy="${s.y}" rx="28" ry="16" fill="none" stroke="#16110c" stroke-width="1.6" transform="rotate(-18 ${s.x} ${s.y})"/>`;
+        }
+        return `<g transform="translate(${s.x},${s.y}) rotate(-12)">
+          <path d="M-20 0 H20" stroke="#7a1616" stroke-width="2"/>
+          <path d="M-16 -6 V6 M-8 -6 V6 M0 -6 V6 M8 -6 V6 M16 -6 V6" stroke="#7a1616" stroke-width="1.4"/>
+        </g>`;
+      }).join("");
+    }
+
+    function printPlan() {
+      const counts = { tower: 0, pond: 0, setback: 0 };
+      state.stamps.forEach(s => counts[s.tool]++);
+      const bits = [];
+      if (counts.tower) bits.push(counts.tower + " cooling tower" + (counts.tower > 1 ? "s" : "") + " on the lee");
+      if (counts.pond) bits.push(counts.pond + " holding pond" + (counts.pond > 1 ? "s" : "") + " on the draw");
+      if (counts.setback) bits.push(counts.setback + " setback mark" + (counts.setback > 1 ? "s" : "") + " from the school");
+      const line = bits.length
+        ? "Reader plan filed for this parish: " + bits.join("; ") + ". See tomorrow’s back page."
+        : "Reader filed a blank parcel. The night desk sent it back with a note: mark something.";
+      state.extraAds[state.ed].unshift({
+        k: "Reader site plan · just set",
+        t: line,
+        fresh: true
+      });
+      hideScrim("plan-scrim");
+      render();
+      announce(line);
+      document.querySelector(".class-block").scrollIntoView({ behavior: "smooth" });
+    }
+
+    document.querySelector(".editions").addEventListener("click", (ev) => {
+      const btn = ev.target.closest("[data-ed]");
+      if (!btn) return;
+      state.ed = btn.dataset.ed;
+      state.storyIndex = 0;
+      document.querySelectorAll(".editions [data-ed]").forEach(b => {
+        b.setAttribute("aria-current", b === btn ? "true" : "false");
+      });
+      announce(EDITIONS[state.ed].folio + " edition.");
+      render();
+      document.getElementById("sheet").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    document.getElementById("clip-scrim").addEventListener("click", (ev) => {
+      if (ev.target.id === "clip-scrim" || ev.target.dataset.close === "clip") hideScrim("clip-scrim");
+    });
+    document.getElementById("plan-scrim").addEventListener("click", (ev) => {
+      if (ev.target.id === "plan-scrim" || ev.target.dataset.close === "plan") hideScrim("plan-scrim");
+    });
+
+    document.querySelectorAll(".tools [data-tool]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        state.tool = btn.dataset.tool;
+        document.querySelectorAll(".tools [data-tool]").forEach(b => b.setAttribute("aria-pressed", b === btn ? "true" : "false"));
+        const names = { tower: "cooling tower", pond: "holding pond", setback: "setback", erase: "scratch-out" };
+        document.getElementById("parcel-help").textContent = "Selected: " + names[state.tool] + ". Click the dirt.";
+      });
+    });
+
+    document.getElementById("parcel").addEventListener("click", (ev) => {
+      const svg = ev.currentTarget;
+      const pt = svg.createSVGPoint();
+      pt.x = ev.clientX; pt.y = ev.clientY;
+      const loc = pt.matrixTransform(svg.getScreenCTM().inverse());
+      stampAt(loc.x, loc.y);
+    });
+
+    document.getElementById("print-plan").addEventListener("click", printPlan);
+
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "Escape") {
+        hideScrim("clip-scrim");
+        hideScrim("plan-scrim");
+        return;
+      }
+      const tag = ev.target.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA") return;
+      const stories = collectStories();
+      if (!stories.length) return;
+      if (ev.key === "ArrowDown" || ev.key === "j" || ev.key === "ArrowRight") {
+        ev.preventDefault();
+        state.storyIndex = (state.storyIndex + 1) % stories.length;
+        stories[state.storyIndex].focus();
+      } else if (ev.key === "ArrowUp" || ev.key === "k" || ev.key === "ArrowLeft") {
+        ev.preventDefault();
+        state.storyIndex = (state.storyIndex - 1 + stories.length) % stories.length;
+        stories[state.storyIndex].focus();
+      } else if (ev.key === "Enter" && document.activeElement?.dataset.flag) {
+        openClip(document.activeElement.dataset.flag);
+      }
+    });
+
+    press.addEventListener("focusin", (ev) => {
+      const stories = collectStories();
+      const i = stories.indexOf(ev.target);
+      if (i >= 0) state.storyIndex = i;
+    });
+
+    render();
+  </script>
+</body>
+</html>

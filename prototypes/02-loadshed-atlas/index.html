@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LOADSHED ATLAS — Hydrographic Office of Compute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,600&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #07141c;
+      --ink-deep: #040c12;
+      --baltic: #0a2230;
+      --copper: #8a6a3d;
+      --copper-bright: #c4a36a;
+      --verdigris: #3d6b5a;
+      --vellum: #efe4c8;
+      --vellum-dark: #d4c4a0;
+      --cream: #f4ead2;
+      --vermilion: #c2341a;
+      --vermilion-deep: #8e1e10;
+      --soot: #1c1814;
+      --coffee: #6b3a22;
+      --lead: #3a3530;
+      --lane: #2a4a58;
+      --serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+      --mono: "IBM Plex Mono", "Courier New", monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+
+    body {
+      background:
+        radial-gradient(ellipse at 20% 10%, #123044 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 90%, #0a1820 0%, transparent 45%),
+        var(--ink-deep);
+      color: var(--vellum);
+      font-family: var(--serif);
+      overflow: hidden;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cg fill='none' stroke='%23c2341a' stroke-width='1.5'%3E%3Cpath d='M7 28 L16 3 L25 28'/%3E%3Cpath d='M10 17 Q16 22 22 17'/%3E%3Ccircle cx='16' cy='3' r='1.6' fill='%23c2341a'/%3E%3C/g%3E%3C/svg%3E") 16 3, crosshair;
+    }
+
+    body.mode-pencil {
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Cpath d='M4 24 L8 20 L22 6 L24 8 L10 22 Z' fill='%23c2341a' stroke='%2307141c' stroke-width='0.6'/%3E%3Cpath d='M20.2 7.8 L22.2 9.8' stroke='%2307141c'/%3E%3C/svg%3E") 2 26, text;
+    }
+
+    .desk {
+      height: 100%;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      padding: 14px 18px 10px;
+      gap: 8px;
+    }
+
+    header.plate {
+      display: grid;
+      grid-template-columns: minmax(220px, 1.1fr) minmax(280px, 1.2fr) minmax(180px, 0.9fr);
+      align-items: end;
+      gap: 16px;
+      border-bottom: 1px solid var(--copper);
+      padding: 0 4px 10px;
+      letter-spacing: 0.04em;
+    }
+
+    .plate-left h1 {
+      font-size: 1.85rem;
+      font-weight: 500;
+      color: var(--cream);
+      line-height: 1;
+    }
+
+    .plate-left h1 span {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--copper-bright);
+    }
+
+    .plate-left p {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      color: var(--copper-bright);
+      margin-top: 4px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .plate-center {
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      color: var(--verdigris);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .plate-center strong {
+      display: block;
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 0.92rem;
+      color: var(--vellum);
+      letter-spacing: 0.02em;
+      text-transform: none;
+      margin-bottom: 4px;
+    }
+
+    .plate-right {
+      text-align: right;
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      color: var(--copper-bright);
+      letter-spacing: 0.12em;
+    }
+
+    .plate-right .folio-no {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      color: var(--vermilion);
+      letter-spacing: 0.08em;
+    }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: 148px 1fr 168px;
+      gap: 10px;
+      min-height: 0;
+    }
+
+    .rack, .instruments {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-height: 0;
+    }
+
+    .drawer {
+      border: 1px solid var(--copper);
+      background: linear-gradient(180deg, #122836 0%, #0b1c26 100%);
+      padding: 8px;
+    }
+
+    .drawer h2 {
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      color: var(--copper-bright);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .folio-btn {
+      width: 100%;
+      text-align: left;
+      background: transparent;
+      border: 0;
+      border-left: 3px solid transparent;
+      color: var(--vellum-dark);
+      font-family: var(--serif);
+      font-size: 0.78rem;
+      padding: 7px 6px;
+      cursor: inherit;
+    }
+
+    .folio-btn small {
+      display: block;
+      font-family: var(--mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.14em;
+      color: var(--verdigris);
+      text-transform: uppercase;
+    }
+
+    .folio-btn.active {
+      border-left-color: var(--vermilion);
+      color: var(--cream);
+      background: rgba(194, 52, 26, 0.08);
+    }
+
+    .folio-btn:focus-visible {
+      outline: 1px solid var(--vermilion);
+      outline-offset: 2px;
+    }
+
+    .tool-btn {
+      width: 100%;
+      background: var(--ink);
+      border: 1px solid var(--copper);
+      color: var(--cream);
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 8px 6px;
+      cursor: inherit;
+    }
+
+    .tool-btn:hover, .tool-btn.active {
+      border-color: var(--vermilion);
+      color: var(--vermilion);
+    }
+
+    .tool-btn:focus-visible {
+      outline: 1px solid var(--vermilion);
+    }
+
+    .hint {
+      font-family: var(--mono);
+      font-size: 0.52rem;
+      color: var(--verdigris);
+      letter-spacing: 0.08em;
+      line-height: 1.45;
+    }
+
+    .chart-well {
+      position: relative;
+      min-height: 0;
+      perspective: 1400px;
+    }
+
+    .vellum-sheet {
+      position: relative;
+      height: 100%;
+      background:
+        radial-gradient(ellipse at 8% 92%, rgba(107, 58, 34, 0.38) 0 48px, transparent 70px),
+        radial-gradient(ellipse at 92% 8%, rgba(61, 107, 90, 0.08) 0 80px, transparent 120px),
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(90, 70, 40, 0.06) 2px, rgba(90, 70, 40, 0.06) 3px),
+        repeating-linear-gradient(90deg, transparent, transparent 4px, rgba(70, 55, 30, 0.05) 4px, rgba(70, 55, 30, 0.05) 5px),
+        linear-gradient(165deg, #f8eed6 0%, #e8d7b0 48%, #d2be92 100%);
+      border: 12px solid #14100b;
+      box-shadow:
+        0 0 0 1px var(--copper-bright),
+        14px 18px 44px rgba(0, 0, 0, 0.55),
+        inset 0 0 90px rgba(80, 50, 20, 0.14);
+      transform-origin: left center;
+      animation: unroll 1.15s cubic-bezier(0.18, 0.7, 0.22, 1) both;
+      overflow: hidden;
+    }
+
+    .vellum-sheet.re-unroll {
+      animation: none;
+    }
+
+    .vellum-sheet.re-unroll.go {
+      animation: unroll 0.85s cubic-bezier(0.18, 0.7, 0.22, 1) both;
+    }
+
+    @keyframes unroll {
+      from {
+        transform: rotateY(-72deg) scaleX(0.16);
+        filter: brightness(0.65);
+      }
+      to {
+        transform: none;
+        filter: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .vellum-sheet, .wreck, .buoy-halo { animation: none !important; }
+    }
+
+    .coffee-ring {
+      position: absolute;
+      left: 14px;
+      bottom: 16px;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      border: 9px solid rgba(107, 58, 34, 0.42);
+      box-shadow: inset 0 0 0 4px rgba(107, 58, 34, 0.18), 0 0 0 1px rgba(107, 58, 34, 0.12);
+      pointer-events: none;
+      transform: rotate(-14deg);
+      z-index: 5;
+    }
+
+    .coffee-ring::after {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border-radius: 50%;
+      border: 3px solid rgba(107, 58, 34, 0.14);
+    }
+
+    .chart-svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .fix-readout {
+      position: absolute;
+      right: 14px;
+      bottom: 10px;
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      color: var(--lead);
+      letter-spacing: 0.1em;
+      z-index: 4;
+    }
+
+    .inset-card {
+      position: absolute;
+      width: 280px;
+      background: #f7edd6;
+      border: 1px solid var(--soot);
+      box-shadow: 6px 8px 0 rgba(7, 20, 28, 0.18);
+      padding: 12px 14px 14px;
+      z-index: 8;
+      color: var(--soot);
+      display: none;
+    }
+
+    .inset-card.open { display: block; }
+
+    .inset-card.wax::before {
+      content: "FLAG";
+      position: absolute;
+      top: -11px;
+      right: 14px;
+      background: var(--vermilion);
+      color: var(--cream);
+      font-family: var(--mono);
+      font-size: 0.52rem;
+      letter-spacing: 0.2em;
+      padding: 3px 8px;
+    }
+
+    .inset-card h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      line-height: 1.15;
+      padding-right: 36px;
+    }
+
+    .inset-card .meta {
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.08em;
+      color: var(--coffee);
+      margin: 4px 0 8px;
+    }
+
+    .inset-card dl {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 3px 8px;
+      font-size: 0.72rem;
+    }
+
+    .inset-card dt {
+      font-family: var(--mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--copper);
+      padding-top: 2px;
+    }
+
+    .inset-card .weather {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--copper);
+      font-style: italic;
+      font-size: 0.78rem;
+    }
+
+    .close-x {
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      border: 0;
+      background: none;
+      font-family: var(--mono);
+      color: var(--vermilion);
+      cursor: inherit;
+      font-size: 0.7rem;
+    }
+
+    .radio-compose {
+      position: absolute;
+      width: 260px;
+      background: #f3e6c4;
+      border: 1px dashed var(--vermilion-deep);
+      padding: 10px;
+      z-index: 9;
+      display: none;
+      color: var(--soot);
+    }
+
+    .radio-compose.open { display: block; }
+
+    .radio-compose label {
+      font-family: var(--mono);
+      font-size: 0.52rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--coffee);
+    }
+
+    .radio-compose textarea, .radio-compose select {
+      width: 100%;
+      margin: 4px 0 8px;
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid var(--soot);
+      font-family: var(--serif);
+      font-size: 0.82rem;
+      color: var(--soot);
+      resize: none;
+    }
+
+    .radio-compose select { font-family: var(--mono); font-size: 0.7rem; }
+
+    .staff {
+      height: 210px;
+      position: relative;
+      border: 1px solid var(--copper);
+      background: #0a1820;
+      overflow: hidden;
+    }
+
+    .staff svg { width: 100%; height: 100%; }
+
+    .spark {
+      height: 132px;
+      border: 1px solid var(--copper);
+      background: #0a1820;
+      padding: 6px 6px 4px;
+    }
+
+    .spark h2 { margin-bottom: 2px; }
+
+    .spark svg { width: 100%; height: 92px; display: block; }
+
+    .spark .delta {
+      font-family: var(--mono);
+      font-size: 0.55rem;
+      color: var(--vermilion);
+      letter-spacing: 0.1em;
+    }
+
+    .keel {
+      border-top: 1px solid var(--copper);
+      padding-top: 6px;
+      min-height: 92px;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 10px;
+    }
+
+    .keel h2 {
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--copper-bright);
+    }
+
+    .notices {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    .notice {
+      min-width: 240px;
+      max-width: 300px;
+      font-size: 0.74rem;
+      color: var(--vellum);
+      border-left: 2px solid var(--vermilion);
+      padding-left: 8px;
+    }
+
+    .notice time {
+      display: block;
+      font-family: var(--mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.14em;
+      color: var(--vermilion);
+      margin-bottom: 3px;
+    }
+
+    .notice.correction {
+      border-left-color: var(--verdigris);
+    }
+
+    .notice.correction time { color: var(--verdigris); }
+
+    .toast {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--vellum);
+      color: var(--soot);
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      padding: 8px 14px;
+      border: 1px solid var(--vermilion);
+      z-index: 20;
+      display: none;
+    }
+
+    .toast.show { display: block; }
+
+    .harbor:focus { outline: none; }
+    .harbor:focus .mark-ring {
+      stroke: var(--vermilion);
+      stroke-width: 2.2;
+    }
+    .wreck-bob {
+      animation: swell 2.8s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    .buoy-halo { animation: halo 2.8s ease-in-out infinite; }
+    @keyframes swell {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+    @keyframes halo {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.85; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="desk">
+    <header class="plate">
+      <div class="plate-left">
+        <h1>LOADSHED <span>ATLAS</span></h1>
+        <p>Hydrographic Office of Compute · Schematic survey, not a legal plat</p>
+      </div>
+      <div class="plate-center">
+        <strong>“Democracy is the referee for social impact.”</strong>
+        OECD.AI · LongtermWiki · In the spirit of Jigsaw sensemaking
+      </div>
+      <div class="plate-right">
+        <div class="folio-no" id="folioNo">FOLIO I</div>
+        <div id="folioCoords">39°05′N  77°29′W</div>
+        <div>SOUNDINGS MGD · TONNAGE MW FIRM</div>
+      </div>
+    </header>
+
+    <div class="workspace">
+      <aside class="rack">
+        <div class="drawer">
+          <h2>Chart rack · 1–4</h2>
+          <button class="folio-btn active" data-folio="loudoun" id="btn-loudoun">
+            I · Loudoun
+            <small>Potomac approaches</small>
+          </button>
+          <button class="folio-btn" data-folio="morrow" id="btn-morrow">
+            II · Morrow
+            <small>Boardman / Columbia</small>
+          </button>
+          <button class="folio-btn" data-folio="grant" id="btn-grant">
+            III · Grant
+            <small>Quincy canals</small>
+          </button>
+          <button class="folio-btn" data-folio="dfw" id="btn-dfw">
+            IV · DFW
+            <small>Trinity inland</small>
+          </button>
+        </div>
+        <button class="tool-btn" id="btnFix">Take a fix</button>
+        <button class="tool-btn" id="btnMic">Key the mic</button>
+        <button class="tool-btn" id="btnOverlay">Vellum overlay</button>
+        <button class="tool-btn" id="btnFile">File chart correction</button>
+        <p class="hint">Tab the harbor marks. [ ] or 1–4 changes folio. Esc closes a plate. Overlay: drag setback, pond, tap.</p>
+      </aside>
+
+      <div class="chart-well">
+        <div class="vellum-sheet" id="sheet">
+          <div class="coffee-ring" aria-hidden="true"></div>
+          <svg class="chart-svg" id="chart" viewBox="0 0 900 620" role="img" aria-label="Hydrographic chart of compute hinterland"></svg>
+          <div class="fix-readout" id="readout">FIX — —′</div>
+          <article class="inset-card" id="sounding"></article>
+          <form class="radio-compose" id="compose">
+            <button type="button" class="close-x" data-close="compose">close</button>
+            <label>Transmission · topic</label>
+            <select id="topic">
+              <option value="power">POWER</option>
+              <option value="water">WATER</option>
+              <option value="schools">SCHOOLS</option>
+              <option value="tax">LEVY / TAX</option>
+            </select>
+            <label>Bearing</label>
+            <select id="stance">
+              <option value="-1">AGAINST THE HARBOR</option>
+              <option value="1">WITH THE HARBOR</option>
+            </select>
+            <label>Plain language — 160 characters</label>
+            <textarea id="tx" rows="3" maxlength="160" placeholder="QSL from the parish…"></textarea>
+            <button type="submit" class="tool-btn">Transmit</button>
+          </form>
+        </div>
+      </div>
+
+      <aside class="instruments">
+        <div class="drawer staff">
+          <h2>Tide of agreement</h2>
+          <svg id="tide" viewBox="0 0 160 190" aria-label="Tidal staff of parish concordance"></svg>
+        </div>
+        <div class="spark">
+          <h2>Load vs municipal baseline</h2>
+          <svg id="spark" viewBox="0 0 156 92" aria-label="Ten-year load sparkline"></svg>
+          <div class="delta" id="sparkDelta"></div>
+        </div>
+        <p class="hint" id="legend">● Harbor (MW) &nbsp; ✕ Wreck / FLAG &nbsp; ▽ Radio &nbsp; ≡ Lane</p>
+      </aside>
+    </div>
+
+    <footer class="keel">
+      <div>
+        <h2>Admiralty notices</h2>
+        <p class="hint" style="margin-top:6px">LLM ingest staged as weather to mariners. Dated. Terse. Local.</p>
+      </div>
+      <div class="notices" id="notices"></div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const ROMAN = { loudoun: "I", morrow: "II", grant: "III", dfw: "IV" };
+      const PREFIX = { loudoun: "W4L", morrow: "W7M", grant: "W7G", dfw: "W5D" };
+      const STORE = "loadshed-atlas-v1";
+
+      const FOLIOS = {
+        loudoun: {
+          id: "loudoun",
+          title: "Loudoun County",
+          sheet: "Potomac Approaches — Data Center Alley",
+          lat: 39.083, lon: -77.483,
+          ba: "Dominion / PJM",
+          load: [820, 910, 1080, 1420, 1880, 2410, 2920, 3410, 3880, 4290, 4710],
+          water: [
+            "M 80 90 C 200 40, 420 70, 640 48 C 760 36, 820 90, 860 160 L 870 300 C 880 420, 820 520, 700 580 L 200 560 C 90 500, 50 320, 80 90 Z",
+          ],
+          river: "M 700 40 C 780 90, 840 170, 858 280 C 872 400, 820 520, 690 590",
+          creek: "M 240 200 C 300 260, 280 340, 360 400 C 420 450, 500 480, 580 500",
+          contours: [
+            "M 160 180 C 220 160, 280 190, 300 240 C 250 250, 180 220, 160 180",
+            "M 480 220 C 560 200, 620 250, 600 310 C 530 300, 470 260, 480 220",
+            "M 200 420 C 280 400, 340 450, 300 500 C 230 490, 180 450, 200 420",
+          ],
+          lanes: [
+            [[180, 140], [320, 210], [410, 250], [520, 270], [680, 220]],
+            [[320, 210], [340, 340], [420, 430]],
+            [[520, 270], [560, 380], [620, 460]],
+          ],
+          substations: [
+            { name: "Pleasant View", x: 180, y: 140 },
+            { name: "Beaumeade", x: 410, y: 250 },
+            { name: "Dulles Rdstd.", x: 680, y: 220 },
+          ],
+          depths: [
+            [150, 260, "0.4"], [260, 150, "1.1"], [500, 160, "0.8"],
+            [610, 340, "2.4"], [430, 480, "0.6"], [720, 400, "4.2"],
+          ],
+          places: [
+            { t: "ASHBURN ROADS", x: 340, y: 300, r: -8 },
+            { t: "STERLING REACH", x: 560, y: 390, r: 6 },
+            { t: "POTOMAC", x: 790, y: 240, r: 72 },
+          ],
+          harbors: [
+            { id: "aws", name: "AWS US-EAST-1", x: 360, y: 270, lat: 39.043, lon: -77.488, mw: 980, water: 4.2, aquifer: "Potomac / Loudoun Water — Broad Run", schools: "Loudoun County Public Schools", tax: "M&T + BPOL machinery exemption; Alley still on the roll", weather: "GALE — 14 campuses in the firm-transmission queue", weatherNote: "Dominion CPCN for Pleasant View–Mosby 500 kV; queue binding." },
+            { id: "msft", name: "Microsoft ST1 Sterling", x: 540, y: 360, lat: 39.006, lon: -77.429, mw: 640, water: 2.4, aquifer: "Potomac alluvium · Goose Creek intake", schools: "LCPS — Sterling / Forest Grove", tax: "Data-center M&T abatement, renewed 2024", weather: "MODERATE — school seats lag the levy", weatherNote: "LCPS short ~1,200 seats west of Route 28." },
+            { id: "eqix", name: "Equinix Ashburn", x: 300, y: 330, lat: 39.016, lon: -77.459, mw: 420, water: 1.1, aquifer: "Potomac", schools: "LCPS", tax: "Standard M&T schedule", weather: "FAIR", weatherNote: "Campus on existing Beaumeade feed." },
+            { id: "dlr", name: "Digital Realty IAD", x: 430, y: 210, lat: 39.072, lon: -77.472, mw: 310, water: 0.8, aquifer: "Potomac", schools: "LCPS", tax: "M&T", weather: "FAIR", weatherNote: "No new CPCN this quarter." },
+            { id: "qts", name: "QTS Ashburn", x: 250, y: 400, lat: 38.992, lon: -77.501, mw: 180, water: 0.5, aquifer: "Potomac", schools: "LCPS", tax: "M&T", weather: "FAIR", weatherNote: "Quiet docket." },
+            { id: "cyrus", name: "CyrusOne Northern VA", x: 620, y: 430, lat: 38.994, lon: -77.401, mw: 220, water: 0.6, aquifer: "Potomac", schools: "LCPS", tax: "M&T", weather: "MODERATE", weatherNote: "Dual-feed pending Dulles tap." },
+          ],
+          notices: [
+            { date: "12 SEP 2026", text: "Dominion files CPCN for 500 kV Pleasant View–Mosby rebuild. Fourteen campuses await firm transmission." },
+            { date: "03 SEP 2026", text: "Loudoun Water: Potomac withdrawals +18% YoY. Broad Run WRF at 91% rated capacity." },
+            { date: "27 AUG 2026", text: "PJM 2026/27 capacity auction clears $269.92/MW-day. Alley cited as the binding constraint." },
+            { date: "14 AUG 2026", text: "LCPS board: M&T receipts up; housing lags. 1,200 seats short west of Route 28." },
+          ],
+          radio: [
+            { call: "W4L-ASH-2", x: 390, y: 300, lat: 39.038, lon: -77.470, topic: "schools", stance: -1, text: "Buses queue on Waxpool while the campus gets a second feeder. Seats, not servers." },
+            { call: "W4L-PLN-1", x: 200, y: 180, lat: 39.110, lon: -77.540, topic: "tax", stance: 1, text: "Levy would be a hole without M&T. Flag the wrecks; do not scuttle the roll." },
+            { call: "W4L-WEL-4", x: 500, y: 470, lat: 38.980, lon: -77.450, topic: "water", stance: -1, text: "Domestic well off Farmwell dropped six feet since June. Shoaling is not a metaphor." },
+            { call: "W4L-WRK-9", x: 670, y: 250, lat: 39.050, lon: -77.390, topic: "power", stance: 1, text: "Night shift at ST1. The lane is real. Build the 500 kV or the lights flicker in Sterling." },
+            { call: "W4L-TCH-3", x: 280, y: 470, lat: 38.975, lon: -77.510, topic: "schools", stance: -1, text: "I teach at Forest Grove. Portable classrooms, permanent substations." },
+          ],
+        },
+        morrow: {
+          id: "morrow",
+          title: "Morrow County / Boardman",
+          sheet: "Columbia Reach — Port of Morrow",
+          lat: 45.840, lon: -119.700,
+          ba: "UEC / BPA",
+          load: [190, 205, 270, 410, 670, 880, 1090, 1270, 1440, 1610, 1790],
+          water: [
+            "M 40 70 C 180 20, 400 80, 620 30 C 760 0, 860 70, 890 130 L 890 210 C 720 170, 400 240, 40 190 Z",
+            "M 60 80 L 60 560 L 860 580 L 860 220 C 700 180, 400 250, 60 200 Z",
+          ],
+          river: "M 20 120 C 200 60, 450 140, 700 70 C 800 40, 900 110, 910 160",
+          creek: "M 120 300 C 200 280, 240 360, 360 380 C 500 400, 620 360, 740 400",
+          contours: [
+            "M 180 320 C 260 300, 300 360, 240 400 C 180 390, 150 340, 180 320",
+            "M 520 300 C 610 280, 660 340, 600 380 C 530 360, 500 320, 520 300",
+          ],
+          lanes: [
+            [[140, 200], [300, 260], [480, 240], [700, 190]],
+            [[300, 260], [320, 380], [400, 460]],
+            [[480, 240], [560, 360], [640, 470]],
+          ],
+          substations: [
+            { name: "Boardman 230", x: 300, y: 260 },
+            { name: "Umatilla N.", x: 700, y: 190 },
+            { name: "Port tap", x: 480, y: 240 },
+          ],
+          depths: [
+            [200, 160, "8.1"], [420, 180, "5.4"], [600, 280, "1.2"],
+            [260, 420, "0.7"], [720, 360, "3.0"],
+          ],
+          places: [
+            { t: "COLUMBIA R.", x: 480, y: 100, r: 0 },
+            { t: "BOARDMAN HBR", x: 320, y: 310, r: -4 },
+            { t: "PORT OF MORROW", x: 560, y: 280, r: 5 },
+          ],
+          harbors: [
+            { id: "amz-b", name: "Amazon Boardman", x: 340, y: 280, lat: 45.840, lon: -119.745, mw: 720, water: 8.1, aquifer: "Columbia River right · basalt GW", schools: "Morrow School District", tax: "Enterprise-zone abatement; $41M off the local levy", weather: "GALE — Phase IV wants 180 MGD", weatherNote: "Irrigators filed against the Columbia right." },
+            { id: "amz-u", name: "Amazon Umatilla", x: 620, y: 250, lat: 45.917, lon: -119.420, mw: 510, water: 5.4, aquifer: "Umatilla Basin basalt", schools: "Morrow / Umatilla SD", tax: "EZ abatement", weather: "GALE — N-1 on Boardman–Umatilla 230 kV", weatherNote: "UEC/BPA network upgrade still in queue." },
+            { id: "pom", name: "Port of Morrow campus", x: 470, y: 320, lat: 45.838, lon: -119.700, mw: 190, water: 1.2, aquifer: "Columbia", schools: "Morrow SD", tax: "Port district", weather: "MODERATE", weatherNote: "Staff report only; no new right." },
+            { id: "uec", name: "UEC industrial park", x: 250, y: 400, lat: 45.790, lon: -119.800, mw: 110, water: 0.4, aquifer: "Basalt wells", schools: "Morrow SD", tax: "Standard", weather: "FAIR", weatherNote: "Quiet." },
+          ],
+          notices: [
+            { date: "08 SEP 2026", text: "Port of Morrow: Amazon Phase IV seeks 180 MGD Columbia right. Irrigators protest the hearing." },
+            { date: "22 AUG 2026", text: "Umatilla Electric files BPA network upgrade. Boardman–Umatilla 230 kV overloads on N-1." },
+            { date: "01 AUG 2026", text: "CTUIR testimony: basalt aquifer decline in 11 observation wells. Not a model. A well log." },
+            { date: "19 JUL 2026", text: "Morrow SD enrollment flat. Enterprise-zone roll-off still $41M against the local levy." },
+          ],
+          radio: [
+            { call: "W7M-IRR-1", x: 220, y: 340, lat: 45.800, lon: -119.820, topic: "water", stance: -1, text: "We held the Columbia right for potatoes. 180 MGD is a new river." },
+            { call: "W7M-PRT-6", x: 500, y: 210, lat: 45.860, lon: -119.680, topic: "tax", stance: 1, text: "Port jobs are the only reason Boardman still has a grocer. Keep the zone." },
+            { call: "W7M-CTU-3", x: 740, y: 300, lat: 45.900, lon: -119.350, topic: "water", stance: -1, text: "Eleven wells. The basalt does not care about your campus brochure." },
+            { call: "W7M-LIN-8", x: 380, y: 450, lat: 45.770, lon: -119.720, topic: "power", stance: 1, text: "The 230 kV is the wreck. Tap it or the rest is talk." },
+          ],
+        },
+        grant: {
+          id: "grant",
+          title: "Grant County",
+          sheet: "Quincy Canals — Columbia Basin",
+          lat: 47.234, lon: -119.852,
+          ba: "Grant PUD / Priest Rapids",
+          load: [390, 425, 470, 610, 870, 1090, 1340, 1490, 1670, 1810, 1970],
+          water: [
+            "M 50 50 L 50 580 L 860 590 L 860 60 Z",
+          ],
+          river: "M 40 40 C 80 200, 60 400, 90 600",
+          creek: "",
+          canals: [
+            [[140, 80], [820, 90]],
+            [[140, 160], [820, 175]],
+            [[140, 250], [820, 260]],
+            [[140, 340], [820, 355]],
+            [[140, 430], [820, 440]],
+            [[140, 510], [820, 525]],
+            [[140, 80], [150, 525]],
+            [[280, 80], [300, 525]],
+            [[430, 80], [450, 530]],
+            [[580, 85], [600, 535]],
+            [[720, 88], [740, 538]],
+          ],
+          contours: [
+            "M 200 200 C 260 180, 300 230, 250 270 C 200 250, 180 220, 200 200",
+          ],
+          lanes: [
+            [[120, 300], [280, 280], [450, 300], [620, 270], [780, 290]],
+            [[280, 280], [300, 400], [360, 500]],
+          ],
+          substations: [
+            { name: "Quincy 230", x: 280, y: 280 },
+            { name: "Priest slice", x: 120, y: 300 },
+            { name: "East Low", x: 620, y: 270 },
+          ],
+          depths: [
+            [200, 140, "6.2"], [400, 200, "2.1"], [560, 320, "0.4"],
+            [700, 180, "1.8"], [330, 460, "0.3"],
+          ],
+          places: [
+            { t: "QUINCY HARBOR", x: 360, y: 310, r: 0 },
+            { t: "EAST LOW CANAL", x: 620, y: 150, r: 0 },
+            { t: "COLUMBIA", x: 95, y: 240, r: 90 },
+          ],
+          harbors: [
+            { id: "msft-q", name: "Microsoft Quincy", x: 360, y: 270, lat: 47.234, lon: -119.852, mw: 860, water: 6.2, aquifer: "East Low Canal / Columbia Basin Project", schools: "Quincy School District", tax: "Industrial rate rider under PUD fight", weather: "GALE — +240 MW on a fully subscribed slice", weatherNote: "Priest Rapids slice already spoken for." },
+            { id: "sabey", name: "Sabey Intergate.Quincy", x: 520, y: 330, lat: 47.220, lon: -119.800, mw: 400, water: 2.1, aquifer: "Canal return", schools: "Quincy SD", tax: "PUD industrial", weather: "MODERATE — canal temperature", weatherNote: "Reach-17 return +1.4°C in seepage study." },
+            { id: "yahoo", name: "Legacy Quincy hall", x: 250, y: 360, lat: 47.236, lon: -119.890, mw: 140, water: 0.4, aquifer: "Canal", schools: "Quincy SD", tax: "Grandfathered", weather: "FAIR", weatherNote: "No new request." },
+            { id: "intuit", name: "Intuit Quincy", x: 640, y: 390, lat: 47.210, lon: -119.760, mw: 90, water: 0.3, aquifer: "Canal", schools: "Quincy SD", tax: "Standard", weather: "FAIR", weatherNote: "Quiet." },
+          ],
+          notices: [
+            { date: "15 SEP 2026", text: "Grant PUD splits 3–2 on the industrial rate rider. Quincy is 38% of system peak." },
+            { date: "29 AUG 2026", text: "East Low Canal seepage: cooling return raises reach-17 temperature 1.4°C." },
+            { date: "11 AUG 2026", text: "Microsoft files +240 MW. Priest Rapids slice already fully subscribed." },
+            { date: "02 JUL 2026", text: "Quincy Valley irrigators, forty comments: we were here first." },
+          ],
+          radio: [
+            { call: "W7G-IRR-5", x: 200, y: 200, lat: 47.250, lon: -119.920, topic: "water", stance: -1, text: "Canal water grew apples. It does not owe a campus a second sip." },
+            { call: "W7G-PUD-2", x: 140, y: 360, lat: 47.200, lon: -119.950, topic: "power", stance: -1, text: "Residential riders should not float industrial night load. Vote the 3–2 back." },
+            { call: "W7G-WRK-1", x: 400, y: 240, lat: 47.240, lon: -119.840, topic: "tax", stance: 1, text: "I keep the hall cold. Quincy would be a grain town without this harbor." },
+            { call: "W7G-SCH-7", x: 580, y: 460, lat: 47.190, lon: -119.780, topic: "schools", stance: 1, text: "Levy held because the campuses showed up. I will not pretend otherwise." },
+          ],
+        },
+        dfw: {
+          id: "dfw",
+          title: "Dallas–Fort Worth",
+          sheet: "Trinity Inland Survey — North Texas cluster",
+          lat: 32.900, lon: -97.040,
+          ba: "Oncor / ERCOT",
+          load: [580, 600, 625, 670, 715, 880, 1190, 1570, 2090, 2660, 3180],
+          water: [
+            "M 70 80 L 830 70 L 850 540 L 90 560 Z",
+          ],
+          river: "M 450 40 C 430 180, 400 300, 360 600",
+          creek: "M 80 300 C 220 280, 300 340, 450 360 C 600 380, 760 300, 860 320",
+          contours: [
+            "M 200 180 C 280 150, 340 210, 280 250 C 210 240, 180 200, 200 180",
+            "M 600 200 C 680 170, 740 230, 680 280 C 610 260, 580 220, 600 200",
+            "M 500 420 C 580 400, 620 470, 540 500 C 480 480, 470 440, 500 420",
+          ],
+          lanes: [
+            [[180, 220], [320, 250], [480, 240], [680, 220], [800, 260]],
+            [[320, 250], [340, 380], [300, 480]],
+            [[680, 220], [700, 360], [740, 470]],
+          ],
+          substations: [
+            { name: "Allen 138", x: 480, y: 240 },
+            { name: "Oncor N.", x: 180, y: 220 },
+            { name: "FW ETJ tap", x: 740, y: 470 },
+          ],
+          depths: [
+            [240, 160, "2.1"], [520, 180, "2.8"], [700, 300, "1.0"],
+            [400, 400, "0.9"], [160, 400, "0.5"],
+          ],
+          places: [
+            { t: "ELM FORK", x: 400, y: 140, r: 78 },
+            { t: "WEST FORK", x: 220, y: 340, r: -8 },
+            { t: "ALLEN ROADS", x: 520, y: 280, r: 0 },
+            { t: "FORT WORTH ETJ", x: 720, y: 420, r: 6 },
+          ],
+          harbors: [
+            { id: "aligned", name: "Aligned DFW", x: 500, y: 220, lat: 33.104, lon: -96.671, mw: 480, water: 2.8, aquifer: "Trinity Aquifer District", schools: "Allen ISD", tax: "Ch. 403 successor abatement pending", weather: "GALE — drought stage 2 + 620 MW inbound", weatherNote: "ERCOT West/North interface already congested." },
+            { id: "vantage", name: "Vantage / Compass Allen", x: 400, y: 280, lat: 33.103, lon: -96.690, mw: 390, water: 2.1, aquifer: "Trinity", schools: "Allen ISD", tax: "Ch. 313 legacy / 403 ask", weather: "GALE — ISD protest on file", weatherNote: "Board packet: abatement vs. instruction." },
+            { id: "dlr-fw", name: "Digital Realty Fort Worth", x: 700, y: 430, lat: 32.755, lon: -97.331, mw: 210, water: 1.0, aquifer: "Trinity", schools: "Fort Worth ISD", tax: "ETJ 403", weather: "MODERATE — 138 kV tap delayed", weatherNote: "Temporary dual-feed." },
+            { id: "stack", name: "STACK North Texas", x: 280, y: 360, lat: 33.020, lon: -96.840, mw: 180, water: 0.9, aquifer: "Trinity", schools: "Plano ISD", tax: "Standard", weather: "FAIR", weatherNote: "No new docket." },
+          ],
+          notices: [
+            { date: "16 SEP 2026", text: "ERCOT West/North interface congested. Allen–Plano cluster adding 620 MW in 18 months." },
+            { date: "04 SEP 2026", text: "Trinity Aquifer District drought stage 2. Municipal + industrial combined +9%." },
+            { date: "21 AUG 2026", text: "Ch. 403 abatement for 480 MW in Fort Worth ETJ. ISD files protest." },
+            { date: "30 JUL 2026", text: "Oncor 138 kV tap delayed. Two campuses on temporary dual-feed." },
+          ],
+          radio: [
+            { call: "W5D-ISD-4", x: 460, y: 180, lat: 33.120, lon: -96.680, topic: "tax", stance: -1, text: "403 is a quiet theft of the instructional levy. Name it." },
+            { call: "W5D-DRY-2", x: 200, y: 300, lat: 32.980, lon: -97.100, topic: "water", stance: -1, text: "Stage 2 and they want another cooling pond. The Trinity is not a tank." },
+            { call: "W5D-DEV-8", x: 760, y: 360, lat: 32.800, lon: -97.280, topic: "power", stance: 1, text: "ERCOT needs the MWs inside the metro, not West Texas daydreams. Tap Oncor." },
+            { call: "W5D-PAR-1", x: 560, y: 480, lat: 32.860, lon: -96.900, topic: "schools", stance: -1, text: "My kid’s campus is portable. Their campus is a campus." },
+          ],
+        },
+      };
+
+      const YEARS = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
+
+      const state = {
+        folio: "loudoun",
+        mic: false,
+        overlay: false,
+        compose: null,
+        overlays: { loudoun: null, morrow: null, grant: null, dfw: null },
+        extraRadio: { loudoun: [], morrow: [], grant: [], dfw: [] },
+        extraNotices: { loudoun: [], morrow: [], grant: [], dfw: [] },
+      };
+
+      const $ = (id) => document.getElementById(id);
+      const sheet = $("sheet");
+      const svg = $("chart");
+      const sounding = $("sounding");
+      const compose = $("compose");
+      const toast = $("toast");
+
+      function loadStore() {
+        try {
+          const raw = localStorage.getItem(STORE);
+          if (!raw) return;
+          const data = JSON.parse(raw);
+          if (data.radio) state.extraRadio = Object.assign(state.extraRadio, data.radio);
+          if (data.notices) state.extraNotices = Object.assign(state.extraNotices, data.notices);
+          if (data.overlays) state.overlays = Object.assign(state.overlays, data.overlays);
+        } catch (e) { /* empty folio */ }
+      }
+
+      function saveStore() {
+        localStorage.setItem(STORE, JSON.stringify({
+          radio: state.extraRadio,
+          notices: state.extraNotices,
+          overlays: state.overlays,
+        }));
+      }
+
+      function folio() { return FOLIOS[state.folio]; }
+
+      function radioAll() {
+        return folio().radio.concat(state.extraRadio[state.folio] || []);
+      }
+
+      function noticesAll() {
+        return (state.extraNotices[state.folio] || []).concat(folio().notices);
+      }
+
+      function heaviest() {
+        return folio().harbors.slice().sort((a, b) => b.mw - a.mw).slice(0, 2).map((h) => h.id);
+      }
+
+      function fmtLat(lat, lon) {
+        const ns = lat >= 0 ? "N" : "S";
+        const ew = lon >= 0 ? "E" : "W";
+        const al = Math.abs(lat);
+        const ao = Math.abs(lon);
+        const ad = Math.floor(al);
+        const am = Math.round((al - ad) * 60);
+        const od = Math.floor(ao);
+        const om = Math.round((ao - od) * 60);
+        return `${ad}°${String(am).padStart(2, "0")}′${ns}  ${od}°${String(om).padStart(2, "0")}′${ew}`;
+      }
+
+      function toastMsg(msg) {
+        toast.textContent = msg;
+        toast.classList.add("show");
+        clearTimeout(toast._t);
+        toast._t = setTimeout(() => toast.classList.remove("show"), 3200);
+      }
+
+      function defaultOverlay() {
+        const wrecks = heaviest();
+        const a = folio().harbors.find((h) => h.id === wrecks[0]);
+        const sub = folio().substations[1] || folio().substations[0];
+        return {
+          setback: { x: a.x, y: a.y, r: 58 },
+          pond: { x: a.x + 70, y: a.y + 36 },
+          tap: { x1: sub.x, y1: sub.y, x2: a.x + 20, y2: a.y - 30 },
+        };
+      }
+
+      function ensureOverlay() {
+        if (!state.overlays[state.folio]) state.overlays[state.folio] = defaultOverlay();
+        return state.overlays[state.folio];
+      }
+
+      function rhumbLines() {
+        let d = "";
+        const cx = 450, cy = 310;
+        for (let a = 0; a < 360; a += 22.5) {
+          const r = 520;
+          const rad = (a * Math.PI) / 180;
+          d += `M ${cx} ${cy} L ${cx + r * Math.cos(rad)} ${cy + r * Math.sin(rad)} `;
+        }
+        return d;
+      }
+
+      function compassRose() {
+        return `
+          <g transform="translate(790,118)" class="rose">
+            <circle r="54" fill="#f3e6c4" stroke="#c2341a" stroke-width="1.6"/>
+            <circle r="46" fill="none" stroke="#8a6a3d" stroke-width="0.7"/>
+            <circle r="18" fill="#efe4c8" stroke="#c2341a" stroke-width="0.8"/>
+            <path d="M0,-50 L7,2 L0,12 L-7,2 Z" fill="#c2341a"/>
+            <path d="M0,50 L7,-2 L0,-12 L-7,-2 Z" fill="#3d6b5a"/>
+            <path d="M50,0 L-2,7 L-12,0 L-2,-7 Z" fill="#8a6a3d"/>
+            <path d="M-50,0 L2,7 L12,0 L2,-7 Z" fill="#8a6a3d"/>
+            <path d="M0,-50 L3,-8 L0,-2 L-3,-8 Z" fill="#8e1e10"/>
+            <text y="-58" text-anchor="middle" font-family="Fraunces, serif" font-size="13" fill="#c2341a">N</text>
+            <text y="68" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#6b3a22">VERMILION ROSE</text>
+          </g>`;
+      }
+
+      function renderChart() {
+        const f = folio();
+        const wrecks = heaviest();
+        const ov = state.overlay ? ensureOverlay() : null;
+        const radio = radioAll();
+
+        const canalMarks = (f.canals || []).map((c) =>
+          `<path d="M ${c[0][0]} ${c[0][1]} L ${c[1][0]} ${c[1][1]}" fill="none" stroke="#2a5548" stroke-width="1.8" opacity="0.7"/>`
+        ).join("");
+
+        const contours = (f.contours || []).map((p) =>
+          `<path d="${p}" fill="url(#hatch)" stroke="#5a4030" stroke-width="1.1" opacity="0.95"/>`
+        ).join("");
+
+        const lanes = f.lanes.map((pts) => {
+          const d = pts.map((p, i) => (i ? "L" : "M") + p[0] + " " + p[1]).join(" ");
+          return `<path d="${d}" fill="none" stroke="#1a3540" stroke-width="2.8" stroke-dasharray="12 6" opacity="0.85"/>`;
+        }).join("");
+
+        const subs = f.substations.map((s) => `
+          <g transform="translate(${s.x},${s.y})">
+            <rect x="-7" y="-7" width="14" height="14" fill="none" stroke="#8a6a3d" stroke-width="1.2"/>
+            <path d="M-7 0 H7 M0 -7 V7" stroke="#8a6a3d" stroke-width="0.8"/>
+            <text x="10" y="-8" font-family="Fraunces, serif" font-style="italic" font-size="9" fill="#3a3530">${s.name}</text>
+          </g>`).join("");
+
+        const sprinkled = [];
+        for (let i = 0; i < 8; i++) {
+          for (let j = 0; j < 5; j++) {
+            const x = 90 + i * 92 + ((j * 19) % 27);
+            const y = 100 + j * 92 + ((i * 11) % 21);
+            if (f.harbors.some((h) => Math.hypot(h.x - x, h.y - y) < 48)) continue;
+            sprinkled.push([x, y, (0.4 + ((i * 3 + j) % 8) * 0.5).toFixed(1)]);
+          }
+        }
+        const depths = f.depths.concat(sprinkled).map((d) =>
+          `<text x="${d[0]}" y="${d[1]}" font-family="IBM Plex Mono, monospace" font-size="9" fill="#1c4038" opacity="0.72">${d[2]}</text>`
+        ).join("");
+
+        const places = f.places.map((p) =>
+          `<text x="${p.x}" y="${p.y}" transform="rotate(${p.r} ${p.x} ${p.y})" font-family="Fraunces, serif" font-style="italic" font-size="14" fill="#3a2418" letter-spacing="2.4">${p.t}</text>`
+        ).join("");
+
+        const harbors = f.harbors.map((h) => {
+          const wreck = wrecks.includes(h.id);
+          return `
+            <g class="harbor" tabindex="0" role="button"
+               data-id="${h.id}" transform="translate(${h.x},${h.y})"
+               aria-label="${wreck ? "Wreck buoy" : "Harbor"} ${h.name}, ${h.mw} megawatts">
+              <g class="${wreck ? "wreck-bob" : ""}">
+                ${wreck ? `<circle class="buoy-halo" r="22" fill="#c2341a" fill-opacity="0.08" stroke="#c2341a" stroke-width="1.4"/>` : ""}
+                ${wreck
+                  ? `<path d="M-10 -10 L10 10 M10 -10 L-10 10" stroke="#c2341a" stroke-width="3"/>
+                     <circle r="4" fill="#c2341a"/>`
+                  : `<circle class="mark-ring" r="12" fill="#f8eed6" stroke="#07141c" stroke-width="1.8"/>
+                     <path d="M0 -9 L6 6 L-6 6 Z" fill="#07141c"/>`}
+              </g>
+              <text x="16" y="-12" font-family="Fraunces, serif" font-size="12" fill="#1c1814">${h.name}</text>
+              <text x="16" y="4" font-family="IBM Plex Mono, monospace" font-size="9" fill="#8e1e10">${h.mw} MW · ${h.water} MGD</text>
+            </g>`;
+        }).join("");
+
+        const pins = radio.map((r, i) => `
+          <g class="radio-pin" data-r="${i}" transform="translate(${r.x},${r.y})" tabindex="0" role="button"
+             aria-label="Radio ${r.call}">
+            <circle r="12" fill="#f3e6c4" fill-opacity="0.01"/>
+            <path d="M0 4 L-6 -16 L0 -11 L6 -16 Z" fill="#c2341a"/>
+            <circle cy="-1" r="2.2" fill="#c2341a"/>
+            <text x="8" y="-14" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8e1e10">${r.call}</text>
+          </g>`).join("");
+
+        let overlayInk = "";
+        if (ov) {
+          overlayInk = `
+            <g class="vellum-layer" opacity="0.95">
+              <rect x="40" y="30" width="820" height="560" fill="#f7edd6" opacity="0.28"/>
+              <circle class="ov-setback" cx="${ov.setback.x}" cy="${ov.setback.y}" r="${ov.setback.r}"
+                      fill="#c2341a" fill-opacity="0.04" stroke="#c2341a" stroke-width="1.6" stroke-dasharray="5 4"/>
+              <text class="ov-setback-label" x="${ov.setback.x}" y="${ov.setback.y - ov.setback.r - 8}" text-anchor="middle"
+                    font-family="IBM Plex Mono, monospace" font-size="8" fill="#c2341a">SETBACK</text>
+              <ellipse class="ov-pond" cx="${ov.pond.x}" cy="${ov.pond.y}" rx="28" ry="16"
+                       fill="#3d6b5a" opacity="0.35" stroke="#1c4038" stroke-width="1.2"/>
+              <text class="ov-pond-label" x="${ov.pond.x}" y="${ov.pond.y + 3}" text-anchor="middle"
+                    font-family="Fraunces, serif" font-style="italic" font-size="8" fill="#07141c">cooling pond</text>
+              <path class="ov-tap" d="M ${ov.tap.x1} ${ov.tap.y1} L ${ov.tap.x2} ${ov.tap.y2}"
+                    stroke="#8a6a3d" stroke-width="2.4"/>
+              <circle class="ov-tap-end" cx="${ov.tap.x2}" cy="${ov.tap.y2}" r="10" fill="#8a6a3d"/>
+              <text x="${ov.tap.x2 + 8}" y="${ov.tap.y2 - 8}" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8a6a3d">138 kV TAP</text>
+            </g>`;
+        }
+
+        svg.innerHTML = `
+          <defs>
+            <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+              <path d="M0 0 L0 6" stroke="#5a4030" stroke-width="0.9" opacity="0.55"/>
+            </pattern>
+            <pattern id="waterHatch" width="8" height="8" patternUnits="userSpaceOnUse">
+              <path d="M0 6 Q2 4 4 6 T8 6" fill="none" stroke="#1a3540" stroke-width="0.8" opacity="0.55"/>
+            </pattern>
+            <filter id="wobble">
+              <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" result="n"/>
+              <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4"/>
+            </filter>
+            <style></style>
+          </defs>
+          <rect x="24" y="16" width="852" height="588" fill="#e4d3ab"/>
+          <rect x="28" y="20" width="844" height="580" fill="none" stroke="#1c1814" stroke-width="2"/>
+          <rect x="34" y="26" width="832" height="568" fill="none" stroke="#8a6a3d" stroke-width="0.7"/>
+          ${[0,1,2,3,4,5,6,7,8,9,10].map((i) => {
+            const x = 34 + i * 83.2;
+            const y = 26 + i * 56.8;
+            return `<path d="M${x} 20 V26 M${x} 594 V600 M28 ${y} H34 M868 ${y} H876" stroke="#1c1814" stroke-width="1"/>`;
+          }).join("")}
+          <path d="${rhumbLines()}" fill="none" stroke="#8a6a3d" stroke-width="0.55" opacity="0.45"/>
+          <path d="${({
+            loudoun: "M 660 20 L 880 20 L 880 600 L 690 600 C 860 430, 850 150, 660 20 Z",
+            morrow: "M 20 20 L 880 20 L 880 210 C 640 150, 320 230, 20 180 Z",
+            grant: "M 20 20 L 150 20 L 160 600 L 20 600 Z",
+            dfw: "M 390 20 C 370 200, 340 400, 300 600 L 500 600 C 530 400, 540 200, 520 20 Z",
+          })[f.id]}" fill="#6d8b82" opacity="0.42"/>
+          <path d="${({
+            loudoun: "M 660 20 L 880 20 L 880 600 L 690 600 C 860 430, 850 150, 660 20 Z",
+            morrow: "M 20 20 L 880 20 L 880 210 C 640 150, 320 230, 20 180 Z",
+            grant: "M 20 20 L 150 20 L 160 600 L 20 600 Z",
+            dfw: "M 390 20 C 370 200, 340 400, 300 600 L 500 600 C 530 400, 540 200, 520 20 Z",
+          })[f.id]}" fill="url(#waterHatch)" opacity="0.55"/>
+          ${f.water.map((p, i) => i === 0
+            ? `<path d="${p}" fill="#c9b88a" stroke="#5a4030" stroke-width="1.1" filter="url(#wobble)"/>
+               <path d="${p}" fill="url(#hatch)" opacity="0.35"/>`
+            : `<path d="${p}" fill="#7f9a90" opacity="0.55"/>`).join("")}
+          ${f.river ? `<path d="${f.river}" fill="none" stroke="#3d6b5a" stroke-width="16" opacity="0.28" filter="url(#wobble)"/>
+                       <path d="${f.river}" fill="none" stroke="#1a3540" stroke-width="5" opacity="0.85"/>
+                       <path d="${f.river}" fill="none" stroke="#7f9a90" stroke-width="1.6" opacity="0.9" stroke-dasharray="8 10"/>` : ""}
+          ${f.creek ? `<path d="${f.creek}" fill="none" stroke="#2a4a58" stroke-width="3.2" opacity="0.7"/>` : ""}
+          ${canalMarks}
+          ${contours}
+          ${lanes}
+          ${subs}
+          ${depths}
+          ${places}
+          <rect x="42" y="32" width="268" height="44" fill="#f3e6c4" stroke="#1c1814" stroke-width="1"/>
+          <text x="52" y="50" font-family="Fraunces, serif" font-size="17" fill="#1c1814">${f.title}</text>
+          <text x="52" y="66" font-family="IBM Plex Mono, monospace" font-size="8" fill="#6b3a22" letter-spacing="1.4">${f.sheet.toUpperCase()}</text>
+          ${compassRose()}
+          <g transform="translate(620,568)" stroke="#1c1814" fill="#1c1814">
+            <path d="M0 0 H140" stroke-width="1.6" fill="none"/>
+            <path d="M0 -5 V5 M35 -4 V4 M70 -5 V5 M105 -4 V4 M140 -5 V5" fill="none"/>
+            <text x="0" y="-8" font-family="IBM Plex Mono, monospace" font-size="8">0</text>
+            <text x="64" y="-8" font-family="IBM Plex Mono, monospace" font-size="8">2</text>
+            <text x="128" y="-8" font-family="IBM Plex Mono, monospace" font-size="8">4 NM</text>
+          </g>
+          <g font-family="IBM Plex Mono, monospace" font-size="8" fill="#3a3530">
+            <text x="46" y="586">Soundings in million gal/day · wrecks = two heaviest local loads · schematic hydrography</text>
+          </g>
+          ${harbors}
+          ${pins}
+          ${overlayInk}
+        `;
+
+        svg.querySelectorAll(".harbor").forEach((g) => {
+          g.addEventListener("click", (e) => {
+            e.stopPropagation();
+            openSounding(g.dataset.id);
+          });
+          g.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              openSounding(g.dataset.id);
+            }
+          });
+        });
+
+        svg.querySelectorAll(".radio-pin").forEach((g) => {
+          const open = () => openRadio(radio[+g.dataset.r]);
+          g.addEventListener("click", (e) => { e.stopPropagation(); open(); });
+          g.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              open();
+            }
+          });
+        });
+
+        if (ov) bindOverlayDrag();
+      }
+
+      function svgPoint(evt) {
+        const pt = svg.createSVGPoint();
+        pt.x = evt.clientX;
+        pt.y = evt.clientY;
+        const ctm = svg.getScreenCTM();
+        if (!ctm) return { x: 0, y: 0 };
+        const loc = pt.matrixTransform(ctm.inverse());
+        return { x: loc.x, y: loc.y };
+      }
+
+      let ovDrag = null;
+      svg.addEventListener("pointermove", (e) => {
+        if (!ovDrag || !state.overlay) return;
+        const p = svgPoint(e);
+        const ov = ensureOverlay();
+        if (ovDrag === "setback") {
+          ov.setback.x = p.x; ov.setback.y = p.y;
+          const c = svg.querySelector(".ov-setback");
+          const lab = svg.querySelector(".ov-setback-label");
+          if (c) { c.setAttribute("cx", p.x); c.setAttribute("cy", p.y); }
+          if (lab) { lab.setAttribute("x", p.x); lab.setAttribute("y", p.y - ov.setback.r - 8); }
+        } else if (ovDrag === "pond") {
+          ov.pond.x = p.x; ov.pond.y = p.y;
+          const c = svg.querySelector(".ov-pond");
+          const lab = svg.querySelector(".ov-pond-label");
+          if (c) { c.setAttribute("cx", p.x); c.setAttribute("cy", p.y); }
+          if (lab) { lab.setAttribute("x", p.x); lab.setAttribute("y", p.y + 3); }
+        } else if (ovDrag === "tap") {
+          ov.tap.x2 = p.x; ov.tap.y2 = p.y;
+          const c = svg.querySelector(".ov-tap-end");
+          const line = svg.querySelector(".ov-tap");
+          if (c) { c.setAttribute("cx", p.x); c.setAttribute("cy", p.y); }
+          if (line) line.setAttribute("d", `M ${ov.tap.x1} ${ov.tap.y1} L ${p.x} ${p.y}`);
+        }
+      });
+      svg.addEventListener("pointerup", () => { ovDrag = null; });
+
+      function bindOverlayDrag() {
+        const grab = (sel, kind) => {
+          const el = svg.querySelector(sel);
+          if (!el) return;
+          el.style.cursor = "inherit";
+          el.addEventListener("pointerdown", (e) => {
+            e.stopPropagation();
+            ovDrag = kind;
+          });
+        };
+        grab(".ov-setback", "setback");
+        grab(".ov-pond", "pond");
+        grab(".ov-tap-end", "tap");
+      }
+
+      function openSounding(id) {
+        const h = folio().harbors.find((x) => x.id === id);
+        if (!h) return;
+        const wreck = heaviest().includes(id);
+        sounding.className = "inset-card open" + (wreck ? " wax" : "");
+        sounding.style.left = Math.min(h.x * 0.72 + 40, sheet.clientWidth - 300) + "px";
+        sounding.style.top = Math.max(20, h.y * 0.55 - 20) + "px";
+        sounding.innerHTML = `
+          <button class="close-x" type="button" data-close="sounding">close</button>
+          <h3>${h.name}</h3>
+          <p class="meta">${fmtLat(h.lat, h.lon)} · ${wreck ? "WRECK / HEAVIEST LOCAL LOAD" : "HARBOR MARK"}</p>
+          <dl>
+            <dt>Tonnage</dt><dd>${h.mw} MW firm</dd>
+            <dt>Sounding</dt><dd>${h.water} million gal/day</dd>
+            <dt>Power BA</dt><dd>${folio().ba}</dd>
+            <dt>Aquifer</dt><dd>${h.aquifer}</dd>
+            <dt>Schools</dt><dd>${h.schools}</dd>
+            <dt>Abatement</dt><dd>${h.tax}</dd>
+            <dt>Weather</dt><dd>${h.weather}</dd>
+          </dl>
+          <p class="weather">${h.weatherNote}</p>`;
+        compose.classList.remove("open");
+      }
+
+      function openRadio(r) {
+        sounding.className = "inset-card open";
+        sounding.style.left = Math.min(r.x * 0.7 + 30, sheet.clientWidth - 300) + "px";
+        sounding.style.top = Math.max(16, r.y * 0.5) + "px";
+        sounding.innerHTML = `
+          <button class="close-x" type="button" data-close="sounding">close</button>
+          <h3>Radio ${r.call}</h3>
+          <p class="meta">${fmtLat(r.lat, r.lon)} · ${r.topic.toUpperCase()} · ${r.stance < 0 ? "AGAINST THE HARBOR" : "WITH THE HARBOR"}</p>
+          <p class="weather">${r.text}</p>`;
+      }
+
+      function concordance() {
+        const rows = radioAll();
+        const topics = { power: [], water: [], schools: [], tax: [] };
+        rows.forEach((r) => { (topics[r.topic] || topics.power).push(r.stance); });
+        const all = rows.map((r) => r.stance);
+        const meanAll = all.length ? all.reduce((a, b) => a + b, 0) / all.length : 0;
+        const varAll = all.length ? all.reduce((a, b) => a + (b - meanAll) ** 2, 0) / all.length : 1;
+        const overall = all.length ? 1 - Math.min(1, varAll) : 0.28;
+        const band = {};
+        Object.keys(topics).forEach((k) => {
+          const arr = topics[k];
+          if (!arr.length) { band[k] = { n: 0, mean: 0, consensus: 0, riptide: false }; return; }
+          const mean = arr.reduce((a, b) => a + b, 0) / arr.length;
+          const v = arr.reduce((a, b) => a + (b - mean) ** 2, 0) / arr.length;
+          const consensus = 1 - Math.min(1, v);
+          const split = Math.abs(mean - meanAll) > 0.55;
+          band[k] = { n: arr.length, mean, consensus, riptide: split || consensus < 0.55 };
+        });
+        return { band, overall };
+      }
+
+      function renderTide() {
+        const { band, overall } = concordance();
+        const h = 20 + overall * 140;
+        const yWater = 170 - h;
+        const labels = [
+          ["power", "POWER"],
+          ["water", "WATER"],
+          ["schools", "SCHOOL"],
+          ["tax", "LEVY"],
+        ];
+        const marks = labels.map((pair, i) => {
+          const b = band[pair[0]];
+          const y = 50 + i * 28;
+          const riptide = b.n && b.riptide;
+          return `
+            <text x="78" y="${y}" font-family="IBM Plex Mono, monospace" font-size="7" fill="${riptide ? "#c2341a" : "#c4a36a"}">${pair[1]}</text>
+            <text x="78" y="${y + 9}" font-family="IBM Plex Mono, monospace" font-size="6" fill="#3d6b5a">${b.n ? (riptide ? "RIPTIDE" : "SLACK") : "—"}</text>
+            ${riptide ? `<path d="M18 ${y - 4} L70 ${y + 8} M22 ${y + 8} L66 ${y - 4}" stroke="#c2341a" stroke-width="0.6" opacity="0.55"/>` : ""}`;
+        }).join("");
+
+        $("tide").innerHTML = `
+          <text x="8" y="14" font-family="IBM Plex Mono, monospace" font-size="7" fill="#c4a36a" letter-spacing="1">STAFF</text>
+          <text x="8" y="24" font-family="Fraunces, serif" font-style="italic" font-size="8" fill="#efe4c8">parish concordance</text>
+          <rect x="18" y="36" width="22" height="134" fill="#07141c" stroke="#8a6a3d" stroke-width="1"/>
+          <rect x="19" y="${yWater}" width="20" height="${170 - yWater}" fill="#3d6b5a" opacity="0.85">
+            <animate attributeName="y" dur="0.8s" to="${yWater}" fill="freeze"/>
+          </rect>
+          <line x1="16" y1="${yWater}" x2="44" y2="${yWater}" stroke="#efe4c8" stroke-width="1.4"/>
+          <text x="46" y="${yWater + 3}" font-family="IBM Plex Mono, monospace" font-size="7" fill="#efe4c8">WL ${Math.round(overall * 100)}</text>
+          <text x="8" y="182" font-family="IBM Plex Mono, monospace" font-size="6" fill="#8a6a3d">MHWS = parish agrees</text>
+          ${marks}`;
+      }
+
+      function renderSpark() {
+        const series = folio().load;
+        const base = series[0];
+        const max = Math.max.apply(null, series);
+        const w = 148, h = 78, pad = 8;
+        const pts = series.map((v, i) => {
+          const x = pad + (i / (series.length - 1)) * (w - pad * 2);
+          const y = h - pad - ((v - base * 0.8) / (max - base * 0.8)) * (h - pad * 2);
+          return [x, y, v];
+        });
+        const d = pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ");
+        const baseY = h - pad - ((base - base * 0.8) / (max - base * 0.8)) * (h - pad * 2);
+        const stepAt = pts.reduce((best, p, i) => {
+          if (i === 0) return best;
+          const jump = series[i] / series[i - 1];
+          return jump > best.jump ? { i, jump, p } : best;
+        }, { i: 1, jump: 1, p: pts[1] });
+        const delta = Math.round((series[series.length - 1] / base - 1) * 100);
+        $("spark").innerHTML = `
+          <line x1="8" y1="${baseY}" x2="148" y2="${baseY}" stroke="#8a6a3d" stroke-dasharray="3 3" stroke-width="0.8"/>
+          <text x="8" y="${baseY - 3}" font-family="IBM Plex Mono, monospace" font-size="6" fill="#8a6a3d">2015 BASE ${base} MW</text>
+          <path d="${d}" fill="none" stroke="#c2341a" stroke-width="1.6"/>
+          <circle cx="${stepAt.p[0]}" cy="${stepAt.p[1]}" r="2.4" fill="#c2341a"/>
+          <text x="${Math.min(stepAt.p[0] + 4, 100)}" y="${stepAt.p[1] - 6}" font-family="IBM Plex Mono, monospace" font-size="6" fill="#c2341a">STEP ${YEARS[stepAt.i]}</text>`;
+        $("sparkDelta").textContent = `Δ +${delta}% vs 2015 municipal peak · ${series[series.length - 1]} MW now`;
+      }
+
+      function renderNotices() {
+        $("notices").innerHTML = noticesAll().map((n) => `
+          <article class="notice ${n.correction ? "correction" : ""}">
+            <time>${n.date}${n.correction ? " · CHART CORRECTION" : ""}</time>
+            ${n.text}
+          </article>`).join("");
+      }
+
+      function renderChrome() {
+        const f = folio();
+        $("folioNo").textContent = `FOLIO ${ROMAN[f.id]}`;
+        $("folioCoords").textContent = fmtLat(f.lat, f.lon);
+        document.querySelectorAll(".folio-btn").forEach((b) => {
+          b.classList.toggle("active", b.dataset.folio === f.id);
+        });
+        $("btnOverlay").classList.toggle("active", state.overlay);
+        $("btnMic").classList.toggle("active", state.mic);
+        document.body.classList.toggle("mode-pencil", state.mic || state.overlay);
+      }
+
+      function unroll() {
+        sheet.classList.remove("go");
+        sheet.classList.add("re-unroll");
+        void sheet.offsetWidth;
+        sheet.classList.add("go");
+      }
+
+      function setFolio(id) {
+        if (!FOLIOS[id] || id === state.folio) {
+          if (FOLIOS[id] && id !== state.folio) { /* noop */ }
+        }
+        if (!FOLIOS[id]) return;
+        const changed = state.folio !== id;
+        state.folio = id;
+        state.mic = false;
+        compose.classList.remove("open");
+        sounding.classList.remove("open");
+        renderAll();
+        if (changed) unroll();
+      }
+
+      function renderAll() {
+        renderChrome();
+        renderChart();
+        renderTide();
+        renderSpark();
+        renderNotices();
+      }
+
+      function openCompose(x, y) {
+        state.compose = { x, y };
+        compose.classList.add("open");
+        const rect = sheet.getBoundingClientRect();
+        compose.style.left = Math.min(x / 900 * rect.width + 10, rect.width - 270) + "px";
+        compose.style.top = Math.min(y / 620 * rect.height + 10, rect.height - 200) + "px";
+        $("tx").value = "";
+        $("tx").focus();
+      }
+
+      function callSign() {
+        const letters = "ABCDEFGHJKLMNPQRSTUVWXYZ";
+        let s = "";
+        for (let i = 0; i < 3; i++) s += letters[Math.floor(Math.random() * letters.length)];
+        return `${PREFIX[state.folio]}-${s}-${Math.floor(Math.random() * 9) + 1}`;
+      }
+
+      function ntmNumber() {
+        const all = Object.values(state.extraNotices).reduce((n, a) => n + a.length, 0);
+        return `${all + 1}/26`;
+      }
+
+      function chartLatLon(p) {
+        return {
+          lat: folio().lat + (310 - p.y) * 0.0004,
+          lon: folio().lon + (p.x - 450) * 0.0005,
+        };
+      }
+
+      function updateReadout(p) {
+        const ll = chartLatLon(p);
+        $("readout").textContent = `FIX  X ${p.x.toFixed(0)}  Y ${p.y.toFixed(0)}  ·  ${fmtLat(ll.lat, ll.lon)}`;
+      }
+
+      function haversine(lat1, lon1, lat2, lon2) {
+        const R = 6371;
+        const toR = (d) => (d * Math.PI) / 180;
+        const dLat = toR(lat2 - lat1);
+        const dLon = toR(lon2 - lon1);
+        const a = Math.sin(dLat / 2) ** 2 + Math.cos(toR(lat1)) * Math.cos(toR(lat2)) * Math.sin(dLon / 2) ** 2;
+        return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      }
+
+      function takeFix() {
+        if (!navigator.geolocation) {
+          toastMsg("SEXTANT UNAVAILABLE — pick a folio from the rack");
+          return;
+        }
+        toastMsg("TAKING A FIX…");
+        navigator.geolocation.getCurrentPosition((pos) => {
+          const lat = pos.coords.latitude;
+          const lon = pos.coords.longitude;
+          let best = null;
+          let bestD = Infinity;
+          Object.values(FOLIOS).forEach((f) => {
+            const d = haversine(lat, lon, f.lat, f.lon);
+            if (d < bestD) {
+              bestD = d;
+              best = f;
+            }
+          });
+          if (bestD > 450) {
+            toastMsg(`OPEN WATER — ${Math.round(bestD)} km from ${best.title}. Pick a sheet.`);
+            return;
+          }
+          toastMsg(`FIX SNAPS TO FOLIO ${ROMAN[best.id]} — ${best.title}`);
+          setFolio(best.id);
+        }, () => {
+          toastMsg("FIX DENIED — pick a folio from the rack");
+        });
+      }
+
+      function keyMic() {
+        state.mic = !state.mic;
+        if (state.mic) {
+          state.overlay = false;
+          compose.classList.remove("open");
+          toastMsg("CLICK THE CHART TO SITE YOUR TRANSMISSION");
+        }
+        renderChrome();
+        if (!state.mic) renderChart();
+        else renderChart();
+      }
+
+      function toggleOverlay() {
+        state.overlay = !state.overlay;
+        state.mic = false;
+        compose.classList.remove("open");
+        if (state.overlay) ensureOverlay();
+        renderAll();
+        toastMsg(state.overlay ? "VELLUM SLID — drag setback, pond, tap" : "VELLUM STOWED");
+      }
+
+      function fileCorrection() {
+        if (!state.overlay) {
+          toastMsg("SLIDE THE VELLUM FIRST");
+          return;
+        }
+        const wreck = folio().harbors.find((h) => h.id === heaviest()[0]);
+        const n = ntmNumber();
+        const notice = {
+          date: "19 SEP 2026",
+          correction: true,
+          text: `NtM ${n} — Chart correction, Folio ${ROMAN[state.folio]}. Setback redrawn off ${wreck.name}. Cooling pond sited. Proposed 138 kV tap from the roadstead. Filed by visitor. Not a permit.`,
+        };
+        state.extraNotices[state.folio].unshift(notice);
+        saveStore();
+        renderNotices();
+        toastMsg(`FILED ${n} — other visitors would see this notice`);
+      }
+
+      svg.addEventListener("pointermove", (e) => {
+        if (ovDrag) return;
+        updateReadout(svgPoint(e));
+      });
+
+      svg.addEventListener("click", (e) => {
+        const p = svgPoint(e);
+        updateReadout(p);
+        if (!state.mic) return;
+        if (e.target.closest(".harbor") || e.target.closest(".radio-pin")) return;
+        if (e.target.closest(".ov-setback, .ov-pond, .ov-tap-end")) return;
+        openCompose(p.x, p.y);
+      });
+
+      compose.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (!state.compose) return;
+        const text = $("tx").value.trim();
+        if (!text) return;
+        const topic = $("topic").value;
+        const stance = Number($("stance").value);
+        const call = callSign();
+        const ll = chartLatLon(state.compose);
+        state.extraRadio[state.folio].push({
+          call,
+          x: state.compose.x,
+          y: state.compose.y,
+          lat: ll.lat,
+          lon: ll.lon,
+          topic,
+          stance,
+          text,
+        });
+        saveStore();
+        state.mic = false;
+        state.compose = null;
+        compose.classList.remove("open");
+        renderAll();
+        toastMsg(`TRANSMITTED ${call}`);
+      });
+
+      sheet.addEventListener("click", (e) => {
+        const btn = e.target.closest("[data-close]");
+        if (!btn) return;
+        if (btn.dataset.close === "sounding") sounding.classList.remove("open");
+        if (btn.dataset.close === "compose") {
+          compose.classList.remove("open");
+          state.mic = false;
+          renderChrome();
+        }
+      });
+
+      document.querySelectorAll(".folio-btn").forEach((b) => {
+        b.addEventListener("click", () => setFolio(b.dataset.folio));
+      });
+
+      $("btnFix").addEventListener("click", takeFix);
+      $("btnMic").addEventListener("click", keyMic);
+      $("btnOverlay").addEventListener("click", toggleOverlay);
+      $("btnFile").addEventListener("click", fileCorrection);
+
+      const ORDER = ["loudoun", "morrow", "grant", "dfw"];
+
+      document.addEventListener("keydown", (e) => {
+        if (e.target.matches("textarea, input, select")) return;
+        if (e.key >= "1" && e.key <= "4") {
+          setFolio(ORDER[+e.key - 1]);
+          return;
+        }
+        if (e.key === "[") {
+          setFolio(ORDER[(ORDER.indexOf(state.folio) + 3) % 4]);
+          return;
+        }
+        if (e.key === "]") {
+          setFolio(ORDER[(ORDER.indexOf(state.folio) + 1) % 4]);
+          return;
+        }
+        if (e.key === "Escape") {
+          sounding.classList.remove("open");
+          compose.classList.remove("open");
+          state.mic = false;
+          renderChrome();
+        }
+        if (e.key === "g" || e.key === "G") takeFix();
+        if (e.key === "o" || e.key === "O") toggleOverlay();
+        if (e.key === "r" || e.key === "R") keyMic();
+      });
+
+      loadStore();
+      renderAll();
+    })();
+  </script>
+</body>
+</html>
