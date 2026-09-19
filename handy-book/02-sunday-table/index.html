@@ -80,7 +80,6 @@
     .hits { margin: 8px 0 0; padding: 0; }
     .hits button { display: block; width: 100%; text-align: left; padding: 6px 0; }
     .back { font-family: "Patrick Hand", cursive; font-size: 20px; color: var(--tomato); margin-bottom: 8px; }
-    .install { position: fixed; left: 12px; right: 12px; bottom: 12px; background: var(--tomato); color: #fff8ea; padding: 12px; font-weight: 700; }
   </style>
 </head>
 <body>
@@ -145,7 +144,6 @@
       </div>
     </div>
   </div>
-  <button class="install hidden" id="install" type="button">Add to home screen</button>
   <script src="../shared/catalog.js"></script>
   <script>
     const S = {};
@@ -241,11 +239,6 @@
     $("backRecipe").onclick = () => { $("pageR").classList.add("hidden"); $("recipe").classList.remove("hidden"); };
     $("backPage").onclick = () => { $("shop").classList.add("hidden"); $("pageR").classList.remove("hidden"); };
 
-    let deferred;
-    window.addEventListener("beforeinstallprompt", (e) => {
-      e.preventDefault(); deferred = e; $("install").classList.remove("hidden");
-    });
-    $("install").onclick = async () => { if (deferred) { deferred.prompt(); deferred = null; $("install").classList.add("hidden"); } };
   </script>
 </body>
 </html>

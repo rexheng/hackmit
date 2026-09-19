@@ -35,6 +35,7 @@
     .glass {
       flex: 1; background: linear-gradient(180deg, #d8e4dc, #c5d2c8);
       border-bottom: 10px solid #6a6860; position: relative; padding: 16px 14px 20px;
+      display: flex; flex-direction: column;
     }
     .glass::after {
       content: ""; position: absolute; inset: 0; pointer-events: none;
@@ -42,7 +43,7 @@
     }
     .window {
       background: var(--manila); border: 3px solid #2a2a24; min-height: 220px; padding: 14px;
-      box-shadow: inset 0 0 0 2px #c9b98a;
+      box-shadow: inset 0 0 0 2px #c9b98a; flex: 1;
     }
     .ticket {
       background: #fff; border: 1px dashed #2a2a24; padding: 10px 12px; margin-bottom: 10px;
@@ -80,7 +81,6 @@
     .binder .tab { background: var(--green); color: #fff; display: inline-block; padding: 2px 8px; font-size: 12px; letter-spacing: .1em; }
     .back { font-family: "IBM Plex Mono", monospace; font-size: 12px; margin-bottom: 8px; }
     .shot { width: 100%; height: 90px; object-fit: cover; display: block; margin: 6px 0; }
-    .install { position: fixed; left: 10px; right: 10px; bottom: 10px; background: var(--green); color: #fff; padding: 12px; font-weight: 700; }
   </style>
 </head>
 <body>
@@ -150,7 +150,6 @@
     </div>
     <div class="counter"></div>
   </div>
-  <button class="install hidden" id="install" type="button">Add to home screen</button>
   <script src="../shared/catalog.js"></script>
   <script>
     const S = {};
@@ -228,9 +227,6 @@
     $("backPage").onclick = () => show("page");
     $("again").onclick = () => { $("shot").classList.add("hidden"); $("hits").innerHTML = ""; $("num").textContent = "A—" + String(10 + Math.floor(Math.random() * 80)).padStart(2, "0"); show("home"); };
 
-    let deferred;
-    window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); deferred = e; $("install").classList.remove("hidden"); });
-    $("install").onclick = async () => { if (deferred) { deferred.prompt(); deferred = null; $("install").classList.add("hidden"); } };
   </script>
 </body>
 </html>

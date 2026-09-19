@@ -42,8 +42,9 @@
     .stencil { font-family: Oswald, sans-serif; letter-spacing: .16em; font-size: 13px; }
     .cover h1 { font-family: Oswald, sans-serif; font-size: 52px; line-height: .85; margin: 12px 0; font-weight: 600; color: var(--hi); }
     .band {
-      position: absolute; right: 22px; top: -8px; bottom: -8px; width: 18px;
-      background: #1a1c14; border-radius: 9px; box-shadow: inset 0 0 0 1px #111;
+      position: absolute; right: 28px; top: -10px; bottom: -10px; width: 22px;
+      background: linear-gradient(90deg, #111 0 4px, #2a2410 4px 18px, #111 18px);
+      border-radius: 11px; box-shadow: 2px 0 0 #0a0a08;
     }
     .pad {
       background:
@@ -76,7 +77,6 @@
     .pg .no { float: right; font-family: Oswald, sans-serif; }
     .gear li { list-style: none; padding: 8px 0; border-bottom: 1px solid #b8b49a; }
     .back { margin-bottom: 10px; }
-    .install { position: fixed; left: 12px; right: 12px; bottom: 12px; background: var(--hi); color: #1c1e16; padding: 12px; font-family: Oswald, sans-serif; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -148,7 +148,6 @@
       <button class="ghost hidden" id="again" type="button">NEW PAGE</button>
     </section>
   </div>
-  <button class="install hidden" id="install" type="button">Add to home screen</button>
   <script src="../shared/catalog.js"></script>
   <script>
     const S = {};
@@ -226,9 +225,6 @@
     $("backBook").onclick = () => show("book");
     $("backPage").onclick = () => show("page");
 
-    let deferred;
-    window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); deferred = e; $("install").classList.remove("hidden"); });
-    $("install").onclick = async () => { if (deferred) { deferred.prompt(); deferred = null; $("install").classList.add("hidden"); } };
   </script>
 </body>
 </html>
