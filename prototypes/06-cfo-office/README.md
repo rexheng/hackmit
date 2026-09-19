@@ -4,12 +4,16 @@ Playable prototype of a **virtual Office of the CFO**: MuJoCo office + flying ra
 
 ## Run the office (browser)
 
-Serve this folder (modules + JSON trajectories):
+Static files. On Vercel the production URL is the `index.html` at the project root of this folder.
+
+Locally:
 
 ```bash
 python3 sim/serve.py
 # → http://127.0.0.1:8060/
 ```
+
+Or `npx serve .` from this directory.
 
 Open `index.html` via that server. **Run one close**, then **Learn × 12**.
 
