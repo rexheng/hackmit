@@ -49,7 +49,7 @@ for preset, fips in {**PRESET_COUNTY, **{f: f for f in tx["counties"]}}.items():
         "bills": c["bills"], "claims": mine,
         "exposure": {o: e for o, e in ((o["operator"], o) for o in exposure["operators"]) if o in present},
         "filings": {o: f for o, f in filings.items() if o in present},
-        "news": news["counties"].get(fips, []),
+        "news": news["counties"].get(fips) or news["counties"].get(fips[:2], []),  # no county feed yet: statewide headlines
         "estimate": est["counties"].get(fips),
         "label": tx["counties"].get(fips),
     }
@@ -61,6 +61,7 @@ data = {
     "estimate_meta": est["meta"],
     "texas": {k: tx[k] for k in ("scales", "operator_metrics", "texas_bill", "tax", "registry")},
     "default_site": "48113",
+    "feeds": json.loads((live_dir / "feeds.json").read_text()) if (live_dir / "feeds.json").exists() else None,
 }
 dest = P.parent / "prototypes/03-compute-works/live.js"
 dest.write_text("window.CW_LIVE = " + json.dumps(data, separators=(",", ":")) + ";\n")

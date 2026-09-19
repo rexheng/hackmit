@@ -211,7 +211,7 @@
     body.cw-plain #objTip, body.cw-plain #workOrder{display:none !important}   /* the toy's made-up hover text stays out of the simple view */
     body.cw-plain #campus{transform:translateY(5%) scale(1.06);transform-origin:center}
     .nrow.flash{animation:cwFlash 1s ease-out} @keyframes cwFlash{0%,30%{background:#fde68a}100%{background:transparent}}
-    .nrow:last-child .body{padding-left:4px}
+    .nrow:not([data-row]) .body{padding-left:4px} .nrow .tech:not(:has(.gchip)){grid-template-columns:1fr auto}
     .nrow .claim{border-top:1px dashed var(--brass-deep);padding:5px 0;font:400 13px/1.35 "Source Serif 4",serif} .nrow .claim q{font-style:italic}
     .nrow .claim .stamp{display:inline-block;font:600 12px "Teko",sans-serif;letter-spacing:.08em;border:1.5px solid;padding:0 5px;margin-right:4px}
     .nrow .s0{color:var(--enamel)} .nrow .s1{color:#8a5a00} .nrow .s2{color:var(--oxide)} .nrow .s3{color:#5a5248}
@@ -317,7 +317,12 @@
         '<details class="nrow"><summary><span class="nm">WHO PUBLISHES WHAT</span></summary><div class="body">' +
           "<table><tr><th>Owner</th><th>Sites</th><th>PUE</th><th>WUE</th><th>Talk</th><th>Tax certs</th></tr>" +
           T.owners.map((o) => "<tr><td>" + esc(o.owner) + '</td><td class="n">' + o.sites + "</td><td>" + chip(o.pue_grade) + " " + (o.pue ? o.pue.value : "") + "</td><td>" + chip(o.wue_grade) + " " + (o.wue ? o.wue.value : "") + "</td><td>" + chip(o.talk_grade) + '</td><td class="n">' + (o.state_tax_certificates == null ? "" : o.state_tax_certificates) + "</td></tr>").join("") +
-          '</table><p class="fine">Company-wide numbers from each owner\'s own page. ? = not published. ' + link(L.texas.registry.url, "State tax registry") + "</p></div></details></div>";
+          '</table><p class="fine">Company-wide numbers from each owner\'s own page. ? = not published. ' + link(L.texas.registry.url, "State tax registry") + "</p></div></details>" +
+        '<details class="nrow"><summary><span class="nm">IN THE NEWS</span></summary><div class="body">' +
+          (S.news.length ? S.news.slice(0, 4).map((n) => '<div class="claim">' + link(n.url, n.title) + '<span class="fine"> ' + esc(n.outlet || "") + "</span></div>").join("") : '<p class="fine">Not found.</p>') + "</div></details>" +
+        (L.feeds ? '<details class="nrow"><summary><span class="nm">WHERE THIS COMES FROM</span></summary><div class="body">' +
+          L.feeds.feeds.map((f) => '<div class="tech"><b>' + esc(f.kind) + "</b><span>" + f.count + '</span></div><p class="fine">' + esc(f.what) + "</p>").join("") +
+          '<p class="fine">Pulled automatically every ' + esc(L.feeds.every) + ". Last pull: " + esc(L.feeds.retrieved) + ".</p></div></details>" : "") + "</div>";
     } else {
       cards.innerHTML = picker + '<button class="card" data-j="rec-cost"><div class="k">' + esc(S.county) + '</div><div class="more">OPEN THE RECORD ▸</div></button>';
     }

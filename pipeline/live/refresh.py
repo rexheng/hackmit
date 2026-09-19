@@ -138,11 +138,24 @@ for n in cfg["news_counties"]:
             log.append(f"news  {n['fips']} {len(arts)} articles")
             break
     else:
-        log.append(f"NEWS FAILED {n['fips']}: GDELT kept rate limiting")
+        # GDELT limits shared networks hard. Fall back to the Google News RSS search for the same words.
+        try:
+            rss = curl("https://news.google.com/rss/search?q=" + urllib.parse.quote(n["query"] + " when:60d") + "&hl=en-US&gl=US&ceid=US:en")
+            tag = lambda it, t: html.unescape((re.search(rf"(?s)<{t}[^>]*>(.*?)</{t}>", it) or [None, ""])[1])
+            items = re.findall(r"(?s)<item>(.*?)</item>", rss)[:12]
+            news_out[n["fips"]] = [{"title": re.sub(r" - [^-]+$", "", tag(it, "title")), "url": tag(it, "link"), "outlet": tag(it, "source"), "seen": tag(it, "pubDate")[5:16], "via": "Google News RSS"} for it in items]
+            log.append(f"news  {n['fips']} {len(items)} articles (RSS fallback)")
+        except Exception as e:
+            log.append(f"NEWS FAILED {n['fips']}: {e}")
 
 (HERE.parent / "claims" / "candidates_auto.json").write_text(json.dumps(candidates, indent=1))
 (HERE / "filings.json").write_text(json.dumps(filings_out, indent=1))
 old_news = json.loads((HERE / "news.json").read_text())["counties"] if (HERE / "news.json").exists() else {}
 news_out = {**{k: v for k, v in old_news.items() if k not in news_out}, **news_out}  # a rate-limited county keeps its last good result
 (HERE / "news.json").write_text(json.dumps({"retrieved": NOW, "source": "GDELT DOC 2.0 API", "counties": news_out}, indent=1))
+(HERE / "feeds.json").write_text(json.dumps({"retrieved": NOW, "every": "6 hours", "feeds": [
+    {"kind": "Company pages and reports", "count": len(cfg["pages"]), "what": "claims, PUE, WUE, checked word for word"},
+    {"kind": "Local news", "count": sum(len(v) for v in news_out.values()), "what": "headlines by county, GDELT then Google News"},
+    {"kind": "SEC filings", "count": len(filings_out), "what": "what owners tell investors" + ("" if SEC_UA else " (off: needs a contact email)")},
+    {"kind": "Government data", "count": 5, "what": "EIA bills and grid, Texas Comptroller, BLS jobs, PNNL map, Berkeley Lab"}]}, indent=1))
 print("\n".join(log))
