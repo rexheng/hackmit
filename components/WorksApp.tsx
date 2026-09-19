@@ -15,7 +15,7 @@ const VicinityMap = dynamic(() => import("@/components/VicinityMap").then((m) =>
 });
 
 export type View = "gate" | "texas" | "works" | "supply";
-type Stage = "campus" | "map" | "interior" | "affect";
+type Stage = "campus" | "map" | "interior" | "affect" | "mail";
 type Locate = "idle" | "asking" | "in-state" | "out-of-state" | "denied";
 
 const LS = "compute-works-tx-blueprints";
@@ -88,8 +88,15 @@ export function WorksApp({ view }: { view: View }) {
     } catch {
       /* ignore */
     }
-    if (view === "works") setStage("map");
-    if (view === "texas") setStage("affect");
+    let held: Stage | null = null;
+    try {
+      held = sessionStorage.getItem("cw-stage") as Stage | null;
+      sessionStorage.removeItem("cw-stage");
+    } catch {
+      /* ignore */
+    }
+    if (view === "works") setStage(held === "mail" || held === "campus" || held === "interior" ? held : "map");
+    if (view === "texas") setStage(held === "mail" ? "mail" : "affect");
     if (view === "supply") setStage("affect");
     if (view === "gate") setStage("campus");
   }, [view]);
@@ -311,13 +318,15 @@ export function WorksApp({ view }: { view: View }) {
       ? "CAM · AWAITING STAMP · SHARE VICINITY"
       : stage === "map"
         ? "CAM · VICINITY · GOOGLE MIDLOTHIAN · SATELLITE"
-        : stage === "affect"
-          ? view === "supply"
-            ? "CAM · BILL OF MATERIALS · SUPPLY CHAIN"
-            : "CAM · LEDGER · HOW THIS PLANT TOUCHES YOU"
-          : flight
-            ? `CAM · DOLLHOUSE OPEN · ${flight.toUpperCase()} · ESC LEAVES`
-            : "CAM · SIMPLE FLIGHT · NO WHEEL SPEED";
+        : stage === "mail"
+          ? "CAM · MAIL DESK · OPT-IN CIVIC LETTER"
+          : stage === "affect"
+            ? view === "supply"
+              ? "CAM · BILL OF MATERIALS · SUPPLY CHAIN"
+              : "CAM · LEDGER · HOW THIS PLANT TOUCHES YOU"
+            : flight
+              ? `CAM · DOLLHOUSE OPEN · ${flight.toUpperCase()} · ESC LEAVES`
+              : "CAM · SIMPLE FLIGHT · NO WHEEL SPEED";
 
   return (
     <div className="works">
@@ -356,7 +365,7 @@ export function WorksApp({ view }: { view: View }) {
 
       <div className="floor">
         <aside className="left">
-          <section className="panel">
+          <section className="panel tag-panel">
             <h2>{view === "gate" ? "SHIPPING TAG · LOCATION" : "SHIPPING TAG · RESTAMP"}</h2>
             <div className="tag-body">
               {view === "gate" ? (
@@ -383,7 +392,7 @@ export function WorksApp({ view }: { view: View }) {
                   <textarea
                     id="prompt"
                     className="ship-input"
-                    style={{ height: 72, resize: "vertical" }}
+                    style={{ height: 52, resize: "vertical" }}
                     spellCheck={false}
                     value={prompt}
                     onChange={(e) => setPrompt(e.target.value)}
@@ -419,7 +428,7 @@ export function WorksApp({ view }: { view: View }) {
             </div>
           </section>
 
-          <section className="panel">
+          <section className="panel levers-panel">
             <h2>LEVERS</h2>
             <div className="levers">
               <button type="button" className={`lever${construction === "half" ? " on" : ""}`} onClick={() => setConstruction("half")}>
@@ -457,7 +466,7 @@ export function WorksApp({ view }: { view: View }) {
             </div>
           </section>
 
-          <section className="panel">
+          <section className="panel crew-panel">
             <h2>TIN CREW · 1–5</h2>
             <div className="roster">
               {CREW.map((b) => (
@@ -481,7 +490,17 @@ export function WorksApp({ view }: { view: View }) {
         <main className="stage-wrap" id="stage">
           <div className="stage-plate">{plate}</div>
           {view === "gate" ? (
-            <div className="await">
+            <>
+              <Campus
+                visible
+                construction="half"
+                layout={layout}
+                selected={null}
+                onSelect={() => undefined}
+                onLayout={setLayout}
+                onFlight={() => undefined}
+              />
+              <div className="await">
               <div className="plate">
                 <h3>AWAITING A VICINITY</h3>
                 <p>
@@ -493,6 +512,7 @@ export function WorksApp({ view }: { view: View }) {
                 {locate === "asking" ? <p style={{ marginTop: 10 }}>Listening for a fix…</p> : null}
               </div>
             </div>
+            </>
           ) : null}
           {view !== "gate" && view !== "supply" ? (
             <>
@@ -550,6 +570,50 @@ export function WorksApp({ view }: { view: View }) {
                   ) : null}
                 </article>
               ) : null}
+              {stage === "mail" ? (
+                <article className="ledger">
+                  <div className="kicker">OPT-IN CIVIC MAIL · NOT A BLAST · REPLY-TO IS YOU</div>
+                  <h3>SEND THE RESTAMP TO THE DESKS</h3>
+                  <p>
+                    Constructed public addresses for TX-6, the Ellis County Judge, and the City of Midlothian, plus an optional extra To. This is a letter from a resident, not a harvest.
+                  </p>
+                  {REPS.map((r) => (
+                    <div key={r.email} className="clipping">
+                      <span className="pin">{r.title}</span>
+                      <h3>{r.name}</h3>
+                      <p>
+                        {r.email} — {r.why}
+                      </p>
+                    </div>
+                  ))}
+                  <form className="mail-form" onSubmit={sendMail}>
+                    <label>
+                      YOUR NAME
+                      <input value={citizenName} onChange={(e) => setCitizenName(e.target.value)} required />
+                    </label>
+                    <label>
+                      YOUR EMAIL (reply-to)
+                      <input type="email" value={citizenEmail} onChange={(e) => setCitizenEmail(e.target.value)} required />
+                    </label>
+                    <label>
+                      CITY
+                      <input value={city} onChange={(e) => setCity(e.target.value)} />
+                    </label>
+                    <label>
+                      EXTRA TO (optional)
+                      <input value={extraTo} onChange={(e) => setExtraTo(e.target.value)} placeholder="you@example.com" />
+                    </label>
+                    <label>
+                      LETTER
+                      <textarea value={mailBody} onChange={(e) => setMailBody(e.target.value)} />
+                    </label>
+                    <button type="submit" className="stamp-btn" style={{ marginTop: 8 }} disabled={mailBusy}>
+                      {mailBusy ? "SENDING…" : "SEND TO THE DESKS"}
+                    </button>
+                  </form>
+                  {mailStatus ? <div className="mail-status">{mailStatus}</div> : null}
+                </article>
+              ) : null}
             </>
           ) : null}
           {view === "supply" ? (
@@ -589,7 +653,7 @@ export function WorksApp({ view }: { view: View }) {
         </main>
 
         <aside className="right">
-          <section className="panel">
+          <section className="panel punch-panel">
             <h2>PUNCH CARD · TREE GRADE</h2>
             <div className="card-body">
               <div className="punch">
@@ -605,11 +669,20 @@ export function WorksApp({ view }: { view: View }) {
                     </div>
                   ))}
                 </div>
-                {card.lines.map((l) => (
-                  <div key={l} className="holes">
-                    {l}
-                  </div>
-                ))}
+                <div className="factors-grid">
+                  {card.factors.map((f) => (
+                    <article key={f.id} className="factor compact">
+                      <h3>
+                        {f.label} <span>{f.score}</span>
+                      </h3>
+                      <div className="meter">
+                        <i style={{ width: `${f.score}%` }} />
+                      </div>
+                    </article>
+                  ))}
+                </div>
+                <div className="holes">{card.lines[1]}</div>
+                <div className="holes">{card.lines[2]}</div>
               </div>
               <div className="alpha">
                 RESIDUAL LETTER · NEUTRAL CALCULUS ONLY
@@ -621,28 +694,7 @@ export function WorksApp({ view }: { view: View }) {
             </div>
           </section>
 
-          <section className="panel">
-            <h2>FACTORS · HOW IT TOUCHES YOU</h2>
-            <div className="factors">
-              {card.factors.map((f) => (
-                <article key={f.id} className="factor">
-                  <h3>
-                    {f.label} <span>{f.score}</span>
-                  </h3>
-                  <div className="meter">
-                    <i style={{ width: `${f.score}%` }} />
-                  </div>
-                  <p>
-                    <span className="tmpl">TEMPLATE</span> {f.templateValue}
-                  </p>
-                  <p>{f.citizen}</p>
-                  <div className="calc">{f.calculus}</div>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section className="panel">
+          <section className="panel clip-panel">
             <h2>CLIPBOARD · INGEST</h2>
             <div className="clip">
               {HERO.news.map((n) => (
@@ -655,7 +707,7 @@ export function WorksApp({ view }: { view: View }) {
             </div>
           </section>
 
-          <section className="panel">
+          <section className="panel union-panel">
             <h2>UNION BOARD</h2>
             <div className="board">
               <textarea
@@ -721,52 +773,6 @@ export function WorksApp({ view }: { view: View }) {
               </div>
             </div>
           </section>
-
-          {view !== "gate" ? (
-            <section className="panel">
-              <h2>MAIL DESK · REPRESENTATIVES</h2>
-              <div className="card-body mail-form">
-                <p style={{ fontFamily: "var(--font-serif), serif", fontSize: 12, marginBottom: 6 }}>
-                  Opt-in civic mail from you. Constructed public desks for TX-6, Ellis County, and the City of Midlothian, plus an optional extra To. Not a phishing form.
-                </p>
-                {REPS.map((r) => (
-                  <div key={r.email} className="clipping">
-                    <span className="pin">{r.title}</span>
-                    <h3>{r.name}</h3>
-                    <p>
-                      {r.email} — {r.why}
-                    </p>
-                  </div>
-                ))}
-                <form onSubmit={sendMail}>
-                  <label>
-                    YOUR NAME
-                    <input value={citizenName} onChange={(e) => setCitizenName(e.target.value)} required />
-                  </label>
-                  <label>
-                    YOUR EMAIL (reply-to)
-                    <input type="email" value={citizenEmail} onChange={(e) => setCitizenEmail(e.target.value)} required />
-                  </label>
-                  <label>
-                    CITY
-                    <input value={city} onChange={(e) => setCity(e.target.value)} />
-                  </label>
-                  <label>
-                    EXTRA TO (optional)
-                    <input value={extraTo} onChange={(e) => setExtraTo(e.target.value)} placeholder="you@example.com" />
-                  </label>
-                  <label>
-                    LETTER
-                    <textarea value={mailBody} onChange={(e) => setMailBody(e.target.value)} />
-                  </label>
-                  <button type="submit" className="stamp-btn" style={{ marginTop: 8 }} disabled={mailBusy}>
-                    {mailBusy ? "SENDING…" : "SEND TO THE DESKS"}
-                  </button>
-                </form>
-                {mailStatus ? <div className="mail-status">{mailStatus}</div> : null}
-              </div>
-            </section>
-          ) : null}
         </aside>
       </div>
 
@@ -812,6 +818,25 @@ export function WorksApp({ view }: { view: View }) {
             )}
           </div>
         </div>
+        <button
+          type="button"
+          className="share-btn"
+          onClick={() => {
+            setStage("mail");
+            if (view === "gate" || view === "supply") {
+              try {
+                sessionStorage.setItem("cw-stage", "mail");
+              } catch {
+                /* ignore */
+              }
+              router.push("/works");
+            }
+          }}
+        >
+          MAIL THE
+          <br />
+          DESKS
+        </button>
         <button type="button" className="share-btn" onClick={stampBlueprint}>
           STAMP THE
           <br />
