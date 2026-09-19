@@ -1,0 +1,8406 @@
+{
+ "base_year": 2019,
+ "latest_year": 2024,
+ "us_average": {
+  "2019": {
+   "avg_monthly_bill_usd": 114.86,
+   "cents_per_kwh": 12.71
+  },
+  "2024": {
+   "avg_monthly_bill_usd": 139.91,
+   "cents_per_kwh": 15.79
+  }
+ },
+ "source_table": "PUDL core_eia861__yearly_sales and core_eia861__yearly_service_territory (EIA Form 861)",
+ "caveat": "These are average bills for all homes a utility serves in the state, not just this county. The data does not say why bills changed, so we do not say data centers caused it. Not adjusted for inflation.",
+ "counties": {
+  "01069": [
+   {
+    "utility_name": "City of Dothan - (AL)",
+    "residential_customers_in_state": 26752,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 120.06,
+     "2024": 125.99
+    },
+    "change_usd_per_month": 5.93,
+    "change_pct": 4.9,
+    "cents_per_kwh": {
+     "2019": 9.49,
+     "2024": 10.72
+    }
+   },
+   {
+    "utility_name": "Wiregrass Electric Coop, Inc",
+    "residential_customers_in_state": 22401,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 159.59,
+     "2024": 188.76
+    },
+    "change_usd_per_month": 29.17,
+    "change_pct": 18.3,
+    "cents_per_kwh": {
+     "2019": 12.83,
+     "2024": 15.45
+    }
+   }
+  ],
+  "01071": [
+   {
+    "utility_name": "Sand Mountain Electric Coop",
+    "residential_customers_in_state": 27298,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 137.28,
+     "2024": 147.69
+    },
+    "change_usd_per_month": 10.41,
+    "change_pct": 7.6,
+    "cents_per_kwh": {
+     "2019": 11.5,
+     "2024": 12.55
+    }
+   },
+   {
+    "utility_name": "North Alabama Electric Coop",
+    "residential_customers_in_state": 13099,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 146.2,
+     "2024": 162.12
+    },
+    "change_usd_per_month": 15.92,
+    "change_pct": 10.9,
+    "cents_per_kwh": {
+     "2019": 11.42,
+     "2024": 12.83
+    }
+   },
+   {
+    "utility_name": "City of Scottsboro - (AL)",
+    "residential_customers_in_state": 7090,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 137.46,
+     "2024": 150.86
+    },
+    "change_usd_per_month": 13.4,
+    "change_pct": 9.7,
+    "cents_per_kwh": {
+     "2019": 11.45,
+     "2024": 12.87
+    }
+   }
+  ],
+  "01073": [
+   {
+    "utility_name": "City of Bessemer Utilities",
+    "residential_customers_in_state": 9378,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 115.26,
+     "2024": 126.86
+    },
+    "change_usd_per_month": 11.6,
+    "change_pct": 10.1,
+    "cents_per_kwh": {
+     "2019": 10.88,
+     "2024": 12.26
+    }
+   },
+   {
+    "utility_name": "City of Tarrant",
+    "residential_customers_in_state": 2069,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 145.92,
+     "2024": 156.96
+    },
+    "change_usd_per_month": 11.04,
+    "change_pct": 7.6,
+    "cents_per_kwh": {
+     "2019": 12.45,
+     "2024": 13.45
+    }
+   }
+  ],
+  "04003": [
+   {
+    "utility_name": "Arizona Public Service Co",
+    "residential_customers_in_state": 1256120,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.0,
+     "2024": 170.02
+    },
+    "change_usd_per_month": 37.02,
+    "change_pct": 27.8,
+    "cents_per_kwh": {
+     "2019": 13.6,
+     "2024": 16.45
+    }
+   },
+   {
+    "utility_name": "Sulphur Springs Valley E C Inc",
+    "residential_customers_in_state": 46008,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 96.82,
+     "2024": 100.12
+    },
+    "change_usd_per_month": 3.3,
+    "change_pct": 3.4,
+    "cents_per_kwh": {
+     "2019": 14.13,
+     "2024": 13.49
+    }
+   }
+  ],
+  "04013": [
+   {
+    "utility_name": "Arizona Public Service Co",
+    "residential_customers_in_state": 1256120,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.0,
+     "2024": 170.02
+    },
+    "change_usd_per_month": 37.02,
+    "change_pct": 27.8,
+    "cents_per_kwh": {
+     "2019": 13.6,
+     "2024": 16.45
+    }
+   },
+   {
+    "utility_name": "Salt River Project",
+    "residential_customers_in_state": 1053407,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 131.12,
+     "2024": 162.97
+    },
+    "change_usd_per_month": 31.85,
+    "change_pct": 24.3,
+    "cents_per_kwh": {
+     "2019": 11.56,
+     "2024": 13.46
+    }
+   },
+   {
+    "utility_name": "City of Mesa - (AZ)",
+    "residential_customers_in_state": 15331,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 87.38,
+     "2024": 145.74
+    },
+    "change_usd_per_month": 58.36,
+    "change_pct": 66.8,
+    "cents_per_kwh": {
+     "2019": 10.44,
+     "2024": 16.93
+    }
+   },
+   {
+    "utility_name": "USBIA-San Carlos Project",
+    "residential_customers_in_state": 11432,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 117.34,
+     "2024": 179.61
+    },
+    "change_usd_per_month": 62.27,
+    "change_pct": 53.1,
+    "cents_per_kwh": {
+     "2019": 13.58,
+     "2024": 19.49
+    }
+   }
+  ],
+  "04019": [
+   {
+    "utility_name": "Arizona Public Service Co",
+    "residential_customers_in_state": 1256120,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.0,
+     "2024": 170.02
+    },
+    "change_usd_per_month": 37.02,
+    "change_pct": 27.8,
+    "cents_per_kwh": {
+     "2019": 13.6,
+     "2024": 16.45
+    }
+   },
+   {
+    "utility_name": "Trico Electric Cooperative Inc",
+    "residential_customers_in_state": 52450,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 126.54,
+     "2024": 133.48
+    },
+    "change_usd_per_month": 6.94,
+    "change_pct": 5.5,
+    "cents_per_kwh": {
+     "2019": 14.35,
+     "2024": 14.17
+    }
+   },
+   {
+    "utility_name": "Sulphur Springs Valley E C Inc",
+    "residential_customers_in_state": 46008,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 96.82,
+     "2024": 100.12
+    },
+    "change_usd_per_month": 3.3,
+    "change_pct": 3.4,
+    "cents_per_kwh": {
+     "2019": 14.13,
+     "2024": 13.49
+    }
+   },
+   {
+    "utility_name": "USBIA-San Carlos Project",
+    "residential_customers_in_state": 11432,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 117.34,
+     "2024": 179.61
+    },
+    "change_usd_per_month": 62.27,
+    "change_pct": 53.1,
+    "cents_per_kwh": {
+     "2019": 13.58,
+     "2024": 19.49
+    }
+   },
+   {
+    "utility_name": "Ajo Improvement Co",
+    "residential_customers_in_state": 821,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 52.43,
+     "2024": 68.82
+    },
+    "change_usd_per_month": 16.39,
+    "change_pct": 31.3,
+    "cents_per_kwh": {
+     "2019": 10.66,
+     "2024": 12.56
+    }
+   }
+  ],
+  "05119": [
+   {
+    "utility_name": "First Electric Coop Corp",
+    "residential_customers_in_state": 95175,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.99,
+     "2024": 143.15
+    },
+    "change_usd_per_month": 15.16,
+    "change_pct": 11.8,
+    "cents_per_kwh": {
+     "2019": 10.39,
+     "2024": 12.27
+    }
+   },
+   {
+    "utility_name": "City of North Little Rock - (AR)",
+    "residential_customers_in_state": 34984,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 100.62,
+     "2024": 108.22
+    },
+    "change_usd_per_month": 7.6,
+    "change_pct": 7.6,
+    "cents_per_kwh": {
+     "2019": 10.97,
+     "2024": 12.23
+    }
+   }
+  ],
+  "05145": [
+   {
+    "utility_name": "First Electric Coop Corp",
+    "residential_customers_in_state": 95175,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.99,
+     "2024": 143.15
+    },
+    "change_usd_per_month": 15.16,
+    "change_pct": 11.8,
+    "cents_per_kwh": {
+     "2019": 10.39,
+     "2024": 12.27
+    }
+   }
+  ],
+  "06001": [
+   {
+    "utility_name": "Alameda Municipal Power",
+    "residential_customers_in_state": 33174,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 70.11,
+     "2024": 80.66
+    },
+    "change_usd_per_month": 10.55,
+    "change_pct": 15.0,
+    "cents_per_kwh": {
+     "2019": 19.85,
+     "2024": 22.98
+    }
+   }
+  ],
+  "06037": [
+   {
+    "utility_name": "Los Angeles Department of Water & Power",
+    "residential_customers_in_state": 1410191,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 96.94,
+     "2024": 115.63
+    },
+    "change_usd_per_month": 18.69,
+    "change_pct": 19.3,
+    "cents_per_kwh": {
+     "2019": 19.99,
+     "2024": 23.84
+    }
+   },
+   {
+    "utility_name": "City of Glendale - (CA)",
+    "residential_customers_in_state": 77563,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 78.42,
+     "2024": 139.11
+    },
+    "change_usd_per_month": 60.69,
+    "change_pct": 77.4,
+    "cents_per_kwh": {
+     "2019": 20.06,
+     "2024": 33.81
+    }
+   },
+   {
+    "utility_name": "City of Burbank Water and Power",
+    "residential_customers_in_state": 46157,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 77.92,
+     "2024": 89.9
+    },
+    "change_usd_per_month": 11.98,
+    "change_pct": 15.4,
+    "cents_per_kwh": {
+     "2019": 15.81,
+     "2024": 19.25
+    }
+   },
+   {
+    "utility_name": "City of Azusa",
+    "residential_customers_in_state": 15599,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 68.8,
+     "2024": 90.88
+    },
+    "change_usd_per_month": 22.08,
+    "change_pct": 32.1,
+    "cents_per_kwh": {
+     "2019": 13.33,
+     "2024": 19.08
+    }
+   },
+   {
+    "utility_name": "City of Vernon",
+    "residential_customers_in_state": 73,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 40.39,
+     "2024": 55.82
+    },
+    "change_usd_per_month": 15.43,
+    "change_pct": 38.2,
+    "cents_per_kwh": {
+     "2019": 11.75,
+     "2024": 14.55
+    }
+   }
+  ],
+  "06065": [
+   {
+    "utility_name": "City of Riverside - (CA)",
+    "residential_customers_in_state": 100450,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 95.69,
+     "2024": 128.68
+    },
+    "change_usd_per_month": 32.99,
+    "change_pct": 34.5,
+    "cents_per_kwh": {
+     "2019": 16.27,
+     "2024": 20.2
+    }
+   },
+   {
+    "utility_name": "City of Corona - (CA)",
+    "residential_customers_in_state": 1285,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 69.88,
+     "2024": 83.24
+    },
+    "change_usd_per_month": 13.36,
+    "change_pct": 19.1,
+    "cents_per_kwh": {
+     "2019": 14.88,
+     "2024": 15.5
+    }
+   }
+  ],
+  "06067": [
+   {
+    "utility_name": "Sacramento Municipal Util Dist",
+    "residential_customers_in_state": 592557,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 99.35,
+     "2024": 125.54
+    },
+    "change_usd_per_month": 26.19,
+    "change_pct": 26.4,
+    "cents_per_kwh": {
+     "2019": 14.91,
+     "2024": 17.87
+    }
+   }
+  ],
+  "06075": [
+   {
+    "utility_name": "City & County of San Francisco",
+    "residential_customers_in_state": 2618,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 159.94,
+     "2024": 325.11
+    },
+    "change_usd_per_month": 165.17,
+    "change_pct": 103.3,
+    "cents_per_kwh": {
+     "2019": 18.94,
+     "2024": 24.05
+    }
+   }
+  ],
+  "06085": [
+   {
+    "utility_name": "City of Santa Clara - (CA)",
+    "residential_customers_in_state": 50949,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 50.7,
+     "2024": 71.8
+    },
+    "change_usd_per_month": 21.1,
+    "change_pct": 41.6,
+    "cents_per_kwh": {
+     "2019": 12.63,
+     "2024": 16.88
+    }
+   }
+  ],
+  "06099": [
+   {
+    "utility_name": "Turlock Irrigation District",
+    "residential_customers_in_state": 80575,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 129.21,
+     "2024": 140.8
+    },
+    "change_usd_per_month": 11.59,
+    "change_pct": 9.0,
+    "cents_per_kwh": {
+     "2019": 16.05,
+     "2024": 16.34
+    }
+   }
+  ],
+  "08001": [
+   {
+    "utility_name": "CORE Electric Cooperative",
+    "residential_customers_in_state": 165067,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 113.54,
+     "2024": 129.93
+    },
+    "change_usd_per_month": 16.39,
+    "change_pct": 14.4,
+    "cents_per_kwh": {
+     "2019": 13.12,
+     "2024": 15.04
+    }
+   },
+   {
+    "utility_name": "United Power, Inc",
+    "residential_customers_in_state": 101502,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 108.82,
+     "2024": 127.7
+    },
+    "change_usd_per_month": 18.88,
+    "change_pct": 17.3,
+    "cents_per_kwh": {
+     "2019": 13.05,
+     "2024": 15.75
+    }
+   },
+   {
+    "utility_name": "Morgan County Rural Elec Assn",
+    "residential_customers_in_state": 5825,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 142.46,
+     "2024": 146.19
+    },
+    "change_usd_per_month": 3.73,
+    "change_pct": 2.6,
+    "cents_per_kwh": {
+     "2019": 13.76,
+     "2024": 14.37
+    }
+   }
+  ],
+  "08005": [
+   {
+    "utility_name": "CORE Electric Cooperative",
+    "residential_customers_in_state": 165067,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 113.54,
+     "2024": 129.93
+    },
+    "change_usd_per_month": 16.39,
+    "change_pct": 14.4,
+    "cents_per_kwh": {
+     "2019": 13.12,
+     "2024": 15.04
+    }
+   },
+   {
+    "utility_name": "Mountain View Elec Assn, Inc",
+    "residential_customers_in_state": 59789,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 131.24,
+     "2024": 139.24
+    },
+    "change_usd_per_month": 8.0,
+    "change_pct": 6.1,
+    "cents_per_kwh": {
+     "2019": 14.57,
+     "2024": 15.52
+    }
+   },
+   {
+    "utility_name": "Morgan County Rural Elec Assn",
+    "residential_customers_in_state": 5825,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 142.46,
+     "2024": 146.19
+    },
+    "change_usd_per_month": 3.73,
+    "change_pct": 2.6,
+    "cents_per_kwh": {
+     "2019": 13.76,
+     "2024": 14.37
+    }
+   }
+  ],
+  "08014": [
+   {
+    "utility_name": "United Power, Inc",
+    "residential_customers_in_state": 101502,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 108.82,
+     "2024": 127.7
+    },
+    "change_usd_per_month": 18.88,
+    "change_pct": 17.3,
+    "cents_per_kwh": {
+     "2019": 13.05,
+     "2024": 15.75
+    }
+   }
+  ],
+  "08035": [
+   {
+    "utility_name": "CORE Electric Cooperative",
+    "residential_customers_in_state": 165067,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 113.54,
+     "2024": 129.93
+    },
+    "change_usd_per_month": 16.39,
+    "change_pct": 14.4,
+    "cents_per_kwh": {
+     "2019": 13.12,
+     "2024": 15.04
+    }
+   },
+   {
+    "utility_name": "Mountain View Elec Assn, Inc",
+    "residential_customers_in_state": 59789,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 131.24,
+     "2024": 139.24
+    },
+    "change_usd_per_month": 8.0,
+    "change_pct": 6.1,
+    "cents_per_kwh": {
+     "2019": 14.57,
+     "2024": 15.52
+    }
+   }
+  ],
+  "08041": [
+   {
+    "utility_name": "CORE Electric Cooperative",
+    "residential_customers_in_state": 165067,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 113.54,
+     "2024": 129.93
+    },
+    "change_usd_per_month": 16.39,
+    "change_pct": 14.4,
+    "cents_per_kwh": {
+     "2019": 13.12,
+     "2024": 15.04
+    }
+   },
+   {
+    "utility_name": "Black Hills Colorado Electric, LLC",
+    "residential_customers_in_state": 89252,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.07,
+     "2024": 97.37
+    },
+    "change_usd_per_month": -0.7,
+    "change_pct": -0.7,
+    "cents_per_kwh": {
+     "2019": 16.38,
+     "2024": 17.05
+    }
+   },
+   {
+    "utility_name": "Mountain View Elec Assn, Inc",
+    "residential_customers_in_state": 59789,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 131.24,
+     "2024": 139.24
+    },
+    "change_usd_per_month": 8.0,
+    "change_pct": 6.1,
+    "cents_per_kwh": {
+     "2019": 14.57,
+     "2024": 15.52
+    }
+   },
+   {
+    "utility_name": "City of Fountain",
+    "residential_customers_in_state": 17242,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 65.2,
+     "2024": 99.44
+    },
+    "change_usd_per_month": 34.24,
+    "change_pct": 52.5,
+    "cents_per_kwh": {
+     "2019": 9.43,
+     "2024": 13.74
+    }
+   }
+  ],
+  "12001": [
+   {
+    "utility_name": "Duke Energy Florida, LLC",
+    "residential_customers_in_state": 1793067,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 145.06,
+     "2024": 170.34
+    },
+    "change_usd_per_month": 25.28,
+    "change_pct": 17.4,
+    "cents_per_kwh": {
+     "2019": 13.62,
+     "2024": 16.63
+    }
+   },
+   {
+    "utility_name": "Clay Electric Cooperative, Inc - (FL)",
+    "residential_customers_in_state": 171179,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 138.24,
+     "2024": 159.07
+    },
+    "change_usd_per_month": 20.83,
+    "change_pct": 15.1,
+    "cents_per_kwh": {
+     "2019": 11.55,
+     "2024": 13.09
+    }
+   },
+   {
+    "utility_name": "Gainesville Regional Utilities",
+    "residential_customers_in_state": 92968,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 105.65,
+     "2024": 115.91
+    },
+    "change_usd_per_month": 10.26,
+    "change_pct": 9.7,
+    "cents_per_kwh": {
+     "2019": 13.18,
+     "2024": 14.87
+    }
+   },
+   {
+    "utility_name": "Central Florida Elec Coop, Inc",
+    "residential_customers_in_state": 32771,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.58,
+     "2024": 142.77
+    },
+    "change_usd_per_month": 15.19,
+    "change_pct": 11.9,
+    "cents_per_kwh": {
+     "2019": 12.78,
+     "2024": 13.62
+    }
+   }
+  ],
+  "12031": [
+   {
+    "utility_name": "JEA",
+    "residential_customers_in_state": 470564,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 122.88,
+     "2024": 132.51
+    },
+    "change_usd_per_month": 9.63,
+    "change_pct": 7.8,
+    "cents_per_kwh": {
+     "2019": 11.42,
+     "2024": 12.43
+    }
+   },
+   {
+    "utility_name": "Clay Electric Cooperative, Inc - (FL)",
+    "residential_customers_in_state": 171179,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 138.24,
+     "2024": 159.07
+    },
+    "change_usd_per_month": 20.83,
+    "change_pct": 15.1,
+    "cents_per_kwh": {
+     "2019": 11.55,
+     "2024": 13.09
+    }
+   },
+   {
+    "utility_name": "Beaches Energy Services",
+    "residential_customers_in_state": 30358,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 131.69,
+     "2024": 150.51
+    },
+    "change_usd_per_month": 18.82,
+    "change_pct": 14.3,
+    "cents_per_kwh": {
+     "2019": 10.64,
+     "2024": 12.38
+    }
+   }
+  ],
+  "12057": [
+   {
+    "utility_name": "Duke Energy Florida, LLC",
+    "residential_customers_in_state": 1793067,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 145.06,
+     "2024": 170.34
+    },
+    "change_usd_per_month": 25.28,
+    "change_pct": 17.4,
+    "cents_per_kwh": {
+     "2019": 13.62,
+     "2024": 16.63
+    }
+   },
+   {
+    "utility_name": "Tampa Electric Co",
+    "residential_customers_in_state": 757280,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.44,
+     "2024": 165.79
+    },
+    "change_usd_per_month": 38.35,
+    "change_pct": 30.1,
+    "cents_per_kwh": {
+     "2019": 10.93,
+     "2024": 14.67
+    }
+   },
+   {
+    "utility_name": "Peace River Electric Coop, Inc",
+    "residential_customers_in_state": 57589,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 151.79,
+     "2024": 145.6
+    },
+    "change_usd_per_month": -6.19,
+    "change_pct": -4.1,
+    "cents_per_kwh": {
+     "2019": 12.72,
+     "2024": 12.35
+    }
+   }
+  ],
+  "12086": [
+   {
+    "utility_name": "City of Homestead - (FL)",
+    "residential_customers_in_state": 26052,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 168.78,
+     "2024": 159.08
+    },
+    "change_usd_per_month": -9.7,
+    "change_pct": -5.7,
+    "cents_per_kwh": {
+     "2019": 13.9,
+     "2024": 12.29
+    }
+   }
+  ],
+  "12095": [
+   {
+    "utility_name": "Duke Energy Florida, LLC",
+    "residential_customers_in_state": 1793067,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 145.06,
+     "2024": 170.34
+    },
+    "change_usd_per_month": 25.28,
+    "change_pct": 17.4,
+    "cents_per_kwh": {
+     "2019": 13.62,
+     "2024": 16.63
+    }
+   },
+   {
+    "utility_name": "City of Winter Park - (FL)",
+    "residential_customers_in_state": 12137,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 142.31,
+     "2024": 179.77
+    },
+    "change_usd_per_month": 37.46,
+    "change_pct": 26.3,
+    "cents_per_kwh": {
+     "2019": 11.66,
+     "2024": 13.63
+    }
+   },
+   {
+    "utility_name": "Central Florida Tourism Oversight District",
+    "residential_customers_in_state": 9,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 101.85,
+     "2024": 129.63
+    },
+    "change_usd_per_month": 27.78,
+    "change_pct": 27.3,
+    "cents_per_kwh": {
+     "2019": 9.73,
+     "2024": 11.48
+    }
+   }
+  ],
+  "12105": [
+   {
+    "utility_name": "Duke Energy Florida, LLC",
+    "residential_customers_in_state": 1793067,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 145.06,
+     "2024": 170.34
+    },
+    "change_usd_per_month": 25.28,
+    "change_pct": 17.4,
+    "cents_per_kwh": {
+     "2019": 13.62,
+     "2024": 16.63
+    }
+   },
+   {
+    "utility_name": "Tampa Electric Co",
+    "residential_customers_in_state": 757280,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.44,
+     "2024": 165.79
+    },
+    "change_usd_per_month": 38.35,
+    "change_pct": 30.1,
+    "cents_per_kwh": {
+     "2019": 10.93,
+     "2024": 14.67
+    }
+   },
+   {
+    "utility_name": "City of Lakeland - (FL)",
+    "residential_customers_in_state": 121604,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 123.41,
+     "2024": 133.94
+    },
+    "change_usd_per_month": 10.53,
+    "change_pct": 8.5,
+    "cents_per_kwh": {
+     "2019": 10.62,
+     "2024": 11.4
+    }
+   },
+   {
+    "utility_name": "Peace River Electric Coop, Inc",
+    "residential_customers_in_state": 57589,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 151.79,
+     "2024": 145.6
+    },
+    "change_usd_per_month": -6.19,
+    "change_pct": -4.1,
+    "cents_per_kwh": {
+     "2019": 12.72,
+     "2024": 12.35
+    }
+   },
+   {
+    "utility_name": "City of Bartow - (FL)",
+    "residential_customers_in_state": 11613,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 119.41,
+     "2024": 122.4
+    },
+    "change_usd_per_month": 2.99,
+    "change_pct": 2.5,
+    "cents_per_kwh": {
+     "2019": 10.43,
+     "2024": 10.83
+    }
+   }
+  ],
+  "13067": [
+   {
+    "utility_name": "Georgia Power Co",
+    "residential_customers_in_state": 2452488,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.02,
+     "2024": 153.24
+    },
+    "change_usd_per_month": 26.22,
+    "change_pct": 20.6,
+    "cents_per_kwh": {
+     "2019": 12.1,
+     "2024": 15.49
+    }
+   },
+   {
+    "utility_name": "City of Marietta - (GA)",
+    "residential_customers_in_state": 36273,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 97.58,
+     "2024": 99.04
+    },
+    "change_usd_per_month": 1.46,
+    "change_pct": 1.5,
+    "cents_per_kwh": {
+     "2019": 11.71,
+     "2024": 11.93
+    }
+   }
+  ],
+  "13097": [
+   {
+    "utility_name": "Georgia Power Co",
+    "residential_customers_in_state": 2452488,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.02,
+     "2024": 153.24
+    },
+    "change_usd_per_month": 26.22,
+    "change_pct": 20.6,
+    "cents_per_kwh": {
+     "2019": 12.1,
+     "2024": 15.49
+    }
+   }
+  ],
+  "13113": [
+   {
+    "utility_name": "Georgia Power Co",
+    "residential_customers_in_state": 2452488,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.02,
+     "2024": 153.24
+    },
+    "change_usd_per_month": 26.22,
+    "change_pct": 20.6,
+    "cents_per_kwh": {
+     "2019": 12.1,
+     "2024": 15.49
+    }
+   },
+   {
+    "utility_name": "Coweta-Fayette El Member Corp",
+    "residential_customers_in_state": 83001,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 141.53,
+     "2024": 158.09
+    },
+    "change_usd_per_month": 16.56,
+    "change_pct": 11.7,
+    "cents_per_kwh": {
+     "2019": 11.24,
+     "2024": 12.8
+    }
+   },
+   {
+    "utility_name": "Central Georgia El Member Corp",
+    "residential_customers_in_state": 61155,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.12,
+     "2024": 156.66
+    },
+    "change_usd_per_month": 23.54,
+    "change_pct": 17.7,
+    "cents_per_kwh": {
+     "2019": 10.19,
+     "2024": 12.24
+    }
+   }
+  ],
+  "13117": [
+   {
+    "utility_name": "Georgia Power Co",
+    "residential_customers_in_state": 2452488,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.02,
+     "2024": 153.24
+    },
+    "change_usd_per_month": 26.22,
+    "change_pct": 20.6,
+    "cents_per_kwh": {
+     "2019": 12.1,
+     "2024": 15.49
+    }
+   },
+   {
+    "utility_name": "Amicalola Electric Member Corp",
+    "residential_customers_in_state": 50337,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 138.93,
+     "2024": 153.72
+    },
+    "change_usd_per_month": 14.79,
+    "change_pct": 10.6,
+    "cents_per_kwh": {
+     "2019": 11.23,
+     "2024": 12.41
+    }
+   }
+  ],
+  "13121": [
+   {
+    "utility_name": "Georgia Power Co",
+    "residential_customers_in_state": 2452488,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.02,
+     "2024": 153.24
+    },
+    "change_usd_per_month": 26.22,
+    "change_pct": 20.6,
+    "cents_per_kwh": {
+     "2019": 12.1,
+     "2024": 15.49
+    }
+   },
+   {
+    "utility_name": "Coweta-Fayette El Member Corp",
+    "residential_customers_in_state": 83001,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 141.53,
+     "2024": 158.09
+    },
+    "change_usd_per_month": 16.56,
+    "change_pct": 11.7,
+    "cents_per_kwh": {
+     "2019": 11.24,
+     "2024": 12.8
+    }
+   },
+   {
+    "utility_name": "City of College Park - (GA)",
+    "residential_customers_in_state": 7924,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 94.98,
+     "2024": 104.36
+    },
+    "change_usd_per_month": 9.38,
+    "change_pct": 9.9,
+    "cents_per_kwh": {
+     "2019": 11.41,
+     "2024": 12.84
+    }
+   }
+  ],
+  "13135": [
+   {
+    "utility_name": "Georgia Power Co",
+    "residential_customers_in_state": 2452488,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.02,
+     "2024": 153.24
+    },
+    "change_usd_per_month": 26.22,
+    "change_pct": 20.6,
+    "cents_per_kwh": {
+     "2019": 12.1,
+     "2024": 15.49
+    }
+   },
+   {
+    "utility_name": "Walton Electric Member Corp",
+    "residential_customers_in_state": 131915,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 147.44,
+     "2024": 161.2
+    },
+    "change_usd_per_month": 13.76,
+    "change_pct": 9.3,
+    "cents_per_kwh": {
+     "2019": 11.45,
+     "2024": 12.99
+    }
+   },
+   {
+    "utility_name": "City of Lawrenceville - (GA)",
+    "residential_customers_in_state": 10667,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 111.04,
+     "2024": 134.8
+    },
+    "change_usd_per_month": 23.76,
+    "change_pct": 21.4,
+    "cents_per_kwh": {
+     "2019": 11.96,
+     "2024": 15.78
+    }
+   },
+   {
+    "utility_name": "City of Buford",
+    "residential_customers_in_state": 2985,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 125.72,
+     "2024": 147.32
+    },
+    "change_usd_per_month": 21.6,
+    "change_pct": 17.2,
+    "cents_per_kwh": {
+     "2019": 11.68,
+     "2024": 13.34
+    }
+   }
+  ],
+  "13215": [
+   {
+    "utility_name": "Georgia Power Co",
+    "residential_customers_in_state": 2452488,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.02,
+     "2024": 153.24
+    },
+    "change_usd_per_month": 26.22,
+    "change_pct": 20.6,
+    "cents_per_kwh": {
+     "2019": 12.1,
+     "2024": 15.49
+    }
+   },
+   {
+    "utility_name": "Flint Electric Membership Corp",
+    "residential_customers_in_state": 83739,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 161.3,
+     "2024": 171.05
+    },
+    "change_usd_per_month": 9.75,
+    "change_pct": 6.0,
+    "cents_per_kwh": {
+     "2019": 12.62,
+     "2024": 13.57
+    }
+   },
+   {
+    "utility_name": "Diverse Power Incorporated",
+    "residential_customers_in_state": 31998,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 180.88,
+     "2024": 207.24
+    },
+    "change_usd_per_month": 26.36,
+    "change_pct": 14.6,
+    "cents_per_kwh": {
+     "2019": 14.41,
+     "2024": 16.75
+    }
+   }
+  ],
+  "13217": [
+   {
+    "utility_name": "Georgia Power Co",
+    "residential_customers_in_state": 2452488,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.02,
+     "2024": 153.24
+    },
+    "change_usd_per_month": 26.22,
+    "change_pct": 20.6,
+    "cents_per_kwh": {
+     "2019": 12.1,
+     "2024": 15.49
+    }
+   },
+   {
+    "utility_name": "Walton Electric Member Corp",
+    "residential_customers_in_state": 131915,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 147.44,
+     "2024": 161.2
+    },
+    "change_usd_per_month": 13.76,
+    "change_pct": 9.3,
+    "cents_per_kwh": {
+     "2019": 11.45,
+     "2024": 12.99
+    }
+   },
+   {
+    "utility_name": "Snapping Shoals El Member Corp",
+    "residential_customers_in_state": 105253,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 135.02,
+     "2024": 159.18
+    },
+    "change_usd_per_month": 24.16,
+    "change_pct": 17.9,
+    "cents_per_kwh": {
+     "2019": 10.1,
+     "2024": 12.37
+    }
+   },
+   {
+    "utility_name": "Central Georgia El Member Corp",
+    "residential_customers_in_state": 61155,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.12,
+     "2024": 156.66
+    },
+    "change_usd_per_month": 23.54,
+    "change_pct": 17.7,
+    "cents_per_kwh": {
+     "2019": 10.19,
+     "2024": 12.24
+    }
+   }
+  ],
+  "16001": [
+   {
+    "utility_name": "Idaho Power Co",
+    "residential_customers_in_state": 525751,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 93.12,
+     "2024": 107.68
+    },
+    "change_usd_per_month": 14.56,
+    "change_pct": 15.6,
+    "cents_per_kwh": {
+     "2019": 10.04,
+     "2024": 11.76
+    }
+   }
+  ],
+  "16065": [
+   {
+    "utility_name": "Fall River Rural Elec Coop Inc",
+    "residential_customers_in_state": 15433,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 118.27,
+     "2024": 129.52
+    },
+    "change_usd_per_month": 11.25,
+    "change_pct": 9.5,
+    "cents_per_kwh": {
+     "2019": 10.9,
+     "2024": 11.11
+    }
+   }
+  ],
+  "17019": [
+   {
+    "utility_name": "Corn Belt Energy Corporation",
+    "residential_customers_in_state": 34710,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 131.13,
+     "2024": 144.08
+    },
+    "change_usd_per_month": 12.95,
+    "change_pct": 9.9,
+    "cents_per_kwh": {
+     "2019": 13.32,
+     "2024": 15.76
+    }
+   },
+   {
+    "utility_name": "Eastern Illinois Elec Coop",
+    "residential_customers_in_state": 11115,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 197.82,
+     "2024": 211.56
+    },
+    "change_usd_per_month": 13.74,
+    "change_pct": 6.9,
+    "cents_per_kwh": {
+     "2019": 14.81,
+     "2024": 17.1
+    }
+   }
+  ],
+  "17031": [
+   {
+    "utility_name": "Commonwealth Edison Co",
+    "residential_customers_in_state": 2922223,
+    "share_of_homes_covered": 0.78,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 77.49,
+     "2024": 88.72
+    },
+    "change_usd_per_month": 11.23,
+    "change_pct": 14.5,
+    "cents_per_kwh": {
+     "2019": 13.3,
+     "2024": 15.22
+    }
+   }
+  ],
+  "17037": [
+   {
+    "utility_name": "Commonwealth Edison Co",
+    "residential_customers_in_state": 2922223,
+    "share_of_homes_covered": 0.78,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 77.49,
+     "2024": 88.72
+    },
+    "change_usd_per_month": 11.23,
+    "change_pct": 14.5,
+    "cents_per_kwh": {
+     "2019": 13.3,
+     "2024": 15.22
+    }
+   }
+  ],
+  "17043": [
+   {
+    "utility_name": "Commonwealth Edison Co",
+    "residential_customers_in_state": 2922223,
+    "share_of_homes_covered": 0.78,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 77.49,
+     "2024": 88.72
+    },
+    "change_usd_per_month": 11.23,
+    "change_pct": 14.5,
+    "cents_per_kwh": {
+     "2019": 13.3,
+     "2024": 15.22
+    }
+   },
+   {
+    "utility_name": "City of Naperville - (IL)",
+    "residential_customers_in_state": 56117,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 101.62,
+     "2024": 98.85
+    },
+    "change_usd_per_month": -2.77,
+    "change_pct": -2.7,
+    "cents_per_kwh": {
+     "2019": 13.21,
+     "2024": 12.98
+    }
+   },
+   {
+    "utility_name": "City of St Charles - (IL)",
+    "residential_customers_in_state": 14181,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 104.67,
+     "2024": 102.65
+    },
+    "change_usd_per_month": -2.02,
+    "change_pct": -1.9,
+    "cents_per_kwh": {
+     "2019": 14.62,
+     "2024": 15.37
+    }
+   }
+  ],
+  "17097": [
+   {
+    "utility_name": "Commonwealth Edison Co",
+    "residential_customers_in_state": 2922223,
+    "share_of_homes_covered": 0.78,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 77.49,
+     "2024": 88.72
+    },
+    "change_usd_per_month": 11.23,
+    "change_pct": 14.5,
+    "cents_per_kwh": {
+     "2019": 13.3,
+     "2024": 15.22
+    }
+   }
+  ],
+  "18059": [
+   {
+    "utility_name": "AES Indiana",
+    "residential_customers_in_state": 469499,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 109.37,
+     "2024": 123.2
+    },
+    "change_usd_per_month": 13.83,
+    "change_pct": 12.6,
+    "cents_per_kwh": {
+     "2019": 11.25,
+     "2024": 13.75
+    }
+   },
+   {
+    "utility_name": "NineStar Connect",
+    "residential_customers_in_state": 17770,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 179.59,
+     "2024": 194.03
+    },
+    "change_usd_per_month": 14.44,
+    "change_pct": 8.0,
+    "cents_per_kwh": {
+     "2019": 13.44,
+     "2024": 15.68
+    }
+   },
+   {
+    "utility_name": "City of Greenfield - (IN)",
+    "residential_customers_in_state": 11858,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 90.18,
+     "2024": 101.34
+    },
+    "change_usd_per_month": 11.16,
+    "change_pct": 12.4,
+    "cents_per_kwh": {
+     "2019": 10.83,
+     "2024": 13.13
+    }
+   }
+  ],
+  "18089": [
+   {
+    "utility_name": "Northern Indiana Pub Serv Co",
+    "residential_customers_in_state": 430648,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 96.59,
+     "2024": 125.77
+    },
+    "change_usd_per_month": 29.18,
+    "change_pct": 30.2,
+    "cents_per_kwh": {
+     "2019": 14.29,
+     "2024": 19.09
+    }
+   },
+   {
+    "utility_name": "Kankakee Valley Rural E M C",
+    "residential_customers_in_state": 18994,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 124.33,
+     "2024": 145.67
+    },
+    "change_usd_per_month": 21.34,
+    "change_pct": 17.2,
+    "cents_per_kwh": {
+     "2019": 12.92,
+     "2024": 15.2
+    }
+   }
+  ],
+  "18105": [
+   {
+    "utility_name": "AES Indiana",
+    "residential_customers_in_state": 469499,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 109.37,
+     "2024": 123.2
+    },
+    "change_usd_per_month": 13.83,
+    "change_pct": 12.6,
+    "cents_per_kwh": {
+     "2019": 11.25,
+     "2024": 13.75
+    }
+   },
+   {
+    "utility_name": "South Central Indiana REMC",
+    "residential_customers_in_state": 34901,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 175.16,
+     "2024": 190.86
+    },
+    "change_usd_per_month": 15.7,
+    "change_pct": 9.0,
+    "cents_per_kwh": {
+     "2019": 15.29,
+     "2024": 17.73
+    }
+   },
+   {
+    "utility_name": "Jackson County Rural E M C - (IN)",
+    "residential_customers_in_state": 24215,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 168.86,
+     "2024": 191.78
+    },
+    "change_usd_per_month": 22.92,
+    "change_pct": 13.6,
+    "cents_per_kwh": {
+     "2019": 12.63,
+     "2024": 15.32
+    }
+   },
+   {
+    "utility_name": "Utilities Dist-Western IN REMC",
+    "residential_customers_in_state": 18898,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 164.07,
+     "2024": 171.36
+    },
+    "change_usd_per_month": 7.29,
+    "change_pct": 4.4,
+    "cents_per_kwh": {
+     "2019": 14.64,
+     "2024": 16.1
+    }
+   }
+  ],
+  "18157": [
+   {
+    "utility_name": "Tipmont Rural Elec Member Corp",
+    "residential_customers_in_state": 28885,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 142.9,
+     "2024": 154.41
+    },
+    "change_usd_per_month": 11.51,
+    "change_pct": 8.1,
+    "cents_per_kwh": {
+     "2019": 13.72,
+     "2024": 16.07
+    }
+   },
+   {
+    "utility_name": "Carroll-White REMC",
+    "residential_customers_in_state": 14807,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 152.32,
+     "2024": 159.09
+    },
+    "change_usd_per_month": 6.77,
+    "change_pct": 4.4,
+    "cents_per_kwh": {
+     "2019": 13.71,
+     "2024": 14.93
+    }
+   }
+  ],
+  "19049": [
+   {
+    "utility_name": "Interstate Power and Light Co",
+    "residential_customers_in_state": 417153,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 124.1,
+     "2024": 127.8
+    },
+    "change_usd_per_month": 3.7,
+    "change_pct": 3.0,
+    "cents_per_kwh": {
+     "2019": 16.7,
+     "2024": 17.9
+    }
+   },
+   {
+    "utility_name": "Midland Power Coop",
+    "residential_customers_in_state": 11939,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 190.44,
+     "2024": 191.38
+    },
+    "change_usd_per_month": 0.94,
+    "change_pct": 0.5,
+    "cents_per_kwh": {
+     "2019": 12.18,
+     "2024": 13.6
+    }
+   }
+  ],
+  "19103": [
+   {
+    "utility_name": "Interstate Power and Light Co",
+    "residential_customers_in_state": 417153,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 124.1,
+     "2024": 127.8
+    },
+    "change_usd_per_month": 3.7,
+    "change_pct": 3.0,
+    "cents_per_kwh": {
+     "2019": 16.7,
+     "2024": 17.9
+    }
+   },
+   {
+    "utility_name": "Linn County REC",
+    "residential_customers_in_state": 30323,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 106.64,
+     "2024": 120.99
+    },
+    "change_usd_per_month": 14.35,
+    "change_pct": 13.5,
+    "cents_per_kwh": {
+     "2019": 11.55,
+     "2024": 14.23
+    }
+   },
+   {
+    "utility_name": "Eastern Iowa Light & Power Coop",
+    "residential_customers_in_state": 20749,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 148.53,
+     "2024": 153.74
+    },
+    "change_usd_per_month": 5.21,
+    "change_pct": 3.5,
+    "cents_per_kwh": {
+     "2019": 12.35,
+     "2024": 13.56
+    }
+   },
+   {
+    "utility_name": "East-Central Iowa Rural Elec Coop",
+    "residential_customers_in_state": 7368,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 160.35,
+     "2024": 178.84
+    },
+    "change_usd_per_month": 18.49,
+    "change_pct": 11.5,
+    "cents_per_kwh": {
+     "2019": 10.99,
+     "2024": 13.28
+    }
+   }
+  ],
+  "19121": [
+   {
+    "utility_name": "Interstate Power and Light Co",
+    "residential_customers_in_state": 417153,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 124.1,
+     "2024": 127.8
+    },
+    "change_usd_per_month": 3.7,
+    "change_pct": 3.0,
+    "cents_per_kwh": {
+     "2019": 16.7,
+     "2024": 17.9
+    }
+   }
+  ],
+  "19153": [
+   {
+    "utility_name": "Interstate Power and Light Co",
+    "residential_customers_in_state": 417153,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 124.1,
+     "2024": 127.8
+    },
+    "change_usd_per_month": 3.7,
+    "change_pct": 3.0,
+    "cents_per_kwh": {
+     "2019": 16.7,
+     "2024": 17.9
+    }
+   },
+   {
+    "utility_name": "Midland Power Coop",
+    "residential_customers_in_state": 11939,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 190.44,
+     "2024": 191.38
+    },
+    "change_usd_per_month": 0.94,
+    "change_pct": 0.5,
+    "cents_per_kwh": {
+     "2019": 12.18,
+     "2024": 13.6
+    }
+   },
+   {
+    "utility_name": "Consumers Energy Coop - (IA)",
+    "residential_customers_in_state": 6922,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 157.29,
+     "2024": 152.92
+    },
+    "change_usd_per_month": -4.37,
+    "change_pct": -2.8,
+    "cents_per_kwh": {
+     "2019": 14.22,
+     "2024": 15.0
+    }
+   }
+  ],
+  "19163": [
+   {
+    "utility_name": "Interstate Power and Light Co",
+    "residential_customers_in_state": 417153,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 124.1,
+     "2024": 127.8
+    },
+    "change_usd_per_month": 3.7,
+    "change_pct": 3.0,
+    "cents_per_kwh": {
+     "2019": 16.7,
+     "2024": 17.9
+    }
+   },
+   {
+    "utility_name": "Eastern Iowa Light & Power Coop",
+    "residential_customers_in_state": 20749,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 148.53,
+     "2024": 153.74
+    },
+    "change_usd_per_month": 5.21,
+    "change_pct": 3.5,
+    "cents_per_kwh": {
+     "2019": 12.35,
+     "2024": 13.56
+    }
+   }
+  ],
+  "19181": [
+   {
+    "utility_name": "Interstate Power and Light Co",
+    "residential_customers_in_state": 417153,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 124.1,
+     "2024": 127.8
+    },
+    "change_usd_per_month": 3.7,
+    "change_pct": 3.0,
+    "cents_per_kwh": {
+     "2019": 16.7,
+     "2024": 17.9
+    }
+   }
+  ],
+  "20051": [
+   {
+    "utility_name": "Midwest Energy Inc - (KS)",
+    "residential_customers_in_state": 29832,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 105.09,
+     "2024": 101.37
+    },
+    "change_usd_per_month": -3.72,
+    "change_pct": -3.5,
+    "cents_per_kwh": {
+     "2019": 12.15,
+     "2024": 11.44
+    }
+   },
+   {
+    "utility_name": "Western Coop Electric Assn Inc",
+    "residential_customers_in_state": 5799,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 80.9,
+     "2024": 122.12
+    },
+    "change_usd_per_month": 41.22,
+    "change_pct": 51.0,
+    "cents_per_kwh": {
+     "2019": 11.52,
+     "2024": 14.17
+    }
+   }
+  ],
+  "20091": [
+   {
+    "utility_name": "Evergy Kansas Central, Inc",
+    "residential_customers_in_state": 341806,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 112.66,
+     "2024": 120.85
+    },
+    "change_usd_per_month": 8.19,
+    "change_pct": 7.3,
+    "cents_per_kwh": {
+     "2019": 13.29,
+     "2024": 14.29
+    }
+   },
+   {
+    "utility_name": "Evergy Metro",
+    "residential_customers_in_state": 244555,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 124.32,
+     "2024": 127.69
+    },
+    "change_usd_per_month": 3.37,
+    "change_pct": 2.7,
+    "cents_per_kwh": {
+     "2019": 12.21,
+     "2024": 13.13
+    }
+   }
+  ],
+  "21071": [
+   {
+    "utility_name": "Kentucky Power Co",
+    "residential_customers_in_state": 130852,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 153.27,
+     "2024": 178.32
+    },
+    "change_usd_per_month": 25.05,
+    "change_pct": 16.3,
+    "cents_per_kwh": {
+     "2019": 12.01,
+     "2024": 15.07
+    }
+   }
+  ],
+  "21107": [
+   {
+    "utility_name": "Kentucky Utilities Co",
+    "residential_customers_in_state": 450673,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 119.1,
+     "2024": 129.98
+    },
+    "change_usd_per_month": 10.88,
+    "change_pct": 9.1,
+    "cents_per_kwh": {
+     "2019": 10.21,
+     "2024": 11.85
+    }
+   },
+   {
+    "utility_name": "Kenergy Corp",
+    "residential_customers_in_state": 47292,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 153.34,
+     "2024": 178.92
+    },
+    "change_usd_per_month": 25.58,
+    "change_pct": 16.7,
+    "cents_per_kwh": {
+     "2019": 12.25,
+     "2024": 15.15
+    }
+   },
+   {
+    "utility_name": "Madisonville Municipal Utils",
+    "residential_customers_in_state": 6919,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 97.51,
+     "2024": 105.09
+    },
+    "change_usd_per_month": 7.58,
+    "change_pct": 7.8,
+    "cents_per_kwh": {
+     "2019": 11.49,
+     "2024": 11.68
+    }
+   }
+  ],
+  "21111": [
+   {
+    "utility_name": "Louisville Gas & Electric Co",
+    "residential_customers_in_state": 384902,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 104.9,
+     "2024": 111.87
+    },
+    "change_usd_per_month": 6.97,
+    "change_pct": 6.6,
+    "cents_per_kwh": {
+     "2019": 10.89,
+     "2024": 12.28
+    }
+   },
+   {
+    "utility_name": "Salt River Electric Coop Corp",
+    "residential_customers_in_state": 53479,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 115.86,
+     "2024": 130.62
+    },
+    "change_usd_per_month": 14.76,
+    "change_pct": 12.7,
+    "cents_per_kwh": {
+     "2019": 9.02,
+     "2024": 10.88
+    }
+   },
+   {
+    "utility_name": "Shelby Energy Coop, Inc - (KY)",
+    "residential_customers_in_state": 17437,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 137.8,
+     "2024": 156.06
+    },
+    "change_usd_per_month": 18.26,
+    "change_pct": 13.3,
+    "cents_per_kwh": {
+     "2019": 10.95,
+     "2024": 13.21
+    }
+   }
+  ],
+  "21145": [
+   {
+    "utility_name": "Kentucky Utilities Co",
+    "residential_customers_in_state": 450673,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 119.1,
+     "2024": 129.98
+    },
+    "change_usd_per_month": 10.88,
+    "change_pct": 9.1,
+    "cents_per_kwh": {
+     "2019": 10.21,
+     "2024": 11.85
+    }
+   },
+   {
+    "utility_name": "Jackson Purchase Energy Corporation",
+    "residential_customers_in_state": 23979,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 141.96,
+     "2024": 184.26
+    },
+    "change_usd_per_month": 42.3,
+    "change_pct": 29.8,
+    "cents_per_kwh": {
+     "2019": 11.83,
+     "2024": 15.64
+    }
+   },
+   {
+    "utility_name": "City of Paducah - (KY)",
+    "residential_customers_in_state": 18863,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 132.03,
+     "2024": 138.7
+    },
+    "change_usd_per_month": 6.67,
+    "change_pct": 5.1,
+    "cents_per_kwh": {
+     "2019": 13.72,
+     "2024": 15.55
+    }
+   }
+  ],
+  "22033": [
+   {
+    "utility_name": "Entergy Louisiana LLC",
+    "residential_customers_in_state": 957522,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 111.94,
+     "2024": 135.28
+    },
+    "change_usd_per_month": 23.34,
+    "change_pct": 20.9,
+    "cents_per_kwh": {
+     "2019": 8.98,
+     "2024": 11.05
+    }
+   }
+  ],
+  "23005": [
+   {
+    "utility_name": "Central Maine Power Co",
+    "residential_customers_in_state": 519295,
+    "share_of_homes_covered": 0.9,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.42,
+     "2024": 130.57
+    },
+    "change_usd_per_month": 32.15,
+    "change_pct": 32.7,
+    "cents_per_kwh": {
+     "2019": 17.32,
+     "2024": 23.43
+    }
+   }
+  ],
+  "24003": [
+   {
+    "utility_name": "Baltimore Gas & Electric Co",
+    "residential_customers_in_state": 1025745,
+    "share_of_homes_covered": 0.84,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 109.66,
+     "2024": 155.58
+    },
+    "change_usd_per_month": 45.92,
+    "change_pct": 41.9,
+    "cents_per_kwh": {
+     "2019": 12.25,
+     "2024": 17.91
+    }
+   }
+  ],
+  "24027": [
+   {
+    "utility_name": "Baltimore Gas & Electric Co",
+    "residential_customers_in_state": 1025745,
+    "share_of_homes_covered": 0.84,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 109.66,
+     "2024": 155.58
+    },
+    "change_usd_per_month": 45.92,
+    "change_pct": 41.9,
+    "cents_per_kwh": {
+     "2019": 12.25,
+     "2024": 17.91
+    }
+   }
+  ],
+  "24031": [
+   {
+    "utility_name": "Baltimore Gas & Electric Co",
+    "residential_customers_in_state": 1025745,
+    "share_of_homes_covered": 0.84,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 109.66,
+     "2024": 155.58
+    },
+    "change_usd_per_month": 45.92,
+    "change_pct": 41.9,
+    "cents_per_kwh": {
+     "2019": 12.25,
+     "2024": 17.91
+    }
+   }
+  ],
+  "24033": [
+   {
+    "utility_name": "Baltimore Gas & Electric Co",
+    "residential_customers_in_state": 1025745,
+    "share_of_homes_covered": 0.84,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 109.66,
+     "2024": 155.58
+    },
+    "change_usd_per_month": 45.92,
+    "change_pct": 41.9,
+    "cents_per_kwh": {
+     "2019": 12.25,
+     "2024": 17.91
+    }
+   },
+   {
+    "utility_name": "Southern Maryland Elec Coop Inc",
+    "residential_customers_in_state": 158375,
+    "share_of_homes_covered": 0.98,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 149.36,
+     "2024": 170.08
+    },
+    "change_usd_per_month": 20.72,
+    "change_pct": 13.9,
+    "cents_per_kwh": {
+     "2019": 12.44,
+     "2024": 14.84
+    }
+   }
+  ],
+  "24510": [
+   {
+    "utility_name": "Baltimore Gas & Electric Co",
+    "residential_customers_in_state": 1025745,
+    "share_of_homes_covered": 0.84,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 109.66,
+     "2024": 155.58
+    },
+    "change_usd_per_month": 45.92,
+    "change_pct": 41.9,
+    "cents_per_kwh": {
+     "2019": 12.25,
+     "2024": 17.91
+    }
+   }
+  ],
+  "25009": [
+   {
+    "utility_name": "Massachusetts Electric Co",
+    "residential_customers_in_state": 526437,
+    "share_of_homes_covered": 0.44,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 130.02,
+     "2024": 165.44
+    },
+    "change_usd_per_month": 35.42,
+    "change_pct": 27.2,
+    "cents_per_kwh": {
+     "2019": 23.83,
+     "2024": 33.6
+    }
+   },
+   {
+    "utility_name": "City of Peabody - (MA)",
+    "residential_customers_in_state": 22546,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 70.72,
+     "2024": 112.26
+    },
+    "change_usd_per_month": 41.54,
+    "change_pct": 58.7,
+    "cents_per_kwh": {
+     "2019": 11.09,
+     "2024": 15.71
+    }
+   },
+   {
+    "utility_name": "Town of Danvers",
+    "residential_customers_in_state": 11594,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 95.28,
+     "2024": 114.03
+    },
+    "change_usd_per_month": 18.75,
+    "change_pct": 19.7,
+    "cents_per_kwh": {
+     "2019": 14.13,
+     "2024": 16.45
+    }
+   }
+  ],
+  "25017": [
+   {
+    "utility_name": "Massachusetts Electric Co",
+    "residential_customers_in_state": 526437,
+    "share_of_homes_covered": 0.44,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 130.02,
+     "2024": 165.44
+    },
+    "change_usd_per_month": 35.42,
+    "change_pct": 27.2,
+    "cents_per_kwh": {
+     "2019": 23.83,
+     "2024": 33.6
+    }
+   },
+   {
+    "utility_name": "Town of Reading - (MA)",
+    "residential_customers_in_state": 27405,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 114.78,
+     "2024": 125.09
+    },
+    "change_usd_per_month": 10.31,
+    "change_pct": 9.0,
+    "cents_per_kwh": {
+     "2019": 15.2,
+     "2024": 15.86
+    }
+   },
+   {
+    "utility_name": "Town of Hudson - (MA)",
+    "residential_customers_in_state": 11448,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 81.68,
+     "2024": 101.78
+    },
+    "change_usd_per_month": 20.1,
+    "change_pct": 24.6,
+    "cents_per_kwh": {
+     "2019": 11.02,
+     "2024": 13.39
+    }
+   },
+   {
+    "utility_name": "Town of Littleton - (MA)",
+    "residential_customers_in_state": 6738,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 102.08,
+     "2024": 119.96
+    },
+    "change_usd_per_month": 17.88,
+    "change_pct": 17.5,
+    "cents_per_kwh": {
+     "2019": 12.77,
+     "2024": 14.12
+    }
+   }
+  ],
+  "26045": [
+   {
+    "utility_name": "Consumers Energy Co - (MI)",
+    "residential_customers_in_state": 1657843,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 102.34,
+     "2024": 120.01
+    },
+    "change_usd_per_month": 17.67,
+    "change_pct": 17.3,
+    "cents_per_kwh": {
+     "2019": 15.85,
+     "2024": 19.11
+    }
+   },
+   {
+    "utility_name": "City of Lansing - (MI)",
+    "residential_customers_in_state": 87301,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 85.1,
+     "2024": 101.76
+    },
+    "change_usd_per_month": 16.66,
+    "change_pct": 19.6,
+    "cents_per_kwh": {
+     "2019": 15.82,
+     "2024": 19.78
+    }
+   },
+   {
+    "utility_name": "Tri-County Electric Coop (MI)",
+    "residential_customers_in_state": 23034,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 121.84,
+     "2024": 143.08
+    },
+    "change_usd_per_month": 21.24,
+    "change_pct": 17.4,
+    "cents_per_kwh": {
+     "2019": 14.87,
+     "2024": 18.04
+    }
+   }
+  ],
+  "26049": [
+   {
+    "utility_name": "DTE Electric Company",
+    "residential_customers_in_state": 2067758,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 100.94,
+     "2024": 122.74
+    },
+    "change_usd_per_month": 21.8,
+    "change_pct": 21.6,
+    "cents_per_kwh": {
+     "2019": 16.11,
+     "2024": 20.13
+    }
+   },
+   {
+    "utility_name": "Consumers Energy Co - (MI)",
+    "residential_customers_in_state": 1657843,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 102.34,
+     "2024": 120.01
+    },
+    "change_usd_per_month": 17.67,
+    "change_pct": 17.3,
+    "cents_per_kwh": {
+     "2019": 15.85,
+     "2024": 19.11
+    }
+   }
+  ],
+  "26099": [
+   {
+    "utility_name": "DTE Electric Company",
+    "residential_customers_in_state": 2067758,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 100.94,
+     "2024": 122.74
+    },
+    "change_usd_per_month": 21.8,
+    "change_pct": 21.6,
+    "cents_per_kwh": {
+     "2019": 16.11,
+     "2024": 20.13
+    }
+   }
+  ],
+  "26115": [
+   {
+    "utility_name": "DTE Electric Company",
+    "residential_customers_in_state": 2067758,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 100.94,
+     "2024": 122.74
+    },
+    "change_usd_per_month": 21.8,
+    "change_pct": 21.6,
+    "cents_per_kwh": {
+     "2019": 16.11,
+     "2024": 20.13
+    }
+   },
+   {
+    "utility_name": "Consumers Energy Co - (MI)",
+    "residential_customers_in_state": 1657843,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 102.34,
+     "2024": 120.01
+    },
+    "change_usd_per_month": 17.67,
+    "change_pct": 17.3,
+    "cents_per_kwh": {
+     "2019": 15.85,
+     "2024": 19.11
+    }
+   },
+   {
+    "utility_name": "Midwest Energy Cooperative - (MI)",
+    "residential_customers_in_state": 29283,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 151.91,
+     "2024": 185.21
+    },
+    "change_usd_per_month": 33.3,
+    "change_pct": 21.9,
+    "cents_per_kwh": {
+     "2019": 15.41,
+     "2024": 19.91
+    }
+   }
+  ],
+  "26125": [
+   {
+    "utility_name": "DTE Electric Company",
+    "residential_customers_in_state": 2067758,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 100.94,
+     "2024": 122.74
+    },
+    "change_usd_per_month": 21.8,
+    "change_pct": 21.6,
+    "cents_per_kwh": {
+     "2019": 16.11,
+     "2024": 20.13
+    }
+   },
+   {
+    "utility_name": "Consumers Energy Co - (MI)",
+    "residential_customers_in_state": 1657843,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 102.34,
+     "2024": 120.01
+    },
+    "change_usd_per_month": 17.67,
+    "change_pct": 17.3,
+    "cents_per_kwh": {
+     "2019": 15.85,
+     "2024": 19.11
+    }
+   }
+  ],
+  "26163": [
+   {
+    "utility_name": "DTE Electric Company",
+    "residential_customers_in_state": 2067758,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 100.94,
+     "2024": 122.74
+    },
+    "change_usd_per_month": 21.8,
+    "change_pct": 21.6,
+    "cents_per_kwh": {
+     "2019": 16.11,
+     "2024": 20.13
+    }
+   }
+  ],
+  "27003": [
+   {
+    "utility_name": "Northern States Power Co - Minnesota",
+    "residential_customers_in_state": 1230057,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 83.74,
+     "2024": 99.82
+    },
+    "change_usd_per_month": 16.08,
+    "change_pct": 19.2,
+    "cents_per_kwh": {
+     "2019": 13.62,
+     "2024": 16.98
+    }
+   },
+   {
+    "utility_name": "Connexus Energy",
+    "residential_customers_in_state": 134095,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 105.38,
+     "2024": 105.48
+    },
+    "change_usd_per_month": 0.1,
+    "change_pct": 0.1,
+    "cents_per_kwh": {
+     "2019": 13.44,
+     "2024": 13.66
+    }
+   },
+   {
+    "utility_name": "City of Anoka",
+    "residential_customers_in_state": 11646,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 75.35,
+     "2024": 86.58
+    },
+    "change_usd_per_month": 11.23,
+    "change_pct": 14.9,
+    "cents_per_kwh": {
+     "2019": 13.51,
+     "2024": 15.88
+    }
+   }
+  ],
+  "27019": [
+   {
+    "utility_name": "Northern States Power Co - Minnesota",
+    "residential_customers_in_state": 1230057,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 83.74,
+     "2024": 99.82
+    },
+    "change_usd_per_month": 16.08,
+    "change_pct": 19.2,
+    "cents_per_kwh": {
+     "2019": 13.62,
+     "2024": 16.98
+    }
+   },
+   {
+    "utility_name": "Wright-Hennepin Coop Elec Assn",
+    "residential_customers_in_state": 53714,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 118.91,
+     "2024": 130.85
+    },
+    "change_usd_per_month": 11.94,
+    "change_pct": 10.0,
+    "cents_per_kwh": {
+     "2019": 12.33,
+     "2024": 14.59
+    }
+   },
+   {
+    "utility_name": "Minnesota Valley Electric Coop",
+    "residential_customers_in_state": 43412,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 117.22,
+     "2024": 132.46
+    },
+    "change_usd_per_month": 15.24,
+    "change_pct": 13.0,
+    "cents_per_kwh": {
+     "2019": 11.74,
+     "2024": 13.98
+    }
+   },
+   {
+    "utility_name": "City of Chaska - (MN)",
+    "residential_customers_in_state": 10954,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.61,
+     "2024": 105.36
+    },
+    "change_usd_per_month": 6.75,
+    "change_pct": 6.8,
+    "cents_per_kwh": {
+     "2019": 14.21,
+     "2024": 16.28
+    }
+   }
+  ],
+  "27037": [
+   {
+    "utility_name": "Northern States Power Co - Minnesota",
+    "residential_customers_in_state": 1230057,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 83.74,
+     "2024": 99.82
+    },
+    "change_usd_per_month": 16.08,
+    "change_pct": 19.2,
+    "cents_per_kwh": {
+     "2019": 13.62,
+     "2024": 16.98
+    }
+   },
+   {
+    "utility_name": "Dakota Electric Association",
+    "residential_customers_in_state": 108097,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 97.86,
+     "2024": 100.25
+    },
+    "change_usd_per_month": 2.39,
+    "change_pct": 2.4,
+    "cents_per_kwh": {
+     "2019": 13.18,
+     "2024": 14.0
+    }
+   },
+   {
+    "utility_name": "Minnesota Valley Electric Coop",
+    "residential_customers_in_state": 43412,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 117.22,
+     "2024": 132.46
+    },
+    "change_usd_per_month": 15.24,
+    "change_pct": 13.0,
+    "cents_per_kwh": {
+     "2019": 11.74,
+     "2024": 13.98
+    }
+   }
+  ],
+  "27053": [
+   {
+    "utility_name": "Northern States Power Co - Minnesota",
+    "residential_customers_in_state": 1230057,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 83.74,
+     "2024": 99.82
+    },
+    "change_usd_per_month": 16.08,
+    "change_pct": 19.2,
+    "cents_per_kwh": {
+     "2019": 13.62,
+     "2024": 16.98
+    }
+   },
+   {
+    "utility_name": "Connexus Energy",
+    "residential_customers_in_state": 134095,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 105.38,
+     "2024": 105.48
+    },
+    "change_usd_per_month": 0.1,
+    "change_pct": 0.1,
+    "cents_per_kwh": {
+     "2019": 13.44,
+     "2024": 13.66
+    }
+   },
+   {
+    "utility_name": "Wright-Hennepin Coop Elec Assn",
+    "residential_customers_in_state": 53714,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 118.91,
+     "2024": 130.85
+    },
+    "change_usd_per_month": 11.94,
+    "change_pct": 10.0,
+    "cents_per_kwh": {
+     "2019": 12.33,
+     "2024": 14.59
+    }
+   },
+   {
+    "utility_name": "Minnesota Valley Electric Coop",
+    "residential_customers_in_state": 43412,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 117.22,
+     "2024": 132.46
+    },
+    "change_usd_per_month": 15.24,
+    "change_pct": 13.0,
+    "cents_per_kwh": {
+     "2019": 11.74,
+     "2024": 13.98
+    }
+   },
+   {
+    "utility_name": "City of Elk River",
+    "residential_customers_in_state": 11776,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 102.92,
+     "2024": 115.61
+    },
+    "change_usd_per_month": 12.69,
+    "change_pct": 12.3,
+    "cents_per_kwh": {
+     "2019": 13.7,
+     "2024": 15.83
+    }
+   },
+   {
+    "utility_name": "City of Anoka",
+    "residential_customers_in_state": 11646,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 75.35,
+     "2024": 86.58
+    },
+    "change_usd_per_month": 11.23,
+    "change_pct": 14.9,
+    "cents_per_kwh": {
+     "2019": 13.51,
+     "2024": 15.88
+    }
+   }
+  ],
+  "27109": [
+   {
+    "utility_name": "Northern States Power Co - Minnesota",
+    "residential_customers_in_state": 1230057,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 83.74,
+     "2024": 99.82
+    },
+    "change_usd_per_month": 16.08,
+    "change_pct": 19.2,
+    "cents_per_kwh": {
+     "2019": 13.62,
+     "2024": 16.98
+    }
+   },
+   {
+    "utility_name": "Rochester Public Utilities",
+    "residential_customers_in_state": 54943,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 87.77,
+     "2024": 100.35
+    },
+    "change_usd_per_month": 12.58,
+    "change_pct": 14.3,
+    "cents_per_kwh": {
+     "2019": 15.19,
+     "2024": 17.91
+    }
+   },
+   {
+    "utility_name": "People's Cooperative Services",
+    "residential_customers_in_state": 21665,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 141.63,
+     "2024": 145.78
+    },
+    "change_usd_per_month": 4.15,
+    "change_pct": 2.9,
+    "cents_per_kwh": {
+     "2019": 14.64,
+     "2024": 16.7
+    }
+   },
+   {
+    "utility_name": "Freeborn Mower Electric Cooperative",
+    "residential_customers_in_state": 17842,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 120.45,
+     "2024": 128.49
+    },
+    "change_usd_per_month": 8.04,
+    "change_pct": 6.7,
+    "cents_per_kwh": {
+     "2019": 13.25,
+     "2024": 15.15
+    }
+   },
+   {
+    "utility_name": "MiEnergy Cooperative",
+    "residential_customers_in_state": 15224,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 153.64,
+     "2024": 154.22
+    },
+    "change_usd_per_month": 0.58,
+    "change_pct": 0.4,
+    "cents_per_kwh": {
+     "2019": 14.93,
+     "2024": 16.56
+    }
+   }
+  ],
+  "27123": [
+   {
+    "utility_name": "Northern States Power Co - Minnesota",
+    "residential_customers_in_state": 1230057,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 83.74,
+     "2024": 99.82
+    },
+    "change_usd_per_month": 16.08,
+    "change_pct": 19.2,
+    "cents_per_kwh": {
+     "2019": 13.62,
+     "2024": 16.98
+    }
+   },
+   {
+    "utility_name": "Connexus Energy",
+    "residential_customers_in_state": 134095,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 105.38,
+     "2024": 105.48
+    },
+    "change_usd_per_month": 0.1,
+    "change_pct": 0.1,
+    "cents_per_kwh": {
+     "2019": 13.44,
+     "2024": 13.66
+    }
+   }
+  ],
+  "27137": [
+   {
+    "utility_name": "ALLETE, Inc.",
+    "residential_customers_in_state": 125896,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 78.3,
+     "2024": 101.99
+    },
+    "change_usd_per_month": 23.69,
+    "change_pct": 30.3,
+    "cents_per_kwh": {
+     "2019": 11.08,
+     "2024": 15.66
+    }
+   },
+   {
+    "utility_name": "Lake Country Power",
+    "residential_customers_in_state": 47204,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 132.56,
+     "2024": 148.34
+    },
+    "change_usd_per_month": 15.78,
+    "change_pct": 11.9,
+    "cents_per_kwh": {
+     "2019": 14.6,
+     "2024": 17.9
+    }
+   }
+  ],
+  "28033": [
+   {
+    "utility_name": "Entergy Mississippi LLC",
+    "residential_customers_in_state": 384611,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 124.41,
+     "2024": 157.0
+    },
+    "change_usd_per_month": 32.59,
+    "change_pct": 26.2,
+    "cents_per_kwh": {
+     "2019": 9.93,
+     "2024": 13.21
+    }
+   }
+  ],
+  "28089": [
+   {
+    "utility_name": "Entergy Mississippi LLC",
+    "residential_customers_in_state": 384611,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 124.41,
+     "2024": 157.0
+    },
+    "change_usd_per_month": 32.59,
+    "change_pct": 26.2,
+    "cents_per_kwh": {
+     "2019": 9.93,
+     "2024": 13.21
+    }
+   }
+  ],
+  "29019": [
+   {
+    "utility_name": "City of Columbia - (MO)",
+    "residential_customers_in_state": 45651,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 102.09,
+     "2024": 109.33
+    },
+    "change_usd_per_month": 7.24,
+    "change_pct": 7.1,
+    "cents_per_kwh": {
+     "2019": 12.58,
+     "2024": 13.94
+    }
+   },
+   {
+    "utility_name": "Boone Electric Coop",
+    "residential_customers_in_state": 33806,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 124.96,
+     "2024": 141.9
+    },
+    "change_usd_per_month": 16.94,
+    "change_pct": 13.6,
+    "cents_per_kwh": {
+     "2019": 11.06,
+     "2024": 13.4
+    }
+   },
+   {
+    "utility_name": "Callaway Electric Cooperative",
+    "residential_customers_in_state": 12647,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 172.09,
+     "2024": 187.85
+    },
+    "change_usd_per_month": 15.76,
+    "change_pct": 9.2,
+    "cents_per_kwh": {
+     "2019": 13.71,
+     "2024": 16.29
+    }
+   },
+   {
+    "utility_name": "Consolidated Electric Coop",
+    "residential_customers_in_state": 7649,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 147.83,
+     "2024": 163.66
+    },
+    "change_usd_per_month": 15.83,
+    "change_pct": 10.7,
+    "cents_per_kwh": {
+     "2019": 10.52,
+     "2024": 12.96
+    }
+   }
+  ],
+  "29025": [
+   {
+    "utility_name": "Platte-Clay Electric Coop, Inc",
+    "residential_customers_in_state": 23584,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 150.39,
+     "2024": 157.61
+    },
+    "change_usd_per_month": 7.22,
+    "change_pct": 4.8,
+    "cents_per_kwh": {
+     "2019": 11.14,
+     "2024": 12.46
+    }
+   },
+   {
+    "utility_name": "Farmers Electric Coop, Inc - (MO)",
+    "residential_customers_in_state": 12451,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 140.58,
+     "2024": 144.81
+    },
+    "change_usd_per_month": 4.23,
+    "change_pct": 3.0,
+    "cents_per_kwh": {
+     "2019": 12.33,
+     "2024": 13.35
+    }
+   }
+  ],
+  "29047": [
+   {
+    "utility_name": "Evergy Missouri West",
+    "residential_customers_in_state": 305583,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 113.44,
+     "2024": 122.68
+    },
+    "change_usd_per_month": 9.24,
+    "change_pct": 8.1,
+    "cents_per_kwh": {
+     "2019": 10.9,
+     "2024": 12.55
+    }
+   },
+   {
+    "utility_name": "Evergy Metro",
+    "residential_customers_in_state": 273860,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 111.66,
+     "2024": 109.43
+    },
+    "change_usd_per_month": -2.23,
+    "change_pct": -2.0,
+    "cents_per_kwh": {
+     "2019": 13.31,
+     "2024": 13.72
+    }
+   },
+   {
+    "utility_name": "Platte-Clay Electric Coop, Inc",
+    "residential_customers_in_state": 23584,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 150.39,
+     "2024": 157.61
+    },
+    "change_usd_per_month": 7.22,
+    "change_pct": 4.8,
+    "cents_per_kwh": {
+     "2019": 11.14,
+     "2024": 12.46
+    }
+   }
+  ],
+  "29095": [
+   {
+    "utility_name": "Evergy Missouri West",
+    "residential_customers_in_state": 305583,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 113.44,
+     "2024": 122.68
+    },
+    "change_usd_per_month": 9.24,
+    "change_pct": 8.1,
+    "cents_per_kwh": {
+     "2019": 10.9,
+     "2024": 12.55
+    }
+   },
+   {
+    "utility_name": "Evergy Metro",
+    "residential_customers_in_state": 273860,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 111.66,
+     "2024": 109.43
+    },
+    "change_usd_per_month": -2.23,
+    "change_pct": -2.0,
+    "cents_per_kwh": {
+     "2019": 13.31,
+     "2024": 13.72
+    }
+   },
+   {
+    "utility_name": "City of Independence - (MO)",
+    "residential_customers_in_state": 53832,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 112.38,
+     "2024": 132.43
+    },
+    "change_usd_per_month": 20.05,
+    "change_pct": 17.8,
+    "cents_per_kwh": {
+     "2019": 13.66,
+     "2024": 15.74
+    }
+   },
+   {
+    "utility_name": "West Central Electric Coop Inc - (MO)",
+    "residential_customers_in_state": 15280,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 162.63,
+     "2024": 174.1
+    },
+    "change_usd_per_month": 11.47,
+    "change_pct": 7.1,
+    "cents_per_kwh": {
+     "2019": 10.67,
+     "2024": 12.28
+    }
+   }
+  ],
+  "29165": [
+   {
+    "utility_name": "Evergy Missouri West",
+    "residential_customers_in_state": 305583,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 113.44,
+     "2024": 122.68
+    },
+    "change_usd_per_month": 9.24,
+    "change_pct": 8.1,
+    "cents_per_kwh": {
+     "2019": 10.9,
+     "2024": 12.55
+    }
+   },
+   {
+    "utility_name": "Evergy Metro",
+    "residential_customers_in_state": 273860,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 111.66,
+     "2024": 109.43
+    },
+    "change_usd_per_month": -2.23,
+    "change_pct": -2.0,
+    "cents_per_kwh": {
+     "2019": 13.31,
+     "2024": 13.72
+    }
+   },
+   {
+    "utility_name": "Platte-Clay Electric Coop, Inc",
+    "residential_customers_in_state": 23584,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 150.39,
+     "2024": 157.61
+    },
+    "change_usd_per_month": 7.22,
+    "change_pct": 4.8,
+    "cents_per_kwh": {
+     "2019": 11.14,
+     "2024": 12.46
+    }
+   }
+  ],
+  "29510": [
+   {
+    "utility_name": "City of Kirkwood - (MO)",
+    "residential_customers_in_state": 9084,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 101.13,
+     "2024": 126.42
+    },
+    "change_usd_per_month": 25.29,
+    "change_pct": 25.0,
+    "cents_per_kwh": {
+     "2019": 10.76,
+     "2024": 14.35
+    }
+   }
+  ],
+  "30017": [
+   {
+    "utility_name": "Montana-Dakota Utilities Co",
+    "residential_customers_in_state": 19616,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 83.36,
+     "2024": 97.92
+    },
+    "change_usd_per_month": 14.56,
+    "change_pct": 17.5,
+    "cents_per_kwh": {
+     "2019": 10.76,
+     "2024": 12.89
+    }
+   }
+  ],
+  "30039": [
+   {
+    "utility_name": "Missoula Electric Coop, Inc",
+    "residential_customers_in_state": 14686,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 103.45,
+     "2024": 112.98
+    },
+    "change_usd_per_month": 9.53,
+    "change_pct": 9.2,
+    "cents_per_kwh": {
+     "2019": 10.04,
+     "2024": 10.5
+    }
+   }
+  ],
+  "31019": [
+   {
+    "utility_name": "Nebraska Public Power District",
+    "residential_customers_in_state": 73650,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 105.66,
+     "2024": 99.69
+    },
+    "change_usd_per_month": -5.97,
+    "change_pct": -5.7,
+    "cents_per_kwh": {
+     "2019": 10.45,
+     "2024": 10.63
+    }
+   },
+   {
+    "utility_name": "Dawson Power District",
+    "residential_customers_in_state": 16080,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 146.87,
+     "2024": 145.05
+    },
+    "change_usd_per_month": -1.82,
+    "change_pct": -1.2,
+    "cents_per_kwh": {
+     "2019": 10.74,
+     "2024": 11.41
+    }
+   },
+   {
+    "utility_name": "Southern Public Power District",
+    "residential_customers_in_state": 15215,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.02,
+     "2024": 119.27
+    },
+    "change_usd_per_month": -13.75,
+    "change_pct": -10.3,
+    "cents_per_kwh": {
+     "2019": 9.43,
+     "2024": 9.21
+    }
+   },
+   {
+    "utility_name": "Custer Public Power District",
+    "residential_customers_in_state": 4707,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 170.43,
+     "2024": 166.89
+    },
+    "change_usd_per_month": -3.54,
+    "change_pct": -2.1,
+    "cents_per_kwh": {
+     "2019": 12.33,
+     "2024": 12.71
+    }
+   }
+  ],
+  "31055": [
+   {
+    "utility_name": "Omaha Public Power District",
+    "residential_customers_in_state": 362918,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 104.77,
+     "2024": 109.32
+    },
+    "change_usd_per_month": 4.55,
+    "change_pct": 4.3,
+    "cents_per_kwh": {
+     "2019": 11.3,
+     "2024": 12.36
+    }
+   }
+  ],
+  "31153": [
+   {
+    "utility_name": "Omaha Public Power District",
+    "residential_customers_in_state": 362918,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 104.77,
+     "2024": 109.32
+    },
+    "change_usd_per_month": 4.55,
+    "change_pct": 4.3,
+    "cents_per_kwh": {
+     "2019": 11.3,
+     "2024": 12.36
+    }
+   }
+  ],
+  "32003": [
+   {
+    "utility_name": "Nevada Power Co",
+    "residential_customers_in_state": 916385,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 113.87,
+     "2024": 146.89
+    },
+    "change_usd_per_month": 33.02,
+    "change_pct": 29.0,
+    "cents_per_kwh": {
+     "2019": 12.33,
+     "2024": 15.33
+    }
+   },
+   {
+    "utility_name": "Valley Electric Assn, Inc",
+    "residential_customers_in_state": 22368,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 157.61,
+     "2024": 200.19
+    },
+    "change_usd_per_month": 42.58,
+    "change_pct": 27.0,
+    "cents_per_kwh": {
+     "2019": 13.33,
+     "2024": 16.73
+    }
+   },
+   {
+    "utility_name": "Overton Power District No 5",
+    "residential_customers_in_state": 15545,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 122.09,
+     "2024": 131.95
+    },
+    "change_usd_per_month": 9.86,
+    "change_pct": 8.1,
+    "cents_per_kwh": {
+     "2019": 9.97,
+     "2024": 10.69
+    }
+   }
+  ],
+  "35001": [
+   {
+    "utility_name": "Public Service Co of NM",
+    "residential_customers_in_state": 492945,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 75.55,
+     "2024": 89.42
+    },
+    "change_usd_per_month": 13.87,
+    "change_pct": 18.4,
+    "cents_per_kwh": {
+     "2019": 13.26,
+     "2024": 15.57
+    }
+   },
+   {
+    "utility_name": "Continental Divide El Coop Inc",
+    "residential_customers_in_state": 20415,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 81.94,
+     "2024": 97.93
+    },
+    "change_usd_per_month": 15.99,
+    "change_pct": 19.5,
+    "cents_per_kwh": {
+     "2019": 14.33,
+     "2024": 16.02
+    }
+   }
+  ],
+  "35013": [
+   {
+    "utility_name": "Public Service Co of NM",
+    "residential_customers_in_state": 492945,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 75.55,
+     "2024": 89.42
+    },
+    "change_usd_per_month": 13.87,
+    "change_pct": 18.4,
+    "cents_per_kwh": {
+     "2019": 13.26,
+     "2024": 15.57
+    }
+   },
+   {
+    "utility_name": "El Paso Electric Co",
+    "residential_customers_in_state": 94760,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 71.08,
+     "2024": 75.16
+    },
+    "change_usd_per_month": 4.08,
+    "change_pct": 5.7,
+    "cents_per_kwh": {
+     "2019": 10.47,
+     "2024": 10.16
+    }
+   }
+  ],
+  "35049": [
+   {
+    "utility_name": "Public Service Co of NM",
+    "residential_customers_in_state": 492945,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 75.55,
+     "2024": 89.42
+    },
+    "change_usd_per_month": 13.87,
+    "change_pct": 18.4,
+    "cents_per_kwh": {
+     "2019": 13.26,
+     "2024": 15.57
+    }
+   },
+   {
+    "utility_name": "Jemez Mountains Elec Coop, Inc",
+    "residential_customers_in_state": 28093,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 80.45,
+     "2024": 89.25
+    },
+    "change_usd_per_month": 8.8,
+    "change_pct": 10.9,
+    "cents_per_kwh": {
+     "2019": 13.74,
+     "2024": 15.36
+    }
+   }
+  ],
+  "35061": [
+   {
+    "utility_name": "Public Service Co of NM",
+    "residential_customers_in_state": 492945,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 75.55,
+     "2024": 89.42
+    },
+    "change_usd_per_month": 13.87,
+    "change_pct": 18.4,
+    "cents_per_kwh": {
+     "2019": 13.26,
+     "2024": 15.57
+    }
+   },
+   {
+    "utility_name": "Continental Divide El Coop Inc",
+    "residential_customers_in_state": 20415,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 81.94,
+     "2024": 97.93
+    },
+    "change_usd_per_month": 15.99,
+    "change_pct": 19.5,
+    "cents_per_kwh": {
+     "2019": 14.33,
+     "2024": 16.02
+    }
+   }
+  ],
+  "36001": [
+   {
+    "utility_name": "Niagara Mohawk Power Corp.",
+    "residential_customers_in_state": 1430208,
+    "share_of_homes_covered": 0.93,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 78.32,
+     "2024": 109.74
+    },
+    "change_usd_per_month": 31.42,
+    "change_pct": 40.1,
+    "cents_per_kwh": {
+     "2019": 12.54,
+     "2024": 17.22
+    }
+   }
+  ],
+  "36029": [
+   {
+    "utility_name": "Niagara Mohawk Power Corp.",
+    "residential_customers_in_state": 1430208,
+    "share_of_homes_covered": 0.93,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 78.32,
+     "2024": 109.74
+    },
+    "change_usd_per_month": 31.42,
+    "change_pct": 40.1,
+    "cents_per_kwh": {
+     "2019": 12.54,
+     "2024": 17.22
+    }
+   }
+  ],
+  "36063": [
+   {
+    "utility_name": "Niagara Mohawk Power Corp.",
+    "residential_customers_in_state": 1430208,
+    "share_of_homes_covered": 0.93,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 78.32,
+     "2024": 109.74
+    },
+    "change_usd_per_month": 31.42,
+    "change_pct": 40.1,
+    "cents_per_kwh": {
+     "2019": 12.54,
+     "2024": 17.22
+    }
+   }
+  ],
+  "36067": [
+   {
+    "utility_name": "Niagara Mohawk Power Corp.",
+    "residential_customers_in_state": 1430208,
+    "share_of_homes_covered": 0.93,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 78.32,
+     "2024": 109.74
+    },
+    "change_usd_per_month": 31.42,
+    "change_pct": 40.1,
+    "cents_per_kwh": {
+     "2019": 12.54,
+     "2024": 17.22
+    }
+   },
+   {
+    "utility_name": "Village of Solvay - (NY)",
+    "residential_customers_in_state": 4680,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 65.02,
+     "2024": 67.11
+    },
+    "change_usd_per_month": 2.09,
+    "change_pct": 3.2,
+    "cents_per_kwh": {
+     "2019": 5.72,
+     "2024": 6.49
+    }
+   }
+  ],
+  "36103": [
+   {
+    "utility_name": "Long Island Power Authority",
+    "residential_customers_in_state": 1029943,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 151.8,
+     "2024": 181.5
+    },
+    "change_usd_per_month": 29.7,
+    "change_pct": 19.6,
+    "cents_per_kwh": {
+     "2019": 20.39,
+     "2024": 24.57
+    }
+   },
+   {
+    "utility_name": "Fishers Island Utility Co Inc",
+    "residential_customers_in_state": 657,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 174.41,
+     "2024": 242.94
+    },
+    "change_usd_per_month": 68.53,
+    "change_pct": 39.3,
+    "cents_per_kwh": {
+     "2019": 31.81,
+     "2024": 38.17
+    }
+   }
+  ],
+  "37027": [
+   {
+    "utility_name": "Duke Energy Carolinas, LLC",
+    "residential_customers_in_state": 1919372,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 108.22,
+     "2024": 137.16
+    },
+    "change_usd_per_month": 28.94,
+    "change_pct": 26.7,
+    "cents_per_kwh": {
+     "2019": 10.36,
+     "2024": 13.94
+    }
+   },
+   {
+    "utility_name": "EnergyUnited Elec Member Corp",
+    "residential_customers_in_state": 121995,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 138.5,
+     "2024": 137.08
+    },
+    "change_usd_per_month": -1.42,
+    "change_pct": -1.0,
+    "cents_per_kwh": {
+     "2019": 11.28,
+     "2024": 11.54
+    }
+   },
+   {
+    "utility_name": "Rutherford Elec Member Corp",
+    "residential_customers_in_state": 70743,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 126.84,
+     "2024": 146.41
+    },
+    "change_usd_per_month": 19.57,
+    "change_pct": 15.4,
+    "cents_per_kwh": {
+     "2019": 10.87,
+     "2024": 13.13
+    }
+   }
+  ],
+  "37035": [
+   {
+    "utility_name": "Duke Energy Carolinas, LLC",
+    "residential_customers_in_state": 1919372,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 108.22,
+     "2024": 137.16
+    },
+    "change_usd_per_month": 28.94,
+    "change_pct": 26.7,
+    "cents_per_kwh": {
+     "2019": 10.36,
+     "2024": 13.94
+    }
+   },
+   {
+    "utility_name": "EnergyUnited Elec Member Corp",
+    "residential_customers_in_state": 121995,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 138.5,
+     "2024": 137.08
+    },
+    "change_usd_per_month": -1.42,
+    "change_pct": -1.0,
+    "cents_per_kwh": {
+     "2019": 11.28,
+     "2024": 11.54
+    }
+   },
+   {
+    "utility_name": "Rutherford Elec Member Corp",
+    "residential_customers_in_state": 70743,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 126.84,
+     "2024": 146.41
+    },
+    "change_usd_per_month": 19.57,
+    "change_pct": 15.4,
+    "cents_per_kwh": {
+     "2019": 10.87,
+     "2024": 13.13
+    }
+   }
+  ],
+  "37045": [
+   {
+    "utility_name": "Duke Energy Carolinas, LLC",
+    "residential_customers_in_state": 1919372,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 108.22,
+     "2024": 137.16
+    },
+    "change_usd_per_month": 28.94,
+    "change_pct": 26.7,
+    "cents_per_kwh": {
+     "2019": 10.36,
+     "2024": 13.94
+    }
+   },
+   {
+    "utility_name": "Rutherford Elec Member Corp",
+    "residential_customers_in_state": 70743,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 126.84,
+     "2024": 146.41
+    },
+    "change_usd_per_month": 19.57,
+    "change_pct": 15.4,
+    "cents_per_kwh": {
+     "2019": 10.87,
+     "2024": 13.13
+    }
+   }
+  ],
+  "37063": [
+   {
+    "utility_name": "Duke Energy Carolinas, LLC",
+    "residential_customers_in_state": 1919372,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 108.22,
+     "2024": 137.16
+    },
+    "change_usd_per_month": 28.94,
+    "change_pct": 26.7,
+    "cents_per_kwh": {
+     "2019": 10.36,
+     "2024": 13.94
+    }
+   },
+   {
+    "utility_name": "Duke Energy Progress - (NC)",
+    "residential_customers_in_state": 1356079,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 130.29,
+     "2024": 156.39
+    },
+    "change_usd_per_month": 26.1,
+    "change_pct": 20.0,
+    "cents_per_kwh": {
+     "2019": 11.83,
+     "2024": 15.54
+    }
+   },
+   {
+    "utility_name": "Wake Electric Membership Corp",
+    "residential_customers_in_state": 53268,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 144.37,
+     "2024": 149.15
+    },
+    "change_usd_per_month": 4.78,
+    "change_pct": 3.3,
+    "cents_per_kwh": {
+     "2019": 12.21,
+     "2024": 13.42
+    }
+   },
+   {
+    "utility_name": "Piedmont Electric Member Corp",
+    "residential_customers_in_state": 30334,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 154.83,
+     "2024": 178.66
+    },
+    "change_usd_per_month": 23.83,
+    "change_pct": 15.4,
+    "cents_per_kwh": {
+     "2019": 12.89,
+     "2024": 15.6
+    }
+   }
+  ],
+  "37119": [
+   {
+    "utility_name": "Duke Energy Carolinas, LLC",
+    "residential_customers_in_state": 1919372,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 108.22,
+     "2024": 137.16
+    },
+    "change_usd_per_month": 28.94,
+    "change_pct": 26.7,
+    "cents_per_kwh": {
+     "2019": 10.36,
+     "2024": 13.94
+    }
+   },
+   {
+    "utility_name": "EnergyUnited Elec Member Corp",
+    "residential_customers_in_state": 121995,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 138.5,
+     "2024": 137.08
+    },
+    "change_usd_per_month": -1.42,
+    "change_pct": -1.0,
+    "cents_per_kwh": {
+     "2019": 11.28,
+     "2024": 11.54
+    }
+   },
+   {
+    "utility_name": "Union Electric Membership Corp - (NC)",
+    "residential_customers_in_state": 84602,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 155.92,
+     "2024": 164.48
+    },
+    "change_usd_per_month": 8.56,
+    "change_pct": 5.5,
+    "cents_per_kwh": {
+     "2019": 12.2,
+     "2024": 13.37
+    }
+   },
+   {
+    "utility_name": "Town of Huntersville - (NC)",
+    "residential_customers_in_state": 8080,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 111.15,
+     "2024": 119.08
+    },
+    "change_usd_per_month": 7.93,
+    "change_pct": 7.1,
+    "cents_per_kwh": {
+     "2019": 11.8,
+     "2024": 12.12
+    }
+   },
+   {
+    "utility_name": "York Electric Coop Inc",
+    "residential_customers_in_state": 15,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 147.44,
+     "2024": 172.22
+    },
+    "change_usd_per_month": 24.78,
+    "change_pct": 16.8,
+    "cents_per_kwh": {
+     "2019": 11.98,
+     "2024": 12.35
+    }
+   }
+  ],
+  "37161": [
+   {
+    "utility_name": "Duke Energy Carolinas, LLC",
+    "residential_customers_in_state": 1919372,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 108.22,
+     "2024": 137.16
+    },
+    "change_usd_per_month": 28.94,
+    "change_pct": 26.7,
+    "cents_per_kwh": {
+     "2019": 10.36,
+     "2024": 13.94
+    }
+   },
+   {
+    "utility_name": "Duke Energy Progress - (NC)",
+    "residential_customers_in_state": 1356079,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 130.29,
+     "2024": 156.39
+    },
+    "change_usd_per_month": 26.1,
+    "change_pct": 20.0,
+    "cents_per_kwh": {
+     "2019": 11.83,
+     "2024": 15.54
+    }
+   },
+   {
+    "utility_name": "Rutherford Elec Member Corp",
+    "residential_customers_in_state": 70743,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 126.84,
+     "2024": 146.41
+    },
+    "change_usd_per_month": 19.57,
+    "change_pct": 15.4,
+    "cents_per_kwh": {
+     "2019": 10.87,
+     "2024": 13.13
+    }
+   }
+  ],
+  "37179": [
+   {
+    "utility_name": "Duke Energy Carolinas, LLC",
+    "residential_customers_in_state": 1919372,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 108.22,
+     "2024": 137.16
+    },
+    "change_usd_per_month": 28.94,
+    "change_pct": 26.7,
+    "cents_per_kwh": {
+     "2019": 10.36,
+     "2024": 13.94
+    }
+   },
+   {
+    "utility_name": "Union Electric Membership Corp - (NC)",
+    "residential_customers_in_state": 84602,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 155.92,
+     "2024": 164.48
+    },
+    "change_usd_per_month": 8.56,
+    "change_pct": 5.5,
+    "cents_per_kwh": {
+     "2019": 12.2,
+     "2024": 13.37
+    }
+   },
+   {
+    "utility_name": "Pee Dee Electric Member Corp",
+    "residential_customers_in_state": 19396,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 147.06,
+     "2024": 169.04
+    },
+    "change_usd_per_month": 21.98,
+    "change_pct": 14.9,
+    "cents_per_kwh": {
+     "2019": 12.64,
+     "2024": 14.77
+    }
+   },
+   {
+    "utility_name": "City of Monroe - (NC)",
+    "residential_customers_in_state": 10543,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 131.51,
+     "2024": 118.32
+    },
+    "change_usd_per_month": -13.19,
+    "change_pct": -10.0,
+    "cents_per_kwh": {
+     "2019": 13.02,
+     "2024": 12.28
+    }
+   }
+  ],
+  "37183": [
+   {
+    "utility_name": "Duke Energy Carolinas, LLC",
+    "residential_customers_in_state": 1919372,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 108.22,
+     "2024": 137.16
+    },
+    "change_usd_per_month": 28.94,
+    "change_pct": 26.7,
+    "cents_per_kwh": {
+     "2019": 10.36,
+     "2024": 13.94
+    }
+   },
+   {
+    "utility_name": "Duke Energy Progress - (NC)",
+    "residential_customers_in_state": 1356079,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 130.29,
+     "2024": 156.39
+    },
+    "change_usd_per_month": 26.1,
+    "change_pct": 20.0,
+    "cents_per_kwh": {
+     "2019": 11.83,
+     "2024": 15.54
+    }
+   },
+   {
+    "utility_name": "Wake Electric Membership Corp",
+    "residential_customers_in_state": 53268,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 144.37,
+     "2024": 149.15
+    },
+    "change_usd_per_month": 4.78,
+    "change_pct": 3.3,
+    "cents_per_kwh": {
+     "2019": 12.21,
+     "2024": 13.42
+    }
+   }
+  ],
+  "38017": [
+   {
+    "utility_name": "Northern States Power Co - Minnesota",
+    "residential_customers_in_state": 82987,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 80.64,
+     "2024": 88.92
+    },
+    "change_usd_per_month": 8.28,
+    "change_pct": 10.3,
+    "cents_per_kwh": {
+     "2019": 10.05,
+     "2024": 12.11
+    }
+   },
+   {
+    "utility_name": "Cass County Elec Coop Inc",
+    "residential_customers_in_state": 51968,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 128.9,
+     "2024": 122.93
+    },
+    "change_usd_per_month": -5.97,
+    "change_pct": -4.6,
+    "cents_per_kwh": {
+     "2019": 11.64,
+     "2024": 12.45
+    }
+   },
+   {
+    "utility_name": "Nodak Electric Coop Inc",
+    "residential_customers_in_state": 20803,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 195.95,
+     "2024": 175.93
+    },
+    "change_usd_per_month": -20.02,
+    "change_pct": -10.2,
+    "cents_per_kwh": {
+     "2019": 11.59,
+     "2024": 12.08
+    }
+   }
+  ],
+  "38021": [
+   {
+    "utility_name": "Montana-Dakota Utilities Co",
+    "residential_customers_in_state": 79354,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 87.75,
+     "2024": 94.4
+    },
+    "change_usd_per_month": 6.65,
+    "change_pct": 7.6,
+    "cents_per_kwh": {
+     "2019": 10.59,
+     "2024": 11.72
+    }
+   },
+   {
+    "utility_name": "Cass County Elec Coop Inc",
+    "residential_customers_in_state": 51968,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 128.9,
+     "2024": 122.93
+    },
+    "change_usd_per_month": -5.97,
+    "change_pct": -4.6,
+    "cents_per_kwh": {
+     "2019": 11.64,
+     "2024": 12.45
+    }
+   },
+   {
+    "utility_name": "Dakota Valley Elec Coop Inc",
+    "residential_customers_in_state": 5721,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 215.63,
+     "2024": 213.4
+    },
+    "change_usd_per_month": -2.23,
+    "change_pct": -1.0,
+    "cents_per_kwh": {
+     "2019": 10.35,
+     "2024": 12.01
+    }
+   }
+  ],
+  "39017": [
+   {
+    "utility_name": "City of Hamilton - (OH)",
+    "residential_customers_in_state": 26964,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 118.5,
+     "2024": 119.88
+    },
+    "change_usd_per_month": 1.38,
+    "change_pct": 1.2,
+    "cents_per_kwh": {
+     "2019": 14.98,
+     "2024": 15.44
+    }
+   },
+   {
+    "utility_name": "Butler Rural Electric Coop Inc - (OH)",
+    "residential_customers_in_state": 11374,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 219.77,
+     "2024": 241.03
+    },
+    "change_usd_per_month": 21.26,
+    "change_pct": 9.7,
+    "cents_per_kwh": {
+     "2019": 15.8,
+     "2024": 18.16
+    }
+   }
+  ],
+  "39023": [
+   {
+    "utility_name": "Pioneer Rural Elec Coop, Inc - (OH)",
+    "residential_customers_in_state": 16310,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 184.51,
+     "2024": 207.72
+    },
+    "change_usd_per_month": 23.21,
+    "change_pct": 12.6,
+    "cents_per_kwh": {
+     "2019": 13.75,
+     "2024": 16.18
+    }
+   }
+  ],
+  "39035": [
+   {
+    "utility_name": "City of Cleveland - (OH)",
+    "residential_customers_in_state": 64914,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 71.0,
+     "2024": 73.28
+    },
+    "change_usd_per_month": 2.28,
+    "change_pct": 3.2,
+    "cents_per_kwh": {
+     "2019": 14.65,
+     "2024": 14.87
+    }
+   }
+  ],
+  "39041": [
+   {
+    "utility_name": "Ohio Power Co",
+    "residential_customers_in_state": 550768,
+    "share_of_homes_covered": 0.41,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 112.11,
+     "2024": 173.55
+    },
+    "change_usd_per_month": 61.44,
+    "change_pct": 54.8,
+    "cents_per_kwh": {
+     "2019": 12.19,
+     "2024": 19.33
+    }
+   },
+   {
+    "utility_name": "Licking Rural Electric Inc",
+    "residential_customers_in_state": 25820,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 151.17,
+     "2024": 177.74
+    },
+    "change_usd_per_month": 26.57,
+    "change_pct": 17.6,
+    "cents_per_kwh": {
+     "2019": 13.9,
+     "2024": 16.88
+    }
+   },
+   {
+    "utility_name": "Consolidated Cooperative",
+    "residential_customers_in_state": 16897,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 178.4,
+     "2024": 204.54
+    },
+    "change_usd_per_month": 26.14,
+    "change_pct": 14.7,
+    "cents_per_kwh": {
+     "2019": 13.82,
+     "2024": 16.11
+    }
+   },
+   {
+    "utility_name": "City of Westerville - (OH)",
+    "residential_customers_in_state": 15713,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 105.89,
+     "2024": 121.71
+    },
+    "change_usd_per_month": 15.82,
+    "change_pct": 14.9,
+    "cents_per_kwh": {
+     "2019": 11.61,
+     "2024": 13.19
+    }
+   },
+   {
+    "utility_name": "Union Rural Electric Coop, Inc",
+    "residential_customers_in_state": 11812,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 162.4,
+     "2024": 182.59
+    },
+    "change_usd_per_month": 20.19,
+    "change_pct": 12.4,
+    "cents_per_kwh": {
+     "2019": 13.53,
+     "2024": 15.67
+    }
+   }
+  ],
+  "39043": [
+   {
+    "utility_name": "Lorain-Medina R E C, Inc",
+    "residential_customers_in_state": 15234,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 162.69,
+     "2024": 200.68
+    },
+    "change_usd_per_month": 37.99,
+    "change_pct": 23.4,
+    "cents_per_kwh": {
+     "2019": 13.43,
+     "2024": 17.26
+    }
+   },
+   {
+    "utility_name": "Hancock-Wood Electric Coop Inc",
+    "residential_customers_in_state": 11307,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 163.25,
+     "2024": 184.57
+    },
+    "change_usd_per_month": 21.32,
+    "change_pct": 13.1,
+    "cents_per_kwh": {
+     "2019": 14.43,
+     "2024": 17.05
+    }
+   }
+  ],
+  "39045": [
+   {
+    "utility_name": "Ohio Power Co",
+    "residential_customers_in_state": 550768,
+    "share_of_homes_covered": 0.41,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 112.11,
+     "2024": 173.55
+    },
+    "change_usd_per_month": 61.44,
+    "change_pct": 54.8,
+    "cents_per_kwh": {
+     "2019": 12.19,
+     "2024": 19.33
+    }
+   },
+   {
+    "utility_name": "South Central Power Company",
+    "residential_customers_in_state": 117469,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.94,
+     "2024": 159.68
+    },
+    "change_usd_per_month": 25.74,
+    "change_pct": 19.2,
+    "cents_per_kwh": {
+     "2019": 11.92,
+     "2024": 14.87
+    }
+   }
+  ],
+  "39049": [
+   {
+    "utility_name": "Ohio Power Co",
+    "residential_customers_in_state": 550768,
+    "share_of_homes_covered": 0.41,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 112.11,
+     "2024": 173.55
+    },
+    "change_usd_per_month": 61.44,
+    "change_pct": 54.8,
+    "cents_per_kwh": {
+     "2019": 12.19,
+     "2024": 19.33
+    }
+   },
+   {
+    "utility_name": "South Central Power Company",
+    "residential_customers_in_state": 117469,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.94,
+     "2024": 159.68
+    },
+    "change_usd_per_month": 25.74,
+    "change_pct": 19.2,
+    "cents_per_kwh": {
+     "2019": 11.92,
+     "2024": 14.87
+    }
+   },
+   {
+    "utility_name": "Licking Rural Electric Inc",
+    "residential_customers_in_state": 25820,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 151.17,
+     "2024": 177.74
+    },
+    "change_usd_per_month": 26.57,
+    "change_pct": 17.6,
+    "cents_per_kwh": {
+     "2019": 13.9,
+     "2024": 16.88
+    }
+   },
+   {
+    "utility_name": "Consolidated Cooperative",
+    "residential_customers_in_state": 16897,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 178.4,
+     "2024": 204.54
+    },
+    "change_usd_per_month": 26.14,
+    "change_pct": 14.7,
+    "cents_per_kwh": {
+     "2019": 13.82,
+     "2024": 16.11
+    }
+   },
+   {
+    "utility_name": "City of Westerville - (OH)",
+    "residential_customers_in_state": 15713,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 105.89,
+     "2024": 121.71
+    },
+    "change_usd_per_month": 15.82,
+    "change_pct": 14.9,
+    "cents_per_kwh": {
+     "2019": 11.61,
+     "2024": 13.19
+    }
+   },
+   {
+    "utility_name": "City of Columbus - (OH)",
+    "residential_customers_in_state": 15510,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 65.42,
+     "2024": 62.37
+    },
+    "change_usd_per_month": -3.05,
+    "change_pct": -4.7,
+    "cents_per_kwh": {
+     "2019": 11.33,
+     "2024": 11.32
+    }
+   }
+  ],
+  "39061": [
+   {
+    "utility_name": "Butler Rural Electric Coop Inc - (OH)",
+    "residential_customers_in_state": 11374,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 219.77,
+     "2024": 241.03
+    },
+    "change_usd_per_month": 21.26,
+    "change_pct": 9.7,
+    "cents_per_kwh": {
+     "2019": 15.8,
+     "2024": 18.16
+    }
+   }
+  ],
+  "39089": [
+   {
+    "utility_name": "Ohio Power Co",
+    "residential_customers_in_state": 550768,
+    "share_of_homes_covered": 0.41,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 112.11,
+     "2024": 173.55
+    },
+    "change_usd_per_month": 61.44,
+    "change_pct": 54.8,
+    "cents_per_kwh": {
+     "2019": 12.19,
+     "2024": 19.33
+    }
+   },
+   {
+    "utility_name": "South Central Power Company",
+    "residential_customers_in_state": 117469,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.94,
+     "2024": 159.68
+    },
+    "change_usd_per_month": 25.74,
+    "change_pct": 19.2,
+    "cents_per_kwh": {
+     "2019": 11.92,
+     "2024": 14.87
+    }
+   },
+   {
+    "utility_name": "Licking Rural Electric Inc",
+    "residential_customers_in_state": 25820,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 151.17,
+     "2024": 177.74
+    },
+    "change_usd_per_month": 26.57,
+    "change_pct": 17.6,
+    "cents_per_kwh": {
+     "2019": 13.9,
+     "2024": 16.88
+    }
+   },
+   {
+    "utility_name": "Consolidated Cooperative",
+    "residential_customers_in_state": 16897,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 178.4,
+     "2024": 204.54
+    },
+    "change_usd_per_month": 26.14,
+    "change_pct": 14.7,
+    "cents_per_kwh": {
+     "2019": 13.82,
+     "2024": 16.11
+    }
+   },
+   {
+    "utility_name": "Guernsey-Muskingum El Coop Inc",
+    "residential_customers_in_state": 15289,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 138.44,
+     "2024": 165.41
+    },
+    "change_usd_per_month": 26.97,
+    "change_pct": 19.5,
+    "cents_per_kwh": {
+     "2019": 14.23,
+     "2024": 18.0
+    }
+   }
+  ],
+  "39153": [
+   {
+    "utility_name": "Ohio Power Co",
+    "residential_customers_in_state": 550768,
+    "share_of_homes_covered": 0.41,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 112.11,
+     "2024": 173.55
+    },
+    "change_usd_per_month": 61.44,
+    "change_pct": 54.8,
+    "cents_per_kwh": {
+     "2019": 12.19,
+     "2024": 19.33
+    }
+   },
+   {
+    "utility_name": "City of Cuyahoga Falls - (OH)",
+    "residential_customers_in_state": 24349,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 81.94,
+     "2024": 79.69
+    },
+    "change_usd_per_month": -2.25,
+    "change_pct": -2.7,
+    "cents_per_kwh": {
+     "2019": 13.38,
+     "2024": 13.02
+    }
+   },
+   {
+    "utility_name": "City of Wadsworth - (OH)",
+    "residential_customers_in_state": 12180,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 90.54,
+     "2024": 93.02
+    },
+    "change_usd_per_month": 2.48,
+    "change_pct": 2.7,
+    "cents_per_kwh": {
+     "2019": 12.37,
+     "2024": 11.99
+    }
+   }
+  ],
+  "39159": [
+   {
+    "utility_name": "Consolidated Cooperative",
+    "residential_customers_in_state": 16897,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 178.4,
+     "2024": 204.54
+    },
+    "change_usd_per_month": 26.14,
+    "change_pct": 14.7,
+    "cents_per_kwh": {
+     "2019": 13.82,
+     "2024": 16.11
+    }
+   },
+   {
+    "utility_name": "Pioneer Rural Elec Coop, Inc - (OH)",
+    "residential_customers_in_state": 16310,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 184.51,
+     "2024": 207.72
+    },
+    "change_usd_per_month": 23.21,
+    "change_pct": 12.6,
+    "cents_per_kwh": {
+     "2019": 13.75,
+     "2024": 16.18
+    }
+   },
+   {
+    "utility_name": "Union Rural Electric Coop, Inc",
+    "residential_customers_in_state": 11812,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 162.4,
+     "2024": 182.59
+    },
+    "change_usd_per_month": 20.19,
+    "change_pct": 12.4,
+    "cents_per_kwh": {
+     "2019": 13.53,
+     "2024": 15.67
+    }
+   }
+  ],
+  "39165": [
+   {
+    "utility_name": "City of Lebanon - (OH)",
+    "residential_customers_in_state": 8707,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 97.41,
+     "2024": 92.88
+    },
+    "change_usd_per_month": -4.53,
+    "change_pct": -4.7,
+    "cents_per_kwh": {
+     "2019": 11.13,
+     "2024": 11.14
+    }
+   }
+  ],
+  "39173": [
+   {
+    "utility_name": "Ohio Power Co",
+    "residential_customers_in_state": 550768,
+    "share_of_homes_covered": 0.41,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 112.11,
+     "2024": 173.55
+    },
+    "change_usd_per_month": 61.44,
+    "change_pct": 54.8,
+    "cents_per_kwh": {
+     "2019": 12.19,
+     "2024": 19.33
+    }
+   },
+   {
+    "utility_name": "City of Bowling Green - (OH)",
+    "residential_customers_in_state": 13068,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 92.62,
+     "2024": 96.72
+    },
+    "change_usd_per_month": 4.1,
+    "change_pct": 4.4,
+    "cents_per_kwh": {
+     "2019": 14.36,
+     "2024": 15.36
+    }
+   },
+   {
+    "utility_name": "Hancock-Wood Electric Coop Inc",
+    "residential_customers_in_state": 11307,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 163.25,
+     "2024": 184.57
+    },
+    "change_usd_per_month": 21.32,
+    "change_pct": 13.1,
+    "cents_per_kwh": {
+     "2019": 14.43,
+     "2024": 17.05
+    }
+   },
+   {
+    "utility_name": "North Central Elec Coop, Inc - (OH)",
+    "residential_customers_in_state": 8433,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 162.59,
+     "2024": 202.37
+    },
+    "change_usd_per_month": 39.78,
+    "change_pct": 24.5,
+    "cents_per_kwh": {
+     "2019": 13.14,
+     "2024": 17.09
+    }
+   }
+  ],
+  "40013": [
+   {
+    "utility_name": "Oklahoma Gas & Electric Co",
+    "residential_customers_in_state": 710123,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 102.76,
+     "2024": 125.37
+    },
+    "change_usd_per_month": 22.61,
+    "change_pct": 22.0,
+    "cents_per_kwh": {
+     "2019": 9.24,
+     "2024": 11.78
+    }
+   },
+   {
+    "utility_name": "Choctaw Electric Coop Inc",
+    "residential_customers_in_state": 21483,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 150.78,
+     "2024": 155.84
+    },
+    "change_usd_per_month": 5.06,
+    "change_pct": 3.4,
+    "cents_per_kwh": {
+     "2019": 12.79,
+     "2024": 13.21
+    }
+   }
+  ],
+  "40101": [
+   {
+    "utility_name": "Oklahoma Gas & Electric Co",
+    "residential_customers_in_state": 710123,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 102.76,
+     "2024": 125.37
+    },
+    "change_usd_per_month": 22.61,
+    "change_pct": 22.0,
+    "cents_per_kwh": {
+     "2019": 9.24,
+     "2024": 11.78
+    }
+   },
+   {
+    "utility_name": "East Central Oklahoma Elec Coop Inc",
+    "residential_customers_in_state": 33358,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 134.05,
+     "2024": 136.71
+    },
+    "change_usd_per_month": 2.66,
+    "change_pct": 2.0,
+    "cents_per_kwh": {
+     "2019": 11.41,
+     "2024": 11.99
+    }
+   },
+   {
+    "utility_name": "Lake Region Electric Coop, Inc - (OK)",
+    "residential_customers_in_state": 24788,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 126.71,
+     "2024": 140.93
+    },
+    "change_usd_per_month": 14.22,
+    "change_pct": 11.2,
+    "cents_per_kwh": {
+     "2019": 10.67,
+     "2024": 12.02
+    }
+   },
+   {
+    "utility_name": "Cookson Hills Elec Coop, Inc",
+    "residential_customers_in_state": 17551,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 141.95,
+     "2024": 164.22
+    },
+    "change_usd_per_month": 22.27,
+    "change_pct": 15.7,
+    "cents_per_kwh": {
+     "2019": 11.65,
+     "2024": 14.18
+    }
+   }
+  ],
+  "40109": [
+   {
+    "utility_name": "Oklahoma Gas & Electric Co",
+    "residential_customers_in_state": 710123,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 102.76,
+     "2024": 125.37
+    },
+    "change_usd_per_month": 22.61,
+    "change_pct": 22.0,
+    "cents_per_kwh": {
+     "2019": 9.24,
+     "2024": 11.78
+    }
+   },
+   {
+    "utility_name": "Oklahoma Electric Coop Inc",
+    "residential_customers_in_state": 58544,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 147.0,
+     "2024": 154.67
+    },
+    "change_usd_per_month": 7.67,
+    "change_pct": 5.2,
+    "cents_per_kwh": {
+     "2019": 11.25,
+     "2024": 12.25
+    }
+   },
+   {
+    "utility_name": "City of Edmond - (OK)",
+    "residential_customers_in_state": 39532,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 123.82,
+     "2024": 126.98
+    },
+    "change_usd_per_month": 3.16,
+    "change_pct": 2.6,
+    "cents_per_kwh": {
+     "2019": 11.19,
+     "2024": 11.22
+    }
+   },
+   {
+    "utility_name": "Canadian Valley Elec Coop, Inc",
+    "residential_customers_in_state": 24605,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 132.52,
+     "2024": 152.36
+    },
+    "change_usd_per_month": 19.84,
+    "change_pct": 15.0,
+    "cents_per_kwh": {
+     "2019": 9.95,
+     "2024": 11.9
+    }
+   },
+   {
+    "utility_name": "Central Rural Electric Cooperative, Inc",
+    "residential_customers_in_state": 19650,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 154.78,
+     "2024": 173.97
+    },
+    "change_usd_per_month": 19.19,
+    "change_pct": 12.4,
+    "cents_per_kwh": {
+     "2019": 9.56,
+     "2024": 11.56
+    }
+   },
+   {
+    "utility_name": "Cimarron Electric Coop",
+    "residential_customers_in_state": 15258,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 111.11,
+     "2024": 114.9
+    },
+    "change_usd_per_month": 3.79,
+    "change_pct": 3.4,
+    "cents_per_kwh": {
+     "2019": 10.96,
+     "2024": 11.87
+    }
+   }
+  ],
+  "40143": [
+   {
+    "utility_name": "Oklahoma Gas & Electric Co",
+    "residential_customers_in_state": 710123,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 102.76,
+     "2024": 125.37
+    },
+    "change_usd_per_month": 22.61,
+    "change_pct": 22.0,
+    "cents_per_kwh": {
+     "2019": 9.24,
+     "2024": 11.78
+    }
+   },
+   {
+    "utility_name": "Public Service Co of Oklahoma",
+    "residential_customers_in_state": 501093,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 110.61,
+     "2024": 133.19
+    },
+    "change_usd_per_month": 22.58,
+    "change_pct": 20.4,
+    "cents_per_kwh": {
+     "2019": 10.14,
+     "2024": 12.73
+    }
+   },
+   {
+    "utility_name": "Verdigris Valley Elec Coop Inc",
+    "residential_customers_in_state": 35102,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 149.52,
+     "2024": 166.63
+    },
+    "change_usd_per_month": 17.11,
+    "change_pct": 11.4,
+    "cents_per_kwh": {
+     "2019": 10.59,
+     "2024": 11.93
+    }
+   },
+   {
+    "utility_name": "East Central Oklahoma Elec Coop Inc",
+    "residential_customers_in_state": 33358,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 134.05,
+     "2024": 136.71
+    },
+    "change_usd_per_month": 2.66,
+    "change_pct": 2.0,
+    "cents_per_kwh": {
+     "2019": 11.41,
+     "2024": 11.99
+    }
+   },
+   {
+    "utility_name": "Indian Electric Coop, Inc",
+    "residential_customers_in_state": 14839,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 146.07,
+     "2024": 163.66
+    },
+    "change_usd_per_month": 17.59,
+    "change_pct": 12.0,
+    "cents_per_kwh": {
+     "2019": 10.72,
+     "2024": 12.57
+    }
+   }
+  ],
+  "41005": [
+   {
+    "utility_name": "Portland General Electric Co",
+    "residential_customers_in_state": 828857,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.1,
+     "2024": 141.4
+    },
+    "change_usd_per_month": 43.3,
+    "change_pct": 44.1,
+    "cents_per_kwh": {
+     "2019": 12.28,
+     "2024": 18.19
+    }
+   }
+  ],
+  "41013": [
+   {
+    "utility_name": "Central Electric Coop Inc - (OR)",
+    "residential_customers_in_state": 34562,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 122.02,
+     "2024": 134.13
+    },
+    "change_usd_per_month": 12.11,
+    "change_pct": 9.9,
+    "cents_per_kwh": {
+     "2019": 8.66,
+     "2024": 9.75
+    }
+   }
+  ],
+  "41017": [
+   {
+    "utility_name": "Central Electric Coop Inc - (OR)",
+    "residential_customers_in_state": 34562,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 122.02,
+     "2024": 134.13
+    },
+    "change_usd_per_month": 12.11,
+    "change_pct": 9.9,
+    "cents_per_kwh": {
+     "2019": 8.66,
+     "2024": 9.75
+    }
+   },
+   {
+    "utility_name": "Midstate Electric Coop, Inc",
+    "residential_customers_in_state": 18594,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 116.93,
+     "2024": 135.9
+    },
+    "change_usd_per_month": 18.97,
+    "change_pct": 16.2,
+    "cents_per_kwh": {
+     "2019": 8.99,
+     "2024": 10.52
+    }
+   }
+  ],
+  "41039": [
+   {
+    "utility_name": "City of Eugene - (OR)",
+    "residential_customers_in_state": 89582,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 104.72,
+     "2024": 115.11
+    },
+    "change_usd_per_month": 10.39,
+    "change_pct": 9.9,
+    "cents_per_kwh": {
+     "2019": 11.35,
+     "2024": 13.07
+    }
+   },
+   {
+    "utility_name": "Central Lincoln People's Ut Dt",
+    "residential_customers_in_state": 35904,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 101.51,
+     "2024": 108.32
+    },
+    "change_usd_per_month": 6.81,
+    "change_pct": 6.7,
+    "cents_per_kwh": {
+     "2019": 9.81,
+     "2024": 10.93
+    }
+   },
+   {
+    "utility_name": "City of Springfield - (OR)",
+    "residential_customers_in_state": 29882,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 75.16,
+     "2024": 81.75
+    },
+    "change_usd_per_month": 6.59,
+    "change_pct": 8.8,
+    "cents_per_kwh": {
+     "2019": 6.88,
+     "2024": 8.1
+    }
+   },
+   {
+    "utility_name": "Emerald People's Utility Dist",
+    "residential_customers_in_state": 19968,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 130.12,
+     "2024": 134.3
+    },
+    "change_usd_per_month": 4.18,
+    "change_pct": 3.2,
+    "cents_per_kwh": {
+     "2019": 10.42,
+     "2024": 11.05
+    }
+   },
+   {
+    "utility_name": "Consumers Power, Inc",
+    "residential_customers_in_state": 18751,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.41,
+     "2024": 152.91
+    },
+    "change_usd_per_month": 25.5,
+    "change_pct": 20.0,
+    "cents_per_kwh": {
+     "2019": 10.83,
+     "2024": 13.01
+    }
+   },
+   {
+    "utility_name": "Midstate Electric Coop, Inc",
+    "residential_customers_in_state": 18594,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 116.93,
+     "2024": 135.9
+    },
+    "change_usd_per_month": 18.97,
+    "change_pct": 16.2,
+    "cents_per_kwh": {
+     "2019": 8.99,
+     "2024": 10.52
+    }
+   },
+   {
+    "utility_name": "Lane Electric Coop Inc",
+    "residential_customers_in_state": 12413,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 151.08,
+     "2024": 155.99
+    },
+    "change_usd_per_month": 4.91,
+    "change_pct": 3.2,
+    "cents_per_kwh": {
+     "2019": 11.63,
+     "2024": 12.55
+    }
+   }
+  ],
+  "41043": [
+   {
+    "utility_name": "Central Electric Coop Inc - (OR)",
+    "residential_customers_in_state": 34562,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 122.02,
+     "2024": 134.13
+    },
+    "change_usd_per_month": 12.11,
+    "change_pct": 9.9,
+    "cents_per_kwh": {
+     "2019": 8.66,
+     "2024": 9.75
+    }
+   },
+   {
+    "utility_name": "Emerald People's Utility Dist",
+    "residential_customers_in_state": 19968,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 130.12,
+     "2024": 134.3
+    },
+    "change_usd_per_month": 4.18,
+    "change_pct": 3.2,
+    "cents_per_kwh": {
+     "2019": 10.42,
+     "2024": 11.05
+    }
+   },
+   {
+    "utility_name": "Consumers Power, Inc",
+    "residential_customers_in_state": 18751,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.41,
+     "2024": 152.91
+    },
+    "change_usd_per_month": 25.5,
+    "change_pct": 20.0,
+    "cents_per_kwh": {
+     "2019": 10.83,
+     "2024": 13.01
+    }
+   }
+  ],
+  "41047": [
+   {
+    "utility_name": "Portland General Electric Co",
+    "residential_customers_in_state": 828857,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.1,
+     "2024": 141.4
+    },
+    "change_usd_per_month": 43.3,
+    "change_pct": 44.1,
+    "cents_per_kwh": {
+     "2019": 12.28,
+     "2024": 18.19
+    }
+   },
+   {
+    "utility_name": "Consumers Power, Inc",
+    "residential_customers_in_state": 18751,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 127.41,
+     "2024": 152.91
+    },
+    "change_usd_per_month": 25.5,
+    "change_pct": 20.0,
+    "cents_per_kwh": {
+     "2019": 10.83,
+     "2024": 13.01
+    }
+   },
+   {
+    "utility_name": "Salem Electric - (OR)",
+    "residential_customers_in_state": 18385,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 83.86,
+     "2024": 96.14
+    },
+    "change_usd_per_month": 12.28,
+    "change_pct": 14.6,
+    "cents_per_kwh": {
+     "2019": 9.52,
+     "2024": 11.02
+    }
+   }
+  ],
+  "41049": [
+   {
+    "utility_name": "Umatilla Electric Coop Assn",
+    "residential_customers_in_state": 12620,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 106.19,
+     "2024": 118.16
+    },
+    "change_usd_per_month": 11.97,
+    "change_pct": 11.3,
+    "cents_per_kwh": {
+     "2019": 8.36,
+     "2024": 9.84
+    }
+   }
+  ],
+  "41051": [
+   {
+    "utility_name": "Portland General Electric Co",
+    "residential_customers_in_state": 828857,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.1,
+     "2024": 141.4
+    },
+    "change_usd_per_month": 43.3,
+    "change_pct": 44.1,
+    "cents_per_kwh": {
+     "2019": 12.28,
+     "2024": 18.19
+    }
+   }
+  ],
+  "41059": [
+   {
+    "utility_name": "Umatilla Electric Coop Assn",
+    "residential_customers_in_state": 12620,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 106.19,
+     "2024": 118.16
+    },
+    "change_usd_per_month": 11.97,
+    "change_pct": 11.3,
+    "cents_per_kwh": {
+     "2019": 8.36,
+     "2024": 9.84
+    }
+   }
+  ],
+  "41065": [
+   {
+    "utility_name": "Central Electric Coop Inc - (OR)",
+    "residential_customers_in_state": 34562,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 122.02,
+     "2024": 134.13
+    },
+    "change_usd_per_month": 12.11,
+    "change_pct": 9.9,
+    "cents_per_kwh": {
+     "2019": 8.66,
+     "2024": 9.75
+    }
+   },
+   {
+    "utility_name": "Northern Wasco County PUD",
+    "residential_customers_in_state": 9800,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 89.95,
+     "2024": 95.42
+    },
+    "change_usd_per_month": 5.47,
+    "change_pct": 6.1,
+    "cents_per_kwh": {
+     "2019": 7.0,
+     "2024": 7.72
+    }
+   }
+  ],
+  "41067": [
+   {
+    "utility_name": "Portland General Electric Co",
+    "residential_customers_in_state": 828857,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.1,
+     "2024": 141.4
+    },
+    "change_usd_per_month": 43.3,
+    "change_pct": 44.1,
+    "cents_per_kwh": {
+     "2019": 12.28,
+     "2024": 18.19
+    }
+   },
+   {
+    "utility_name": "City of Forest Grove",
+    "residential_customers_in_state": 10369,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 86.82,
+     "2024": 97.05
+    },
+    "change_usd_per_month": 10.23,
+    "change_pct": 11.8,
+    "cents_per_kwh": {
+     "2019": 8.46,
+     "2024": 9.93
+    }
+   }
+  ],
+  "42003": [
+   {
+    "utility_name": "Central Electric Coop, Inc - (PA)",
+    "residential_customers_in_state": 23629,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 108.23,
+     "2024": 129.75
+    },
+    "change_usd_per_month": 21.52,
+    "change_pct": 19.9,
+    "cents_per_kwh": {
+     "2019": 14.04,
+     "2024": 17.03
+    }
+   }
+  ],
+  "42077": [
+   {
+    "utility_name": "PPL Electric Utilities Corp",
+    "residential_customers_in_state": 797773,
+    "share_of_homes_covered": 0.62,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 119.05,
+     "2024": 144.25
+    },
+    "change_usd_per_month": 25.2,
+    "change_pct": 21.2,
+    "cents_per_kwh": {
+     "2019": 13.36,
+     "2024": 16.99
+    }
+   }
+  ],
+  "42091": [
+   {
+    "utility_name": "PECO Energy Co",
+    "residential_customers_in_state": 1205013,
+    "share_of_homes_covered": 0.78,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 95.16,
+     "2024": 121.18
+    },
+    "change_usd_per_month": 26.02,
+    "change_pct": 27.3,
+    "cents_per_kwh": {
+     "2019": 12.76,
+     "2024": 16.16
+    }
+   },
+   {
+    "utility_name": "PPL Electric Utilities Corp",
+    "residential_customers_in_state": 797773,
+    "share_of_homes_covered": 0.62,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 119.05,
+     "2024": 144.25
+    },
+    "change_usd_per_month": 25.2,
+    "change_pct": 21.2,
+    "cents_per_kwh": {
+     "2019": 13.36,
+     "2024": 16.99
+    }
+   }
+  ],
+  "42101": [
+   {
+    "utility_name": "PECO Energy Co",
+    "residential_customers_in_state": 1205013,
+    "share_of_homes_covered": 0.78,
+    "covers_most_homes": false,
+    "avg_monthly_bill_usd": {
+     "2019": 95.16,
+     "2024": 121.18
+    },
+    "change_usd_per_month": 26.02,
+    "change_pct": 27.3,
+    "cents_per_kwh": {
+     "2019": 12.76,
+     "2024": 16.16
+    }
+   }
+  ],
+  "45003": [
+   {
+    "utility_name": "Aiken Electric Coop Inc",
+    "residential_customers_in_state": 49460,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 159.69,
+     "2024": 170.28
+    },
+    "change_usd_per_month": 10.59,
+    "change_pct": 6.6,
+    "cents_per_kwh": {
+     "2019": 13.98,
+     "2024": 15.53
+    }
+   }
+  ],
+  "45015": [
+   {
+    "utility_name": "Berkeley Electric Coop Inc",
+    "residential_customers_in_state": 115117,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 163.28,
+     "2024": 170.31
+    },
+    "change_usd_per_month": 7.03,
+    "change_pct": 4.3,
+    "cents_per_kwh": {
+     "2019": 13.32,
+     "2024": 14.93
+    }
+   },
+   {
+    "utility_name": "Edisto Electric Coop, Inc",
+    "residential_customers_in_state": 15421,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 190.7,
+     "2024": 199.83
+    },
+    "change_usd_per_month": 9.13,
+    "change_pct": 4.8,
+    "cents_per_kwh": {
+     "2019": 15.07,
+     "2024": 16.4
+    }
+   }
+  ],
+  "45051": [
+   {
+    "utility_name": "Duke Energy Progress - (NC)",
+    "residential_customers_in_state": 143713,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 157.6,
+     "2024": 170.52
+    },
+    "change_usd_per_month": 12.92,
+    "change_pct": 8.2,
+    "cents_per_kwh": {
+     "2019": 12.34,
+     "2024": 14.88
+    }
+   },
+   {
+    "utility_name": "Horry Electric Coop Inc",
+    "residential_customers_in_state": 86726,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 157.67,
+     "2024": 140.32
+    },
+    "change_usd_per_month": -17.35,
+    "change_pct": -11.0,
+    "cents_per_kwh": {
+     "2019": 13.84,
+     "2024": 13.23
+    }
+   }
+  ],
+  "46099": [
+   {
+    "utility_name": "Northern States Power Co - Minnesota",
+    "residential_customers_in_state": 92204,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 92.26,
+     "2024": 103.33
+    },
+    "change_usd_per_month": 11.07,
+    "change_pct": 12.0,
+    "cents_per_kwh": {
+     "2019": 11.95,
+     "2024": 13.87
+    }
+   },
+   {
+    "utility_name": "Southeastern Electric Coop Inc - (SD)",
+    "residential_customers_in_state": 20160,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 148.25,
+     "2024": 139.98
+    },
+    "change_usd_per_month": -8.27,
+    "change_pct": -5.6,
+    "cents_per_kwh": {
+     "2019": 10.95,
+     "2024": 12.41
+    }
+   }
+  ],
+  "47037": [
+   {
+    "utility_name": "Nashville Electric Service",
+    "residential_customers_in_state": 417640,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.84,
+     "2024": 137.51
+    },
+    "change_usd_per_month": 3.67,
+    "change_pct": 2.7,
+    "cents_per_kwh": {
+     "2019": 11.89,
+     "2024": 13.47
+    }
+   }
+  ],
+  "47057": [
+   {
+    "utility_name": "Knoxville Utilities Board",
+    "residential_customers_in_state": 193707,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 121.63,
+     "2024": 137.06
+    },
+    "change_usd_per_month": 15.43,
+    "change_pct": 12.7,
+    "cents_per_kwh": {
+     "2019": 10.67,
+     "2024": 12.54
+    }
+   },
+   {
+    "utility_name": "Appalachian Electric Coop",
+    "residential_customers_in_state": 43709,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 147.4,
+     "2024": 157.98
+    },
+    "change_usd_per_month": 10.58,
+    "change_pct": 7.2,
+    "cents_per_kwh": {
+     "2019": 11.59,
+     "2024": 12.93
+    }
+   }
+  ],
+  "47125": [
+   {
+    "utility_name": "Cumberland Elec Member Corp",
+    "residential_customers_in_state": 100585,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 169.22,
+     "2024": 176.97
+    },
+    "change_usd_per_month": 7.75,
+    "change_pct": 4.6,
+    "cents_per_kwh": {
+     "2019": 11.51,
+     "2024": 12.99
+    }
+   },
+   {
+    "utility_name": "City of Clarksville - (TN)",
+    "residential_customers_in_state": 75953,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 136.46,
+     "2024": 143.2
+    },
+    "change_usd_per_month": 6.74,
+    "change_pct": 4.9,
+    "cents_per_kwh": {
+     "2019": 11.26,
+     "2024": 12.77
+    }
+   },
+   {
+    "utility_name": "City of Dickson",
+    "residential_customers_in_state": 30808,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.12,
+     "2024": 143.49
+    },
+    "change_usd_per_month": 10.37,
+    "change_pct": 7.8,
+    "cents_per_kwh": {
+     "2019": 10.3,
+     "2024": 11.65
+    }
+   }
+  ],
+  "47145": [
+   {
+    "utility_name": "City of Clinton - (TN)",
+    "residential_customers_in_state": 26230,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 140.3,
+     "2024": 154.35
+    },
+    "change_usd_per_month": 14.05,
+    "change_pct": 10.0,
+    "cents_per_kwh": {
+     "2019": 11.59,
+     "2024": 12.99
+    }
+   },
+   {
+    "utility_name": "City of Rockwood - (TN)",
+    "residential_customers_in_state": 12042,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 137.07,
+     "2024": 152.05
+    },
+    "change_usd_per_month": 14.98,
+    "change_pct": 10.9,
+    "cents_per_kwh": {
+     "2019": 11.3,
+     "2024": 12.71
+    }
+   }
+  ],
+  "47157": [
+   {
+    "utility_name": "City of Memphis - (TN)",
+    "residential_customers_in_state": 380286,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 120.54,
+     "2024": 138.5
+    },
+    "change_usd_per_month": 17.96,
+    "change_pct": 14.9,
+    "cents_per_kwh": {
+     "2019": 10.03,
+     "2024": 12.16
+    }
+   }
+  ],
+  "47165": [
+   {
+    "utility_name": "Nashville Electric Service",
+    "residential_customers_in_state": 417640,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.84,
+     "2024": 137.51
+    },
+    "change_usd_per_month": 3.67,
+    "change_pct": 2.7,
+    "cents_per_kwh": {
+     "2019": 11.89,
+     "2024": 13.47
+    }
+   },
+   {
+    "utility_name": "Cumberland Elec Member Corp",
+    "residential_customers_in_state": 100585,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 169.22,
+     "2024": 176.97
+    },
+    "change_usd_per_month": 7.75,
+    "change_pct": 4.6,
+    "cents_per_kwh": {
+     "2019": 11.51,
+     "2024": 12.99
+    }
+   },
+   {
+    "utility_name": "City of Gallatin - (TN)",
+    "residential_customers_in_state": 23204,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 116.48,
+     "2024": 121.58
+    },
+    "change_usd_per_month": 5.1,
+    "change_pct": 4.4,
+    "cents_per_kwh": {
+     "2019": 10.24,
+     "2024": 11.78
+    }
+   }
+  ],
+  "47187": [
+   {
+    "utility_name": "Nashville Electric Service",
+    "residential_customers_in_state": 417640,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.84,
+     "2024": 137.51
+    },
+    "change_usd_per_month": 3.67,
+    "change_pct": 2.7,
+    "cents_per_kwh": {
+     "2019": 11.89,
+     "2024": 13.47
+    }
+   },
+   {
+    "utility_name": "Middle Tennessee E M C",
+    "residential_customers_in_state": 307370,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 141.01,
+     "2024": 148.33
+    },
+    "change_usd_per_month": 7.32,
+    "change_pct": 5.2,
+    "cents_per_kwh": {
+     "2019": 10.13,
+     "2024": 11.76
+    }
+   },
+   {
+    "utility_name": "Duck River Elec Member Corp",
+    "residential_customers_in_state": 71342,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 153.89,
+     "2024": 168.56
+    },
+    "change_usd_per_month": 14.67,
+    "change_pct": 9.5,
+    "cents_per_kwh": {
+     "2019": 11.15,
+     "2024": 12.5
+    }
+   }
+  ],
+  "48005": [
+   {
+    "utility_name": "Sam Houston Electric Coop Inc",
+    "residential_customers_in_state": 86118,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 137.69,
+     "2024": 144.08
+    },
+    "change_usd_per_month": 6.39,
+    "change_pct": 4.6,
+    "cents_per_kwh": {
+     "2019": 11.6,
+     "2024": 12.62
+    }
+   },
+   {
+    "utility_name": "Houston County Elec Coop Inc",
+    "residential_customers_in_state": 21426,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 101.65,
+     "2024": 142.49
+    },
+    "change_usd_per_month": 40.84,
+    "change_pct": 40.2,
+    "cents_per_kwh": {
+     "2019": 11.73,
+     "2024": 16.6
+    }
+   },
+   {
+    "utility_name": "Jasper-Newton Elec Coop, Inc",
+    "residential_customers_in_state": 21180,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 134.09,
+     "2024": 140.42
+    },
+    "change_usd_per_month": 6.33,
+    "change_pct": 4.7,
+    "cents_per_kwh": {
+     "2019": 12.31,
+     "2024": 12.96
+    }
+   }
+  ],
+  "48029": [
+   {
+    "utility_name": "Pedernales Electric Coop, Inc",
+    "residential_customers_in_state": 405587,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 128.45,
+     "2024": 145.55
+    },
+    "change_usd_per_month": 17.1,
+    "change_pct": 13.3,
+    "cents_per_kwh": {
+     "2019": 10.36,
+     "2024": 12.22
+    }
+   },
+   {
+    "utility_name": "Guadalupe Valley Elec Coop Inc",
+    "residential_customers_in_state": 92189,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 129.05,
+     "2024": 149.49
+    },
+    "change_usd_per_month": 20.44,
+    "change_pct": 15.8,
+    "cents_per_kwh": {
+     "2019": 10.19,
+     "2024": 12.49
+    }
+   },
+   {
+    "utility_name": "Bandera Electric Coop, Inc",
+    "residential_customers_in_state": 35346,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 135.45,
+     "2024": 145.75
+    },
+    "change_usd_per_month": 10.3,
+    "change_pct": 7.6,
+    "cents_per_kwh": {
+     "2019": 11.31,
+     "2024": 12.4
+    }
+   },
+   {
+    "utility_name": "Karnes Electric Coop Inc",
+    "residential_customers_in_state": 13222,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 121.31,
+     "2024": 144.58
+    },
+    "change_usd_per_month": 23.27,
+    "change_pct": 19.2,
+    "cents_per_kwh": {
+     "2019": 9.52,
+     "2024": 9.9
+    }
+   }
+  ],
+  "48085": [
+   {
+    "utility_name": "Denton County Elec Coop, Inc",
+    "residential_customers_in_state": 298734,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 135.9,
+     "2024": 166.39
+    },
+    "change_usd_per_month": 30.49,
+    "change_pct": 22.4,
+    "cents_per_kwh": {
+     "2019": 10.4,
+     "2024": 13.77
+    }
+   },
+   {
+    "utility_name": "Grayson-Collin Elec Coop, Inc",
+    "residential_customers_in_state": 90464,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 164.44,
+     "2024": 185.63
+    },
+    "change_usd_per_month": 21.19,
+    "change_pct": 12.9,
+    "cents_per_kwh": {
+     "2019": 12.24,
+     "2024": 16.4
+    }
+   },
+   {
+    "utility_name": "Farmers Electric Coop, Inc - (TX)",
+    "residential_customers_in_state": 84006,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 156.28,
+     "2024": 143.04
+    },
+    "change_usd_per_month": -13.24,
+    "change_pct": -8.5,
+    "cents_per_kwh": {
+     "2019": 11.5,
+     "2024": 11.51
+    }
+   },
+   {
+    "utility_name": "Fannin County Electric Coop",
+    "residential_customers_in_state": 11712,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 159.39,
+     "2024": 181.5
+    },
+    "change_usd_per_month": 22.11,
+    "change_pct": 13.9,
+    "cents_per_kwh": {
+     "2019": 13.57,
+     "2024": 15.65
+    }
+   }
+  ],
+  "48113": [
+   {
+    "utility_name": "Farmers Electric Coop, Inc - (TX)",
+    "residential_customers_in_state": 84006,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 156.28,
+     "2024": 143.04
+    },
+    "change_usd_per_month": -13.24,
+    "change_pct": -8.5,
+    "cents_per_kwh": {
+     "2019": 11.5,
+     "2024": 11.51
+    }
+   },
+   {
+    "utility_name": "Trinity Valley Elec Coop Inc",
+    "residential_customers_in_state": 79954,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 152.31,
+     "2024": 142.78
+    },
+    "change_usd_per_month": -9.53,
+    "change_pct": -6.3,
+    "cents_per_kwh": {
+     "2019": 11.12,
+     "2024": 11.26
+    }
+   },
+   {
+    "utility_name": "City of Garland - (TX)",
+    "residential_customers_in_state": 69421,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 119.65,
+     "2024": 146.98
+    },
+    "change_usd_per_month": 27.33,
+    "change_pct": 22.8,
+    "cents_per_kwh": {
+     "2019": 10.31,
+     "2024": 13.48
+    }
+   },
+   {
+    "utility_name": "HILCO Electric Cooperative, Inc.",
+    "residential_customers_in_state": 26883,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 167.82,
+     "2024": 215.86
+    },
+    "change_usd_per_month": 48.04,
+    "change_pct": 28.6,
+    "cents_per_kwh": {
+     "2019": 10.55,
+     "2024": 14.91
+    }
+   }
+  ],
+  "48121": [
+   {
+    "utility_name": "Denton County Elec Coop, Inc",
+    "residential_customers_in_state": 298734,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 135.9,
+     "2024": 166.39
+    },
+    "change_usd_per_month": 30.49,
+    "change_pct": 22.4,
+    "cents_per_kwh": {
+     "2019": 10.4,
+     "2024": 13.77
+    }
+   },
+   {
+    "utility_name": "Tri-County Electric Coop, Inc (TX)",
+    "residential_customers_in_state": 118075,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 143.15,
+     "2024": 188.12
+    },
+    "change_usd_per_month": 44.97,
+    "change_pct": 31.4,
+    "cents_per_kwh": {
+     "2019": 8.98,
+     "2024": 12.65
+    }
+   },
+   {
+    "utility_name": "City of Denton - (TX)",
+    "residential_customers_in_state": 58941,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 109.82,
+     "2024": 127.99
+    },
+    "change_usd_per_month": 18.17,
+    "change_pct": 16.5,
+    "cents_per_kwh": {
+     "2019": 10.73,
+     "2024": 12.81
+    }
+   },
+   {
+    "utility_name": "Wise Electric Coop Inc",
+    "residential_customers_in_state": 20137,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 158.06,
+     "2024": 226.31
+    },
+    "change_usd_per_month": 68.25,
+    "change_pct": 43.2,
+    "cents_per_kwh": {
+     "2019": 10.35,
+     "2024": 15.56
+    }
+   },
+   {
+    "utility_name": "Cooke County Elec Coop Assn",
+    "residential_customers_in_state": 15886,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 139.17,
+     "2024": 161.93
+    },
+    "change_usd_per_month": 22.76,
+    "change_pct": 16.4,
+    "cents_per_kwh": {
+     "2019": 11.4,
+     "2024": 14.01
+    }
+   }
+  ],
+  "48139": [
+   {
+    "utility_name": "United Electric Coop Service Inc - (TX)",
+    "residential_customers_in_state": 88324,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 128.32,
+     "2024": 168.47
+    },
+    "change_usd_per_month": 40.15,
+    "change_pct": 31.3,
+    "cents_per_kwh": {
+     "2019": 9.09,
+     "2024": 13.0
+    }
+   },
+   {
+    "utility_name": "HILCO Electric Cooperative, Inc.",
+    "residential_customers_in_state": 26883,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 167.82,
+     "2024": 215.86
+    },
+    "change_usd_per_month": 48.04,
+    "change_pct": 28.6,
+    "cents_per_kwh": {
+     "2019": 10.55,
+     "2024": 14.91
+    }
+   },
+   {
+    "utility_name": "Navarro County Elec Coop, Inc",
+    "residential_customers_in_state": 18435,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 140.41,
+     "2024": 175.96
+    },
+    "change_usd_per_month": 35.55,
+    "change_pct": 25.3,
+    "cents_per_kwh": {
+     "2019": 10.48,
+     "2024": 14.25
+    }
+   }
+  ],
+  "48201": [
+   {
+    "utility_name": "Entergy Texas Inc.",
+    "residential_customers_in_state": 457369,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 125.86,
+     "2024": 165.32
+    },
+    "change_usd_per_month": 39.46,
+    "change_pct": 31.4,
+    "cents_per_kwh": {
+     "2019": 10.05,
+     "2024": 13.66
+    }
+   },
+   {
+    "utility_name": "San Bernard Electric Coop, Inc",
+    "residential_customers_in_state": 31774,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 160.92,
+     "2024": 173.27
+    },
+    "change_usd_per_month": 12.35,
+    "change_pct": 7.7,
+    "cents_per_kwh": {
+     "2019": 12.88,
+     "2024": 14.16
+    }
+   }
+  ],
+  "48221": [
+   {
+    "utility_name": "Tri-County Electric Coop, Inc (TX)",
+    "residential_customers_in_state": 118075,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 143.15,
+     "2024": 188.12
+    },
+    "change_usd_per_month": 44.97,
+    "change_pct": 31.4,
+    "cents_per_kwh": {
+     "2019": 8.98,
+     "2024": 12.65
+    }
+   },
+   {
+    "utility_name": "United Electric Coop Service Inc - (TX)",
+    "residential_customers_in_state": 88324,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 128.32,
+     "2024": 168.47
+    },
+    "change_usd_per_month": 40.15,
+    "change_pct": 31.3,
+    "cents_per_kwh": {
+     "2019": 9.09,
+     "2024": 13.0
+    }
+   }
+  ],
+  "48325": [
+   {
+    "utility_name": "Bandera Electric Coop, Inc",
+    "residential_customers_in_state": 35346,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 135.45,
+     "2024": 145.75
+    },
+    "change_usd_per_month": 10.3,
+    "change_pct": 7.6,
+    "cents_per_kwh": {
+     "2019": 11.31,
+     "2024": 12.4
+    }
+   },
+   {
+    "utility_name": "Medina Electric Coop, Inc",
+    "residential_customers_in_state": 30205,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 124.98,
+     "2024": 136.46
+    },
+    "change_usd_per_month": 11.48,
+    "change_pct": 9.2,
+    "cents_per_kwh": {
+     "2019": 11.54,
+     "2024": 12.1
+    }
+   },
+   {
+    "utility_name": "Karnes Electric Coop Inc",
+    "residential_customers_in_state": 13222,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 121.31,
+     "2024": 144.58
+    },
+    "change_usd_per_month": 23.27,
+    "change_pct": 19.2,
+    "cents_per_kwh": {
+     "2019": 9.52,
+     "2024": 9.9
+    }
+   }
+  ],
+  "48331": [
+   {
+    "utility_name": "Entergy Texas Inc.",
+    "residential_customers_in_state": 457369,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 125.86,
+     "2024": 165.32
+    },
+    "change_usd_per_month": 39.46,
+    "change_pct": 31.4,
+    "cents_per_kwh": {
+     "2019": 10.05,
+     "2024": 13.66
+    }
+   },
+   {
+    "utility_name": "Heart of Texas Electric Coop",
+    "residential_customers_in_state": 18722,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 152.11,
+     "2024": 192.38
+    },
+    "change_usd_per_month": 40.27,
+    "change_pct": 26.5,
+    "cents_per_kwh": {
+     "2019": 9.25,
+     "2024": 12.62
+    }
+   },
+   {
+    "utility_name": "Bartlett Electric Coop, Inc",
+    "residential_customers_in_state": 11527,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 166.89,
+     "2024": 219.37
+    },
+    "change_usd_per_month": 52.48,
+    "change_pct": 31.4,
+    "cents_per_kwh": {
+     "2019": 10.79,
+     "2024": 16.09
+    }
+   }
+  ],
+  "48339": [
+   {
+    "utility_name": "Entergy Texas Inc.",
+    "residential_customers_in_state": 457369,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 125.86,
+     "2024": 165.32
+    },
+    "change_usd_per_month": 39.46,
+    "change_pct": 31.4,
+    "cents_per_kwh": {
+     "2019": 10.05,
+     "2024": 13.66
+    }
+   },
+   {
+    "utility_name": "Sam Houston Electric Coop Inc",
+    "residential_customers_in_state": 86118,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 137.69,
+     "2024": 144.08
+    },
+    "change_usd_per_month": 6.39,
+    "change_pct": 4.6,
+    "cents_per_kwh": {
+     "2019": 11.6,
+     "2024": 12.62
+    }
+   },
+   {
+    "utility_name": "Mid-South Electric Coop Assn",
+    "residential_customers_in_state": 36267,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 152.18,
+     "2024": 176.7
+    },
+    "change_usd_per_month": 24.52,
+    "change_pct": 16.1,
+    "cents_per_kwh": {
+     "2019": 11.71,
+     "2024": 14.08
+    }
+   },
+   {
+    "utility_name": "San Bernard Electric Coop, Inc",
+    "residential_customers_in_state": 31774,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 160.92,
+     "2024": 173.27
+    },
+    "change_usd_per_month": 12.35,
+    "change_pct": 7.7,
+    "cents_per_kwh": {
+     "2019": 12.88,
+     "2024": 14.16
+    }
+   }
+  ],
+  "48349": [
+   {
+    "utility_name": "Navarro County Elec Coop, Inc",
+    "residential_customers_in_state": 18435,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 140.41,
+     "2024": 175.96
+    },
+    "change_usd_per_month": 35.55,
+    "change_pct": 25.3,
+    "cents_per_kwh": {
+     "2019": 10.48,
+     "2024": 14.25
+    }
+   }
+  ],
+  "48439": [
+   {
+    "utility_name": "Denton County Elec Coop, Inc",
+    "residential_customers_in_state": 298734,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 135.9,
+     "2024": 166.39
+    },
+    "change_usd_per_month": 30.49,
+    "change_pct": 22.4,
+    "cents_per_kwh": {
+     "2019": 10.4,
+     "2024": 13.77
+    }
+   },
+   {
+    "utility_name": "Tri-County Electric Coop, Inc (TX)",
+    "residential_customers_in_state": 118075,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 143.15,
+     "2024": 188.12
+    },
+    "change_usd_per_month": 44.97,
+    "change_pct": 31.4,
+    "cents_per_kwh": {
+     "2019": 8.98,
+     "2024": 12.65
+    }
+   },
+   {
+    "utility_name": "United Electric Coop Service Inc - (TX)",
+    "residential_customers_in_state": 88324,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 128.32,
+     "2024": 168.47
+    },
+    "change_usd_per_month": 40.15,
+    "change_pct": 31.3,
+    "cents_per_kwh": {
+     "2019": 9.09,
+     "2024": 13.0
+    }
+   }
+  ],
+  "48453": [
+   {
+    "utility_name": "Austin Energy",
+    "residential_customers_in_state": 507291,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 95.09,
+     "2024": 104.85
+    },
+    "change_usd_per_month": 9.76,
+    "change_pct": 10.3,
+    "cents_per_kwh": {
+     "2019": 10.84,
+     "2024": 12.58
+    }
+   },
+   {
+    "utility_name": "Pedernales Electric Coop, Inc",
+    "residential_customers_in_state": 405587,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 128.45,
+     "2024": 145.55
+    },
+    "change_usd_per_month": 17.1,
+    "change_pct": 13.3,
+    "cents_per_kwh": {
+     "2019": 10.36,
+     "2024": 12.22
+    }
+   }
+  ],
+  "49035": [
+   {
+    "utility_name": "City of Murray - (UT)",
+    "residential_customers_in_state": 17000,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 58.72,
+     "2024": 68.65
+    },
+    "change_usd_per_month": 9.93,
+    "change_pct": 16.9,
+    "cents_per_kwh": {
+     "2019": 9.24,
+     "2024": 11.06
+    }
+   }
+  ],
+  "49047": [
+   {
+    "utility_name": "Moon Lake Electric Assn Inc",
+    "residential_customers_in_state": 13275,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 75.8,
+     "2024": 89.69
+    },
+    "change_usd_per_month": 13.89,
+    "change_pct": 18.3,
+    "cents_per_kwh": {
+     "2019": 7.8,
+     "2024": 8.98
+    }
+   }
+  ],
+  "49049": [
+   {
+    "utility_name": "Provo City Corp",
+    "residential_customers_in_state": 35299,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 62.67,
+     "2024": 69.43
+    },
+    "change_usd_per_month": 6.76,
+    "change_pct": 10.8,
+    "cents_per_kwh": {
+     "2019": 10.73,
+     "2024": 11.39
+    }
+   },
+   {
+    "utility_name": "Lehi City Corporation",
+    "residential_customers_in_state": 27459,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 64.81,
+     "2024": 88.15
+    },
+    "change_usd_per_month": 23.34,
+    "change_pct": 36.0,
+    "cents_per_kwh": {
+     "2019": 8.77,
+     "2024": 10.95
+    }
+   },
+   {
+    "utility_name": "Spanish Fork City Corporation",
+    "residential_customers_in_state": 13988,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 75.19,
+     "2024": 80.19
+    },
+    "change_usd_per_month": 5.0,
+    "change_pct": 6.6,
+    "cents_per_kwh": {
+     "2019": 10.25,
+     "2024": 10.1
+    }
+   },
+   {
+    "utility_name": "City of Springville - (UT)",
+    "residential_customers_in_state": 10852,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 76.11,
+     "2024": 100.75
+    },
+    "change_usd_per_month": 24.64,
+    "change_pct": 32.4,
+    "cents_per_kwh": {
+     "2019": 10.68,
+     "2024": 12.75
+    }
+   },
+   {
+    "utility_name": "Strawberry Electric Serv Dist",
+    "residential_customers_in_state": 3593,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 115.83,
+     "2024": 175.65
+    },
+    "change_usd_per_month": 59.82,
+    "change_pct": 51.6,
+    "cents_per_kwh": {
+     "2019": 10.81,
+     "2024": 15.16
+    }
+   }
+  ],
+  "49053": [
+   {
+    "utility_name": "City of St George",
+    "residential_customers_in_state": 28436,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 86.2,
+     "2024": 111.94
+    },
+    "change_usd_per_month": 25.74,
+    "change_pct": 29.9,
+    "cents_per_kwh": {
+     "2019": 9.49,
+     "2024": 11.4
+    }
+   },
+   {
+    "utility_name": "Dixie Escalante R E A, Inc",
+    "residential_customers_in_state": 26906,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 102.29,
+     "2024": 124.65
+    },
+    "change_usd_per_month": 22.36,
+    "change_pct": 21.9,
+    "cents_per_kwh": {
+     "2019": 7.85,
+     "2024": 8.92
+    }
+   },
+   {
+    "utility_name": "Garkane Energy Coop, Inc",
+    "residential_customers_in_state": 11653,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 89.02,
+     "2024": 103.13
+    },
+    "change_usd_per_month": 14.11,
+    "change_pct": 15.9,
+    "cents_per_kwh": {
+     "2019": 10.54,
+     "2024": 11.45
+    }
+   }
+  ],
+  "51047": [
+   {
+    "utility_name": "Virginia Electric & Power Co",
+    "residential_customers_in_state": 2383548,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.48,
+     "2024": 141.63
+    },
+    "change_usd_per_month": 8.15,
+    "change_pct": 6.1,
+    "cents_per_kwh": {
+     "2019": 12.06,
+     "2024": 14.09
+    }
+   },
+   {
+    "utility_name": "Rappahannock Electric Coop",
+    "residential_customers_in_state": 169489,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 164.44,
+     "2024": 170.46
+    },
+    "change_usd_per_month": 6.02,
+    "change_pct": 3.7,
+    "cents_per_kwh": {
+     "2019": 13.2,
+     "2024": 14.89
+    }
+   }
+  ],
+  "51061": [
+   {
+    "utility_name": "Virginia Electric & Power Co",
+    "residential_customers_in_state": 2383548,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.48,
+     "2024": 141.63
+    },
+    "change_usd_per_month": 8.15,
+    "change_pct": 6.1,
+    "cents_per_kwh": {
+     "2019": 12.06,
+     "2024": 14.09
+    }
+   },
+   {
+    "utility_name": "Rappahannock Electric Coop",
+    "residential_customers_in_state": 169489,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 164.44,
+     "2024": 170.46
+    },
+    "change_usd_per_month": 6.02,
+    "change_pct": 3.7,
+    "cents_per_kwh": {
+     "2019": 13.2,
+     "2024": 14.89
+    }
+   }
+  ],
+  "51069": [
+   {
+    "utility_name": "Rappahannock Electric Coop",
+    "residential_customers_in_state": 169489,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 164.44,
+     "2024": 170.46
+    },
+    "change_usd_per_month": 6.02,
+    "change_pct": 3.7,
+    "cents_per_kwh": {
+     "2019": 13.2,
+     "2024": 14.89
+    }
+   },
+   {
+    "utility_name": "Shenandoah Valley Elec Coop",
+    "residential_customers_in_state": 85281,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 143.35,
+     "2024": 160.97
+    },
+    "change_usd_per_month": 17.62,
+    "change_pct": 12.3,
+    "cents_per_kwh": {
+     "2019": 11.82,
+     "2024": 13.81
+    }
+   }
+  ],
+  "51087": [
+   {
+    "utility_name": "Virginia Electric & Power Co",
+    "residential_customers_in_state": 2383548,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.48,
+     "2024": 141.63
+    },
+    "change_usd_per_month": 8.15,
+    "change_pct": 6.1,
+    "cents_per_kwh": {
+     "2019": 12.06,
+     "2024": 14.09
+    }
+   }
+  ],
+  "51107": [
+   {
+    "utility_name": "Virginia Electric & Power Co",
+    "residential_customers_in_state": 2383548,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.48,
+     "2024": 141.63
+    },
+    "change_usd_per_month": 8.15,
+    "change_pct": 6.1,
+    "cents_per_kwh": {
+     "2019": 12.06,
+     "2024": 14.09
+    }
+   }
+  ],
+  "51117": [
+   {
+    "utility_name": "Virginia Electric & Power Co",
+    "residential_customers_in_state": 2383548,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.48,
+     "2024": 141.63
+    },
+    "change_usd_per_month": 8.15,
+    "change_pct": 6.1,
+    "cents_per_kwh": {
+     "2019": 12.06,
+     "2024": 14.09
+    }
+   },
+   {
+    "utility_name": "Southside Electric Coop, Inc",
+    "residential_customers_in_state": 56846,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 161.82,
+     "2024": 171.45
+    },
+    "change_usd_per_month": 9.63,
+    "change_pct": 6.0,
+    "cents_per_kwh": {
+     "2019": 13.87,
+     "2024": 15.48
+    }
+   }
+  ],
+  "51153": [
+   {
+    "utility_name": "Virginia Electric & Power Co",
+    "residential_customers_in_state": 2383548,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.48,
+     "2024": 141.63
+    },
+    "change_usd_per_month": 8.15,
+    "change_pct": 6.1,
+    "cents_per_kwh": {
+     "2019": 12.06,
+     "2024": 14.09
+    }
+   }
+  ],
+  "51660": [
+   {
+    "utility_name": "Virginia Electric & Power Co",
+    "residential_customers_in_state": 2383548,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.48,
+     "2024": 141.63
+    },
+    "change_usd_per_month": 8.15,
+    "change_pct": 6.1,
+    "cents_per_kwh": {
+     "2019": 12.06,
+     "2024": 14.09
+    }
+   }
+  ],
+  "51683": [
+   {
+    "utility_name": "Virginia Electric & Power Co",
+    "residential_customers_in_state": 2383548,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 133.48,
+     "2024": 141.63
+    },
+    "change_usd_per_month": 8.15,
+    "change_pct": 6.1,
+    "cents_per_kwh": {
+     "2019": 12.06,
+     "2024": 14.09
+    }
+   },
+   {
+    "utility_name": "City of Manassas - (VA)",
+    "residential_customers_in_state": 13947,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 109.26,
+     "2024": 115.49
+    },
+    "change_usd_per_month": 6.23,
+    "change_pct": 5.7,
+    "cents_per_kwh": {
+     "2019": 10.37,
+     "2024": 11.63
+    }
+   }
+  ],
+  "53007": [
+   {
+    "utility_name": "PUD No 1 of Chelan County",
+    "residential_customers_in_state": 42120,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 59.14,
+     "2024": 65.39
+    },
+    "change_usd_per_month": 6.25,
+    "change_pct": 10.6,
+    "cents_per_kwh": {
+     "2019": 3.19,
+     "2024": 3.67
+    }
+   }
+  ],
+  "53017": [
+   {
+    "utility_name": "PUD No 2 of Grant County",
+    "residential_customers_in_state": 42485,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 99.84,
+     "2024": 99.71
+    },
+    "change_usd_per_month": -0.13,
+    "change_pct": -0.1,
+    "cents_per_kwh": {
+     "2019": 5.59,
+     "2024": 6.01
+    }
+   },
+   {
+    "utility_name": "PUD No 1 of Douglas County",
+    "residential_customers_in_state": 16667,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 72.55,
+     "2024": 71.6
+    },
+    "change_usd_per_month": -0.95,
+    "change_pct": -1.3,
+    "cents_per_kwh": {
+     "2019": 3.04,
+     "2024": 3.15
+    }
+   }
+  ],
+  "53025": [
+   {
+    "utility_name": "PUD No 2 of Grant County",
+    "residential_customers_in_state": 42485,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 99.84,
+     "2024": 99.71
+    },
+    "change_usd_per_month": -0.13,
+    "change_pct": -0.1,
+    "cents_per_kwh": {
+     "2019": 5.59,
+     "2024": 6.01
+    }
+   }
+  ],
+  "53033": [
+   {
+    "utility_name": "Puget Sound Energy Inc",
+    "residential_customers_in_state": 1091599,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 92.63,
+     "2024": 128.07
+    },
+    "change_usd_per_month": 35.44,
+    "change_pct": 38.3,
+    "cents_per_kwh": {
+     "2019": 10.59,
+     "2024": 14.63
+    }
+   },
+   {
+    "utility_name": "City of Seattle - (WA)",
+    "residential_customers_in_state": 459964,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 69.49,
+     "2024": 84.68
+    },
+    "change_usd_per_month": 15.19,
+    "change_pct": 21.9,
+    "cents_per_kwh": {
+     "2019": 11.37,
+     "2024": 14.09
+    }
+   },
+   {
+    "utility_name": "City of Tacoma - (WA)",
+    "residential_customers_in_state": 180357,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 93.48,
+     "2024": 98.06
+    },
+    "change_usd_per_month": 4.58,
+    "change_pct": 4.9,
+    "cents_per_kwh": {
+     "2019": 9.6,
+     "2024": 10.81
+    }
+   },
+   {
+    "utility_name": "PUD No 1 of Chelan County",
+    "residential_customers_in_state": 42120,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 59.14,
+     "2024": 65.39
+    },
+    "change_usd_per_month": 6.25,
+    "change_pct": 10.6,
+    "cents_per_kwh": {
+     "2019": 3.19,
+     "2024": 3.67
+    }
+   }
+  ],
+  "53053": [
+   {
+    "utility_name": "Puget Sound Energy Inc",
+    "residential_customers_in_state": 1091599,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 92.63,
+     "2024": 128.07
+    },
+    "change_usd_per_month": 35.44,
+    "change_pct": 38.3,
+    "cents_per_kwh": {
+     "2019": 10.59,
+     "2024": 14.63
+    }
+   },
+   {
+    "utility_name": "City of Tacoma - (WA)",
+    "residential_customers_in_state": 180357,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 93.48,
+     "2024": 98.06
+    },
+    "change_usd_per_month": 4.58,
+    "change_pct": 4.9,
+    "cents_per_kwh": {
+     "2019": 9.6,
+     "2024": 10.81
+    }
+   },
+   {
+    "utility_name": "Peninsula Light Company",
+    "residential_customers_in_state": 35478,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 123.01,
+     "2024": 132.76
+    },
+    "change_usd_per_month": 9.75,
+    "change_pct": 7.9,
+    "cents_per_kwh": {
+     "2019": 10.17,
+     "2024": 10.5
+    }
+   },
+   {
+    "utility_name": "PUD No 3 of Mason County",
+    "residential_customers_in_state": 33975,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 120.33,
+     "2024": 156.28
+    },
+    "change_usd_per_month": 35.95,
+    "change_pct": 29.9,
+    "cents_per_kwh": {
+     "2019": 10.71,
+     "2024": 13.79
+    }
+   },
+   {
+    "utility_name": "PUD No 1 of Lewis County",
+    "residential_customers_in_state": 29417,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 125.86,
+     "2024": 132.3
+    },
+    "change_usd_per_month": 6.44,
+    "change_pct": 5.1,
+    "cents_per_kwh": {
+     "2019": 8.92,
+     "2024": 9.48
+    }
+   },
+   {
+    "utility_name": "Elmhurst Mutual Power & Light Co",
+    "residential_customers_in_state": 15410,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 94.02,
+     "2024": 102.32
+    },
+    "change_usd_per_month": 8.3,
+    "change_pct": 8.8,
+    "cents_per_kwh": {
+     "2019": 7.21,
+     "2024": 8.32
+    }
+   }
+  ],
+  "53063": [
+   {
+    "utility_name": "Inland Power & Light Company",
+    "residential_customers_in_state": 41684,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 124.52,
+     "2024": 128.35
+    },
+    "change_usd_per_month": 3.83,
+    "change_pct": 3.1,
+    "cents_per_kwh": {
+     "2019": 8.56,
+     "2024": 8.98
+    }
+   },
+   {
+    "utility_name": "Vera Irrigation District #15",
+    "residential_customers_in_state": 12171,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 90.92,
+     "2024": 100.5
+    },
+    "change_usd_per_month": 9.58,
+    "change_pct": 10.5,
+    "cents_per_kwh": {
+     "2019": 7.94,
+     "2024": 9.18
+    }
+   },
+   {
+    "utility_name": "Kootenai Electric Cooperative",
+    "residential_customers_in_state": 92,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 215.33,
+     "2024": 234.06
+    },
+    "change_usd_per_month": 18.73,
+    "change_pct": 8.7,
+    "cents_per_kwh": {
+     "2019": 8.62,
+     "2024": 10.87
+    }
+   }
+  ],
+  "53067": [
+   {
+    "utility_name": "Puget Sound Energy Inc",
+    "residential_customers_in_state": 1091599,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 92.63,
+     "2024": 128.07
+    },
+    "change_usd_per_month": 35.44,
+    "change_pct": 38.3,
+    "cents_per_kwh": {
+     "2019": 10.59,
+     "2024": 14.63
+    }
+   },
+   {
+    "utility_name": "PUD No 1 of Grays Harbor County",
+    "residential_customers_in_state": 39881,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 131.76,
+     "2024": 132.03
+    },
+    "change_usd_per_month": 0.27,
+    "change_pct": 0.2,
+    "cents_per_kwh": {
+     "2019": 12.5,
+     "2024": 12.52
+    }
+   },
+   {
+    "utility_name": "PUD No 1 of Lewis County",
+    "residential_customers_in_state": 29417,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 125.86,
+     "2024": 132.3
+    },
+    "change_usd_per_month": 6.44,
+    "change_pct": 5.1,
+    "cents_per_kwh": {
+     "2019": 8.92,
+     "2024": 9.48
+    }
+   },
+   {
+    "utility_name": "City of Centralia - (WA)",
+    "residential_customers_in_state": 9068,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 109.6,
+     "2024": 110.54
+    },
+    "change_usd_per_month": 0.94,
+    "change_pct": 0.9,
+    "cents_per_kwh": {
+     "2019": 9.87,
+     "2024": 9.88
+    }
+   }
+  ],
+  "53073": [
+   {
+    "utility_name": "Puget Sound Energy Inc",
+    "residential_customers_in_state": 1091599,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 92.63,
+     "2024": 128.07
+    },
+    "change_usd_per_month": 35.44,
+    "change_pct": 38.3,
+    "cents_per_kwh": {
+     "2019": 10.59,
+     "2024": 14.63
+    }
+   }
+  ],
+  "55015": [
+   {
+    "utility_name": "Wisconsin Electric Power Co",
+    "residential_customers_in_state": 1048148,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.77,
+     "2024": 120.21
+    },
+    "change_usd_per_month": 21.44,
+    "change_pct": 21.7,
+    "cents_per_kwh": {
+     "2019": 15.45,
+     "2024": 19.23
+    }
+   },
+   {
+    "utility_name": "Wisconsin Power & Light Co",
+    "residential_customers_in_state": 437211,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.75,
+     "2024": 113.7
+    },
+    "change_usd_per_month": 14.95,
+    "change_pct": 15.1,
+    "cents_per_kwh": {
+     "2019": 13.66,
+     "2024": 16.89
+    }
+   },
+   {
+    "utility_name": "Wisconsin Public Service Corp",
+    "residential_customers_in_state": 411775,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 78.62,
+     "2024": 96.6
+    },
+    "change_usd_per_month": 17.98,
+    "change_pct": 22.9,
+    "cents_per_kwh": {
+     "2019": 12.93,
+     "2024": 16.23
+    }
+   },
+   {
+    "utility_name": "City of New Holstein - (WI)",
+    "residential_customers_in_state": 2255,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 88.35,
+     "2024": 94.16
+    },
+    "change_usd_per_month": 5.81,
+    "change_pct": 6.6,
+    "cents_per_kwh": {
+     "2019": 12.03,
+     "2024": 13.33
+    }
+   }
+  ],
+  "55021": [
+   {
+    "utility_name": "Wisconsin Electric Power Co",
+    "residential_customers_in_state": 1048148,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.77,
+     "2024": 120.21
+    },
+    "change_usd_per_month": 21.44,
+    "change_pct": 21.7,
+    "cents_per_kwh": {
+     "2019": 15.45,
+     "2024": 19.23
+    }
+   },
+   {
+    "utility_name": "Wisconsin Power & Light Co",
+    "residential_customers_in_state": 437211,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.75,
+     "2024": 113.7
+    },
+    "change_usd_per_month": 14.95,
+    "change_pct": 15.1,
+    "cents_per_kwh": {
+     "2019": 13.66,
+     "2024": 16.89
+    }
+   },
+   {
+    "utility_name": "Adams-Columbia Electric Coop",
+    "residential_customers_in_state": 35910,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 106.94,
+     "2024": 108.48
+    },
+    "change_usd_per_month": 1.54,
+    "change_pct": 1.4,
+    "cents_per_kwh": {
+     "2019": 16.19,
+     "2024": 17.63
+    }
+   },
+   {
+    "utility_name": "City of Columbus - (WI)",
+    "residential_customers_in_state": 2459,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 76.69,
+     "2024": 79.84
+    },
+    "change_usd_per_month": 3.15,
+    "change_pct": 4.1,
+    "cents_per_kwh": {
+     "2019": 11.7,
+     "2024": 12.34
+    }
+   },
+   {
+    "utility_name": "City of Lodi - (WI)",
+    "residential_customers_in_state": 1490,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 79.44,
+     "2024": 83.43
+    },
+    "change_usd_per_month": 3.99,
+    "change_pct": 5.0,
+    "cents_per_kwh": {
+     "2019": 12.23,
+     "2024": 13.29
+    }
+   }
+  ],
+  "55025": [
+   {
+    "utility_name": "Wisconsin Electric Power Co",
+    "residential_customers_in_state": 1048148,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.77,
+     "2024": 120.21
+    },
+    "change_usd_per_month": 21.44,
+    "change_pct": 21.7,
+    "cents_per_kwh": {
+     "2019": 15.45,
+     "2024": 19.23
+    }
+   },
+   {
+    "utility_name": "Wisconsin Power & Light Co",
+    "residential_customers_in_state": 437211,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.75,
+     "2024": 113.7
+    },
+    "change_usd_per_month": 14.95,
+    "change_pct": 15.1,
+    "cents_per_kwh": {
+     "2019": 13.66,
+     "2024": 16.89
+    }
+   },
+   {
+    "utility_name": "Madison Gas & Electric Co",
+    "residential_customers_in_state": 147501,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 84.59,
+     "2024": 98.89
+    },
+    "change_usd_per_month": 14.3,
+    "change_pct": 16.9,
+    "cents_per_kwh": {
+     "2019": 16.56,
+     "2024": 20.34
+    }
+   },
+   {
+    "utility_name": "Adams-Columbia Electric Coop",
+    "residential_customers_in_state": 35910,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 106.94,
+     "2024": 108.48
+    },
+    "change_usd_per_month": 1.54,
+    "change_pct": 1.4,
+    "cents_per_kwh": {
+     "2019": 16.19,
+     "2024": 17.63
+    }
+   },
+   {
+    "utility_name": "Sun Prairie Utilities",
+    "residential_customers_in_state": 16647,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 66.77,
+     "2024": 71.38
+    },
+    "change_usd_per_month": 4.61,
+    "change_pct": 6.9,
+    "cents_per_kwh": {
+     "2019": 10.8,
+     "2024": 12.13
+    }
+   },
+   {
+    "utility_name": "City of Stoughton - (WI)",
+    "residential_customers_in_state": 8391,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 77.38,
+     "2024": 79.76
+    },
+    "change_usd_per_month": 2.38,
+    "change_pct": 3.1,
+    "cents_per_kwh": {
+     "2019": 11.27,
+     "2024": 12.6
+    }
+   },
+   {
+    "utility_name": "Rock Energy Cooperative",
+    "residential_customers_in_state": 7310,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 128.23,
+     "2024": 138.0
+    },
+    "change_usd_per_month": 9.77,
+    "change_pct": 7.6,
+    "cents_per_kwh": {
+     "2019": 13.02,
+     "2024": 14.47
+    }
+   },
+   {
+    "utility_name": "Village of Waunakee - (WI)",
+    "residential_customers_in_state": 6677,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 81.64,
+     "2024": 83.35
+    },
+    "change_usd_per_month": 1.71,
+    "change_pct": 2.1,
+    "cents_per_kwh": {
+     "2019": 11.08,
+     "2024": 11.7
+    }
+   }
+  ],
+  "55027": [
+   {
+    "utility_name": "Wisconsin Electric Power Co",
+    "residential_customers_in_state": 1048148,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.77,
+     "2024": 120.21
+    },
+    "change_usd_per_month": 21.44,
+    "change_pct": 21.7,
+    "cents_per_kwh": {
+     "2019": 15.45,
+     "2024": 19.23
+    }
+   },
+   {
+    "utility_name": "Wisconsin Power & Light Co",
+    "residential_customers_in_state": 437211,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.75,
+     "2024": 113.7
+    },
+    "change_usd_per_month": 14.95,
+    "change_pct": 15.1,
+    "cents_per_kwh": {
+     "2019": 13.66,
+     "2024": 16.89
+    }
+   },
+   {
+    "utility_name": "Adams-Columbia Electric Coop",
+    "residential_customers_in_state": 35910,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 106.94,
+     "2024": 108.48
+    },
+    "change_usd_per_month": 1.54,
+    "change_pct": 1.4,
+    "cents_per_kwh": {
+     "2019": 16.19,
+     "2024": 17.63
+    }
+   },
+   {
+    "utility_name": "Hartford Electric",
+    "residential_customers_in_state": 6998,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 69.91,
+     "2024": 72.31
+    },
+    "change_usd_per_month": 2.4,
+    "change_pct": 3.4,
+    "cents_per_kwh": {
+     "2019": 11.13,
+     "2024": 11.71
+    }
+   },
+   {
+    "utility_name": "Waupun Utilities",
+    "residential_customers_in_state": 3950,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 76.27,
+     "2024": 80.17
+    },
+    "change_usd_per_month": 3.9,
+    "change_pct": 5.1,
+    "cents_per_kwh": {
+     "2019": 10.88,
+     "2024": 11.84
+    }
+   },
+   {
+    "utility_name": "City of Columbus - (WI)",
+    "residential_customers_in_state": 2459,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 76.69,
+     "2024": 79.84
+    },
+    "change_usd_per_month": 3.15,
+    "change_pct": 4.1,
+    "cents_per_kwh": {
+     "2019": 11.7,
+     "2024": 12.34
+    }
+   },
+   {
+    "utility_name": "Hustisford Utilities",
+    "residential_customers_in_state": 1315,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 94.5,
+     "2024": 96.5
+    },
+    "change_usd_per_month": 2.0,
+    "change_pct": 2.1,
+    "cents_per_kwh": {
+     "2019": 12.85,
+     "2024": 13.82
+    }
+   },
+   {
+    "utility_name": "Juneau Utility Comm",
+    "residential_customers_in_state": 970,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 71.18,
+     "2024": 77.31
+    },
+    "change_usd_per_month": 6.13,
+    "change_pct": 8.6,
+    "cents_per_kwh": {
+     "2019": 10.49,
+     "2024": 11.69
+    }
+   }
+  ],
+  "55033": [
+   {
+    "utility_name": "Northern States Power Co",
+    "residential_customers_in_state": 220574,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.15,
+     "2024": 109.3
+    },
+    "change_usd_per_month": 11.15,
+    "change_pct": 11.4,
+    "cents_per_kwh": {
+     "2019": 13.37,
+     "2024": 15.83
+    }
+   },
+   {
+    "utility_name": "Barron Electric Coop",
+    "residential_customers_in_state": 19266,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 122.83,
+     "2024": 129.87
+    },
+    "change_usd_per_month": 7.04,
+    "change_pct": 5.7,
+    "cents_per_kwh": {
+     "2019": 13.58,
+     "2024": 15.72
+    }
+   },
+   {
+    "utility_name": "Dunn County Electric Coop",
+    "residential_customers_in_state": 9482,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 140.63,
+     "2024": 145.31
+    },
+    "change_usd_per_month": 4.68,
+    "change_pct": 3.3,
+    "cents_per_kwh": {
+     "2019": 13.89,
+     "2024": 15.45
+    }
+   }
+  ],
+  "55077": [
+   {
+    "utility_name": "Wisconsin Power & Light Co",
+    "residential_customers_in_state": 437211,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.75,
+     "2024": 113.7
+    },
+    "change_usd_per_month": 14.95,
+    "change_pct": 15.1,
+    "cents_per_kwh": {
+     "2019": 13.66,
+     "2024": 16.89
+    }
+   },
+   {
+    "utility_name": "Adams-Columbia Electric Coop",
+    "residential_customers_in_state": 35910,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 106.94,
+     "2024": 108.48
+    },
+    "change_usd_per_month": 1.54,
+    "change_pct": 1.4,
+    "cents_per_kwh": {
+     "2019": 16.19,
+     "2024": 17.63
+    }
+   },
+   {
+    "utility_name": "Pioneer Power and Light Co",
+    "residential_customers_in_state": 2021,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 74.74,
+     "2024": 99.04
+    },
+    "change_usd_per_month": 24.3,
+    "change_pct": 32.5,
+    "cents_per_kwh": {
+     "2019": 13.44,
+     "2024": 17.13
+    }
+   },
+   {
+    "utility_name": "Westfield Electric Company",
+    "residential_customers_in_state": 622,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 76.96,
+     "2024": 101.55
+    },
+    "change_usd_per_month": 24.59,
+    "change_pct": 32.0,
+    "cents_per_kwh": {
+     "2019": 15.11,
+     "2024": 17.94
+    }
+   }
+  ],
+  "55079": [
+   {
+    "utility_name": "Wisconsin Electric Power Co",
+    "residential_customers_in_state": 1048148,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.77,
+     "2024": 120.21
+    },
+    "change_usd_per_month": 21.44,
+    "change_pct": 21.7,
+    "cents_per_kwh": {
+     "2019": 15.45,
+     "2024": 19.23
+    }
+   }
+  ],
+  "55101": [
+   {
+    "utility_name": "Wisconsin Electric Power Co",
+    "residential_customers_in_state": 1048148,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.77,
+     "2024": 120.21
+    },
+    "change_usd_per_month": 21.44,
+    "change_pct": 21.7,
+    "cents_per_kwh": {
+     "2019": 15.45,
+     "2024": 19.23
+    }
+   }
+  ],
+  "55127": [
+   {
+    "utility_name": "Wisconsin Electric Power Co",
+    "residential_customers_in_state": 1048148,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.77,
+     "2024": 120.21
+    },
+    "change_usd_per_month": 21.44,
+    "change_pct": 21.7,
+    "cents_per_kwh": {
+     "2019": 15.45,
+     "2024": 19.23
+    }
+   },
+   {
+    "utility_name": "Wisconsin Power & Light Co",
+    "residential_customers_in_state": 437211,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.75,
+     "2024": 113.7
+    },
+    "change_usd_per_month": 14.95,
+    "change_pct": 15.1,
+    "cents_per_kwh": {
+     "2019": 13.66,
+     "2024": 16.89
+    }
+   },
+   {
+    "utility_name": "Rock Energy Cooperative",
+    "residential_customers_in_state": 7310,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 128.23,
+     "2024": 138.0
+    },
+    "change_usd_per_month": 9.77,
+    "change_pct": 7.6,
+    "cents_per_kwh": {
+     "2019": 13.02,
+     "2024": 14.47
+    }
+   }
+  ],
+  "55133": [
+   {
+    "utility_name": "Wisconsin Electric Power Co",
+    "residential_customers_in_state": 1048148,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 98.77,
+     "2024": 120.21
+    },
+    "change_usd_per_month": 21.44,
+    "change_pct": 21.7,
+    "cents_per_kwh": {
+     "2019": 15.45,
+     "2024": 19.23
+    }
+   },
+   {
+    "utility_name": "Oconomowoc Utilities",
+    "residential_customers_in_state": 9972,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 85.75,
+     "2024": 91.97
+    },
+    "change_usd_per_month": 6.22,
+    "change_pct": 7.3,
+    "cents_per_kwh": {
+     "2019": 12.11,
+     "2024": 13.75
+    }
+   }
+  ],
+  "56005": [
+   {
+    "utility_name": "Powder River Energy Corp",
+    "residential_customers_in_state": 15406,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 131.09,
+     "2024": 133.43
+    },
+    "change_usd_per_month": 2.34,
+    "change_pct": 1.8,
+    "cents_per_kwh": {
+     "2019": 10.85,
+     "2024": 11.73
+    }
+   }
+  ],
+  "56021": [
+   {
+    "utility_name": "High West Energy, Inc",
+    "residential_customers_in_state": 5579,
+    "share_of_homes_covered": 1.0,
+    "covers_most_homes": true,
+    "avg_monthly_bill_usd": {
+     "2019": 141.77,
+     "2024": 146.11
+    },
+    "change_usd_per_month": 4.34,
+    "change_pct": 3.1,
+    "cents_per_kwh": {
+     "2019": 14.29,
+     "2024": 14.37
+    }
+   }
+  ]
+ }
+}

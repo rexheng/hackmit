@@ -1,0 +1,908 @@
+{
+ "AECI": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 100.0,
+  "fuel_shares": {
+   "coal": 0.5721,
+   "gas": 0.3163,
+   "oil": 0.0,
+   "wind": 0.1115
+  },
+  "n_hours": 8689,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "AVA": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 88.3,
+  "fossil_majority_hours_pct": 10.3,
+  "fuel_shares": {
+   "gas": 0.309,
+   "hydro": 0.4962,
+   "other": 0.1091,
+   "solar": 0.0051,
+   "wind": 0.0806
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "AVRN": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 57.6,
+  "fossil_majority_hours_pct": 42.3,
+  "fuel_shares": {
+   "gas": 0.3734,
+   "hydro": 0.0,
+   "solar": 0.0,
+   "wind": 0.6266
+  },
+  "n_hours": 8687,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "AZPS": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 16.2,
+  "fossil_majority_hours_pct": 83.8,
+  "fuel_shares": {
+   "coal": 0.2753,
+   "gas": 0.4216,
+   "hydro": 0.0,
+   "nuclear": 0.0,
+   "oil": 0.0,
+   "other": 0.0186,
+   "solar": 0.2132,
+   "wind": 0.0713
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "BANC": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 47.2,
+  "fossil_majority_hours_pct": 52.7,
+  "fuel_shares": {
+   "gas": 0.5258,
+   "hydro": 0.4165,
+   "other": 0.0054,
+   "solar": 0.0523
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "BPAT": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 100.0,
+  "fossil_majority_hours_pct": 0.0,
+  "fuel_shares": {
+   "gas": 0.0728,
+   "hydro": 0.7321,
+   "nuclear": 0.0945,
+   "other": 0.0145,
+   "solar": 0.0062,
+   "wind": 0.0799
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "CHPD": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 0.0,
+  "fuel_shares": {
+   "hydro": 0.998,
+   "wind": 0.002
+  },
+  "n_hours": 8759,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "CISO": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 75.2,
+  "fossil_majority_hours_pct": 24.8,
+  "fuel_shares": {
+   "coal": 0.0,
+   "gas": 0.3961,
+   "hydro": 0.107,
+   "nuclear": 0.0882,
+   "oil": 0.0018,
+   "other": 0.0579,
+   "solar": 0.2497,
+   "wind": 0.0993
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "CPLE": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 95.8,
+  "fossil_majority_hours_pct": 4.2,
+  "fuel_shares": {
+   "coal": 0.1288,
+   "gas": 0.2056,
+   "hydro": 0.0033,
+   "nuclear": 0.4687,
+   "oil": 0.0014,
+   "other": 0.1086,
+   "solar": 0.0836
+  },
+  "n_hours": 8759,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "CPLW": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 3.3,
+  "fossil_majority_hours_pct": 96.6,
+  "fuel_shares": {
+   "coal": 0.0,
+   "gas": 0.6387,
+   "hydro": 0.0665,
+   "oil": 0.0063,
+   "other": 0.2881,
+   "solar": 0.0004
+  },
+  "n_hours": 8759,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "DEAA": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 100.0,
+  "fuel_shares": {
+   "gas": 1.0
+  },
+  "n_hours": 7730,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "DOPD": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 0.0,
+  "fuel_shares": {
+   "hydro": 1.0
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "DUK": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 82.8,
+  "fossil_majority_hours_pct": 17.2,
+  "fuel_shares": {
+   "coal": 0.1831,
+   "gas": 0.2411,
+   "hydro": 0.0176,
+   "nuclear": 0.5401,
+   "other": 0.0005,
+   "solar": 0.0176
+  },
+  "n_hours": 8759,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "EPE": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 3.0,
+  "fossil_majority_hours_pct": 97.0,
+  "fuel_shares": {
+   "gas": 0.842,
+   "solar": 0.158
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "ERCO": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 41.4,
+  "fossil_majority_hours_pct": 58.6,
+  "fuel_shares": {
+   "coal": 0.1295,
+   "gas": 0.4091,
+   "hydro": 0.0011,
+   "nuclear": 0.0859,
+   "other": 0.0009,
+   "solar": 0.1383,
+   "wind": 0.2352
+  },
+  "n_hours": 8736,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "FMPP": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 100.0,
+  "fuel_shares": {
+   "coal": 0.2131,
+   "gas": 0.6899,
+   "nuclear": 0.0593,
+   "oil": 0.0004,
+   "other": 0.008,
+   "solar": 0.0294
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "FPC": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 100.0,
+  "fuel_shares": {
+   "coal": 0.08,
+   "gas": 0.8099,
+   "hydro": 0.0049,
+   "oil": 0.0009,
+   "other": 0.0129,
+   "solar": 0.0914
+  },
+  "n_hours": 8759,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "FPL": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 10.8,
+  "fossil_majority_hours_pct": 89.2,
+  "fuel_shares": {
+   "gas": 0.6672,
+   "nuclear": 0.2058,
+   "oil": 0.0,
+   "other": 0.0155,
+   "solar": 0.1116
+  },
+  "n_hours": 8759,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "GCPD": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 0.0,
+  "fuel_shares": {
+   "hydro": 1.0
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "GRID": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 1.7,
+  "fossil_majority_hours_pct": 98.3,
+  "fuel_shares": {
+   "coal": 0.1787,
+   "gas": 0.6848,
+   "solar": 0.0234,
+   "wind": 0.1132
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "GVL": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 3.0,
+  "fossil_majority_hours_pct": 96.9,
+  "fuel_shares": {
+   "coal": 0.0,
+   "gas": 0.7529,
+   "other": 0.2471
+  },
+  "n_hours": 8759,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "GWA": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 0.0,
+  "fuel_shares": {
+   "wind": 1.0
+  },
+  "n_hours": 6886,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "HGMA": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 100.0,
+  "fuel_shares": {
+   "gas": 1.0
+  },
+  "n_hours": 866,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "HST": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 100.0,
+  "fuel_shares": {
+   "gas": 1.0
+  },
+  "n_hours": 59,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "IID": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 99.4,
+  "fossil_majority_hours_pct": 0.6,
+  "fuel_shares": {
+   "gas": 0.1729,
+   "hydro": 0.0236,
+   "oil": 0.0033,
+   "other": 0.5426,
+   "solar": 0.2576
+  },
+  "n_hours": 8662,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "IPCO": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 98.6,
+  "fossil_majority_hours_pct": 1.4,
+  "fuel_shares": {
+   "gas": 0.2428,
+   "hydro": 0.499,
+   "oil": 0.0,
+   "other": 0.0258,
+   "solar": 0.1183,
+   "wind": 0.114
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "ISNE": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 19.5,
+  "fossil_majority_hours_pct": 80.5,
+  "fuel_shares": {
+   "coal": 0.0026,
+   "gas": 0.5721,
+   "hydro": 0.0488,
+   "nuclear": 0.2615,
+   "oil": 0.0116,
+   "other": 0.0451,
+   "solar": 0.0153,
+   "wind": 0.0431
+  },
+  "n_hours": 8758,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "JEA": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 100.0,
+  "fuel_shares": {
+   "coal": 0.3372,
+   "gas": 0.6543,
+   "oil": 0.0007,
+   "other": 0.0016,
+   "solar": 0.0062
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "LDWP": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 36.1,
+  "fossil_majority_hours_pct": 63.8,
+  "fuel_shares": {
+   "coal": 0.16,
+   "gas": 0.4037,
+   "hydro": 0.0469,
+   "other": 0.0672,
+   "solar": 0.22,
+   "wind": 0.1022
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "LGEE": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 100.0,
+  "fuel_shares": {
+   "coal": 0.7888,
+   "gas": 0.1975,
+   "hydro": 0.0095,
+   "oil": 0.0,
+   "solar": 0.0042
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "MISO": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 8.7,
+  "fossil_majority_hours_pct": 91.3,
+  "fuel_shares": {
+   "coal": 0.2914,
+   "gas": 0.3538,
+   "hydro": 0.015,
+   "nuclear": 0.1391,
+   "other": 0.0055,
+   "solar": 0.0451,
+   "wind": 0.1501
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "NEVP": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 32.0,
+  "fossil_majority_hours_pct": 68.0,
+  "fuel_shares": {
+   "coal": 0.07,
+   "gas": 0.5612,
+   "hydro": 0.0073,
+   "nuclear": 0.0,
+   "oil": 0.0,
+   "other": 0.1106,
+   "solar": 0.2415,
+   "wind": 0.0094
+  },
+  "n_hours": 8707,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "NWMT": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 31.3,
+  "fossil_majority_hours_pct": 68.7,
+  "fuel_shares": {
+   "coal": 0.4921,
+   "gas": 0.0546,
+   "hydro": 0.1791,
+   "oil": 0.0238,
+   "solar": 0.0178,
+   "wind": 0.2324
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "NYIS": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 39.3,
+  "fossil_majority_hours_pct": 60.6,
+  "fuel_shares": {
+   "coal": 0.0,
+   "gas": 0.5303,
+   "hydro": 0.182,
+   "nuclear": 0.211,
+   "oil": 0.0013,
+   "other": 0.0221,
+   "solar": 0.0,
+   "wind": 0.0533
+  },
+  "n_hours": 8754,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "PACE": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 24.8,
+  "fossil_majority_hours_pct": 75.2,
+  "fuel_shares": {
+   "coal": 0.4415,
+   "gas": 0.1778,
+   "hydro": 0.0196,
+   "other": 0.0177,
+   "solar": 0.1149,
+   "wind": 0.2284
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "PACW": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 88.2,
+  "fossil_majority_hours_pct": 11.7,
+  "fuel_shares": {
+   "coal": 0.0,
+   "gas": 0.1955,
+   "hydro": 0.3457,
+   "other": 0.0544,
+   "solar": 0.1416,
+   "wind": 0.2628
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "PGE": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 3.3,
+  "fossil_majority_hours_pct": 96.6,
+  "fuel_shares": {
+   "coal": 0.0,
+   "gas": 0.7672,
+   "hydro": 0.2326,
+   "other": 0.0002,
+   "wind": 0.0
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "PJM": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 6.6,
+  "fossil_majority_hours_pct": 93.4,
+  "fuel_shares": {
+   "coal": 0.167,
+   "gas": 0.4196,
+   "hydro": 0.0178,
+   "nuclear": 0.3101,
+   "oil": 0.0061,
+   "other": 0.0145,
+   "solar": 0.0282,
+   "wind": 0.0368
+  },
+  "n_hours": 8759,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "PNM": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 77.8,
+  "fossil_majority_hours_pct": 22.2,
+  "fuel_shares": {
+   "coal": 0.1153,
+   "gas": 0.1642,
+   "hydro": 0.0022,
+   "other": 0.0081,
+   "solar": 0.3043,
+   "wind": 0.406
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "PSCO": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 46.7,
+  "fossil_majority_hours_pct": 53.3,
+  "fuel_shares": {
+   "coal": 0.2051,
+   "gas": 0.3193,
+   "hydro": 0.0074,
+   "oil": 0.0,
+   "other": 0.0139,
+   "solar": 0.0882,
+   "wind": 0.3661
+  },
+  "n_hours": 8759,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "PSEI": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 39.8,
+  "fossil_majority_hours_pct": 60.2,
+  "fuel_shares": {
+   "coal": 0.0,
+   "gas": 0.5618,
+   "hydro": 0.179,
+   "oil": 0.0001,
+   "other": 0.0368,
+   "solar": 0.0057,
+   "wind": 0.2166
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "SC": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 100.0,
+  "fuel_shares": {
+   "coal": 0.6691,
+   "gas": 0.2472,
+   "hydro": 0.0204,
+   "oil": 0.0,
+   "other": 0.028,
+   "solar": 0.0352
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "SCEG": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 21.3,
+  "fossil_majority_hours_pct": 78.7,
+  "fuel_shares": {
+   "coal": 0.1853,
+   "gas": 0.3936,
+   "hydro": 0.0271,
+   "nuclear": 0.3099,
+   "other": 0.0001,
+   "solar": 0.084
+  },
+  "n_hours": 8710,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "SCL": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 0.0,
+  "fuel_shares": {
+   "hydro": 1.0
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "SEC": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 100.0,
+  "fuel_shares": {
+   "coal": 0.2022,
+   "gas": 0.7976,
+   "solar": 0.0002
+  },
+  "n_hours": 8759,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "SEPA": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 0.0,
+  "fuel_shares": {
+   "hydro": 1.0
+  },
+  "n_hours": 4733,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "SIKE": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 100.0,
+  "fuel_shares": {
+   "coal": 1.0
+  },
+  "n_hours": 4123,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "SOCO": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 2.1,
+  "fossil_majority_hours_pct": 97.9,
+  "fuel_shares": {
+   "coal": 0.173,
+   "gas": 0.4931,
+   "hydro": 0.0233,
+   "nuclear": 0.2521,
+   "oil": 0.0001,
+   "other": 0.009,
+   "solar": 0.0493,
+   "wind": 0.0
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "SPA": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 0.0,
+  "fuel_shares": {
+   "hydro": 1.0
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "SRP": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 80.1,
+  "fossil_majority_hours_pct": 19.9,
+  "fuel_shares": {
+   "coal": 0.079,
+   "gas": 0.3183,
+   "hydro": 0.0044,
+   "nuclear": 0.5165,
+   "other": 0.0033,
+   "solar": 0.0657,
+   "wind": 0.0128
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "SWPP": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 44.6,
+  "fossil_majority_hours_pct": 55.4,
+  "fuel_shares": {
+   "coal": 0.2903,
+   "gas": 0.2514,
+   "hydro": 0.0292,
+   "nuclear": 0.0538,
+   "oil": 0.0001,
+   "other": 0.0019,
+   "solar": 0.0078,
+   "wind": 0.3655
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "TAL": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 100.0,
+  "fuel_shares": {
+   "gas": 0.9662,
+   "hydro": 0.0,
+   "solar": 0.0338
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "TEC": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 1.2,
+  "fossil_majority_hours_pct": 98.8,
+  "fuel_shares": {
+   "coal": 0.0,
+   "gas": 0.865,
+   "oil": 0.0002,
+   "other": 0.0162,
+   "solar": 0.1185
+  },
+  "n_hours": 8759,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "TEPC": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 3.9,
+  "fossil_majority_hours_pct": 96.1,
+  "fuel_shares": {
+   "coal": 0.2246,
+   "gas": 0.6294,
+   "other": 0.0,
+   "solar": 0.0732,
+   "wind": 0.0728
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "TIDC": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 4.5,
+  "fossil_majority_hours_pct": 95.4,
+  "fuel_shares": {
+   "gas": 0.8503,
+   "hydro": 0.1497
+  },
+  "n_hours": 8759,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "TPWR": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 0.0,
+  "fuel_shares": {
+   "hydro": 1.0
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "TVA": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 44.7,
+  "fossil_majority_hours_pct": 55.3,
+  "fuel_shares": {
+   "coal": 0.1706,
+   "gas": 0.3408,
+   "hydro": 0.1072,
+   "nuclear": 0.3623,
+   "oil": 0.0,
+   "other": 0.0018,
+   "solar": 0.0172,
+   "wind": 0.0
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "WACM": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 5.0,
+  "fossil_majority_hours_pct": 95.0,
+  "fuel_shares": {
+   "coal": 0.5784,
+   "gas": 0.0825,
+   "hydro": 0.1689,
+   "solar": 0.047,
+   "wind": 0.1232
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "WALC": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 55.2,
+  "fossil_majority_hours_pct": 44.7,
+  "fuel_shares": {
+   "gas": 0.4336,
+   "hydro": 0.4047,
+   "solar": 0.0609,
+   "wind": 0.1008
+  },
+  "n_hours": 8760,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "WAUW": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 0.0,
+  "fuel_shares": {
+   "hydro": 1.0
+  },
+  "n_hours": 8754,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "WWA": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 0.0,
+  "fuel_shares": {
+   "wind": 1.0
+  },
+  "n_hours": 5206,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ },
+ "YAD": {
+  "caveat": "Counts power made inside the region. Does not trace imports or private supply contracts.",
+  "clean_hours_pct": 0.0,
+  "fossil_majority_hours_pct": 0.0,
+  "fuel_shares": {
+   "hydro": 1.0
+  },
+  "n_hours": 5600,
+  "source_table": "PUDL core_eia930__hourly_net_generation_by_energy_source (EIA-930)",
+  "year": 2025
+ }
+}

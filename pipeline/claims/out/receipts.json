@@ -1,0 +1,1459 @@
+{
+ "weights": {
+  "physical_gap": 0.45,
+  "annual_wording": 0.15,
+  "future_target": 0.15,
+  "hedged": 0.1,
+  "no_number": 0.1,
+  "no_boundary": 0.05
+ },
+ "receipts": [
+  {
+   "claim_id": "claim-001",
+   "verdict": "Holds on paper only",
+   "score": 0.53,
+   "confidence": "high",
+   "evidence": [
+    {
+     "label": "of Amazon Web Services's 203 mapped U.S. sites sit on a power grid that ran mostly on fossil fuels in more than half of 2025's hours",
+     "value": 151,
+     "unit": "sites",
+     "source": "IM3 Open Source Data Center Atlas (PNNL, from OpenStreetMap) joined to PUDL core_eia930__hourly_net_generation_by_energy_source"
+    },
+    {
+     "label": "of the 207 sites the atlas lists for this company could be matched to one power grid",
+     "value": 203,
+     "unit": "sites",
+     "source": "PUDL core_eia861__yearly_service_territory"
+    }
+   ],
+   "explanation_plain": "Over a whole year, Amazon Web Services says it buys as much renewable energy as it uses. We did not audit those purchases. Hour by hour is a different story: 151 of its 203 mapped U.S. sites plug into grids that ran mostly on coal, gas and oil for more than half the year.",
+   "text_features": {
+    "annual_wording": true,
+    "future_target": false,
+    "hedged": [],
+    "no_number": false,
+    "no_boundary": true,
+    "years_named": [
+     2025
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.335,
+    "annual_wording": 0.15,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.0,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-002",
+   "verdict": "Can't be checked",
+   "score": 0.3,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a verified yearly emissions inventory for the company that includes the power its data centers draw hour by hour.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": true,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": [
+     2040
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.15,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-003",
+   "verdict": "Can't be checked",
+   "score": 0.25,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": true,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": false,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.15,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-004",
+   "verdict": "Can't be checked",
+   "score": 0.1,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [
+     "toward",
+     "towards"
+    ],
+    "no_number": false,
+    "no_boundary": false,
+    "years_named": [
+     2025,
+     2024
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.1,
+    "no_number": 0.0,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-005",
+   "verdict": "Holds on paper only",
+   "score": 0.58,
+   "confidence": "high",
+   "evidence": [
+    {
+     "label": "of Meta's 53 mapped U.S. sites sit on a power grid that ran mostly on fossil fuels in more than half of 2025's hours",
+     "value": 45,
+     "unit": "sites",
+     "source": "IM3 Open Source Data Center Atlas (PNNL, from OpenStreetMap) joined to PUDL core_eia930__hourly_net_generation_by_energy_source"
+    },
+    {
+     "label": "of the 64 sites the atlas lists for this company could be matched to one power grid",
+     "value": 53,
+     "unit": "sites",
+     "source": "PUDL core_eia861__yearly_service_territory"
+    }
+   ],
+   "explanation_plain": "Over a whole year, Meta says it buys as much renewable energy as it uses. We did not audit those purchases. Hour by hour is a different story: 45 of its 53 mapped U.S. sites plug into grids that ran mostly on coal, gas and oil for more than half the year.",
+   "text_features": {
+    "annual_wording": true,
+    "future_target": false,
+    "hedged": [],
+    "no_number": false,
+    "no_boundary": true,
+    "years_named": [
+     2020
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.382,
+    "annual_wording": 0.15,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.0,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-006",
+   "verdict": "Can't be checked",
+   "score": 0.15,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a verified yearly emissions inventory for the company that includes the power its data centers draw hour by hour.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [
+     "key to"
+    ],
+    "no_number": true,
+    "no_boundary": false,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.05,
+    "no_number": 0.1,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-007",
+   "verdict": "Can't be checked",
+   "score": 0.35,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": true,
+    "hedged": [
+     "goal"
+    ],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": [
+     2030
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.15,
+    "hedged": 0.05,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-008",
+   "verdict": "Can't be checked",
+   "score": 0.05,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": false,
+    "no_boundary": true,
+    "years_named": [
+     2024
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.0,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-009",
+   "verdict": "Holds on paper only",
+   "score": 0.59,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "label": "of Microsoft's 43 mapped U.S. sites sit on a power grid that ran mostly on fossil fuels in more than half of 2025's hours",
+     "value": 42,
+     "unit": "sites",
+     "source": "IM3 Open Source Data Center Atlas (PNNL, from OpenStreetMap) joined to PUDL core_eia930__hourly_net_generation_by_energy_source"
+    },
+    {
+     "label": "of the 59 sites the atlas lists for this company could be matched to one power grid",
+     "value": 43,
+     "unit": "sites",
+     "source": "PUDL core_eia861__yearly_service_territory"
+    }
+   ],
+   "explanation_plain": "Over a whole year, Microsoft says it buys as much renewable energy as it uses. We did not audit those purchases. Hour by hour is a different story: 42 of its 43 mapped U.S. sites plug into grids that ran mostly on coal, gas and oil for more than half the year.",
+   "text_features": {
+    "annual_wording": true,
+    "future_target": false,
+    "hedged": [],
+    "no_number": false,
+    "no_boundary": false,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.44,
+    "annual_wording": 0.15,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.0,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-010",
+   "verdict": "Can't be checked",
+   "score": 0.25,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a verified yearly emissions inventory and a public list of the carbon removals bought.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": true,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": false,
+    "years_named": [
+     2030
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.15,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-011",
+   "verdict": "Can't be checked",
+   "score": 0.0,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": false,
+    "no_boundary": false,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.0,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-013",
+   "verdict": "Can't be checked",
+   "score": 0.05,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": false,
+    "no_boundary": true,
+    "years_named": [
+     2025
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.0,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-014",
+   "verdict": "Can't be checked",
+   "score": 0.05,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": false,
+    "no_boundary": true,
+    "years_named": [
+     2025
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.0,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-015",
+   "verdict": "Can't be checked",
+   "score": 0.35,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a verified yearly emissions inventory for the company that includes the power its data centers draw hour by hour.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": true,
+    "hedged": [
+     "aim",
+     "commitment",
+     "toward"
+    ],
+    "no_number": true,
+    "no_boundary": false,
+    "years_named": [
+     2040
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.15,
+    "hedged": 0.1,
+    "no_number": 0.1,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-016",
+   "verdict": "Can't be checked",
+   "score": 0.15,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-017",
+   "verdict": "Can't be checked",
+   "score": 0.1,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": false,
+    "years_named": [
+     2024
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-018",
+   "verdict": "Can't be checked",
+   "score": 0.3,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": true,
+    "hedged": [
+     "expect"
+    ],
+    "no_number": true,
+    "no_boundary": false,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.15,
+    "hedged": 0.05,
+    "no_number": 0.1,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-019",
+   "verdict": "Can't be checked",
+   "score": 0.15,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-020",
+   "verdict": "Can't be checked",
+   "score": 0.35,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": true,
+    "hedged": [
+     "commitment"
+    ],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": [
+     2022,
+     2030
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.15,
+    "hedged": 0.05,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-021",
+   "verdict": "Can't be checked",
+   "score": 0.1,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [
+     "toward",
+     "towards"
+    ],
+    "no_number": false,
+    "no_boundary": false,
+    "years_named": [
+     2025,
+     2024
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.1,
+    "no_number": 0.0,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-022",
+   "verdict": "Can't be checked",
+   "score": 0.4,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": true,
+    "hedged": [
+     "commitment",
+     "toward"
+    ],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": [
+     2030
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.15,
+    "hedged": 0.1,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-023",
+   "verdict": "Can't be checked",
+   "score": 0.15,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-024",
+   "verdict": "Can't be checked",
+   "score": 0.15,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-025",
+   "verdict": "Can't be checked",
+   "score": 0.1,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": false,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-026",
+   "verdict": "Can't be checked",
+   "score": 0.3,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": true,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": [
+     2030
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.15,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-027",
+   "verdict": "Can't be checked",
+   "score": 0.05,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": false,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.0,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-028",
+   "verdict": "Can't be checked",
+   "score": 0.1,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": false,
+    "years_named": [
+     2025
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-029",
+   "verdict": "Can't be checked",
+   "score": 0.2,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [
+     "aim"
+    ],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.05,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-030",
+   "verdict": "Can't be checked",
+   "score": 0.3,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": true,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": [
+     2030
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.15,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-031",
+   "verdict": "Can't be checked",
+   "score": 0.1,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [
+     "aim"
+    ],
+    "no_number": false,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.05,
+    "no_number": 0.0,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-032",
+   "verdict": "Can't be checked",
+   "score": 0.25,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": true,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": false,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.15,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-033",
+   "verdict": "Can't be checked",
+   "score": 0.25,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [
+     "goal",
+     "toward"
+    ],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.1,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-034",
+   "verdict": "Can't be checked",
+   "score": 0.1,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": false,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-035",
+   "verdict": "Can't be checked",
+   "score": 0.3,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": true,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": [
+     2030
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.15,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-036",
+   "verdict": "Can't be checked",
+   "score": 0.2,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": true,
+    "future_target": false,
+    "hedged": [],
+    "no_number": false,
+    "no_boundary": true,
+    "years_named": [
+     2010,
+     2025,
+     2025
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.15,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.0,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-037",
+   "verdict": "Can't be checked",
+   "score": 0.15,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-038",
+   "verdict": "Can't be checked",
+   "score": 0.15,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-039",
+   "verdict": "Can't be checked",
+   "score": 0.2,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [
+     "aim"
+    ],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.05,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-040",
+   "verdict": "Can't be checked",
+   "score": 0.15,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-041",
+   "verdict": "Can't be checked",
+   "score": 0.0,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": false,
+    "no_boundary": false,
+    "years_named": [
+     2025,
+     2025
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.0,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-042",
+   "verdict": "Can't be checked",
+   "score": 0.3,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a verified yearly emissions inventory for the company that includes the power its data centers draw hour by hour.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": true,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": [
+     2040
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.15,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-043",
+   "verdict": "Can't be checked",
+   "score": 0.15,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-044",
+   "verdict": "Can't be checked",
+   "score": 0.05,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": false,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.0,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-045",
+   "verdict": "Can't be checked",
+   "score": 0.15,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: metered yearly water use for each site, published by the company or the local water utility, and the location of each restoration project.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": [
+     2025
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-046",
+   "verdict": "Can't be checked",
+   "score": 0.2,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [
+     "goal"
+    ],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.05,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-047",
+   "verdict": "Can't be checked",
+   "score": 0.15,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": true,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-048",
+   "verdict": "Holds on paper only",
+   "score": 0.48,
+   "confidence": "high",
+   "evidence": [
+    {
+     "label": "of Amazon Web Services's 203 mapped U.S. sites sit on a power grid that ran mostly on fossil fuels in more than half of 2025's hours",
+     "value": 151,
+     "unit": "sites",
+     "source": "IM3 Open Source Data Center Atlas (PNNL, from OpenStreetMap) joined to PUDL core_eia930__hourly_net_generation_by_energy_source"
+    },
+    {
+     "label": "of the 207 sites the atlas lists for this company could be matched to one power grid",
+     "value": 203,
+     "unit": "sites",
+     "source": "PUDL core_eia861__yearly_service_territory"
+    }
+   ],
+   "explanation_plain": "Over a whole year, Amazon Web Services says it buys as much renewable energy as it uses. We did not audit those purchases. Hour by hour is a different story: 151 of its 203 mapped U.S. sites plug into grids that ran mostly on coal, gas and oil for more than half the year.",
+   "text_features": {
+    "annual_wording": true,
+    "future_target": false,
+    "hedged": [],
+    "no_number": false,
+    "no_boundary": false,
+    "years_named": [
+     2025
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.335,
+    "annual_wording": 0.15,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.0,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-049",
+   "verdict": "Holds on paper only",
+   "score": 0.48,
+   "confidence": "high",
+   "evidence": [
+    {
+     "label": "of Amazon Web Services's 203 mapped U.S. sites sit on a power grid that ran mostly on fossil fuels in more than half of 2025's hours",
+     "value": 151,
+     "unit": "sites",
+     "source": "IM3 Open Source Data Center Atlas (PNNL, from OpenStreetMap) joined to PUDL core_eia930__hourly_net_generation_by_energy_source"
+    },
+    {
+     "label": "of the 207 sites the atlas lists for this company could be matched to one power grid",
+     "value": 203,
+     "unit": "sites",
+     "source": "PUDL core_eia861__yearly_service_territory"
+    }
+   ],
+   "explanation_plain": "Over a whole year, Amazon Web Services says it buys as much renewable energy as it uses. We did not audit those purchases. Hour by hour is a different story: 151 of its 203 mapped U.S. sites plug into grids that ran mostly on coal, gas and oil for more than half the year.",
+   "text_features": {
+    "annual_wording": true,
+    "future_target": false,
+    "hedged": [],
+    "no_number": false,
+    "no_boundary": false,
+    "years_named": [
+     2025
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.335,
+    "annual_wording": 0.15,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.0,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-050",
+   "verdict": "Holds on paper only",
+   "score": 0.53,
+   "confidence": "high",
+   "evidence": [
+    {
+     "label": "of Amazon Web Services's 203 mapped U.S. sites sit on a power grid that ran mostly on fossil fuels in more than half of 2025's hours",
+     "value": 151,
+     "unit": "sites",
+     "source": "IM3 Open Source Data Center Atlas (PNNL, from OpenStreetMap) joined to PUDL core_eia930__hourly_net_generation_by_energy_source"
+    },
+    {
+     "label": "of the 207 sites the atlas lists for this company could be matched to one power grid",
+     "value": 203,
+     "unit": "sites",
+     "source": "PUDL core_eia861__yearly_service_territory"
+    }
+   ],
+   "explanation_plain": "Over a whole year, Amazon Web Services says it buys as much renewable energy as it uses. We did not audit those purchases. Hour by hour is a different story: 151 of its 203 mapped U.S. sites plug into grids that ran mostly on coal, gas and oil for more than half the year.",
+   "text_features": {
+    "annual_wording": true,
+    "future_target": false,
+    "hedged": [],
+    "no_number": false,
+    "no_boundary": true,
+    "years_named": [
+     2025
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.335,
+    "annual_wording": 0.15,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.0,
+    "no_boundary": 0.05
+   }
+  },
+  {
+   "claim_id": "claim-051",
+   "verdict": "Can't be checked",
+   "score": 0.25,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": true,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": false,
+    "years_named": [
+     2025
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.15,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-052",
+   "verdict": "Can't be checked",
+   "score": 0.25,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": true,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": false,
+    "years_named": [
+     2024
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.15,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-053",
+   "verdict": "Can't be checked",
+   "score": 0.1,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a measured public record that matches the wording of the claim.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [],
+    "no_number": true,
+    "no_boundary": false,
+    "years_named": [
+     2024
+    ]
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.0,
+    "no_number": 0.1,
+    "no_boundary": 0.0
+   }
+  },
+  {
+   "claim_id": "claim-054",
+   "verdict": "Can't be checked",
+   "score": 0.2,
+   "confidence": "low",
+   "evidence": [],
+   "explanation_plain": "No public record exists to test this. What would be needed: a verified yearly emissions inventory for the company that includes the power its data centers draw hour by hour.",
+   "text_features": {
+    "annual_wording": false,
+    "future_target": false,
+    "hedged": [
+     "toward",
+     "towards"
+    ],
+    "no_number": true,
+    "no_boundary": false,
+    "years_named": []
+   },
+   "score_parts": {
+    "physical_gap": 0.0,
+    "annual_wording": 0.0,
+    "future_target": 0.0,
+    "hedged": 0.1,
+    "no_number": 0.1,
+    "no_boundary": 0.0
+   }
+  }
+ ]
+}

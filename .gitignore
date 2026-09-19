@@ -11,3 +11,6 @@ out
 .env
 .env*.local
 *.tsbuildinfo
+
+# pipeline scratch
+pipeline/**/__pycache__/
