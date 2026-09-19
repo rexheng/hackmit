@@ -583,6 +583,12 @@
        "unit": "of 100",
        "grade": "C",
        "note": "ERCO, 2025."
+      },
+      {
+       "label": "Coal and gas share in the hottest hours",
+       "value": 49.1,
+       "unit": "%",
+       "note": "Coldest hours: 66.6%. All hours: 52.8%. Hot afternoons get solar; cold nights don't. Demand runs 37% above average when it's hottest. NOAA weather joined to the grid, hour by hour."
       }
      ],
      "caveat": "Records don't say why bills changed, so we don't blame data centers.",
@@ -790,6 +796,12 @@
        "unit": "of 100",
        "grade": "C",
        "note": "ERCO, 2025."
+      },
+      {
+       "label": "Coal and gas share in the hottest hours",
+       "value": 49.1,
+       "unit": "%",
+       "note": "Coldest hours: 66.6%. All hours: 52.8%. Hot afternoons get solar; cold nights don't. Demand runs 37% above average when it's hottest. NOAA weather joined to the grid, hour by hour."
       }
      ],
      "caveat": "Records don't say why bills changed, so we don't blame data centers.",
@@ -1088,6 +1100,12 @@
        "unit": "of 100",
        "grade": "C",
        "note": "ERCO, 2025."
+      },
+      {
+       "label": "Coal and gas share in the hottest hours",
+       "value": 49.1,
+       "unit": "%",
+       "note": "Coldest hours: 66.6%. All hours: 52.8%. Hot afternoons get solar; cold nights don't. Demand runs 37% above average when it's hottest. NOAA weather joined to the grid, hour by hour."
       }
      ],
      "caveat": "Records don't say why bills changed, so we don't blame data centers.",
@@ -1234,6 +1252,12 @@
        "unit": "of 100",
        "grade": "C",
        "note": "ERCO, 2025."
+      },
+      {
+       "label": "Coal and gas share in the hottest hours",
+       "value": 49.1,
+       "unit": "%",
+       "note": "Coldest hours: 66.6%. All hours: 52.8%. Hot afternoons get solar; cold nights don't. Demand runs 37% above average when it's hottest. NOAA weather joined to the grid, hour by hour."
       }
      ],
      "caveat": "Records don't say why bills changed, so we don't blame data centers.",
@@ -1405,6 +1429,12 @@
        "unit": "of 100",
        "grade": "C",
        "note": "ERCO, 2025."
+      },
+      {
+       "label": "Coal and gas share in the hottest hours",
+       "value": 49.1,
+       "unit": "%",
+       "note": "Coldest hours: 66.6%. All hours: 52.8%. Hot afternoons get solar; cold nights don't. Demand runs 37% above average when it's hottest. NOAA weather joined to the grid, hour by hour."
       }
      ],
      "caveat": "Records don't say why bills changed, so we don't blame data centers.",
@@ -1742,6 +1772,12 @@
        "unit": "of 100",
        "grade": "C",
        "note": "ERCO, 2025."
+      },
+      {
+       "label": "Coal and gas share in the hottest hours",
+       "value": 49.1,
+       "unit": "%",
+       "note": "Coldest hours: 66.6%. All hours: 52.8%. Hot afternoons get solar; cold nights don't. Demand runs 37% above average when it's hottest. NOAA weather joined to the grid, hour by hour."
       }
      ],
      "caveat": "Records don't say why bills changed, so we don't blame data centers.",
@@ -1918,6 +1954,12 @@
        "unit": "of 100",
        "grade": "C",
        "note": "ERCO, 2025."
+      },
+      {
+       "label": "Coal and gas share in the hottest hours",
+       "value": 49.1,
+       "unit": "%",
+       "note": "Coldest hours: 66.6%. All hours: 52.8%. Hot afternoons get solar; cold nights don't. Demand runs 37% above average when it's hottest. NOAA weather joined to the grid, hour by hour."
       }
      ],
      "caveat": "Records don't say why bills changed, so we don't blame data centers.",
@@ -2361,6 +2403,12 @@
        "unit": "of 100",
        "grade": "C",
        "note": "ERCO, 2025."
+      },
+      {
+       "label": "Coal and gas share in the hottest hours",
+       "value": 49.1,
+       "unit": "%",
+       "note": "Coldest hours: 66.6%. All hours: 52.8%. Hot afternoons get solar; cold nights don't. Demand runs 37% above average when it's hottest. NOAA weather joined to the grid, hour by hour."
       }
      ],
      "caveat": "Records don't say why bills changed, so we don't blame data centers.",
@@ -2570,6 +2618,12 @@
        "unit": "of 100",
        "grade": "C",
        "note": "ERCO, 2025."
+      },
+      {
+       "label": "Coal and gas share in the hottest hours",
+       "value": 49.1,
+       "unit": "%",
+       "note": "Coldest hours: 66.6%. All hours: 52.8%. Hot afternoons get solar; cold nights don't. Demand runs 37% above average when it's hottest. NOAA weather joined to the grid, hour by hour."
       }
      ],
      "caveat": "Records don't say why bills changed, so we don't blame data centers.",
@@ -2747,6 +2801,12 @@
        "unit": "of 100",
        "grade": "C",
        "note": "ERCO, 2025."
+      },
+      {
+       "label": "Coal and gas share in the hottest hours",
+       "value": 49.1,
+       "unit": "%",
+       "note": "Coldest hours: 66.6%. All hours: 52.8%. Hot afternoons get solar; cold nights don't. Demand runs 37% above average when it's hottest. NOAA weather joined to the grid, hour by hour."
       }
      ],
      "caveat": "Records don't say why bills changed, so we don't blame data centers.",
@@ -2906,6 +2966,12 @@
        "unit": "of 100",
        "grade": "C",
        "note": "ERCO, 2025."
+      },
+      {
+       "label": "Coal and gas share in the hottest hours",
+       "value": 49.1,
+       "unit": "%",
+       "note": "Coldest hours: 66.6%. All hours: 52.8%. Hot afternoons get solar; cold nights don't. Demand runs 37% above average when it's hottest. NOAA weather joined to the grid, hour by hour."
       }
      ],
      "caveat": "Records don't say why bills changed, so we don't blame data centers.",

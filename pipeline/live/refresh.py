@@ -157,5 +157,5 @@ news_out = {**{k: v for k, v in old_news.items() if k not in news_out}, **news_o
     {"kind": "Company pages and reports", "count": len(cfg["pages"]), "what": "claims, PUE, WUE, checked word for word"},
     {"kind": "Local news", "count": sum(len(v) for v in news_out.values()), "what": "headlines by county, GDELT then Google News"},
     {"kind": "SEC filings", "count": len(filings_out), "what": "what owners tell investors" + ("" if SEC_UA else " (off: needs a contact email)")},
-    {"kind": "Government data", "count": 5, "what": "EIA bills and grid, Texas Comptroller, BLS jobs, PNNL map, Berkeley Lab"}]}, indent=1))
+    {"kind": "Government data", "count": 6, "what": "EIA bills and grid, NOAA weather, Texas Comptroller, BLS jobs, PNNL map, Berkeley Lab"}]}, indent=1))
 print("\n".join(log))

@@ -11,6 +11,7 @@ Numbers and scores come from code. No model is in the loop. Missing data stays "
 | Verbatim check | `python claims/verify.py` | keeps a quote only if it is a word for word substring of the company's page (`claims/out/claims.json`, `dropped.json`) |
 | Scoring | `python claims/score.py` | verdict, likelihood of a false impression (0 to 1, named features with printed weights), and confidence (`claims/out/receipts.json`) |
 | Estimates | `python estimates/build.py` | labelled low to high estimates of county data center electricity and water use, from published national figures (`estimates/out/`) |
+| Heat vs grid | `python heat/build.py` | NOAA hourly temperature (ISD) joined to the ERCOT hourly fuel mix: what the grid burns in the hottest and coldest hours (`heat/out/`) |
 | Texas label | `python texas/build.py` | the five-row A to E data center label for every Texas county: power, water, tax dollars, jobs, straight talk. Company PUE and WUE are checked word for word (`texas/metrics.json`); every cut-off is in `texas/scales.json` (`texas/out/labels.json`) |
 | Bundle | `python bundle.py` | `prototypes/03-compute-works/live.js` |
 

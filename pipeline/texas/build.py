@@ -102,6 +102,7 @@ receipts = {r["claim_id"]: r for r in json.loads((P / "claims/out/receipts.json"
 TALK = {"Holds up": 1, "Holds on paper only": 0.5, "Can't be checked": 0.25, "Does not hold up": 0}
 grid = json.loads((P / "atlas/out/grid_2025.json").read_text())
 est = json.loads((P / "estimates/out/estimates.json").read_text())["counties"]
+heat = json.loads((P / "heat/out/heat.json").read_text()) if (P / "heat/out/heat.json").exists() else None
 
 counties = defaultdict(lambda: {"ids": {}, "grid": None})
 for r in csv.DictReader(open(P / "atlas/out/sites_grid.csv")):
@@ -166,7 +167,10 @@ for fips, c in counties.items():
              {"label": "PUE", "value": pue, "grade": g_pue, "industry_average": 1.54,
               "note": (f"About {round((pue - 1) * 100)} extra units of power per 100 go to cooling. From owners of {round(pue_cov * 100)}% of named sites." if pue is not None else "No owner here publishes it.")},
              {"label": "Hours the grid ran mostly on coal and gas", "value": g and round(g["fossil_majority_hours_pct"]), "unit": "of 100", "grade": g_grid,
-              "note": f"{c['grid']}, 2025." if g else "More than one grid serves this county."}],
+              "note": f"{c['grid']}, 2025." if g else "More than one grid serves this county."}] +
+             ([{"label": "Coal and gas share in the hottest hours", "value": heat["hottest_5pct"]["fossil_share_pct"], "unit": "%",
+                "note": f"Coldest hours: {heat['coldest_5pct']['fossil_share_pct']}%. All hours: {heat['all_hours_fossil_share_pct']}%. Hot afternoons get solar; cold nights don't. Demand runs {heat['hottest_5pct']['generation_vs_average_pct']:.0f}% above average when it's hottest. NOAA weather joined to the grid, hour by hour."}]
+              if heat and c["grid"] == "ERCO" else []),
          "caveat": "Records don't say why bills changed, so we don't blame data centers.",
          "source": "EIA Form 861 and EIA-930, via PUDL"},
         {"id": "water", "name": "WATER", "grade": g_water, "estimate": True, "water": water,
