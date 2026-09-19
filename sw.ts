@@ -70,11 +70,27 @@ const serwist = new Serwist({
       {
         url: "/offline",
         matcher({ request }) {
-          return request.destination === "document";
+          return (
+            request.mode === "navigate" ||
+            request.destination === "document" ||
+            Boolean(request.headers.get("accept")?.includes("text/html"))
+          );
         },
       },
     ],
   },
+});
+
+serwist.setCatchHandler(async ({ request }) => {
+  if (
+    request.mode === "navigate" ||
+    request.destination === "document" ||
+    request.headers.get("accept")?.includes("text/html")
+  ) {
+    const cached = await serwist.matchPrecache("/offline");
+    if (cached) return cached;
+  }
+  return Response.error();
 });
 
 serwist.addEventListeners();
