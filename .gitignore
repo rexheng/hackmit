@@ -3,3 +3,10 @@
 !prototypes/03-compute-works/shots/*.png
 .DS_Store
 Thumbs.db
+node_modules
+.next
+out
+.vercel
+.env
+.env*.local
+*.tsbuildinfo
