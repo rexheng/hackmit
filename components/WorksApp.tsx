@@ -421,8 +421,8 @@ export function WorksApp({ view }: { view: View }) {
                 <div className={`marble${marble ? " go" : ""}`} />
               </div>
               {redesign && view !== "gate" ? (
-                <p className="calc" style={{ fontFamily: "var(--font-elite), monospace", fontSize: 11, marginTop: 8 }}>
-                  {redesign.narrative}
+                <p className="calc restamp-receipt">
+                  RESTAMPED · {redesign.operations.length} OPS ON THE CARD · LETTER MOVED
                 </p>
               ) : null}
             </div>
@@ -681,7 +681,6 @@ export function WorksApp({ view }: { view: View }) {
                     </article>
                   ))}
                 </div>
-                <div className="holes">{card.lines[1]}</div>
                 <div className="holes">{card.lines[2]}</div>
               </div>
               <div className="alpha">
