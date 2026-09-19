@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OCFO — Virtual Office of the CFO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #2a2622;
+      --muted: #7a736c;
+      --paper: #f3efe8;
+      --panel: rgba(245,241,235,.88);
+      --line: #d8d0c6;
+      --walnut: #6b4e35;
+      --gold: #c4a574;
+      --taupe: #8c8782;
+      --ok: #2f6b45;
+      --bad: #8a3a32;
+      --shadow: 0 18px 50px rgba(40,30,18,.12);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: #d9d2c8; color: var(--ink); font-family: "IBM Plex Sans", system-ui, sans-serif; }
+    body { display: grid; grid-template-rows: auto 1fr auto; min-height: 100%; }
+    header {
+      display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+      padding: 14px 22px 12px; background: #f6f2ec; border-bottom: 1px solid var(--line);
+    }
+    header h1 {
+      font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: clamp(28px, 3vw, 40px);
+      margin: 0; letter-spacing: -0.02em;
+    }
+    header h1 em { font-style: italic; color: var(--walnut); font-weight: 500; }
+    .deck { color: var(--muted); font-size: 13px; max-width: 62ch; line-height: 1.45; }
+    .kicker { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-bottom: 2px; }
+
+    .stage { display: grid; grid-template-columns: 1fr minmax(300px, 380px); min-height: 0; }
+    #view { width: 100%; height: 100%; display: block; background: #e8e4de; }
+    .hud {
+      background: var(--panel); backdrop-filter: blur(10px);
+      border-left: 1px solid var(--line); padding: 14px 16px 20px; overflow: auto;
+    }
+    .row { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 14px; }
+    button {
+      font-family: inherit; font-size: 12px; letter-spacing: .04em; text-transform: uppercase;
+      border: 1px solid var(--ink); background: #fff; color: var(--ink); padding: 8px 11px; cursor: pointer;
+    }
+    button:hover { background: var(--ink); color: #f6f2ec; }
+    button:disabled { opacity: .45; cursor: wait; }
+    button.ghost { background: transparent; }
+    .statline { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; margin-bottom: 8px; }
+    #score { font-family: "Cormorant Garamond", serif; font-size: 52px; line-height: .9; }
+    #score.ok { color: var(--ok); } #score.bad { color: var(--bad); }
+    .pill { font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: .12em; border: 1px solid var(--line); padding: 4px 8px; }
+    .pill.ok { border-color: var(--ok); color: var(--ok); }
+    .pill.bad { border-color: var(--bad); color: var(--bad); }
+    #meta, #py { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    h2 { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--walnut); margin: 16px 0 6px; font-weight: 600; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    #tools li, #fails li, #learn li, #policy li {
+      border-top: 1px solid var(--line); padding: 7px 0; font-size: 12.5px; line-height: 1.35;
+    }
+    #tools i { font-style: normal; font-family: "IBM Plex Mono", monospace; font-size: 10px; color: var(--gold); display: block; }
+    #tools.fail, #tools li.fail strong { color: var(--bad); }
+    #tools li.ok strong { color: var(--ok); }
+    #fails b { display: block; font-family: "IBM Plex Mono", monospace; font-size: 11px; }
+    #fails .clean b { color: var(--ok); }
+    #policy li { display: flex; justify-content: space-between; gap: 8px; text-transform: lowercase; }
+    #policy .on b { color: var(--ok); }
+    #policy .off b { color: var(--muted); }
+    footer {
+      display: flex; justify-content: space-between; gap: 16px; align-items: center;
+      padding: 8px 18px; background: #f6f2ec; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted);
+    }
+    #spark { display: flex; align-items: center; }
+    a { color: var(--walnut); }
+    @media (max-width: 960px) {
+      .stage { grid-template-columns: 1fr; grid-template-rows: minmax(42vh, 1fr) auto; }
+      .hud { border-left: 0; border-top: 1px solid var(--line); max-height: 48vh; }
+    }
+  </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div>
+      <div class="kicker">Prototype 06 · MuJoCo × Office of the CFO</div>
+      <h1>OCFO <em>Virtual Close</em></h1>
+    </div>
+    <p class="deck">A physical twin of the executive suite. The ragdoll is the close bot — thrusters on a floppy humanoid, flying station to station. It reconciles bank, GL and AP, names every break, then rewrites its own matching policy. Next month it flies quieter.</p>
+  </header>
+  <div class="stage">
+    <canvas id="view"></canvas>
+    <aside class="hud">
+      <div class="statline">
+        <div>
+          <div class="kicker">Episode <span id="ep">00</span></div>
+          <div id="score">—</div>
+        </div>
+        <div id="spark"></div>
+        <div id="status" class="pill">IDLE</div>
+      </div>
+      <div id="meta">Northline Compute LLC · August 2026 cash close · Chase · NetSuite · Coupa</div>
+      <div class="row">
+        <button id="run">Run one close</button>
+        <button id="learn12">Learn × 12</button>
+        <button id="throw" class="ghost">Throw ragdoll</button>
+        <button id="reset" class="ghost">Reset policy</button>
+      </div>
+      <h2>Tool path (waypoints)</h2>
+      <ul id="tools"></ul>
+      <h2>When and why it failed</h2>
+      <ul id="fails"></ul>
+      <h2>Policy rewrite</h2>
+      <ul id="learn"></ul>
+      <h2>Current policy</h2>
+      <ul id="policy"></ul>
+      <p id="py"></p>
+    </aside>
+  </div>
+  <footer>
+    <span>MJCF office + flying ragdoll in <code>sim/office.xml</code> · Blender bake in <code>sim/blender_office.py</code> · recorded MuJoCo flights in <code>trajectories/</code></span>
+    <span><a href="../index.html">All prototypes</a></span>
+  </footer>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
