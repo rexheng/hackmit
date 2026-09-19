@@ -1,0 +1,5824 @@
+{
+ "meta": {
+  "inputs": {
+   "us_datacenter_twh_2023": {
+    "value": 176,
+    "unit": "TWh",
+    "source": "Lawrence Berkeley National Laboratory, 2024 United States Data Center Energy Usage Report",
+    "url": "https://newscenter.lbl.gov/2025/01/15/berkeley-lab-report-evaluates-increase-in-electricity-demand-from-data-centers/"
+   },
+   "home_kwh_per_year": {
+    "value": 10791,
+    "unit": "kWh",
+    "source": "U.S. Energy Information Administration, average U.S. home, 2022",
+    "url": "https://www.eia.gov/tools/faqs/faq.php?id=97&t=3"
+   },
+   "family_gallons_per_day": {
+    "value": 300,
+    "unit": "gallons",
+    "source": "U.S. EPA WaterSense: the average American family uses more than 300 gallons a day at home",
+    "url": "https://www.epa.gov/watersense/how-we-use-water"
+   },
+   "wue_low_l_per_kwh": {
+    "value": 0.12,
+    "unit": "L/kWh",
+    "source": "Amazon: AWS global data center water use effectiveness, as reported by the company",
+    "url": "https://sustainability.aboutamazon.com/natural-resources/water"
+   },
+   "wue_high_l_per_kwh": {
+    "value": 0.84,
+    "unit": "L/kWh",
+    "source": "Industry average implied by Amazon's sentence that 0.12 L/kWh is \"7 times better than the industry average\"",
+    "url": "https://sustainability.aboutamazon.com/natural-resources/water"
+   }
+  },
+  "method": [
+   "Start from the national total: U.S. data centers used 176 TWh in 2023.",
+   "Give this county its share, by mapped floor area and by mapped site count. Those two answers are the low and the high.",
+   "For water, multiply by litres per kWh: low is the rate AWS reports for itself, high is the industry average AWS's own page implies.",
+   "Convert to average homes (electricity) and average families (water) so the size is easy to picture."
+  ],
+  "limits": [
+   "This is an estimate, not a measurement. No company or utility publishes these numbers per county.",
+   "The public map is incomplete and a big building is not always a busy one, so the true figure can fall outside the range.",
+   "The national total is for 2023; use has grown since.",
+   "The water rates are per unit of computing power, a little less than total power, so water figures lean high by roughly a tenth to a third.",
+   "Water is on-site cooling water only. It leaves out the water used by power plants."
+  ]
+ },
+ "counties": {
+  "01069": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    9.86,
+    120
+   ],
+   "electricity_as_homes": [
+    910,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.31,
+    26
+   ],
+   "water_as_families": [
+    2.85,
+    240
+   ]
+  },
+  "01071": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.15,
+    0.2
+   ],
+   "electricity_gwh_per_year": [
+    260,
+    360
+   ],
+   "electricity_as_homes": [
+    24000,
+    33000
+   ],
+   "water_million_gallons_per_year": [
+    8.35,
+    79
+   ],
+   "water_as_families": [
+    76,
+    730
+   ]
+  },
+  "01073": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "01089": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.41,
+    0.95
+   ],
+   "electricity_gwh_per_year": [
+    720,
+    1700
+   ],
+   "electricity_as_homes": [
+    66000,
+    150000
+   ],
+   "water_million_gallons_per_year": [
+    23,
+    370
+   ],
+   "water_as_families": [
+    210,
+    3400
+   ]
+  },
+  "05119": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    29,
+    120
+   ],
+   "electricity_as_homes": [
+    2700,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.93,
+    26
+   ],
+   "water_as_families": [
+    8.47,
+    240
+   ]
+  },
+  "05145": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    4.21,
+    120
+   ],
+   "electricity_as_homes": [
+    390,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.13,
+    26
+   ],
+   "water_as_families": [
+    1.22,
+    240
+   ]
+  },
+  "04003": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    6.92,
+    120
+   ],
+   "electricity_as_homes": [
+    640,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.22,
+    26
+   ],
+   "water_as_families": [
+    2.0,
+    240
+   ]
+  },
+  "04013": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    4.27,
+    4.96
+   ],
+   "electricity_gwh_per_year": [
+    7500,
+    8700
+   ],
+   "electricity_as_homes": [
+    700000,
+    810000
+   ],
+   "water_million_gallons_per_year": [
+    240,
+    1900
+   ],
+   "water_as_families": [
+    2200,
+    18000
+   ]
+  },
+  "04019": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    13,
+    120
+   ],
+   "electricity_as_homes": [
+    1200,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.42,
+    26
+   ],
+   "water_as_families": [
+    3.82,
+    240
+   ]
+  },
+  "06001": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.15,
+    0.34
+   ],
+   "electricity_gwh_per_year": [
+    260,
+    600
+   ],
+   "electricity_as_homes": [
+    24000,
+    55000
+   ],
+   "water_million_gallons_per_year": [
+    8.2,
+    130
+   ],
+   "water_as_families": [
+    75,
+    1200
+   ]
+  },
+  "06013": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "06037": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.3,
+    0.68
+   ],
+   "electricity_gwh_per_year": [
+    530,
+    1200
+   ],
+   "electricity_as_homes": [
+    49000,
+    110000
+   ],
+   "water_million_gallons_per_year": [
+    17,
+    260
+   ],
+   "water_as_families": [
+    150,
+    2400
+   ]
+  },
+  "06055": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.08
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    150
+   ],
+   "electricity_as_homes": [
+    11000,
+    14000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    33
+   ],
+   "water_as_families": [
+    35,
+    300
+   ]
+  },
+  "06059": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.06,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    110,
+    240
+   ],
+   "electricity_as_homes": [
+    10000,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    3.57,
+    53
+   ],
+   "water_as_families": [
+    33,
+    480
+   ]
+  },
+  "06065": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "06067": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.34,
+    0.35
+   ],
+   "electricity_gwh_per_year": [
+    600,
+    610
+   ],
+   "electricity_as_homes": [
+    55000,
+    57000
+   ],
+   "water_million_gallons_per_year": [
+    19,
+    140
+   ],
+   "water_as_families": [
+    170,
+    1200
+   ]
+  },
+  "06073": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.11,
+    0.34
+   ],
+   "electricity_gwh_per_year": [
+    190,
+    600
+   ],
+   "electricity_as_homes": [
+    18000,
+    55000
+   ],
+   "water_million_gallons_per_year": [
+    6.16,
+    130
+   ],
+   "water_as_families": [
+    56,
+    1200
+   ]
+  },
+  "06075": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.09,
+    0.27
+   ],
+   "electricity_gwh_per_year": [
+    160,
+    480
+   ],
+   "electricity_as_homes": [
+    15000,
+    44000
+   ],
+   "water_million_gallons_per_year": [
+    5.2,
+    110
+   ],
+   "water_as_families": [
+    48,
+    970
+   ]
+  },
+  "06079": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "06085": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    2.62,
+    5.09
+   ],
+   "electricity_gwh_per_year": [
+    4600,
+    9000
+   ],
+   "electricity_as_homes": [
+    430000,
+    830000
+   ],
+   "water_million_gallons_per_year": [
+    150,
+    2000
+   ],
+   "water_as_families": [
+    1300,
+    18000
+   ]
+  },
+  "06095": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.03,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    51,
+    120
+   ],
+   "electricity_as_homes": [
+    4700,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.61,
+    26
+   ],
+   "water_as_families": [
+    15,
+    240
+   ]
+  },
+  "06099": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    5.52,
+    120
+   ],
+   "electricity_as_homes": [
+    510,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.18,
+    26
+   ],
+   "water_as_families": [
+    1.6,
+    240
+   ]
+  },
+  "08001": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.04,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    79,
+    120
+   ],
+   "electricity_as_homes": [
+    7300,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    2.5,
+    26
+   ],
+   "water_as_families": [
+    23,
+    240
+   ]
+  },
+  "08005": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.27,
+    0.61
+   ],
+   "electricity_gwh_per_year": [
+    470,
+    1100
+   ],
+   "electricity_as_homes": [
+    43000,
+    100000
+   ],
+   "water_million_gallons_per_year": [
+    15,
+    240
+   ],
+   "water_as_families": [
+    140,
+    2200
+   ]
+  },
+  "08014": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.1
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    170
+   ],
+   "electricity_as_homes": [
+    11000,
+    16000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    38
+   ],
+   "water_as_families": [
+    35,
+    350
+   ]
+  },
+  "08031": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.04,
+    0.2
+   ],
+   "electricity_gwh_per_year": [
+    63,
+    360
+   ],
+   "electricity_as_homes": [
+    5800,
+    33000
+   ],
+   "water_million_gallons_per_year": [
+    2.0,
+    79
+   ],
+   "water_as_families": [
+    18,
+    730
+   ]
+  },
+  "08035": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.12,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    210,
+    240
+   ],
+   "electricity_as_homes": [
+    19000,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    6.6,
+    53
+   ],
+   "water_as_families": [
+    60,
+    480
+   ]
+  },
+  "08041": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.2,
+    0.27
+   ],
+   "electricity_gwh_per_year": [
+    350,
+    480
+   ],
+   "electricity_as_homes": [
+    33000,
+    44000
+   ],
+   "water_million_gallons_per_year": [
+    11,
+    110
+   ],
+   "water_as_families": [
+    100,
+    970
+   ]
+  },
+  "09110": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "09120": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    28
+   ],
+   "water_as_families": [
+    35,
+    250
+   ]
+  },
+  "09170": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.03,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    50,
+    120
+   ],
+   "electricity_as_homes": [
+    4600,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.57,
+    26
+   ],
+   "water_as_families": [
+    14,
+    240
+   ]
+  },
+  "09190": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.05,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    81,
+    240
+   ],
+   "electricity_as_homes": [
+    7500,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    2.57,
+    53
+   ],
+   "water_as_families": [
+    23,
+    480
+   ]
+  },
+  "11001": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "12001": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    33,
+    240
+   ],
+   "electricity_as_homes": [
+    3100,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    1.06,
+    53
+   ],
+   "water_as_families": [
+    9.67,
+    480
+   ]
+  },
+  "12011": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.06,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    110,
+    240
+   ],
+   "electricity_as_homes": [
+    10000,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    3.57,
+    53
+   ],
+   "water_as_families": [
+    33,
+    480
+   ]
+  },
+  "12031": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    28,
+    240
+   ],
+   "electricity_as_homes": [
+    2600,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    0.88,
+    53
+   ],
+   "water_as_families": [
+    8.03,
+    480
+   ]
+  },
+  "12057": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.2
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    360
+   ],
+   "electricity_as_homes": [
+    11000,
+    33000
+   ],
+   "water_million_gallons_per_year": [
+    3.73,
+    79
+   ],
+   "water_as_families": [
+    34,
+    730
+   ]
+  },
+  "12086": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.27
+   ],
+   "electricity_gwh_per_year": [
+    130,
+    480
+   ],
+   "electricity_as_homes": [
+    12000,
+    44000
+   ],
+   "water_million_gallons_per_year": [
+    4.03,
+    110
+   ],
+   "water_as_families": [
+    37,
+    970
+   ]
+  },
+  "12095": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.06,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    110,
+    240
+   ],
+   "electricity_as_homes": [
+    9900,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    3.38,
+    53
+   ],
+   "water_as_families": [
+    31,
+    480
+   ]
+  },
+  "12105": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    21,
+    120
+   ],
+   "electricity_as_homes": [
+    1900,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.66,
+    26
+   ],
+   "water_as_families": [
+    6.0,
+    240
+   ]
+  },
+  "13067": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.2,
+    0.21
+   ],
+   "electricity_gwh_per_year": [
+    360,
+    380
+   ],
+   "electricity_as_homes": [
+    33000,
+    35000
+   ],
+   "water_million_gallons_per_year": [
+    11,
+    83
+   ],
+   "water_as_families": [
+    100,
+    760
+   ]
+  },
+  "13097": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.41,
+    0.66
+   ],
+   "electricity_gwh_per_year": [
+    720,
+    1200
+   ],
+   "electricity_as_homes": [
+    66000,
+    110000
+   ],
+   "water_million_gallons_per_year": [
+    23,
+    260
+   ],
+   "water_as_families": [
+    210,
+    2300
+   ]
+  },
+  "13113": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.14,
+    0.3
+   ],
+   "electricity_gwh_per_year": [
+    240,
+    520
+   ],
+   "electricity_as_homes": [
+    22000,
+    48000
+   ],
+   "water_million_gallons_per_year": [
+    7.57,
+    120
+   ],
+   "water_as_families": [
+    69,
+    1100
+   ]
+  },
+  "13117": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.09
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    160
+   ],
+   "electricity_as_homes": [
+    11000,
+    15000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    35
+   ],
+   "water_as_families": [
+    35,
+    320
+   ]
+  },
+  "13121": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    1.01,
+    1.09
+   ],
+   "electricity_gwh_per_year": [
+    1800,
+    1900
+   ],
+   "electricity_as_homes": [
+    160000,
+    180000
+   ],
+   "water_million_gallons_per_year": [
+    56,
+    420
+   ],
+   "water_as_families": [
+    510,
+    3900
+   ]
+  },
+  "13135": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.27,
+    0.37
+   ],
+   "electricity_gwh_per_year": [
+    480,
+    650
+   ],
+   "electricity_as_homes": [
+    44000,
+    60000
+   ],
+   "water_million_gallons_per_year": [
+    15,
+    140
+   ],
+   "water_as_families": [
+    140,
+    1300
+   ]
+  },
+  "13215": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.06,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    110,
+    240
+   ],
+   "electricity_as_homes": [
+    9900,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    3.4,
+    53
+   ],
+   "water_as_families": [
+    31,
+    480
+   ]
+  },
+  "13217": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.27,
+    0.92
+   ],
+   "electricity_gwh_per_year": [
+    480,
+    1600
+   ],
+   "electricity_as_homes": [
+    44000,
+    150000
+   ],
+   "water_million_gallons_per_year": [
+    15,
+    360
+   ],
+   "water_as_families": [
+    140,
+    3300
+   ]
+  },
+  "19049": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.61,
+    0.91
+   ],
+   "electricity_gwh_per_year": [
+    1100,
+    1600
+   ],
+   "electricity_as_homes": [
+    100000,
+    150000
+   ],
+   "water_million_gallons_per_year": [
+    34,
+    360
+   ],
+   "water_as_families": [
+    310,
+    3200
+   ]
+  },
+  "19103": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    2.49,
+    120
+   ],
+   "electricity_as_homes": [
+    230,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.08,
+    26
+   ],
+   "water_as_families": [
+    0.72,
+    240
+   ]
+  },
+  "19121": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "19153": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    1.76,
+    2.95
+   ],
+   "electricity_gwh_per_year": [
+    3100,
+    5200
+   ],
+   "electricity_as_homes": [
+    290000,
+    480000
+   ],
+   "water_million_gallons_per_year": [
+    98,
+    1200
+   ],
+   "water_as_families": [
+    900,
+    11000
+   ]
+  },
+  "19155": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    1.36,
+    1.68
+   ],
+   "electricity_gwh_per_year": [
+    2400,
+    3000
+   ],
+   "electricity_as_homes": [
+    220000,
+    270000
+   ],
+   "water_million_gallons_per_year": [
+    76,
+    660
+   ],
+   "water_as_families": [
+    690,
+    6000
+   ]
+  },
+  "19163": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.03,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    50,
+    120
+   ],
+   "electricity_as_homes": [
+    4600,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.57,
+    26
+   ],
+   "water_as_families": [
+    14,
+    240
+   ]
+  },
+  "19181": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.41,
+    0.64
+   ],
+   "electricity_gwh_per_year": [
+    720,
+    1100
+   ],
+   "electricity_as_homes": [
+    66000,
+    100000
+   ],
+   "water_million_gallons_per_year": [
+    23,
+    250
+   ],
+   "water_as_families": [
+    210,
+    2300
+   ]
+  },
+  "16001": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.2,
+    0.36
+   ],
+   "electricity_gwh_per_year": [
+    360,
+    630
+   ],
+   "electricity_as_homes": [
+    33000,
+    58000
+   ],
+   "water_million_gallons_per_year": [
+    11,
+    140
+   ],
+   "water_as_families": [
+    100,
+    1300
+   ]
+  },
+  "16007": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    3.75,
+    120
+   ],
+   "electricity_as_homes": [
+    350,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.12,
+    26
+   ],
+   "water_as_families": [
+    1.08,
+    240
+   ]
+  },
+  "16065": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    17,
+    120
+   ],
+   "electricity_as_homes": [
+    1600,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.53,
+    26
+   ],
+   "water_as_families": [
+    4.86,
+    240
+   ]
+  },
+  "17019": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    42,
+    120
+   ],
+   "electricity_as_homes": [
+    3900,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.33,
+    26
+   ],
+   "water_as_families": [
+    12,
+    240
+   ]
+  },
+  "17031": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    1.97,
+    2.01
+   ],
+   "electricity_gwh_per_year": [
+    3500,
+    3500
+   ],
+   "electricity_as_homes": [
+    320000,
+    330000
+   ],
+   "water_million_gallons_per_year": [
+    110,
+    790
+   ],
+   "water_as_families": [
+    1000,
+    7200
+   ]
+  },
+  "17037": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.27,
+    0.76
+   ],
+   "electricity_gwh_per_year": [
+    480,
+    1300
+   ],
+   "electricity_as_homes": [
+    44000,
+    120000
+   ],
+   "water_million_gallons_per_year": [
+    15,
+    300
+   ],
+   "water_as_families": [
+    140,
+    2700
+   ]
+  },
+  "17043": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.95,
+    0.99
+   ],
+   "electricity_gwh_per_year": [
+    1700,
+    1800
+   ],
+   "electricity_as_homes": [
+    150000,
+    160000
+   ],
+   "water_million_gallons_per_year": [
+    53,
+    390
+   ],
+   "water_as_families": [
+    480,
+    3500
+   ]
+  },
+  "17097": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.03,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    51,
+    120
+   ],
+   "electricity_as_homes": [
+    4700,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.6,
+    26
+   ],
+   "water_as_families": [
+    15,
+    240
+   ]
+  },
+  "17119": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    0.19,
+    120
+   ],
+   "electricity_as_homes": [
+    17,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.01,
+    26
+   ],
+   "water_as_families": [
+    0.05,
+    240
+   ]
+  },
+  "18059": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    19,
+    120
+   ],
+   "electricity_as_homes": [
+    1800,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.61,
+    26
+   ],
+   "water_as_families": [
+    5.58,
+    240
+   ]
+  },
+  "18089": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.06,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    110,
+    120
+   ],
+   "electricity_as_homes": [
+    9900,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.38,
+    26
+   ],
+   "water_as_families": [
+    31,
+    240
+   ]
+  },
+  "18105": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.05,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    87,
+    120
+   ],
+   "electricity_as_homes": [
+    8000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    2.74,
+    26
+   ],
+   "water_as_families": [
+    25,
+    240
+   ]
+  },
+  "18157": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.14,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    240,
+    240
+   ],
+   "electricity_as_homes": [
+    22000,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    7.57,
+    53
+   ],
+   "water_as_families": [
+    69,
+    480
+   ]
+  },
+  "20051": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    11,
+    120
+   ],
+   "electricity_as_homes": [
+    980,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.34,
+    26
+   ],
+   "water_as_families": [
+    3.07,
+    240
+   ]
+  },
+  "20091": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.29,
+    0.41
+   ],
+   "electricity_gwh_per_year": [
+    510,
+    720
+   ],
+   "electricity_as_homes": [
+    47000,
+    66000
+   ],
+   "water_million_gallons_per_year": [
+    16,
+    160
+   ],
+   "water_as_families": [
+    150,
+    1500
+   ]
+  },
+  "21071": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    14,
+    120
+   ],
+   "electricity_as_homes": [
+    1300,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.45,
+    26
+   ],
+   "water_as_families": [
+    4.15,
+    240
+   ]
+  },
+  "21107": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "21111": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.04,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    65,
+    240
+   ],
+   "electricity_as_homes": [
+    6100,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    2.08,
+    53
+   ],
+   "water_as_families": [
+    19,
+    480
+   ]
+  },
+  "21145": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "22033": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "25009": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.03,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    47,
+    120
+   ],
+   "electricity_as_homes": [
+    4400,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.49,
+    26
+   ],
+   "water_as_families": [
+    14,
+    240
+   ]
+  },
+  "25017": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.13,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    240,
+    240
+   ],
+   "electricity_as_homes": [
+    22000,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    7.5,
+    53
+   ],
+   "water_as_families": [
+    68,
+    480
+   ]
+  },
+  "24003": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.06,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    110,
+    240
+   ],
+   "electricity_as_homes": [
+    10000,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    3.59,
+    53
+   ],
+   "water_as_families": [
+    33,
+    480
+   ]
+  },
+  "24005": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "24510": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.41
+   ],
+   "electricity_gwh_per_year": [
+    31,
+    720
+   ],
+   "electricity_as_homes": [
+    2900,
+    66000
+   ],
+   "water_million_gallons_per_year": [
+    0.99,
+    160
+   ],
+   "water_as_families": [
+    9.04,
+    1500
+   ]
+  },
+  "24021": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.03,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    59,
+    120
+   ],
+   "electricity_as_homes": [
+    5400,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.86,
+    26
+   ],
+   "water_as_families": [
+    17,
+    240
+   ]
+  },
+  "24027": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.06,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    100,
+    120
+   ],
+   "electricity_as_homes": [
+    9500,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.27,
+    26
+   ],
+   "water_as_families": [
+    30,
+    240
+   ]
+  },
+  "24031": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.08
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    130
+   ],
+   "electricity_as_homes": [
+    11000,
+    12000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    30
+   ],
+   "water_as_families": [
+    35,
+    270
+   ]
+  },
+  "24033": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    40,
+    120
+   ],
+   "electricity_as_homes": [
+    3700,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.25,
+    26
+   ],
+   "water_as_families": [
+    11,
+    240
+   ]
+  },
+  "23005": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.03,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    51,
+    240
+   ],
+   "electricity_as_homes": [
+    4700,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    1.61,
+    53
+   ],
+   "water_as_families": [
+    15,
+    480
+   ]
+  },
+  "26045": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.05,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    88,
+    240
+   ],
+   "electricity_as_homes": [
+    8200,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    2.79,
+    53
+   ],
+   "water_as_families": [
+    25,
+    480
+   ]
+  },
+  "26049": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    34,
+    120
+   ],
+   "electricity_as_homes": [
+    3100,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.07,
+    26
+   ],
+   "water_as_families": [
+    9.79,
+    240
+   ]
+  },
+  "26099": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "26115": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "26125": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    37,
+    120
+   ],
+   "electricity_as_homes": [
+    3500,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.18,
+    26
+   ],
+   "water_as_families": [
+    11,
+    240
+   ]
+  },
+  "26163": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.05,
+    0.27
+   ],
+   "electricity_gwh_per_year": [
+    89,
+    480
+   ],
+   "electricity_as_homes": [
+    8200,
+    44000
+   ],
+   "water_million_gallons_per_year": [
+    2.81,
+    110
+   ],
+   "water_as_families": [
+    26,
+    970
+   ]
+  },
+  "27003": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.04,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    68,
+    120
+   ],
+   "electricity_as_homes": [
+    6300,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    2.16,
+    26
+   ],
+   "water_as_families": [
+    20,
+    240
+   ]
+  },
+  "27019": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    12000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    28
+   ],
+   "water_as_families": [
+    35,
+    250
+   ]
+  },
+  "27037": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.2,
+    0.31
+   ],
+   "electricity_gwh_per_year": [
+    360,
+    550
+   ],
+   "electricity_as_homes": [
+    33000,
+    51000
+   ],
+   "water_million_gallons_per_year": [
+    11,
+    120
+   ],
+   "water_as_families": [
+    100,
+    1100
+   ]
+  },
+  "27053": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.13,
+    0.2
+   ],
+   "electricity_gwh_per_year": [
+    230,
+    360
+   ],
+   "electricity_as_homes": [
+    22000,
+    33000
+   ],
+   "water_million_gallons_per_year": [
+    7.38,
+    79
+   ],
+   "water_as_families": [
+    67,
+    730
+   ]
+  },
+  "27109": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.03,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    44,
+    120
+   ],
+   "electricity_as_homes": [
+    4100,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.41,
+    26
+   ],
+   "water_as_families": [
+    13,
+    240
+   ]
+  },
+  "27123": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.06,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    99,
+    120
+   ],
+   "electricity_as_homes": [
+    9200,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.15,
+    26
+   ],
+   "water_as_families": [
+    29,
+    240
+   ]
+  },
+  "27137": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    25,
+    120
+   ],
+   "electricity_as_homes": [
+    2300,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.79,
+    26
+   ],
+   "water_as_families": [
+    7.22,
+    240
+   ]
+  },
+  "29019": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    36,
+    120
+   ],
+   "electricity_as_homes": [
+    3400,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.15,
+    26
+   ],
+   "water_as_families": [
+    10,
+    240
+   ]
+  },
+  "29025": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    1.32,
+    120
+   ],
+   "electricity_as_homes": [
+    120,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.04,
+    26
+   ],
+   "water_as_families": [
+    0.38,
+    240
+   ]
+  },
+  "29047": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.2,
+    0.48
+   ],
+   "electricity_gwh_per_year": [
+    360,
+    850
+   ],
+   "electricity_as_homes": [
+    33000,
+    79000
+   ],
+   "water_million_gallons_per_year": [
+    11,
+    190
+   ],
+   "water_as_families": [
+    100,
+    1700
+   ]
+  },
+  "29095": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.14,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    240,
+    240
+   ],
+   "electricity_as_homes": [
+    22000,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    7.57,
+    53
+   ],
+   "water_as_families": [
+    69,
+    480
+   ]
+  },
+  "29165": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.24,
+    0.41
+   ],
+   "electricity_gwh_per_year": [
+    420,
+    720
+   ],
+   "electricity_as_homes": [
+    39000,
+    66000
+   ],
+   "water_million_gallons_per_year": [
+    13,
+    160
+   ],
+   "water_as_families": [
+    120,
+    1500
+   ]
+  },
+  "29510": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.04,
+    0.2
+   ],
+   "electricity_gwh_per_year": [
+    66,
+    360
+   ],
+   "electricity_as_homes": [
+    6100,
+    33000
+   ],
+   "water_million_gallons_per_year": [
+    2.09,
+    79
+   ],
+   "water_as_families": [
+    19,
+    730
+   ]
+  },
+  "28033": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.42
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    750
+   ],
+   "electricity_as_homes": [
+    11000,
+    69000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    170
+   ],
+   "water_as_families": [
+    35,
+    1500
+   ]
+  },
+  "28089": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "30017": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    7.8,
+    120
+   ],
+   "electricity_as_homes": [
+    720,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.25,
+    26
+   ],
+   "water_as_families": [
+    2.26,
+    240
+   ]
+  },
+  "30039": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    1.39,
+    120
+   ],
+   "electricity_as_homes": [
+    130,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.04,
+    26
+   ],
+   "water_as_families": [
+    0.4,
+    240
+   ]
+  },
+  "37027": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "37035": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.27,
+    0.51
+   ],
+   "electricity_gwh_per_year": [
+    480,
+    900
+   ],
+   "electricity_as_homes": [
+    44000,
+    83000
+   ],
+   "water_million_gallons_per_year": [
+    15,
+    200
+   ],
+   "water_as_families": [
+    140,
+    1800
+   ]
+  },
+  "37045": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "37063": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.2,
+    0.2
+   ],
+   "electricity_gwh_per_year": [
+    360,
+    360
+   ],
+   "electricity_as_homes": [
+    33000,
+    33000
+   ],
+   "water_million_gallons_per_year": [
+    11,
+    79
+   ],
+   "water_as_families": [
+    100,
+    730
+   ]
+  },
+  "37119": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.14,
+    0.34
+   ],
+   "electricity_gwh_per_year": [
+    250,
+    600
+   ],
+   "electricity_as_homes": [
+    23000,
+    55000
+   ],
+   "water_million_gallons_per_year": [
+    7.85,
+    130
+   ],
+   "water_as_families": [
+    72,
+    1200
+   ]
+  },
+  "37161": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.27,
+    0.42
+   ],
+   "electricity_gwh_per_year": [
+    480,
+    740
+   ],
+   "electricity_as_homes": [
+    44000,
+    69000
+   ],
+   "water_million_gallons_per_year": [
+    15,
+    160
+   ],
+   "water_as_families": [
+    140,
+    1500
+   ]
+  },
+  "37179": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "37183": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.1,
+    0.27
+   ],
+   "electricity_gwh_per_year": [
+    180,
+    480
+   ],
+   "electricity_as_homes": [
+    17000,
+    44000
+   ],
+   "water_million_gallons_per_year": [
+    5.74,
+    110
+   ],
+   "water_as_families": [
+    52,
+    970
+   ]
+  },
+  "38017": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    24,
+    120
+   ],
+   "electricity_as_homes": [
+    2200,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.75,
+    26
+   ],
+   "water_as_families": [
+    6.89,
+    240
+   ]
+  },
+  "38021": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "31019": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "31055": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.61,
+    0.68
+   ],
+   "electricity_gwh_per_year": [
+    1100,
+    1200
+   ],
+   "electricity_as_homes": [
+    99000,
+    110000
+   ],
+   "water_million_gallons_per_year": [
+    34,
+    260
+   ],
+   "water_as_families": [
+    310,
+    2400
+   ]
+  },
+  "31153": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    1.02,
+    2.2
+   ],
+   "electricity_gwh_per_year": [
+    1800,
+    3900
+   ],
+   "electricity_as_homes": [
+    170000,
+    360000
+   ],
+   "water_million_gallons_per_year": [
+    57,
+    860
+   ],
+   "water_as_families": [
+    520,
+    7900
+   ]
+  },
+  "33015": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    16,
+    240
+   ],
+   "electricity_as_homes": [
+    1500,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    0.5,
+    53
+   ],
+   "water_as_families": [
+    4.53,
+    480
+   ]
+  },
+  "33017": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    28,
+    120
+   ],
+   "electricity_as_homes": [
+    2600,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.89,
+    26
+   ],
+   "water_as_families": [
+    8.12,
+    240
+   ]
+  },
+  "34003": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.1
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    180
+   ],
+   "electricity_as_homes": [
+    11000,
+    17000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    41
+   ],
+   "water_as_families": [
+    35,
+    370
+   ]
+  },
+  "34013": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.1,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    180,
+    240
+   ],
+   "electricity_as_homes": [
+    17000,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    5.74,
+    53
+   ],
+   "water_as_families": [
+    52,
+    480
+   ]
+  },
+  "34015": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    38,
+    120
+   ],
+   "electricity_as_homes": [
+    3500,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.2,
+    26
+   ],
+   "water_as_families": [
+    11,
+    240
+   ]
+  },
+  "34017": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    1.04,
+    1.09
+   ],
+   "electricity_gwh_per_year": [
+    1800,
+    1900
+   ],
+   "electricity_as_homes": [
+    170000,
+    180000
+   ],
+   "water_million_gallons_per_year": [
+    58,
+    420
+   ],
+   "water_as_families": [
+    530,
+    3900
+   ]
+  },
+  "34021": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "34023": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.88,
+    1.29
+   ],
+   "electricity_gwh_per_year": [
+    1600,
+    2300
+   ],
+   "electricity_as_homes": [
+    140000,
+    210000
+   ],
+   "water_million_gallons_per_year": [
+    49,
+    500
+   ],
+   "water_as_families": [
+    450,
+    4600
+   ]
+  },
+  "34025": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    24,
+    120
+   ],
+   "electricity_as_homes": [
+    2200,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.75,
+    26
+   ],
+   "water_as_families": [
+    6.89,
+    240
+   ]
+  },
+  "34031": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.13,
+    0.2
+   ],
+   "electricity_gwh_per_year": [
+    220,
+    360
+   ],
+   "electricity_as_homes": [
+    21000,
+    33000
+   ],
+   "water_million_gallons_per_year": [
+    7.03,
+    79
+   ],
+   "water_as_families": [
+    64,
+    730
+   ]
+  },
+  "34035": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.66,
+    0.95
+   ],
+   "electricity_gwh_per_year": [
+    1200,
+    1700
+   ],
+   "electricity_as_homes": [
+    110000,
+    150000
+   ],
+   "water_million_gallons_per_year": [
+    37,
+    370
+   ],
+   "water_as_families": [
+    340,
+    3400
+   ]
+  },
+  "34039": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.05,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    87,
+    120
+   ],
+   "electricity_as_homes": [
+    8000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    2.75,
+    26
+   ],
+   "water_as_families": [
+    25,
+    240
+   ]
+  },
+  "35001": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.12,
+    0.54
+   ],
+   "electricity_gwh_per_year": [
+    210,
+    960
+   ],
+   "electricity_as_homes": [
+    19000,
+    89000
+   ],
+   "water_million_gallons_per_year": [
+    6.61,
+    210
+   ],
+   "water_as_families": [
+    60,
+    1900
+   ]
+  },
+  "35013": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    29,
+    120
+   ],
+   "electricity_as_homes": [
+    2700,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.93,
+    26
+   ],
+   "water_as_families": [
+    8.46,
+    240
+   ]
+  },
+  "35049": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    29,
+    120
+   ],
+   "electricity_as_homes": [
+    2700,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.92,
+    26
+   ],
+   "water_as_families": [
+    8.43,
+    240
+   ]
+  },
+  "35061": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.41,
+    1.58
+   ],
+   "electricity_gwh_per_year": [
+    720,
+    2800
+   ],
+   "electricity_as_homes": [
+    66000,
+    260000
+   ],
+   "water_million_gallons_per_year": [
+    23,
+    620
+   ],
+   "water_as_families": [
+    210,
+    5600
+   ]
+  },
+  "32003": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    1.43,
+    1.56
+   ],
+   "electricity_gwh_per_year": [
+    2500,
+    2700
+   ],
+   "electricity_as_homes": [
+    230000,
+    250000
+   ],
+   "water_million_gallons_per_year": [
+    80,
+    610
+   ],
+   "water_as_families": [
+    730,
+    5600
+   ]
+  },
+  "32029": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.27,
+    0.69
+   ],
+   "electricity_gwh_per_year": [
+    480,
+    1200
+   ],
+   "electricity_as_homes": [
+    44000,
+    110000
+   ],
+   "water_million_gallons_per_year": [
+    15,
+    270
+   ],
+   "water_as_families": [
+    140,
+    2400
+   ]
+  },
+  "32031": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.61,
+    0.75
+   ],
+   "electricity_gwh_per_year": [
+    1100,
+    1300
+   ],
+   "electricity_as_homes": [
+    100000,
+    120000
+   ],
+   "water_million_gallons_per_year": [
+    34,
+    290
+   ],
+   "water_as_families": [
+    310,
+    2700
+   ]
+  },
+  "36001": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.2
+   ],
+   "electricity_gwh_per_year": [
+    24,
+    360
+   ],
+   "electricity_as_homes": [
+    2200,
+    33000
+   ],
+   "water_million_gallons_per_year": [
+    0.75,
+    79
+   ],
+   "water_as_families": [
+    6.86,
+    730
+   ]
+  },
+  "36029": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    39,
+    240
+   ],
+   "electricity_as_homes": [
+    3600,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    1.22,
+    53
+   ],
+   "water_as_families": [
+    11,
+    480
+   ]
+  },
+  "36047": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "36061": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.04,
+    0.27
+   ],
+   "electricity_gwh_per_year": [
+    67,
+    480
+   ],
+   "electricity_as_homes": [
+    6200,
+    44000
+   ],
+   "water_million_gallons_per_year": [
+    2.13,
+    110
+   ],
+   "water_as_families": [
+    19,
+    970
+   ]
+  },
+  "36063": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.04,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    71,
+    240
+   ],
+   "electricity_as_homes": [
+    6600,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    2.26,
+    53
+   ],
+   "water_as_families": [
+    21,
+    480
+   ]
+  },
+  "36067": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    11,
+    120
+   ],
+   "electricity_as_homes": [
+    1000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.35,
+    26
+   ],
+   "water_as_families": [
+    3.23,
+    240
+   ]
+  },
+  "36085": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    240
+   ],
+   "electricity_as_homes": [
+    11000,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    3.88,
+    53
+   ],
+   "water_as_families": [
+    35,
+    480
+   ]
+  },
+  "36087": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.27,
+    0.41
+   ],
+   "electricity_gwh_per_year": [
+    480,
+    730
+   ],
+   "electricity_as_homes": [
+    44000,
+    68000
+   ],
+   "water_million_gallons_per_year": [
+    15,
+    160
+   ],
+   "water_as_families": [
+    140,
+    1500
+   ]
+  },
+  "36103": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    34,
+    120
+   ],
+   "electricity_as_homes": [
+    3100,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.07,
+    26
+   ],
+   "water_as_families": [
+    9.77,
+    240
+   ]
+  },
+  "36119": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    12,
+    120
+   ],
+   "electricity_as_homes": [
+    1100,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.39,
+    26
+   ],
+   "water_as_families": [
+    3.57,
+    240
+   ]
+  },
+  "39017": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.14,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    240,
+    240
+   ],
+   "electricity_as_homes": [
+    22000,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    7.57,
+    53
+   ],
+   "water_as_families": [
+    69,
+    480
+   ]
+  },
+  "39023": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.04,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    73,
+    120
+   ],
+   "electricity_as_homes": [
+    6800,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    2.33,
+    26
+   ],
+   "water_as_families": [
+    21,
+    240
+   ]
+  },
+  "39035": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.19,
+    0.34
+   ],
+   "electricity_gwh_per_year": [
+    340,
+    600
+   ],
+   "electricity_as_homes": [
+    32000,
+    55000
+   ],
+   "water_million_gallons_per_year": [
+    11,
+    130
+   ],
+   "water_as_families": [
+    99,
+    1200
+   ]
+  },
+  "39041": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.16
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    280
+   ],
+   "electricity_as_homes": [
+    11000,
+    26000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    63
+   ],
+   "water_as_families": [
+    35,
+    570
+   ]
+  },
+  "39043": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.33
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    580
+   ],
+   "electricity_as_homes": [
+    11000,
+    54000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    130
+   ],
+   "water_as_families": [
+    35,
+    1200
+   ]
+  },
+  "39045": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.15
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    270
+   ],
+   "electricity_as_homes": [
+    11000,
+    25000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    59
+   ],
+   "water_as_families": [
+    35,
+    540
+   ]
+  },
+  "39049": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    2.24,
+    2.5
+   ],
+   "electricity_gwh_per_year": [
+    3900,
+    4400
+   ],
+   "electricity_as_homes": [
+    370000,
+    410000
+   ],
+   "water_million_gallons_per_year": [
+    120,
+    980
+   ],
+   "water_as_families": [
+    1100,
+    8900
+   ]
+  },
+  "39061": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    39,
+    240
+   ],
+   "electricity_as_homes": [
+    3600,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    1.24,
+    53
+   ],
+   "water_as_families": [
+    11,
+    480
+   ]
+  },
+  "39089": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    2.31,
+    3.78
+   ],
+   "electricity_gwh_per_year": [
+    4100,
+    6700
+   ],
+   "electricity_as_homes": [
+    380000,
+    620000
+   ],
+   "water_million_gallons_per_year": [
+    130,
+    1500
+   ],
+   "water_as_families": [
+    1200,
+    13000
+   ]
+  },
+  "39099": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.04,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    69,
+    120
+   ],
+   "electricity_as_homes": [
+    6400,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    2.19,
+    26
+   ],
+   "water_as_families": [
+    20,
+    240
+   ]
+  },
+  "39153": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.03,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    55,
+    120
+   ],
+   "electricity_as_homes": [
+    5100,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.73,
+    26
+   ],
+   "water_as_families": [
+    16,
+    240
+   ]
+  },
+  "39159": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.54,
+    0.77
+   ],
+   "electricity_gwh_per_year": [
+    960,
+    1400
+   ],
+   "electricity_as_homes": [
+    89000,
+    130000
+   ],
+   "water_million_gallons_per_year": [
+    30,
+    300
+   ],
+   "water_as_families": [
+    280,
+    2700
+   ]
+  },
+  "39165": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.14,
+    0.15
+   ],
+   "electricity_gwh_per_year": [
+    240,
+    260
+   ],
+   "electricity_as_homes": [
+    22000,
+    24000
+   ],
+   "water_million_gallons_per_year": [
+    7.57,
+    57
+   ],
+   "water_as_families": [
+    69,
+    520
+   ]
+  },
+  "39173": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "40013": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    12,
+    120
+   ],
+   "electricity_as_homes": [
+    1100,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.39,
+    26
+   ],
+   "water_as_families": [
+    3.59,
+    240
+   ]
+  },
+  "40101": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.06,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    100,
+    120
+   ],
+   "electricity_as_homes": [
+    9600,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.27,
+    26
+   ],
+   "water_as_families": [
+    30,
+    240
+   ]
+  },
+  "40109": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "40143": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.2,
+    0.22
+   ],
+   "electricity_gwh_per_year": [
+    360,
+    390
+   ],
+   "electricity_as_homes": [
+    33000,
+    36000
+   ],
+   "water_million_gallons_per_year": [
+    11,
+    86
+   ],
+   "water_as_families": [
+    100,
+    790
+   ]
+  },
+  "41005": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    23,
+    120
+   ],
+   "electricity_as_homes": [
+    2100,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.72,
+    26
+   ],
+   "water_as_families": [
+    6.61,
+    240
+   ]
+  },
+  "41013": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.88,
+    1.98
+   ],
+   "electricity_gwh_per_year": [
+    1600,
+    3500
+   ],
+   "electricity_as_homes": [
+    140000,
+    320000
+   ],
+   "water_million_gallons_per_year": [
+    49,
+    770
+   ],
+   "water_as_families": [
+    450,
+    7000
+   ]
+  },
+  "41017": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    10,
+    120
+   ],
+   "electricity_as_homes": [
+    960,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.33,
+    26
+   ],
+   "water_as_families": [
+    2.99,
+    240
+   ]
+  },
+  "41033": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "41039": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "41043": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    2.31,
+    120
+   ],
+   "electricity_as_homes": [
+    210,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.07,
+    26
+   ],
+   "water_as_families": [
+    0.67,
+    240
+   ]
+  },
+  "41047": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.04,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    65,
+    240
+   ],
+   "electricity_as_homes": [
+    6000,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    2.07,
+    53
+   ],
+   "water_as_families": [
+    19,
+    480
+   ]
+  },
+  "41049": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    1.9,
+    2.71
+   ],
+   "electricity_gwh_per_year": [
+    3300,
+    4800
+   ],
+   "electricity_as_homes": [
+    310000,
+    440000
+   ],
+   "water_million_gallons_per_year": [
+    110,
+    1100
+   ],
+   "water_as_families": [
+    970,
+    9700
+   ]
+  },
+  "41051": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    38,
+    240
+   ],
+   "electricity_as_homes": [
+    3500,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    1.21,
+    53
+   ],
+   "water_as_families": [
+    11,
+    480
+   ]
+  },
+  "41059": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    2.1,
+    2.32
+   ],
+   "electricity_gwh_per_year": [
+    3700,
+    4100
+   ],
+   "electricity_as_homes": [
+    340000,
+    380000
+   ],
+   "water_million_gallons_per_year": [
+    120,
+    910
+   ],
+   "water_as_families": [
+    1100,
+    8300
+   ]
+  },
+  "41065": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.14,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    240,
+    240
+   ],
+   "electricity_as_homes": [
+    22000,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    7.57,
+    53
+   ],
+   "water_as_families": [
+    69,
+    480
+   ]
+  },
+  "41067": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    1.76,
+    1.85
+   ],
+   "electricity_gwh_per_year": [
+    3100,
+    3300
+   ],
+   "electricity_as_homes": [
+    290000,
+    300000
+   ],
+   "water_million_gallons_per_year": [
+    98,
+    720
+   ],
+   "water_as_families": [
+    900,
+    6600
+   ]
+  },
+  "42003": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.05,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    80,
+    240
+   ],
+   "electricity_as_homes": [
+    7400,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    2.55,
+    53
+   ],
+   "water_as_families": [
+    23,
+    480
+   ]
+  },
+  "42077": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.1,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    180,
+    240
+   ],
+   "electricity_as_homes": [
+    17000,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    5.68,
+    53
+   ],
+   "water_as_families": [
+    52,
+    480
+   ]
+  },
+  "42091": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.11,
+    0.27
+   ],
+   "electricity_gwh_per_year": [
+    190,
+    480
+   ],
+   "electricity_as_homes": [
+    18000,
+    44000
+   ],
+   "water_million_gallons_per_year": [
+    6.04,
+    110
+   ],
+   "water_as_families": [
+    55,
+    970
+   ]
+  },
+  "42101": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.06,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    110,
+    120
+   ],
+   "electricity_as_homes": [
+    10000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.48,
+    26
+   ],
+   "water_as_families": [
+    32,
+    240
+   ]
+  },
+  "72061": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "72127": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    21,
+    120
+   ],
+   "electricity_as_homes": [
+    2000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.67,
+    26
+   ],
+   "water_as_families": [
+    6.15,
+    240
+   ]
+  },
+  "45003": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "45015": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.68,
+    1.11
+   ],
+   "electricity_gwh_per_year": [
+    1200,
+    1900
+   ],
+   "electricity_as_homes": [
+    110000,
+    180000
+   ],
+   "water_million_gallons_per_year": [
+    38,
+    430
+   ],
+   "water_as_families": [
+    350,
+    3900
+   ]
+  },
+  "45051": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.05,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    84,
+    120
+   ],
+   "electricity_as_homes": [
+    7800,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    2.68,
+    26
+   ],
+   "water_as_families": [
+    24,
+    240
+   ]
+  },
+  "46099": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.14,
+    0.16
+   ],
+   "electricity_gwh_per_year": [
+    240,
+    270
+   ],
+   "electricity_as_homes": [
+    22000,
+    25000
+   ],
+   "water_million_gallons_per_year": [
+    7.57,
+    61
+   ],
+   "water_as_families": [
+    69,
+    560
+   ]
+  },
+  "47037": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.15,
+    0.2
+   ],
+   "electricity_gwh_per_year": [
+    270,
+    360
+   ],
+   "electricity_as_homes": [
+    25000,
+    33000
+   ],
+   "water_million_gallons_per_year": [
+    8.59,
+    79
+   ],
+   "water_as_families": [
+    78,
+    730
+   ]
+  },
+  "47057": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    1.13,
+    120
+   ],
+   "electricity_as_homes": [
+    100,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.04,
+    26
+   ],
+   "water_as_families": [
+    0.33,
+    240
+   ]
+  },
+  "47079": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "47125": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.34,
+    0.35
+   ],
+   "electricity_gwh_per_year": [
+    600,
+    620
+   ],
+   "electricity_as_homes": [
+    55000,
+    58000
+   ],
+   "water_million_gallons_per_year": [
+    19,
+    140
+   ],
+   "water_as_families": [
+    170,
+    1300
+   ]
+  },
+  "47145": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "47157": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.14,
+    0.91
+   ],
+   "electricity_gwh_per_year": [
+    240,
+    1600
+   ],
+   "electricity_as_homes": [
+    22000,
+    150000
+   ],
+   "water_million_gallons_per_year": [
+    7.57,
+    350
+   ],
+   "water_as_families": [
+    69,
+    3200
+   ]
+  },
+  "47165": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.27,
+    0.98
+   ],
+   "electricity_gwh_per_year": [
+    480,
+    1700
+   ],
+   "electricity_as_homes": [
+    44000,
+    160000
+   ],
+   "water_million_gallons_per_year": [
+    15,
+    380
+   ],
+   "water_as_families": [
+    140,
+    3500
+   ]
+  },
+  "47187": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.08,
+    0.34
+   ],
+   "electricity_gwh_per_year": [
+    130,
+    600
+   ],
+   "electricity_as_homes": [
+    12000,
+    55000
+   ],
+   "water_million_gallons_per_year": [
+    4.2,
+    130
+   ],
+   "water_as_families": [
+    38,
+    1200
+   ]
+  },
+  "48005": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    12,
+    120
+   ],
+   "electricity_as_homes": [
+    1100,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.38,
+    26
+   ],
+   "water_as_families": [
+    3.45,
+    240
+   ]
+  },
+  "48029": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    1.99,
+    2.24
+   ],
+   "electricity_gwh_per_year": [
+    3500,
+    3900
+   ],
+   "electricity_as_homes": [
+    320000,
+    370000
+   ],
+   "water_million_gallons_per_year": [
+    110,
+    870
+   ],
+   "water_as_families": [
+    1000,
+    8000
+   ]
+  },
+  "48085": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.64,
+    0.88
+   ],
+   "electricity_gwh_per_year": [
+    1100,
+    1600
+   ],
+   "electricity_as_homes": [
+    100000,
+    140000
+   ],
+   "water_million_gallons_per_year": [
+    36,
+    340
+   ],
+   "water_as_families": [
+    330,
+    3100
+   ]
+  },
+  "48113": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    1.27,
+    1.7
+   ],
+   "electricity_gwh_per_year": [
+    2200,
+    3000
+   ],
+   "electricity_as_homes": [
+    210000,
+    280000
+   ],
+   "water_million_gallons_per_year": [
+    71,
+    660
+   ],
+   "water_as_families": [
+    650,
+    6000
+   ]
+  },
+  "48121": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.14,
+    0.17
+   ],
+   "electricity_gwh_per_year": [
+    240,
+    300
+   ],
+   "electricity_as_homes": [
+    22000,
+    27000
+   ],
+   "water_million_gallons_per_year": [
+    7.57,
+    66
+   ],
+   "water_as_families": [
+    69,
+    600
+   ]
+  },
+  "48139": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    1.02,
+    1.77
+   ],
+   "electricity_gwh_per_year": [
+    1800,
+    3100
+   ],
+   "electricity_as_homes": [
+    170000,
+    290000
+   ],
+   "water_million_gallons_per_year": [
+    57,
+    690
+   ],
+   "water_as_families": [
+    520,
+    6300
+   ]
+  },
+  "48201": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.41,
+    0.45
+   ],
+   "electricity_gwh_per_year": [
+    720,
+    780
+   ],
+   "electricity_as_homes": [
+    66000,
+    73000
+   ],
+   "water_million_gallons_per_year": [
+    23,
+    170
+   ],
+   "water_as_families": [
+    210,
+    1600
+   ]
+  },
+  "48221": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "48325": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.12
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    210
+   ],
+   "electricity_as_homes": [
+    11000,
+    19000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    47
+   ],
+   "water_as_families": [
+    35,
+    430
+   ]
+  },
+  "48331": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "48339": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    240
+   ],
+   "electricity_as_homes": [
+    11000,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    3.67,
+    53
+   ],
+   "water_as_families": [
+    34,
+    480
+   ]
+  },
+  "48349": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "48439": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.54,
+    1.47
+   ],
+   "electricity_gwh_per_year": [
+    960,
+    2600
+   ],
+   "electricity_as_homes": [
+    89000,
+    240000
+   ],
+   "water_million_gallons_per_year": [
+    30,
+    570
+   ],
+   "water_as_families": [
+    280,
+    5200
+   ]
+  },
+  "48453": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.72,
+    1.09
+   ],
+   "electricity_gwh_per_year": [
+    1300,
+    1900
+   ],
+   "electricity_as_homes": [
+    120000,
+    180000
+   ],
+   "water_million_gallons_per_year": [
+    40,
+    420
+   ],
+   "water_as_families": [
+    360,
+    3900
+   ]
+  },
+  "48475": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    1.17
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    2100
+   ],
+   "electricity_as_homes": [
+    11000,
+    190000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    460
+   ],
+   "water_as_families": [
+    35,
+    4200
+   ]
+  },
+  "48485": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    36,
+    120
+   ],
+   "electricity_as_homes": [
+    3300,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.14,
+    26
+   ],
+   "water_as_families": [
+    10,
+    240
+   ]
+  },
+  "49035": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.24,
+    0.41
+   ],
+   "electricity_gwh_per_year": [
+    430,
+    720
+   ],
+   "electricity_as_homes": [
+    39000,
+    66000
+   ],
+   "water_million_gallons_per_year": [
+    14,
+    160
+   ],
+   "water_as_families": [
+    120,
+    1500
+   ]
+  },
+  "49047": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    12,
+    120
+   ],
+   "electricity_as_homes": [
+    1100,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.38,
+    26
+   ],
+   "water_as_families": [
+    3.45,
+    240
+   ]
+  },
+  "49049": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.47,
+    1.19
+   ],
+   "electricity_gwh_per_year": [
+    840,
+    2100
+   ],
+   "electricity_as_homes": [
+    77000,
+    190000
+   ],
+   "water_million_gallons_per_year": [
+    26,
+    470
+   ],
+   "water_as_families": [
+    240,
+    4300
+   ]
+  },
+  "49053": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    1.68,
+    120
+   ],
+   "electricity_as_homes": [
+    160,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.05,
+    26
+   ],
+   "water_as_families": [
+    0.49,
+    240
+   ]
+  },
+  "51047": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "51059": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    1.08,
+    1.83
+   ],
+   "electricity_gwh_per_year": [
+    1900,
+    3200
+   ],
+   "electricity_as_homes": [
+    180000,
+    300000
+   ],
+   "water_million_gallons_per_year": [
+    60,
+    720
+   ],
+   "water_as_families": [
+    550,
+    6500
+   ]
+  },
+  "51061": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.13,
+    0.2
+   ],
+   "electricity_gwh_per_year": [
+    230,
+    360
+   ],
+   "electricity_as_homes": [
+    21000,
+    33000
+   ],
+   "water_million_gallons_per_year": [
+    7.35,
+    79
+   ],
+   "water_as_families": [
+    67,
+    730
+   ]
+  },
+  "51069": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "51660": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "51087": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.47,
+    0.81
+   ],
+   "electricity_gwh_per_year": [
+    840,
+    1400
+   ],
+   "electricity_as_homes": [
+    77000,
+    130000
+   ],
+   "water_million_gallons_per_year": [
+    26,
+    320
+   ],
+   "water_as_families": [
+    240,
+    2900
+   ]
+  },
+  "51107": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    14.45,
+    14.72
+   ],
+   "electricity_gwh_per_year": [
+    25000,
+    26000
+   ],
+   "electricity_as_homes": [
+    2400000,
+    2400000
+   ],
+   "water_million_gallons_per_year": [
+    810,
+    5700
+   ],
+   "water_as_families": [
+    7400,
+    53000
+   ]
+  },
+  "51680": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "51683": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.05,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    88,
+    120
+   ],
+   "electricity_as_homes": [
+    8200,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    2.79,
+    26
+   ],
+   "water_as_families": [
+    26,
+    240
+   ]
+  },
+  "51117": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "51153": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    4.27,
+    5.0
+   ],
+   "electricity_gwh_per_year": [
+    7500,
+    8800
+   ],
+   "electricity_as_homes": [
+    700000,
+    820000
+   ],
+   "water_million_gallons_per_year": [
+    240,
+    2000
+   ],
+   "water_as_families": [
+    2200,
+    18000
+   ]
+  },
+  "53007": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.2,
+    0.38
+   ],
+   "electricity_gwh_per_year": [
+    360,
+    660
+   ],
+   "electricity_as_homes": [
+    33000,
+    62000
+   ],
+   "water_million_gallons_per_year": [
+    11,
+    150
+   ],
+   "water_as_families": [
+    100,
+    1300
+   ]
+  },
+  "53017": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.75,
+    0.88
+   ],
+   "electricity_gwh_per_year": [
+    1300,
+    1600
+   ],
+   "electricity_as_homes": [
+    120000,
+    140000
+   ],
+   "water_million_gallons_per_year": [
+    42,
+    340
+   ],
+   "water_as_families": [
+    380,
+    3100
+   ]
+  },
+  "53025": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    2.27,
+    2.65
+   ],
+   "electricity_gwh_per_year": [
+    4000,
+    4700
+   ],
+   "electricity_as_homes": [
+    370000,
+    430000
+   ],
+   "water_million_gallons_per_year": [
+    130,
+    1000
+   ],
+   "water_as_families": [
+    1200,
+    9400
+   ]
+  },
+  "53033": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.51,
+    1.02
+   ],
+   "electricity_gwh_per_year": [
+    890,
+    1800
+   ],
+   "electricity_as_homes": [
+    83000,
+    170000
+   ],
+   "water_million_gallons_per_year": [
+    28,
+    400
+   ],
+   "water_as_families": [
+    260,
+    3600
+   ]
+  },
+  "53053": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.11,
+    0.2
+   ],
+   "electricity_gwh_per_year": [
+    190,
+    360
+   ],
+   "electricity_as_homes": [
+    18000,
+    33000
+   ],
+   "water_million_gallons_per_year": [
+    6.09,
+    79
+   ],
+   "water_as_families": [
+    56,
+    730
+   ]
+  },
+  "53061": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.27
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    480
+   ],
+   "electricity_as_homes": [
+    11000,
+    44000
+   ],
+   "water_million_gallons_per_year": [
+    3.84,
+    110
+   ],
+   "water_as_families": [
+    35,
+    970
+   ]
+  },
+  "53063": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.03,
+    0.2
+   ],
+   "electricity_gwh_per_year": [
+    50,
+    360
+   ],
+   "electricity_as_homes": [
+    4600,
+    33000
+   ],
+   "water_million_gallons_per_year": [
+    1.57,
+    79
+   ],
+   "water_as_families": [
+    14,
+    730
+   ]
+  },
+  "53067": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "53073": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    3.96,
+    120
+   ],
+   "electricity_as_homes": [
+    370,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.13,
+    26
+   ],
+   "water_as_families": [
+    1.15,
+    240
+   ]
+  },
+  "55015": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.03,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    55,
+    120
+   ],
+   "electricity_as_homes": [
+    5100,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.75,
+    26
+   ],
+   "water_as_families": [
+    16,
+    240
+   ]
+  },
+  "55021": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    0.33,
+    120
+   ],
+   "electricity_as_homes": [
+    31,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.01,
+    26
+   ],
+   "water_as_families": [
+    0.1,
+    240
+   ]
+  },
+  "55025": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.14
+   ],
+   "electricity_gwh_per_year": [
+    8.43,
+    240
+   ],
+   "electricity_as_homes": [
+    780,
+    22000
+   ],
+   "water_million_gallons_per_year": [
+    0.27,
+    53
+   ],
+   "water_as_families": [
+    2.44,
+    480
+   ]
+  },
+  "55027": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "55033": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    3.09,
+    120
+   ],
+   "electricity_as_homes": [
+    290,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.1,
+    26
+   ],
+   "water_as_families": [
+    0.9,
+    240
+   ]
+  },
+  "55077": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    7.58,
+    120
+   ],
+   "electricity_as_homes": [
+    700,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.24,
+    26
+   ],
+   "water_as_families": [
+    2.19,
+    240
+   ]
+  },
+  "55079": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.01,
+    0.2
+   ],
+   "electricity_gwh_per_year": [
+    24,
+    360
+   ],
+   "electricity_as_homes": [
+    2200,
+    33000
+   ],
+   "water_million_gallons_per_year": [
+    0.76,
+    79
+   ],
+   "water_as_families": [
+    6.94,
+    730
+   ]
+  },
+  "55101": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    8.35,
+    120
+   ],
+   "electricity_as_homes": [
+    770,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.26,
+    26
+   ],
+   "water_as_families": [
+    2.42,
+    240
+   ]
+  },
+  "55127": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    8.26,
+    120
+   ],
+   "electricity_as_homes": [
+    770,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.26,
+    26
+   ],
+   "water_as_families": [
+    2.39,
+    240
+   ]
+  },
+  "55133": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.02,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    43,
+    120
+   ],
+   "electricity_as_homes": [
+    4000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    1.38,
+    26
+   ],
+   "water_as_families": [
+    13,
+    240
+   ]
+  },
+  "54065": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.07,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    120,
+    120
+   ],
+   "electricity_as_homes": [
+    11000,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    3.79,
+    26
+   ],
+   "water_as_families": [
+    35,
+    240
+   ]
+  },
+  "56005": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.0,
+    0.07
+   ],
+   "electricity_gwh_per_year": [
+    5.49,
+    120
+   ],
+   "electricity_as_homes": [
+    510,
+    11000
+   ],
+   "water_million_gallons_per_year": [
+    0.17,
+    26
+   ],
+   "water_as_families": [
+    1.59,
+    240
+   ]
+  },
+  "56021": {
+   "label": "ESTIMATE",
+   "share_of_us_mapped_data_centers_pct": [
+    0.6,
+    1.22
+   ],
+   "electricity_gwh_per_year": [
+    1100,
+    2100
+   ],
+   "electricity_as_homes": [
+    98000,
+    200000
+   ],
+   "water_million_gallons_per_year": [
+    34,
+    480
+   ],
+   "water_as_families": [
+    310,
+    4400
+   ]
+  }
+ }
+}

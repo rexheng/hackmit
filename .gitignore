@@ -3,3 +3,6 @@
 !prototypes/03-compute-works/shots/*.png
 .DS_Store
 Thumbs.db
+
+# pipeline scratch
+pipeline/**/__pycache__/
