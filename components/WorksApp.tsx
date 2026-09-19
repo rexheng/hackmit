@@ -417,9 +417,7 @@ export function WorksApp({ view }: { view: View }) {
                 </>
               )}
               {redesign && view !== "gate" ? (
-                <p className="calc restamp-receipt">
-                  RESTAMPED · {redesign.operations.length} OPS ON THE CARD · LETTER MOVED
-                </p>
+                <p className="calc restamp-receipt">RESTAMPED · {redesign.operations.length} OPS</p>
               ) : null}
               <div className="chute" aria-hidden>
                 <div className="chute-rail" />
