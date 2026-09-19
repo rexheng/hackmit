@@ -4,7 +4,7 @@ Playable prototype of a **virtual Office of the CFO**: MuJoCo office + flying ra
 
 ## Run the office (browser)
 
-Static files. On Vercel the production URL is the `index.html` at the project root of this folder.
+Static files. Production: **https://ocfo-virtual-close.vercel.app**
 
 Locally:
 
