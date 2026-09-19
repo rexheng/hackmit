@@ -19,19 +19,6 @@ export const WAYPOINTS = {
   floor: [0.3, -0.6, 0.9],
 };
 
-const RAGDOLL_PARTS = [
-  ["torso", 0.11, 0.34, 0xcdc4ba],
-  ["head", 0.1, 0.12, 0xdbc7b8],
-  ["uarm_l", 0.045, 0.24, 0xc2b8ae],
-  ["larm_l", 0.038, 0.22, 0xccc4bc],
-  ["uarm_r", 0.045, 0.24, 0xc2b8ae],
-  ["larm_r", 0.038, 0.22, 0xccc4bc],
-  ["uleg_l", 0.055, 0.32, 0x8c8e93],
-  ["lleg_l", 0.045, 0.3, 0x7f8287],
-  ["uleg_r", 0.055, 0.32, 0x8c8e93],
-  ["lleg_r", 0.045, 0.3, 0x7f8287],
-];
-
 function woodTexture() {
   const c = document.createElement("canvas");
   c.width = 512;
@@ -78,15 +65,17 @@ export function createOffice(canvas) {
   scene.background = new THREE.Color(0xe8e4de);
   scene.fog = new THREE.Fog(0xe8e4de, 12, 22);
 
-  const camera = new THREE.PerspectiveCamera(42, 1, 0.05, 40);
-  camera.position.set(-1.6, 1.55, -3.35);
+  const camera = new THREE.PerspectiveCamera(38, 1, 0.08, 40);
+  camera.position.set(-2.15, 1.55, -2.55);
 
   const controls = new OrbitControls(camera, canvas);
-  controls.target.set(0.2, 0.9, 0.4);
+  controls.target.set(0.25, 0.82, 0.55);
   controls.enableDamping = true;
-  controls.maxPolarAngle = Math.PI * 0.48;
-  controls.minDistance = 1.2;
-  controls.maxDistance = 11;
+  controls.enablePan = false;
+  controls.maxPolarAngle = Math.PI * 0.49;
+  controls.minPolarAngle = Math.PI * 0.18;
+  controls.minDistance = 2.6;
+  controls.maxDistance = 7.5;
 
   scene.add(new THREE.HemisphereLight(0xf4f0e8, 0x8a7a62, 0.55));
   const sun = new THREE.DirectionalLight(0xfff6e8, 1.15);
@@ -299,50 +288,67 @@ export function createOffice(canvas) {
     stations[name] = ring;
   }
 
-  // Ragdoll
+  // Hierarchical flying ragdoll — bind pose, flapping limbs, thrusters on the torso.
   const ragdoll = new THREE.Group();
   ragdoll.name = "closebot";
   scene.add(ragdoll);
-  const parts = {};
-  for (const [name, r, len, color] of RAGDOLL_PARTS) {
-    const mesh = new THREE.Mesh(
-      name === "head" ? new THREE.SphereGeometry(r, 14, 12) : new THREE.CapsuleGeometry(r, len * 0.7, 4, 10),
-      new THREE.MeshStandardMaterial({ color, roughness: 0.45, metalness: 0.08 })
-    );
-    mesh.castShadow = true;
-    ragdoll.add(mesh);
-    parts[name] = mesh;
+  const skin = (color) => new THREE.MeshStandardMaterial({ color, roughness: 0.45, metalness: 0.08 });
+  function cap(r, len, color) {
+    const m = new THREE.Mesh(new THREE.CapsuleGeometry(r, len, 4, 10), skin(color));
+    m.castShadow = true;
+    return m;
   }
-  const visor = new THREE.Mesh(new THREE.SphereGeometry(0.045, 12, 8, 0, Math.PI), new THREE.MeshStandardMaterial({ color: 0x111418, roughness: 0.2, metalness: 0.4 }));
-  parts.head.add(visor);
-  visor.position.set(0, 0.01, 0.06);
+  ragdoll.add(cap(0.09, 0.28, 0xcdc4ba));
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.085, 16, 12), skin(0xdbc7b8));
+  head.position.set(0, 0.28, 0);
+  head.castShadow = true;
+  ragdoll.add(head);
+  const visor = new THREE.Mesh(
+    new THREE.SphereGeometry(0.04, 12, 8, 0, Math.PI),
+    new THREE.MeshStandardMaterial({ color: 0x111418, roughness: 0.2, metalness: 0.45 })
+  );
+  visor.position.set(0, 0.01, 0.055);
+  head.add(visor);
+
+  function limb(x, y, z, r, len, color) {
+    const g = new THREE.Group();
+    g.position.set(x, y, z);
+    g.add(cap(r, len, color));
+    ragdoll.add(g);
+    return g;
+  }
+  const uarmL = limb(-0.14, 0.12, 0, 0.035, 0.16, 0xc2b8ae);
+  const larmL = limb(-0.16, -0.06, 0.02, 0.03, 0.15, 0xccc4bc);
+  const uarmR = limb(0.14, 0.12, 0, 0.035, 0.16, 0xc2b8ae);
+  const larmR = limb(0.16, -0.06, 0.02, 0.03, 0.15, 0xccc4bc);
+  const ulegL = limb(-0.06, -0.22, 0, 0.045, 0.2, 0x8c8e93);
+  const llegL = limb(-0.07, -0.44, 0.01, 0.038, 0.18, 0x7f8287);
+  const ulegR = limb(0.06, -0.22, 0, 0.045, 0.2, 0x8c8e93);
+  const llegR = limb(0.07, -0.44, 0.01, 0.038, 0.18, 0x7f8287);
 
   const thrust = new THREE.Points(
     new THREE.BufferGeometry().setAttribute("position", new THREE.Float32BufferAttribute(new Float32Array(90), 3)),
-    new THREE.PointsMaterial({ color: 0xe8d5b0, size: 0.035, transparent: true, opacity: 0.7 })
+    new THREE.PointsMaterial({ color: 0xe8d5b0, size: 0.03, transparent: true, opacity: 0.75 })
   );
-  scene.add(thrust);
+  ragdoll.add(thrust);
+  ragdoll.position.set(-0.35, 1.22, -1.2);
 
-  const livePos = {};
-  for (const [k, p] of Object.entries(WAYPOINTS)) livePos[k] = mjToThree(p);
-  const bodyState = {};
-  for (const [name] of RAGDOLL_PARTS) {
-    bodyState[name] = { pos: new THREE.Vector3(0.1, 1.55, 0.2), vel: new THREE.Vector3() };
-  }
-
+  const pos = ragdoll.position.clone();
+  const vel = new THREE.Vector3();
   let flight = null;
   let flightT = 0;
-  let wpQueue = ["desk"];
+  let wpQueue = ["coffee_table"];
   let wpIndex = 0;
-  let noise = 2.4;
-  let kp = 2.8;
+  let noise = 1.6;
+  let kp = 2.4;
   let failed = false;
-  let hover = 1.45;
+  let hover = 1.32;
+  let throwSpin = 0;
 
   function setPolicyFlight(score) {
     const s = Math.max(0, Math.min(100, score)) / 100;
-    noise = 2.6 * (1 - s) + 0.15;
-    kp = 2.2 + 2.8 * s;
+    noise = 1.8 * (1 - s) + 0.12;
+    kp = 1.8 + 2.6 * s;
   }
 
   function playFlight(json) {
@@ -359,81 +365,53 @@ export function createOffice(canvas) {
   }
 
   function applyFrame(frame) {
-    for (const [name, b] of Object.entries(frame.bodies || {})) {
-      const mesh = parts[name];
-      if (!mesh || !b.p) continue;
-      const p = mjToThree(b.p);
-      mesh.position.copy(p);
-      if (b.m && b.m.length === 9) {
-        // C * R * C^T with C mapping (x,y,z)->(x,z,y)
-        const R = b.m;
-        const e = [
-          R[0], R[2], R[1],
-          R[6], R[8], R[7],
-          R[3], R[5], R[4],
-        ];
-        const m4 = new THREE.Matrix4().set(
-          e[0], e[1], e[2], 0,
-          e[3], e[4], e[5], 0,
-          e[6], e[7], e[8], 0,
-          0, 0, 0, 1
-        );
-        mesh.quaternion.setFromRotationMatrix(m4);
-      }
-    }
+    const t = frame.bodies && frame.bodies.torso;
+    if (!t || !t.p) return;
+    ragdoll.position.copy(mjToThree(t.p));
+    pos.copy(ragdoll.position);
+  }
+
+  function flap(t) {
+    const w = failed ? 9 : 5.5;
+    uarmL.rotation.z = 0.55 + Math.sin(t * w) * 0.7;
+    uarmR.rotation.z = -0.55 - Math.sin(t * w + 0.4) * 0.7;
+    larmL.rotation.x = 0.4 + Math.sin(t * w * 1.3) * 0.5;
+    larmR.rotation.x = 0.4 + Math.cos(t * w * 1.3) * 0.5;
+    ulegL.rotation.x = 0.25 + Math.sin(t * w * 0.8) * 0.45;
+    ulegR.rotation.x = 0.25 + Math.cos(t * w * 0.8) * 0.45;
+    llegL.rotation.x = 0.35 + Math.sin(t * w) * 0.3;
+    llegR.rotation.x = 0.35 + Math.cos(t * w) * 0.3;
+    head.rotation.y = Math.sin(t * 2) * 0.2;
   }
 
   function stepLive(dt) {
     const targetName = wpQueue[Math.min(wpIndex, wpQueue.length - 1)] || "desk";
     const target = mjToThree(WAYPOINTS[targetName] || WAYPOINTS.desk);
-    const torso = bodyState.torso;
-    const err = target.clone().sub(torso.pos);
-    const acc = err.multiplyScalar(kp).add(new THREE.Vector3((Math.random() - 0.5) * noise, (Math.random() - 0.5) * noise * 0.6, (Math.random() - 0.5) * noise));
-    acc.y += (hover - torso.pos.y) * 1.4;
-    if (failed) acc.y -= 2.2;
-    torso.vel.add(acc.multiplyScalar(dt));
-    torso.vel.multiplyScalar(0.92);
-    torso.pos.add(torso.vel.clone().multiplyScalar(dt));
-    torso.pos.y = Math.max(0.35, torso.pos.y);
-    if (err.length() < 0.35 && wpIndex < wpQueue.length - 1) wpIndex++;
-
-    // Floppy limbs trail the torso
-    const offsets = {
-      head: [0, 0.32, 0],
-      uarm_l: [-0.18, 0.08, 0],
-      larm_l: [-0.22, -0.18, 0.05],
-      uarm_r: [0.18, 0.08, 0],
-      larm_r: [0.22, -0.18, 0.05],
-      uleg_l: [-0.08, -0.28, 0],
-      lleg_l: [-0.1, -0.55, 0.04],
-      uleg_r: [0.08, -0.28, 0],
-      lleg_r: [0.1, -0.55, 0.04],
-    };
-    parts.torso.position.copy(torso.pos);
-    const tilt = Math.atan2(torso.vel.x, 4);
-    parts.torso.rotation.z = -tilt;
-    parts.torso.rotation.x = torso.vel.z * 0.05;
-    for (const [name, off] of Object.entries(offsets)) {
-      const st = bodyState[name];
-      const want = torso.pos.clone().add(new THREE.Vector3(...off));
-      st.vel.add(want.sub(st.pos).multiplyScalar(8 * dt));
-      st.vel.y -= 6 * dt;
-      st.vel.multiplyScalar(0.86);
-      st.pos.add(st.vel.clone().multiplyScalar(dt));
-      parts[name].position.copy(st.pos);
-    }
-
+    target.y = Math.max(target.y, 1.05);
+    const err = target.clone().sub(pos);
+    const acc = err.multiplyScalar(kp);
+    acc.x += (Math.random() - 0.5) * noise;
+    acc.y += (hover - pos.y) * 1.8 + (Math.random() - 0.5) * noise * 0.4;
+    acc.z += (Math.random() - 0.5) * noise;
+    if (failed) acc.y -= 3.4;
+    vel.add(acc.multiplyScalar(dt));
+    vel.multiplyScalar(0.9);
+    pos.add(vel.clone().multiplyScalar(dt));
+    pos.y = Math.max(0.55, Math.min(2.4, pos.y));
+    pos.x = THREE.MathUtils.clamp(pos.x, -3.2, 3.2);
+    pos.z = THREE.MathUtils.clamp(pos.z, -2.5, 2.1);
+    if (err.length() < 0.42 && wpIndex < wpQueue.length - 1) wpIndex++;
+    ragdoll.position.copy(pos);
+    ragdoll.rotation.z = THREE.MathUtils.damp(ragdoll.rotation.z, -vel.x * 0.12, 6, dt);
+    ragdoll.rotation.x = THREE.MathUtils.damp(ragdoll.rotation.x, vel.z * 0.08 + throwSpin, 4, dt);
+    ragdoll.rotation.y += dt * (failed ? 2.8 : 0.35);
+    throwSpin *= 0.96;
+    flap(performance.now() / 1000);
     const posAttr = thrust.geometry.attributes.position;
     for (let i = 0; i < 30; i++) {
-      posAttr.setXYZ(
-        i,
-        torso.pos.x + (Math.random() - 0.5) * 0.2,
-        torso.pos.y - 0.12 - Math.random() * 0.35,
-        torso.pos.z + (Math.random() - 0.5) * 0.2
-      );
+      posAttr.setXYZ(i, (Math.random() - 0.5) * 0.12, -0.18 - Math.random() * 0.28, (Math.random() - 0.5) * 0.12);
     }
     posAttr.needsUpdate = true;
-    thrust.position.set(0, 0, 0);
   }
 
   function resize() {
@@ -443,9 +421,11 @@ export function createOffice(canvas) {
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
     renderer.setSize(w, h, false);
+    renderer.setClearColor(0xe8e4de, 1);
   }
   resize();
   window.addEventListener("resize", resize);
+  canvas.addEventListener("webglcontextlost", (e) => e.preventDefault());
 
   let last = performance.now();
   function frame(now) {
@@ -457,6 +437,7 @@ export function createOffice(canvas) {
       const fps = 1 / 0.024;
       const i = Math.min(flight.frames.length - 1, Math.floor(flightT * fps));
       applyFrame(flight.frames[i]);
+      flap(now / 1000);
       if (i >= flight.frames.length - 1) flight = null;
     } else {
       stepLive(dt);
@@ -475,9 +456,16 @@ export function createOffice(canvas) {
     queueWaypoints,
     setPolicyFlight,
     throwRagdoll() {
-      bodyState.torso.vel.set((Math.random() - 0.5) * 8, 5, (Math.random() - 0.5) * 8);
+      vel.set((Math.random() - 0.5) * 7, 4.2, (Math.random() - 0.5) * 7);
+      throwSpin = (Math.random() - 0.5) * 4;
       failed = true;
-      setTimeout(() => (failed = false), 1800);
+      setTimeout(() => {
+        failed = false;
+      }, 1600);
+    },
+    resetCamera() {
+      camera.position.set(-2.15, 1.55, -2.55);
+      controls.target.set(0.25, 0.82, 0.55);
     },
   };
 }

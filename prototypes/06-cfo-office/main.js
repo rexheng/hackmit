@@ -70,19 +70,6 @@ function renderEpisode(res) {
   spark();
 }
 
-async function maybePlayMujoco(kind) {
-  try {
-    const url = kind === "naive" ? "./trajectories/flight_naive.json" : "./trajectories/flight_learned.json";
-    const r = await fetch(url);
-    if (!r.ok) return false;
-    const json = await r.json();
-    office.playFlight(json);
-    return true;
-  } catch {
-    return false;
-  }
-}
-
 async function runOne() {
   if (busy) return;
   busy = true;
@@ -92,8 +79,6 @@ async function runOne() {
   scores.push(res.score);
   renderEpisode(res);
   office.queueWaypoints(res.waypoints, res.score, !res.balanced);
-  if (episode === 1) await maybePlayMujoco("naive");
-  if (res.balanced && episode > 1) await maybePlayMujoco("learned");
   $("run").disabled = false;
   busy = false;
   return res;
@@ -111,7 +96,6 @@ async function learnMany() {
     office.queueWaypoints(res.waypoints, res.score, !res.balanced);
     await new Promise((r) => setTimeout(r, 220));
   }
-  await maybePlayMujoco("learned");
   $("learn12").disabled = false;
   busy = false;
 }
