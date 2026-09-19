@@ -2,12 +2,19 @@
 
 Talk to a Fort Worth–style data center. The plant updates. You download a GLTF.
 
-Open `index.html` over HTTP (modules):
+**Do not open `index.html` as a file.** ES modules need a local server.
 
 ```bash
-python3 -m http.server 8766 --directory prototypes
-# http://127.0.0.1:8766/06-yard/
+cd prototypes/06-yard
+python3 -m http.server 8766 --bind 0.0.0.0
 ```
+
+Then open **http://127.0.0.1:8766/**
+
+Or from the prototypes folder: **http://127.0.0.1:8766/06-yard/**
+
+Drag the canvas to orbit. If you only see the header and no 3D, the server is not serving this folder.
+
 
 Examples: `make DC1 8m taller`, `add a data hall`, `more generators`, `move the pond west 40m`, `hide the fence`, `paint DC1 red`, `reset`.
 
