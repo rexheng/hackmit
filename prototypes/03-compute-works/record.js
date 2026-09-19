@@ -181,7 +181,11 @@
       padding:4px 8px 3px;cursor:pointer;text-align:left;color:var(--ink)}
     .cwLabel b{display:block;font:600 17px/1 "Teko",sans-serif;letter-spacing:.12em;color:var(--enamel-deep)}
     .cwLabel span{display:block;font:400 13px/1.25 "Source Serif 4",serif}
-    body:not(.cw-plain) .cwLabel{display:none}
+    body:not(.cw-plain) .cwLabel, body:not(.cw-plain) #cwSat{display:none}
+    #cwSat{position:absolute;right:10px;bottom:10px;z-index:8;font:600 15px "Teko",sans-serif;letter-spacing:.14em;background:var(--brass);color:var(--ink);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--shadow);padding:3px 12px;cursor:pointer;transition:transform .12s}
+    #cwSat:hover{transform:translateY(-2px)} #cwSat[hidden]{display:none}
+    #cwSatBox{position:absolute;inset:0;z-index:4;opacity:0;pointer-events:none;transition:opacity .4s} #cwSatBox.on{opacity:1;pointer-events:auto}
+    #cwSatBox .cesium-widget-credits{font-size:9px;opacity:.6} #cwSatBox .cesium-viewer-bottom{display:block}
     .cwp select{width:100%;font:400 16px "Source Serif 4",serif;padding:6px 8px;background:var(--paper);border:3px solid var(--ink);color:var(--ink);margin-top:2px}
     .nlabel{background:var(--paper);border:3px solid var(--ink);box-shadow:4px 4px 0 var(--shadow);padding:10px 12px;color:var(--ink)}
     .nlabel .strip{display:flex;align-items:center;gap:3px;margin:6px 0 4px} .nlabel .strip i{flex:1;text-align:center;font:600 20px/28px "Teko",sans-serif;font-style:normal;color:#fff;opacity:.45;border-radius:3px}
@@ -303,21 +307,21 @@
   const labelEls = {};
   function drawPlain() {
     const S = L.sites[current()], T = S.label;
-    const tx = Object.entries(L.sites).filter((e) => e[1].label).sort((a, b) => b[1].sites - a[1].sites);
+    const tx = Object.entries(L.sites).filter((e) => e[1].label).sort((a, b) => (b[1].is_site ? 1e9 : b[1].sites) - (a[1].is_site ? 1e9 : a[1].sites));
     const picker = '<select id="cwCounty" aria-label="Your county">' +
-      tx.map((e) => '<option value="' + e[0] + '"' + (e[0] === current() ? " selected" : "") + ">" + esc(e[1].county) + ", TX · " + e[1].sites + " data centers</option>").join("") + "</select>";
+      tx.map((e) => '<option value="' + e[0] + '"' + (e[0] === current() ? " selected" : "") + ">" + (e[1].is_site ? esc(e[1].county) + " · Fort Worth, TX" : esc(e[1].county) + ", TX · " + e[1].sites + " data centers") + "</option>").join("") + "</select>";
     if (T) {
       cards.innerHTML = picker +
         '<div class="nlabel">' +
         '<div class="strip">' + "ABCDE".split("").map((g) => '<i class="' + (g === T.overall ? "on" : "") + '" style="background:' + GRADE_COLOR[g] + '">' + g + "</i>").join("") + "</div>" +
         '<p class="fine ctr">A is best · ' + T.graded_rows + " of " + T.rows.length + " graded</p>" +
         T.rows.map((r) => '<details class="nrow" data-row="' + r.id + '"><summary>' + chip(r.grade, true) + '<span class="nm">' + esc(r.name) + (r.estimate ? ' <span class="est">ESTIMATE</span>' : "") + '</span><span class="bigv">' + esc(r.plain_big) + '</span><span class="unit">' + esc(r.plain_unit) + "</span></summary>" +
-          '<div class="body">' + (r.plain ? "<p>" + esc(r.plain) + "</p>" : "") + (r.also ? "<p>" + esc(r.also) + "</p>" : "") + r.technical.map(techLine).join("") + (r.id === "talk" ? claimsInline(S) : "") +
+          '<div class="body">' + (r.plain ? "<p>" + esc(r.plain) + "</p>" : "") + (r.also ? "<p>" + esc(r.also) + "</p>" : "") + r.technical.map(techLine).join("") + (r.id === "talk" ? (r.claims ? r.claims.map((c) => '<div class="claim"><span class="stamp s' + ORDER[c.verdict] + '">' + MARK[c.verdict] + " " + esc(c.verdict) + "</span> <q>" + esc(c.text) + '</q><p class="fine">' + esc(c.why) + " " + link(c.url) + "</p></div>").join("") : claimsInline(S)) : "") +
           '<p class="fine">' + esc(r.caveat) + (r.source ? " " + link(r.source_url || "", r.source) : "") + "</p></div></details>").join("") +
-        '<details class="nrow"><summary><span class="nm">WHO PUBLISHES WHAT</span></summary><div class="body">' +
+        (!T.owners.length ? "" : '<details class="nrow"><summary><span class="nm">WHO PUBLISHES WHAT</span></summary><div class="body">' +
           "<table><tr><th>Owner</th><th>Sites</th><th>PUE</th><th>WUE</th><th>Talk</th><th>Tax certs</th></tr>" +
           T.owners.map((o) => "<tr><td>" + esc(o.owner) + '</td><td class="n">' + o.sites + "</td><td>" + chip(o.pue_grade) + " " + (o.pue ? o.pue.value : "") + "</td><td>" + chip(o.wue_grade) + " " + (o.wue ? o.wue.value : "") + "</td><td>" + chip(o.talk_grade) + '</td><td class="n">' + (o.state_tax_certificates == null ? "" : o.state_tax_certificates) + "</td></tr>").join("") +
-          '</table><p class="fine">Company-wide numbers from each owner\'s own page. ? = not published. ' + link(L.texas.registry.url, "State tax registry") + "</p></div></details>" +
+          '</table><p class="fine">Company-wide numbers from each owner\'s own page. ? = not published. ' + link(L.texas.registry.url, "State tax registry") + "</p></div></details>") +
         '<details class="nrow"><summary><span class="nm">IN THE NEWS</span></summary><div class="body">' +
           (S.news.length ? S.news.slice(0, 4).map((n) => '<div class="claim">' + link(n.url, n.title) + '<span class="fine"> ' + esc(n.outlet || "") + "</span></div>").join("") : '<p class="fine">Not found.</p>') + "</div></details>" +
         (L.feeds ? '<details class="nrow"><summary><span class="nm">WHERE THIS COMES FROM</span></summary><div class="body">' +
@@ -375,6 +379,8 @@
   function pinLabels() {
     if (!stage) return;
     const on = document.body.classList.contains("cw-plain") && !document.querySelector("#cutaway.open");
+    if (typeof satBtn !== "undefined") satBtn.hidden = !L.sites[current()].lat;
+    if (typeof satOn !== "undefined" && satOn) { wires.style.display = "none"; for (const id in labelEls) { const el = labelEls[id]; el.style.display = el.dataset.off ? "none" : ""; Object.assign(el.style, { left: "", right: "", top: "", bottom: "" }, SLOT[id]); } return; }
     wires.style.display = on ? "" : "none";
     if (!on) { for (const id in labelEls) labelEls[id].style.display = "none"; return; }
     const box = stage.getBoundingClientRect();
@@ -392,6 +398,45 @@
     wires.innerHTML = lines;
   }
   drawPlain(); setPlain(saved === "1"); setInterval(pinLabels, 250);
+
+
+  /* ---- SATELLITE: the real site, in Cesium. Loads only when asked. Keyless Esri imagery by default;
+     if keys.js sets window.CW_KEYS.google, Google Photorealistic 3D Tiles are added on top. ---- */
+  const satBtn = document.createElement("button"); satBtn.id = "cwSat"; satBtn.type = "button"; satBtn.textContent = "SATELLITE";
+  const satBox = document.createElement("div"); satBox.id = "cwSatBox";
+  if (stage) stage.append(satBox, satBtn);
+  let viewer = null, satOn = false;
+  function loadCesium() {
+    if (window.Cesium) return Promise.resolve(window.Cesium);
+    return new Promise((ok, fail) => {
+      const base = "https://cdn.jsdelivr.net/npm/cesium@1.145.0/Build/Cesium/";
+      window.CESIUM_BASE_URL = base;
+      const css = document.createElement("link"); css.rel = "stylesheet"; css.href = base + "Widgets/widgets.css"; document.head.appendChild(css);
+      const js = document.createElement("script"); js.src = base + "Cesium.js"; js.onload = () => ok(window.Cesium); js.onerror = () => fail(new Error("Cesium did not load")); document.head.appendChild(js);
+    });
+  }
+  async function showSat() {
+    const S = L.sites[current()];
+    if (!S.lat) return;
+    satBtn.textContent = "LOADING…";
+    try {
+      const C = await loadCesium();
+      if (!viewer) {
+        viewer = new C.Viewer(satBox, { animation: false, timeline: false, baseLayerPicker: false, geocoder: false, homeButton: false, sceneModePicker: false,
+          navigationHelpButton: false, fullscreenButton: false, infoBox: false, selectionIndicator: false,
+          baseLayer: new C.ImageryLayer(new C.UrlTemplateImageryProvider({ url: "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", maximumLevel: 19, credit: "Esri, Maxar, Earthstar Geographics" })) });
+        const key = window.CW_KEYS && window.CW_KEYS.google;
+        if (key && C.createGooglePhotorealistic3DTileset) { try { viewer.scene.primitives.add(await C.createGooglePhotorealistic3DTileset({ key })); } catch (e) { console.warn("Google 3D tiles unavailable", e); } }
+      }
+      viewer.entities.removeAll();
+      const pin = (lat, lon, text, color) => viewer.entities.add({ position: C.Cartesian3.fromDegrees(lon, lat), point: { pixelSize: 12, color: C.Color.fromCssColorString(color), outlineColor: C.Color.WHITE, outlineWidth: 2, disableDepthTestDistance: Infinity },
+        label: { text, font: "600 14px sans-serif", showBackground: true, backgroundColor: C.Color.fromCssColorString("#1c140c").withAlpha(.85), pixelOffset: new C.Cartesian2(0, -24), disableDepthTestDistance: Infinity } });
+      pin(S.lat, S.lon, S.county, "#c01018");
+      viewer.camera.flyTo({ destination: C.Cartesian3.fromDegrees(S.lon, S.lat - 0.012, 1500), orientation: { heading: 0, pitch: C.Math.toRadians(-50), roll: 0 }, duration: 1.8 });
+      satOn = true; satBox.classList.add("on"); satBtn.textContent = "MODEL";
+    } catch (e) { satBtn.textContent = "SATELLITE UNAVAILABLE"; console.error(e); }
+  }
+  satBtn.onclick = () => { if (satOn) { satOn = false; satBox.classList.remove("on"); satBtn.textContent = "SATELLITE"; } else showSat(); };
 
   // Real headlines on the clipboard, in place of the placeholder clippings.
   const clip = document.getElementById("clipboard");

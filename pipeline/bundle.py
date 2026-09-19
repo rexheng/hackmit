@@ -53,6 +53,12 @@ for preset, fips in {**PRESET_COUNTY, **{f: f for f in tx["counties"]}}.items():
         "estimate": est["counties"].get(fips),
         "label": tx["counties"].get(fips),
     }
+# The demo site: one real data center with its own label, on top of its county's records.
+site_label = P / "site/out/label.json"
+if site_label.exists():
+    sl = json.loads(site_label.read_text())
+    base = sites[json.loads((P / "site/site.json").read_text())["county_fips"]]
+    sites["qts-ftw"] = {**base, "county": sl["site"], "label": sl, "is_site": True, "lat": sl["lat"], "lon": sl["lon"]}
 data = {
     "built": news.get("retrieved"), "sites": sites, "weights": scored["weights"],
     "bills_meta": {k: bills[k] for k in ("base_year", "latest_year", "us_average", "source_table", "caveat")},
@@ -60,7 +66,7 @@ data = {
     "news_source": news.get("source"),
     "estimate_meta": est["meta"],
     "texas": {k: tx[k] for k in ("scales", "operator_metrics", "texas_bill", "tax", "registry")},
-    "default_site": "48113",
+    "default_site": "qts-ftw" if "qts-ftw" in sites else "48113",
     "feeds": json.loads((live_dir / "feeds.json").read_text()) if (live_dir / "feeds.json").exists() else None,
 }
 dest = P.parent / "prototypes/03-compute-works/live.js"

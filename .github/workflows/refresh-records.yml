@@ -26,6 +26,7 @@ jobs:
           python pipeline/claims/verify.py
           python pipeline/claims/score.py
           python pipeline/texas/build.py
+          python pipeline/site/build.py
           python pipeline/bundle.py
       - name: Commit if anything changed
         run: |

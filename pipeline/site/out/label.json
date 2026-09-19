@@ -1,0 +1,200 @@
+{
+ "site": "QTS Fort Worth",
+ "county": "Tarrant County",
+ "lat": 32.98901,
+ "lon": -97.26239,
+ "overall": "C",
+ "graded_rows": 3,
+ "rows": [
+  {
+   "id": "power",
+   "name": "POWER",
+   "grade": "C",
+   "plain_big": "70 MW",
+   "plain_unit": "up to 57,000 homes' worth of power",
+   "plain": "200 MW planned. Average Texas electric bill: $164 a month, up 22% since 2019.",
+   "technical": [
+    {
+     "label": "PUE",
+     "value": null,
+     "grade": null,
+     "industry_average": 1.54,
+     "note": "QTS does not publish it for this site."
+    },
+    {
+     "label": "Hours the grid ran mostly on coal and gas",
+     "value": 59,
+     "unit": "of 100",
+     "grade": "C",
+     "note": "ERCO, 2025."
+    },
+    {
+     "label": "Coal and gas share in the hottest hours",
+     "value": 49.1,
+     "unit": "%",
+     "note": "Coldest hours: 66.6%."
+    }
+   ],
+   "caveat": "Homes' worth assumes the site runs at full capacity all year. Records don't say why bills changed.",
+   "source": "QTS Fort Worth page; EIA via PUDL; NOAA",
+   "source_url": "https://q.com/data-centers/fort-worth/"
+  },
+  {
+   "id": "water",
+   "name": "WATER",
+   "grade": null,
+   "estimate": true,
+   "plain_big": "0\u20131,200",
+   "plain_unit": "families' worth a year",
+   "plain": "QTS says it uses zero water for cooling. No public record confirms that here. If it cooled like the industry average: 1,200 families' worth.",
+   "technical": [
+    {
+     "label": "WUE",
+     "value": null,
+     "unit": "L/kWh",
+     "grade": null,
+     "industry_average": 0.84,
+     "note": "Not published for this site."
+    }
+   ],
+   "caveat": "To settle it: this site's metered water use, from Fort Worth Water."
+  },
+  {
+   "id": "tax",
+   "name": "TAX DOLLARS",
+   "grade": null,
+   "plain_big": "NOT LISTED",
+   "plain_unit": "for the state sales-tax break",
+   "plain": "The state list has 163 certified data centers. This site is not one of them. City and county tax breaks: not found.",
+   "technical": [
+    {
+     "label": "Statewide, all data centers",
+     "by_year": {
+      "2025": 1015.6,
+      "2026": 1305.1,
+      "2027": 1598.0,
+      "2028": 1600.9,
+      "2029": 1692.9,
+      "2030": 1753.3
+     },
+     "per_home": {
+      "2025": 80.94,
+      "2026": 104.01,
+      "2027": 127.35,
+      "2028": 127.58,
+      "2029": 134.92,
+      "2030": 139.73
+     }
+    }
+   ],
+   "caveat": "To settle it: the abatement agreement and tax paid, from the Tarrant Appraisal District.",
+   "source": "Texas Comptroller registry",
+   "source_url": "https://comptroller.texas.gov/taxes/data-centers/data-center-lists.php"
+  },
+  {
+   "id": "jobs",
+   "name": "JOBS",
+   "grade": "B",
+   "positive": true,
+   "plain_big": "1,320",
+   "plain_unit": "jobs \u00b7 average pay $148k \u00b7 county-wide",
+   "plain": "QTS does not publish jobs for this site. At 127 employers in this county.",
+   "also": "Texas: 47,620 jobs. About $21,300 of uncollected sales tax per job.",
+   "technical": [
+    {
+     "label": "Jobs per mapped data center",
+     "value": 165,
+     "grade": "B"
+    }
+   ],
+   "caveat": "Includes cloud office jobs. Leaves out construction.",
+   "source": "BLS Quarterly Census of Employment and Wages, 2024, NAICS 518210",
+   "source_url": "https://data.bls.gov/cew/data/api/2024/a/industry/518210.csv"
+  },
+  {
+   "id": "talk",
+   "name": "STRAIGHT TALK",
+   "grade": "D",
+   "plain_big": "1 of 4",
+   "plain_unit": "hold up, at least on paper \u00b7 0 contradicted",
+   "plain": null,
+   "claims": [
+    {
+     "text": "Achieved 100% utilization of carbon-free operational electricity by our facilities",
+     "verdict": "Holds on paper only",
+     "why": "Bought over a year, maybe. Hour by hour, the Texas grid ran mostly on coal and gas in 59 of every 100 hours.",
+     "url": "https://q.com/company/sustainability/"
+    },
+    {
+     "text": "We consume zero water for cooling",
+     "verdict": "Can't be checked",
+     "why": "No public record. Needed: this site's metered water use, from Fort Worth Water.",
+     "url": "https://q.com/company/sustainability/"
+    },
+    {
+     "text": "goal of becoming water positive by 2035",
+     "verdict": "Can't be checked",
+     "why": "No public record. Needed: a result, not a goal.",
+     "url": "https://q.com/company/sustainability/"
+    },
+    {
+     "text": "On-site substation with expansion capability",
+     "verdict": "Can't be checked",
+     "why": "The public map shows no substation on the site. The nearest is Roanoke Substation, 330 m away.",
+     "url": "https://q.com/data-centers/fort-worth/"
+    }
+   ],
+   "technical": [
+    {
+     "label": "Score",
+     "value": 0.31,
+     "unit": "of 1",
+     "grade": "D"
+    }
+   ],
+   "caveat": "Can't be checked doesn't mean false."
+  }
+ ],
+ "blanks": [
+  "WATER",
+  "TAX DOLLARS"
+ ],
+ "owners": [],
+ "sites_without_named_owner": 0,
+ "nearby": {
+  "substations": [
+   {
+    "name": "Roanoke Substation",
+    "operator": null,
+    "voltage": "345000;138000",
+    "metres": 330.0
+   },
+   {
+    "name": "Facebook Data Center",
+    "operator": "Oncor",
+    "voltage": "138000",
+    "metres": 380.0
+   }
+  ]
+ },
+ "facts": [
+  {
+   "key": "capacity_mw",
+   "value": 70,
+   "quote": "70 MW+ of critical campus capacity",
+   "url": "https://q.com/data-centers/fort-worth/"
+  },
+  {
+   "key": "planned_mw",
+   "value": 200,
+   "quote": "200 MW gross campus planned potential",
+   "url": "https://q.com/data-centers/fort-worth/"
+  },
+  {
+   "key": "acres",
+   "value": 52,
+   "quote": "52 acre campus",
+   "url": "https://q.com/data-centers/fort-worth/"
+  }
+ ]
+}

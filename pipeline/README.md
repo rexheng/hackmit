@@ -13,6 +13,7 @@ Numbers and scores come from code. No model is in the loop. Missing data stays "
 | Estimates | `python estimates/build.py` | labelled low to high estimates of county data center electricity and water use, from published national figures (`estimates/out/`) |
 | Heat vs grid | `python heat/build.py` | NOAA hourly temperature (ISD) joined to the ERCOT hourly fuel mix: what the grid burns in the hottest and coldest hours (`heat/out/`) |
 | Texas label | `python texas/build.py` | the five-row A to E data center label for every Texas county: power, water, tax dollars, jobs, straight talk. Company PUE and WUE are checked word for word (`texas/metrics.json`); every cut-off is in `texas/scales.json` (`texas/out/labels.json`) |
+| Demo site | `python site/build.py` | the label for one real data center (QTS Fort Worth): company facts and claims checked word for word, physical claims checked against OpenStreetMap, state tax registry lookup (`site/site.json` -> `site/out/label.json`) |
 | Bundle | `python bundle.py` | `prototypes/03-compute-works/live.js` |
 
 `pip install -r requirements.txt` first. Atlas and bills only need re-running when EIA publishes new data.
