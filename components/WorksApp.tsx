@@ -416,15 +416,15 @@ export function WorksApp({ view }: { view: View }) {
                   </button>
                 </>
               )}
-              <div className="chute" aria-hidden>
-                <div className="chute-rail" />
-                <div className={`marble${marble ? " go" : ""}`} />
-              </div>
               {redesign && view !== "gate" ? (
                 <p className="calc restamp-receipt">
                   RESTAMPED · {redesign.operations.length} OPS ON THE CARD · LETTER MOVED
                 </p>
               ) : null}
+              <div className="chute" aria-hidden>
+                <div className="chute-rail" />
+                <div className={`marble${marble ? " go" : ""}`} />
+              </div>
             </div>
           </section>
 
@@ -601,7 +601,7 @@ export function WorksApp({ view }: { view: View }) {
                     </label>
                     <label>
                       EXTRA TO (optional)
-                      <input value={extraTo} onChange={(e) => setExtraTo(e.target.value)} placeholder="you@example.com" />
+                      <input value={extraTo} onChange={(e) => setExtraTo(e.target.value)} placeholder="another desk, if you have one" />
                     </label>
                     <label>
                       LETTER

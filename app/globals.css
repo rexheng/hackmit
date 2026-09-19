@@ -163,13 +163,20 @@ body {
       flex-direction: column;
     }
     .left .crew-panel .roster { overflow: visible; flex: none; }
-    .right .punch-panel { flex: 0 0 auto; }
-    .right .clip-panel, .right .union-panel {
-      flex: 1 1 0;
-      min-height: 0;
-      display: flex;
-      flex-direction: column;
-    }
+.right .punch-panel { flex: 0 0 auto; }
+.right .clip-panel {
+  flex: 0 1 26%;
+  max-height: 28%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.right .union-panel {
+  flex: 1 1 40%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
     .clip-panel .clip, .union-panel .board {
       flex: 1;
       min-height: 0;
@@ -605,7 +612,7 @@ body {
     .board { padding: 6px; }
     .board textarea {
       width: 100%;
-      height: 48px;
+      height: 36px;
       border: 2px solid var(--ink);
       background: #fff8e4;
       font-family: var(--font-serif), serif;
@@ -624,7 +631,7 @@ body {
     }
     .chip.on { background: var(--danger-y); }
     .pins {
-      max-height: 56px;
+      max-height: 58px;
       overflow: auto;
       font-family: var(--font-serif), serif;
       font-size: 12px;
@@ -650,15 +657,7 @@ body {
       font-size: 12px;
       line-height: 1.3;
     }
-    .cols {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 4px;
-      margin: 4px 0;
-      font-family: var(--font-serif), serif;
-      font-size: 10px;
-    }
-    .cols div { background: #1c140c; padding: 3px 4px; }
+    .steward .cols { display: none; }
 
     /* conveyor */
     footer.belt {
@@ -934,6 +933,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: 2;
+  isolation: isolate;
   background:
     repeating-linear-gradient(90deg, #4a3824 0 18px, #3e2f1d 18px 36px);
 }
