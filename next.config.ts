@@ -8,8 +8,8 @@ const withSerwist = withSerwistInit({
   register: false,
   reloadOnOnline: true,
   additionalPrecacheEntries: [
-    { url: "/offline", revision: "cw-offline-1" },
-    { url: "/", revision: "cw-shell-1" },
+    { url: "/offline", revision: "cw-offline-2" },
+    { url: "/", revision: "cw-shell-2" },
     { url: "/texas", revision: "cw-texas-1" },
     { url: "/works", revision: "cw-works-1" },
     { url: "/supply", revision: "cw-supply-1" },

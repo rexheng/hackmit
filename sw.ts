@@ -3,7 +3,7 @@
 /// <reference lib="webworker" />
 import { defaultCache } from "@serwist/next/worker";
 import type { PrecacheEntry, SerwistGlobalConfig } from "serwist";
-import { ExpirationPlugin, NetworkOnly, Serwist, StaleWhileRevalidate } from "serwist";
+import { ExpirationPlugin, NetworkFirst, NetworkOnly, Serwist, StaleWhileRevalidate } from "serwist";
 
 declare global {
   interface WorkerGlobalScope extends SerwistGlobalConfig {
@@ -30,6 +30,22 @@ const serwist = new Serwist({
       matcher: () => true,
       method: "POST",
       handler: new NetworkOnly(),
+    },
+    {
+      matcher: ({ request, url, sameOrigin }) =>
+        request.method === "GET" && sameOrigin && url.pathname.startsWith("/api/"),
+      method: "GET",
+      handler: new NetworkFirst({
+        cacheName: "cw-api",
+        networkTimeoutSeconds: 8,
+        plugins: [
+          new ExpirationPlugin({
+            maxEntries: 16,
+            maxAgeSeconds: 60,
+            maxAgeFrom: "last-used",
+          }),
+        ],
+      }),
     },
     {
       matcher: ({ url }) =>

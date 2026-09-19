@@ -13,6 +13,28 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: "black-translucent",
     title: "Compute Works",
+    startupImage: [
+      {
+        url: "/icons/splash-1290x2796.png",
+        media:
+          "(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3)",
+      },
+      {
+        url: "/icons/splash-1179x2556.png",
+        media:
+          "(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3)",
+      },
+      {
+        url: "/icons/splash-1170x2532.png",
+        media:
+          "(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3)",
+      },
+      {
+        url: "/icons/splash-2048x2732.png",
+        media:
+          "(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)",
+      },
+    ],
   },
   formatDetection: { telephone: false },
   icons: {
@@ -42,6 +64,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <div className="grain" />
         <RegisterSW />
+        <div className="pwa-titlebar" role="banner">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/icons/icon-192.png" alt="" width={28} height={28} />
+          <b>COMPUTE WORKS</b>
+          <span>INSTALLED · STANDALONE</span>
+        </div>
         {children}
       </body>
     </html>

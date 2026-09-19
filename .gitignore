@@ -3,6 +3,7 @@
 !prototypes/03-compute-works/shots/*.png
 !docs/walkthrough/*.png
 !public/icons/*.png
+!public/screenshots/*.png
 .DS_Store
 Thumbs.db
 node_modules
