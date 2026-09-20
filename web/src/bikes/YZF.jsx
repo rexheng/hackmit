@@ -7,9 +7,11 @@ import {VEHICLES} from '../../../shared/vehicles.js';
 import {REPAIRS} from '../../../shared/repairs.js';
 import RepairPanel from './RepairPanel.jsx';
 import SourceParts from './SourceParts.jsx';
+import SupplierPanel from './SupplierPanel.jsx';
 import {sourcePartDescriptor} from './source-parts.js';
 import '../fz6/fz6.css';
 import './bikes.css';
+import './suppliers.css';
 
 const initialState = {selected:null,selectedMesh:null,detailSpacing:0,meshIsolated:false,hidden:[],isolated:false,playing:false,spacing:0};
 function download(href,name) {const a=document.createElement('a');a.href=href;a.download=name;a.click();}
@@ -18,9 +20,12 @@ export default function VehicleViewer({vehicle=VEHICLES['yzf-2021']}) {
   const host=useRef(null),engine=useRef(null),detectionInput=useRef(null);
   const [parts,setParts]=useState([]),[stats,setStats]=useState(null),[error,setError]=useState('');
   const [viewer,setViewer]=useState(initialState),[mode,setMode]=useState('studio'),[orbit,setOrbit]=useState(false);
-  const [category,setCategory]=useState('All'),[search,setSearch]=useState(''),[tab,setTab]=useState('inspect');
+  const [category,setCategory]=useState('All'),[search,setSearch]=useState(''),[tab,setTab]=useState(()=>{
+    const requested=new URLSearchParams(location.search).get('tab');return ['repair','suppliers'].includes(requested)?requested:'inspect';
+  });
   const [detection,setDetection]=useState(null),[notice,setNotice]=useState('');
   const selected=parts.find(p=>p.id===viewer.selected),ready=!!stats,source=vehicle.source,recipe=REPAIRS[vehicle.repairId];
+  useEffect(()=>{const url=new URL(location.href);if(tab==='inspect')url.searchParams.delete('tab');else url.searchParams.set('tab',tab);history.replaceState(null,'',url);},[tab]);
   useEffect(()=>{
     document.title=`${source.title} / Motion Lab`;
     let disposed=false;
@@ -52,8 +57,14 @@ export default function VehicleViewer({vehicle=VEHICLES['yzf-2021']}) {
   async function importDetection(event){const file=event.target.files?.[0];if(!file)return;try{applyDetection(JSON.parse(await file.text()));setNotice('Detection mapped to the selected source group.');}catch(e){setNotice(e.message);}event.target.value='';}
   function inspectEngine(){
     if(!ready)return;
-    engine.current.showAll();engine.current.setSpacing(0);engine.current.select(vehicle.engineGroup);
+    engine.current.showAll();engine.current.setDetailSpacing(0);engine.current.setSpacing(0);engine.current.select(vehicle.engineGroup);
     engine.current.isolate();engine.current.focus();engine.current.setOrbit(false);setOrbit(false);
+  }
+  function focusCaseStep(step){
+    if(!ready)return;
+    engine.current.showAll();engine.current.setDetailSpacing(0);engine.current.setSpacing(step.spacing);
+    engine.current.select(step.groupId);engine.current.isolate();
+    engine.current.setMode(step.mode);setMode(step.mode);engine.current.setOrbit(false);setOrbit(false);
   }
   const sourceControls = <SourceParts vehicle={vehicle} parts={parts} selected={selected} viewer={viewer} ready={ready}
     onEngine={inspectEngine} onGroup={id=>engine.current?.select(id,true)} onMesh={id=>engine.current?.selectMesh(id)}
@@ -74,11 +85,11 @@ export default function VehicleViewer({vehicle=VEHICLES['yzf-2021']}) {
         <div className="viewport-bottom"><div className="view-presets">{[['hero','Perspective'],['side','Side'],['front','Front'],['rear','Rear'],['top','Top']].map(([id,name])=><button key={id} disabled={!ready} onClick={()=>engine.current?.view(id)}>{name}</button>)}</div><div className="interaction-hint">Drag to orbit <i/> Scroll to zoom <i/> Click to select</div></div>
       </section>
       <aside className="assembly-inspector">
-        <div className="workspace-tabs" role="tablist" aria-label="Workspace"><button role="tab" aria-selected={tab==='inspect'} className={tab==='inspect'?'active':''} onClick={()=>setTab('inspect')}>01 / Inspect</button><button role="tab" aria-selected={tab==='repair'} className={tab==='repair'?'active':''} onClick={()=>setTab('repair')}>02 / Repair studio</button></div>
-        <div className="assembly-stats"><div><strong>{stats?.groups??'—'}</strong><small>SOURCE GROUPS</small></div><div><strong>{stats?(stats.triangles/1000).toFixed(1)+'k':'—'}</strong><small>TRIANGLES</small></div></div>
+        <div className="workspace-tabs" role="tablist" aria-label="Workspace"><button role="tab" aria-selected={tab==='inspect'} className={tab==='inspect'?'active':''} onClick={()=>setTab('inspect')}>01 / Inspect</button><button role="tab" aria-selected={tab==='repair'} className={tab==='repair'?'active':''} onClick={()=>setTab('repair')}>02 / Repair studio</button><button role="tab" aria-selected={tab==='suppliers'} className={tab==='suppliers'?'active':''} onClick={()=>setTab('suppliers')}>03 / Suppliers</button></div>
+        {tab!=='suppliers'&&<><div className="assembly-stats"><div><strong>{stats?.groups??'—'}</strong><small>SOURCE GROUPS</small></div><div><strong>{stats?(stats.triangles/1000).toFixed(1)+'k':'—'}</strong><small>TRIANGLES</small></div></div>
         <label className="section-label">RENDER MODE</label><div className="mode-switch">{[['studio','Studio'],['xray','X-ray'],['wireframe','Mesh']].map(([id,title])=><button key={id} disabled={!ready} aria-pressed={mode===id} className={mode===id?'active':''} onClick={()=>{setMode(id);engine.current?.setMode(id);}}>{title}</button>)}</div>
         <div className="assembly-control"><label htmlFor="assembly-spacing">Exploded view <span>{Math.round(viewer.spacing*100)}%</span></label><input id="assembly-spacing" aria-label="Exploded view" type="range" min="0" max="1" step="0.01" disabled={!ready} value={viewer.spacing} onChange={e=>engine.current?.setSpacing(Number(e.target.value))}/><div className="assembly-actions"><button disabled={!ready} onClick={()=>engine.current?.hideBodywork()}>Hide bodywork</button><button disabled={!ready} onClick={()=>engine.current?.showAll()}>Show all{viewer.hidden.length?` · ${viewer.hidden.length} hidden`:''}</button></div></div>
-        {tab==='repair'?<RepairPanel ready={ready} vehicle={vehicle} recipe={recipe} onMap={id=>engine.current?.select(id,true)}>{sourceControls}</RepairPanel>:<>
+        </>}{tab==='suppliers'?<SupplierPanel vehicle={vehicle}/>:tab==='repair'?<RepairPanel onCaseStep={focusCaseStep} ready={ready} vehicle={vehicle} recipe={recipe} onMap={id=>engine.current?.select(id,true)}>{sourceControls}</RepairPanel>:<>
           {selected&&<div className="assembly-picked"><div className="eyebrow">SELECTED SOURCE GROUP</div><h3>{selected.name}</h3><code>{selected.id}</code><p>{selected.meshCount} meshes · {selected.triangles.toLocaleString()} triangles</p><div className="assembly-actions"><button onClick={()=>engine.current?.focus()}>Focus</button><button className={viewer.isolated?'active':''} aria-pressed={viewer.isolated} onClick={()=>engine.current?.isolate()}>{viewer.isolated?'Exit isolation':'Isolate'}</button><button onClick={()=>engine.current?.hideSelected()}>Hide</button><button onClick={()=>engine.current?.preview()}>{viewer.playing?'Stop preview':'Preview separation'}</button></div></div>}
           <div className="assembly-filters">{['All',...new Set(parts.map(p=>p.category))].map(item=><button key={item} aria-pressed={category===item} className={category===item?'active':''} onClick={()=>setCategory(item)}>{item}</button>)}</div><input className="assembly-search" aria-label="Search components" placeholder="Find a component or source name…" value={search} onChange={e=>setSearch(e.target.value)}/>
           <div className="assembly-piece-list">{visibleParts.map(part=><button key={part.id} className={`assembly-piece ${viewer.selected===part.id?'selected':''}`} aria-pressed={viewer.selected===part.id} onClick={()=>engine.current?.select(part.id)}><strong>{part.name}{viewer.hidden.includes(part.id)?' · hidden':''}</strong><small>{part.meshCount} meshes · {part.sourceName}</small></button>)}{ready&&!visibleParts.length&&<div className="assembly-empty">No matching source groups.</div>}</div>

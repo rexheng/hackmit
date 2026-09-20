@@ -1,0 +1,12 @@
+import {mkdir,writeFile} from 'node:fs/promises';
+import {directorySnapshot} from '../shared/vendors.js';
+const data=directorySnapshot();
+const dir=new URL('../data/vendors/',import.meta.url);
+await mkdir(dir,{recursive:true});
+await writeFile(new URL('directory.json',dir),JSON.stringify(data,null,2)+'\n');
+const csvCell=value=>'"'+String(value??'').replace(/^[=+@-]/,"'$&").replaceAll('"','""')+'"';
+const csv=(headers,rows)=>[headers,...rows].map(row=>row.map(csvCell).join(',')).join('\r\n')+'\r\n';
+await writeFile(new URL('vendors.csv',dir),csv(['id','name','category','kind','condition','url','shipping_policy','phone','location','checked_at','sources'],data.vendors.map(v=>[v.id,v.name,v.category,v.kind,v.condition.join('; '),v.url,v.shipping?.note,v.phone,v.location,v.checkedAt,v.sources.map(s=>s.url).join(' | ')])));
+await writeFile(new URL('offers.csv',dir),csv(['id','vendor_id','part_number','name','condition','price_usd','price_range_usd','fitment','stock_status','known_packaging_usd','shipping_note','source','evidence_type','checked_at'],data.offers.map(o=>[o.id,o.vendorId,o.partNumber,o.name,o.condition,o.priceUsd,o.priceRangeUsd?.join('–'),o.fitment,o.stockStatus,o.shippingOverride?.knownFeeUsd,o.shippingOverride?.note,o.source.url,o.source.access,o.checkedAt])));
+await writeFile(new URL('services.csv',dir),csv(['provider','category','location','service','published_usd','unit','provider_quote_obtained','source','checked_at'],data.vendors.filter(v=>v.kind==='service').flatMap(v=>(v.rates.length?v.rates:[{label:'Individual estimate needed',amountUsd:null,unit:null}]).map(r=>[v.name,v.category,v.location,r.label,r.amountUsd,r.unit,false,v.url,v.checkedAt]))));
+console.log(`Exported ${data.vendors.length} vendor/catalog/service records and ${data.offers.length} observed offers to data/vendors/.`);

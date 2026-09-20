@@ -225,16 +225,16 @@ export function createAssemblyScene(host, model, callbacks = {}) {
       detailSpacing = THREE.MathUtils.clamp(value, 0, 1); preview = null;
       fitSpread(); report();
     },
-    isolateMesh() { if (!selectedMesh) return; meshIsolated = !meshIsolated; updateVisibility(); report(); if (meshIsolated) fit(camera.position.clone().sub(controls.target), selected); },
+    isolateMesh() { if (!selectedMesh) return; meshIsolated = !meshIsolated; updateVisibility(); report(); if (meshIsolated) fit(camera.position.clone().sub(controls.target), selected); else fitSpread(); },
     view(name) { if (directions[name]) fitSpread(false, directions[name]); },
     focus() { if (selected) fit(camera.position.clone().sub(controls.target), selected); },
     setMode(value) { if (!['studio', 'xray', 'wireframe'].includes(value)) return; mode = value; updateMaterials(); },
     setOrbit(value) { controls.autoRotate = !!value; },
     setSpacing(value) { if (!Number.isFinite(value)) return; spacing = THREE.MathUtils.clamp(value, 0, 1); preview = null; fitSpread(); report(); },
-    isolate() { if (!selected) return; isolated = !isolated; updateVisibility(); report(); },
-    hideSelected() { if (!selected) return; hidden.add(selected); selected = null; isolated = false; preview = null; updateVisibility(); updateMaterials(); report(); },
-    showAll() { hidden.clear(); isolated = false; meshIsolated = false; updateVisibility(); report(); },
-    hideBodywork() { model.groups.forEach(p => {if (p.category === 'Body') hidden.add(p.id);}); isolated = false; if (hidden.has(selected)) selected = null; preview = null; updateVisibility(); updateMaterials(); report(); },
+    isolate() { if (!selected) return; isolated = !isolated; updateVisibility(); fitSpread(); report(); },
+    hideSelected() { if (!selected) return; hidden.add(selected); selected = selectedMesh = null; meshIsolated = false; isolated = false; preview = null; updateVisibility(); updateMaterials(); report(); },
+    showAll() { hidden.clear(); isolated = false; meshIsolated = false; updateVisibility(); fitSpread(); report(); },
+    hideBodywork() { model.groups.forEach(p => {if (p.category === 'Body') hidden.add(p.id);}); isolated = false; if (hidden.has(selected)) {selected = selectedMesh = null; meshIsolated = false;} preview = null; updateVisibility(); updateMaterials(); report(); },
     preview() { if (!selected) return; preview = preview ? null : {start: performance.now()}; if (preview) fitSpread(true); report(); },
     reset() {
       spacing = currentSpacing = detailSpacing = currentDetailSpacing = 0; preview = null; isolated = meshIsolated = false; hidden.clear(); selected = selectedMesh = null;

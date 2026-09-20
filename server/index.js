@@ -10,6 +10,7 @@ import { askRoutes } from "./routes/ask.js";
 import { infoRoutes } from "./routes/info.js";
 import { shopRoutes } from "./routes/shop.js";
 import {vehicleVisionRoutes} from './routes/vehicle-vision.js';
+import {vendorDirectoryRoutes} from './routes/vendor-directory.js';
 import {serveVehicleAsset} from '../web/local-model-assets.js';
 import {VEHICLES} from '../shared/vehicles.js';
 
@@ -22,6 +23,7 @@ export async function createApp({ db, search } = {}) {
   const ctx = { db, search };
   const app = express();
   app.use('/api/vehicles', vehicleVisionRoutes());
+  app.use('/api/vehicles', vendorDirectoryRoutes());
   for (const id of Object.keys(VEHICLES)) app.use(`/models/${id}`, (req,res) => serveVehicleAsset(id,req,res));
   app.use(express.json({ limit: "50kb" }));
   app.use("/api", askRoutes(ctx), infoRoutes(ctx), shopRoutes(ctx));

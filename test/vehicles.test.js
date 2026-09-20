@@ -3,7 +3,9 @@ import express from 'express';
 import request from 'supertest';
 import {vehicleVisionRoutes,validateVisionResult,requestOpenAIVision} from '../server/routes/vehicle-vision.js';
 import {describeGroup} from '../web/src/bikes/yzf-model.js';
-import {repairPose} from '../web/src/bikes/repair-scene.js';
+import * as THREE from 'three';
+import {prepareSourceMeshes, spreadSourceMeshes, sourcePartDescriptor} from '../web/src/bikes/source-parts.js';
+import {REPAIRS, repairGeometryStatus} from '../shared/repairs.js';
 import {VEHICLES} from '../shared/vehicles.js';
 import {serveVehicleAsset} from '../web/local-model-assets.js';
 import {mkdtempSync,mkdirSync,writeFileSync,rmSync} from 'node:fs';
@@ -15,30 +17,49 @@ const photo={vehicleId:'yzf-2021',image:'data:image/jpeg;base64,/9j/'};
 function app(options){const a=express();a.use('/api/vehicles',vehicleVisionRoutes(options));return a;}
 
 describe('Vehicle catalogue and rigid group labels',()=>{
-  it('exposes only the three supplied vehicles',()=>expect(Object.keys(VEHICLES)).toEqual(['yzf-2021','bmw-s1000rr','fenomeno-2026']));
+  it('exposes only the three supplied vehicles',()=>expect(Object.keys(VEHICLES)).toEqual(['yzf-2021','honda-cbr650r','corvette-c8']));
   it('uses vehicle-specific names without inventing engine or fuse internals',()=>{
-    expect(describeGroup('seat_32','bmw-s1000rr').id).toBe('rider-seat');
-    expect(describeGroup('engineblock_40','bmw-s1000rr').id).toBe('engine-exterior');
-    expect(describeGroup('misc_a_23','fenomeno-2026').name).toBe('Source group A');
-    expect(describeGroup('door_dside_f_28','fenomeno-2026').name).toBe('Driver door');
-    expect(describeGroup('Flcaliper1_Caliper_0_473','fenomeno-2026').name).toBe('Front wheels & brakes');
+    expect(describeGroup('enginecbr_33','honda-cbr650r').id).toBe('engine-exterior');
+    expect(describeGroup('misc_a_35','honda-cbr650r').name).toBe('Source group A');
+    expect(describeGroup('6.2L LT2 V8 Engine and Engine Bay','corvette-c8').id).toBe('engine-bay');
+    expect(describeGroup('Engine Bay Bolts','corvette-c8').id).toBe('engine-bay-bolts');
+    expect(describeGroup('Front Left Brake Caliper','corvette-c8').category).toBe('Running gear');
+    expect(VEHICLES['corvette-c8'].source).toMatchObject({author:'Hari',license:'CC BY 4.0'});
   });
-  it('removes the old fuse before inserting its replacement and reassembles at completion',()=>{
-    expect(repairPose(0).removal).toBe(0);
-    expect(repairPose(.52).removal).toBe(1);
-    expect(repairPose(.52).insertion).toBe(0);
-    const end=repairPose(1);expect(end).toMatchObject({phase:7,seat:0,bolt:0,cover:0,removal:1,insertion:1,puller:false,driver:false});
-    for(let p=0;p<=1;p+=.01){const state=repairPose(p);expect(state.insertion===0||state.removal===1).toBe(true);}
+  it('separates the original mesh objects and restores their positions without changing geometry or materials',()=>{
+    const material=new THREE.MeshStandardMaterial();
+    const meshes=[new THREE.Mesh(new THREE.BoxGeometry(1,2,1),material),new THREE.Mesh(new THREE.SphereGeometry(.5),material)];
+    const node=new THREE.Group();node.add(...meshes);meshes[1].position.set(.1,.2,.3);
+    for(const mesh of meshes)mesh.userData={originalMaterial:material,sourceNode:mesh.uuid,sourceGroup:'original'};
+    const part={id:'engine',name:'Engine',category:'Powertrain',sourceName:'original',meshes,node,bounds:new THREE.Box3().setFromObject(node),triangles:1,materialNames:['original']};
+    const original=meshes.map(m=>({mesh:m,geometry:m.geometry,position:m.position.clone(),vertices:Array.from(m.geometry.attributes.position.array)}));
+    prepareSourceMeshes(part);spreadSourceMeshes(part,1);
+    for(let i=0;i<meshes.length;i++) {
+      expect(meshes[i]).toBe(original[i].mesh);expect(meshes[i].geometry).toBe(original[i].geometry);expect(meshes[i].material).toBe(material);
+      expect(Array.from(meshes[i].geometry.attributes.position.array)).toEqual(original[i].vertices);
+      expect(meshes[i].position.distanceTo(original[i].position)).toBeGreaterThan(0);
+    }
+    const descriptors=sourcePartDescriptor(part);expect(descriptors.meshes.map(m=>m.id)).toEqual(['engine/mesh-1','engine/mesh-2']);
+    expect(descriptors.meshes[0].sourceNode).toBe(meshes[0].uuid);
+    spreadSourceMeshes(part,0);meshes.forEach((mesh,i)=>expect(mesh.position.equals(original[i].position)).toBe(true));
+    meshes.forEach(m=>m.geometry.dispose());material.dispose();
+  });
+  it('never presents an access-region mapping as modeled repair geometry',()=>{
+    for(const vehicle of Object.values(VEHICLES)) {
+      const recipe=REPAIRS[vehicle.repairId];expect(recipe.vehicleId).toBe(vehicle.id);
+      expect(repairGeometryStatus(recipe)).toMatchObject({animationAvailable:false,targetMapped:false});
+      expect(recipe.missingGeometry.length).toBeGreaterThan(0);
+    }
   });
 });
 
 describe('Document-constrained image analysis',()=>{
   it('preserves uncertainty and distinguishes photo coordinates from 3D registration',()=>{
-    expect(validateVisionResult(candidate,'yzf-2021')).toMatchObject({requiresInspection:true,regionId:'bodywork',vehicleId:'yzf-2021'});
+    expect(validateVisionResult(candidate,'yzf-2021')).toMatchObject({requiresInspection:true,regionId:'bodywork',vehicleId:'yzf-2021',regionRole:'context-only',animationAvailable:false,targetMapped:false});
   });
   it('rejects cross-vehicle repairs, false matches, invented parts and out-of-image boxes',()=>{
-    expect(()=>validateVisionResult(candidate,'bmw-s1000rr')).toThrow();
-    expect(()=>validateVisionResult(candidate,'fenomeno-2026')).toThrow();
+    expect(()=>validateVisionResult(candidate,'honda-cbr650r')).toThrow();
+    expect(()=>validateVisionResult(candidate,'corvette-c8')).toThrow();
     for(const fields of [{bbox:[.8,0,.3,.4]},{bbox:[0,0,0,1]},{bbox:null},{componentId:'crankshaft'},{vehicleMatch:'different'},{confidence:1.2}])expect(()=>validateVisionResult({...candidate,...fields},'yzf-2021')).toThrow();
   });
   it('does not map a repair when more inspection is needed',()=>{
@@ -49,9 +70,9 @@ describe('Document-constrained image analysis',()=>{
     expect((await request(api).get('/api/vehicles/status')).body.configured).toBe(false);
     expect((await request(api).post('/api/vehicles/analyze').send(photo)).status).toBe(503);expect(analyze).not.toHaveBeenCalled();
   });
-  it('rejects undocumented car repairs and remote URLs before contacting OpenAI',async()=>{
+  it('rejects retired vehicle IDs and remote URLs before contacting OpenAI',async()=>{
     const analyze=vi.fn();const api=app({apiKey:'test',analyze});
-    expect((await request(api).post('/api/vehicles/analyze').send({...photo,vehicleId:'fenomeno-2026'})).status).toBe(422);
+    expect((await request(api).post('/api/vehicles/analyze').send({...photo,vehicleId:'fenomeno-2026'})).status).toBe(400);
     expect((await request(api).post('/api/vehicles/analyze').send({...photo,image:'http://localhost/secret'})).status).toBe(400);expect(analyze).not.toHaveBeenCalled();
   });
   it('returns a validated candidate but refuses malformed provider output',async()=>{
@@ -83,7 +104,7 @@ describe('Local model serving',()=>{
       const head=await request(a).head(`/models/${id}/model.glb`).set('Accept-Encoding','br');expect(head.status).toBe(200);expect(head.headers['content-encoding']).toBe('br');
     }
     expect((await request(a).get('/models/yzf-2021/../../package.json')).status).toBe(404);
-    expect((await request(a).post('/models/bmw-s1000rr/model.glb')).status).toBe(405);
+    expect((await request(a).post('/models/honda-cbr650r/model.glb')).status).toBe(405);
     expect((await request(a).head('/models/yzf-2021/model.glb').set('Accept-Encoding','br;q=0')).headers['content-encoding']).toBeUndefined();
     } finally {rmSync(folder,{recursive:true,force:true});}
   });

@@ -19,6 +19,8 @@
     "indexes": "node scripts/createIndexes.js",
     "sync:elastic": "node scripts/syncElastic.js",
     "seed:prices": "node scripts/seedPrices.js",
+    "seed:vendors": "node scripts/seedVendors.js",
+    "export:vendors": "node scripts/exportVendors.js",
     "eval": "node scripts/runEval.js",
     "compress:yzf": "node scripts/bikes/compress-yzf.mjs"
   },

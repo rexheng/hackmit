@@ -9,6 +9,8 @@ export function prepareSourceMeshes(part) {
     mesh.userData.assemblyPosition = mesh.position.clone();
     const angle = index * Math.PI * (3 - Math.sqrt(5));
     mesh.userData.detailOffset = new THREE.Vector3(Math.cos(angle), (index / Math.max(1, part.meshes.length - 1) - .5) * 1.4, Math.sin(angle)).multiplyScalar(radius);
+    mesh.geometry.computeBoundingBox();
+    mesh.userData.detailOffset.y = Math.max(mesh.userData.detailOffset.y, .025 - mesh.geometry.boundingBox.min.y);
   });
 }
 

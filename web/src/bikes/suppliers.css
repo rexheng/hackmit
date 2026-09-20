@@ -1,0 +1,50 @@
+.assembly-lab .workspace-tabs { display:grid;grid-template-columns:repeat(3,minmax(0,1fr)); }
+.assembly-lab .workspace-tabs button { padding:13px 3px;font-size:10px;white-space:nowrap; }
+.supplier-panel { color:#b8c4c0;padding:22px 0 12px; }
+.supplier-panel h3 { color:#f0f3ed;font-size:23px;line-height:1.2;margin:12px 0;letter-spacing:-.5px; }
+.supplier-panel p,.supplier-panel small { font-size:11px;line-height:1.7; }
+.supplier-panel small { display:block;color:#899b95; }
+.supplier-panel a { color:#b6d8c4;text-decoration:none; }
+.supplier-panel a:hover { text-decoration:underline; }
+.supplier-summary { display:flex;gap:20px;padding:14px 0 20px;font-size:10px; }
+.supplier-summary strong { display:block;font-size:24px;font-weight:500;color:#d5e9dd; }
+.supplier-fitment { padding:10px 12px;border-left:2px solid #b7ad78;background:#b7ad7808;color:#c8c1a4; }
+.supplier-switch { display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:18px 0 14px;padding:4px;background:#0e1517;border-radius:6px; }
+.supplier-panel button { cursor:pointer;font:inherit;font-size:11px; }
+.supplier-switch button { border:0;background:transparent;color:#95aaa1;padding:10px 6px;border-radius:4px; }
+.supplier-switch button[aria-pressed=true] { background:#b7d8c4;color:#172720; }
+.supplier-fields { display:grid;grid-template-columns:1fr 1fr;gap:10px; }
+.supplier-panel label { display:block;color:#9fb1a8;font-size:10px;line-height:1.5; }
+.supplier-panel select,.supplier-panel input[type=number],.supplier-panel textarea { display:block;width:100%;box-sizing:border-box;margin:6px 0 10px;background:#111a1b;color:#dbe7df;border:1px solid #35463f;border-radius:4px;padding:9px;font:inherit;font-size:11px; }
+.supplier-panel textarea { min-height:74px;resize:vertical; }
+.supplier-panel input:focus,.supplier-panel select:focus,.supplier-panel textarea:focus { outline:1px solid #b7d8c4;outline-offset:2px; }
+.supplier-calculator { padding:15px;background:#192322;border:1px solid #30413b;border-radius:6px;margin:14px 0 20px; }
+.supplier-calculator summary { font-size:12px;cursor:pointer;margin-bottom:14px;color:#d0e1d7; }
+.supplier-panel .supplier-check { display:flex;align-items:flex-start;gap:8px;margin:10px 0; }
+.supplier-check input { accent-color:#b7d8c4; }
+.supplier-card { border-top:1px solid #33423e;padding:20px 0; }
+.supplier-card-top { display:flex;justify-content:space-between;gap:8px;text-transform:uppercase;font-size:8px;letter-spacing:.8px;color:#849b90; }
+.supplier-card h4 { font-size:17px;font-weight:500;margin:10px 0; }
+.supplier-shipping { display:grid;grid-template-columns:auto 1fr;gap:5px 9px;padding:12px;background:#1d2925;border-radius:4px;margin:12px 0; }
+.supplier-shipping strong { color:#c5e4d2;font-size:17px;font-weight:500; }
+.supplier-shipping span { align-self:center;font-size:10px; }
+.supplier-shipping small { grid-column:1/-1; }
+.supplier-offers summary,.supplier-sources summary { cursor:pointer;font-size:11px;color:#a7c1b3; }
+.supplier-offer { border-left:1px solid #3e5549;padding:12px;margin-top:12px; }
+.supplier-offer>div { display:flex;justify-content:space-between;gap:8px;font-size:12px; }
+.supplier-offer b { flex-shrink:0;color:#d4e7d9;font-weight:500; }
+.supplier-offer code { display:block;color:#829c8e;margin:6px 0;font-size:10px; }
+.supplier-offer a { font-size:10px; }
+.supplier-sources { margin-top:15px; }
+.supplier-sources>small { margin-top:10px; }
+.supplier-sources>div { padding:7px 0;font-size:10px; }
+.supplier-rate { padding:12px;background:#1b2823;margin:8px 0;border-radius:4px; }
+.supplier-rate>div { display:flex;justify-content:space-between;gap:12px;font-size:11px; }
+.supplier-rate strong { white-space:nowrap;color:#d0e8d9;font-weight:500; }
+.supplier-card .assembly-actions { align-items:center;margin:14px 0;font-size:11px; }
+.supplier-draft { border:1px solid #62816f;padding:15px;border-radius:6px;margin:15px 0; }
+.supplier-draft textarea { min-height:280px; }
+.supplier-draft button,.supplier-export { border:1px solid #486453;background:#21352a;color:#c4e0cf;border-radius:4px;padding:12px;margin:5px 6px 5px 0; }
+.supplier-export { width:100%; }
+.supplier-footnote { padding:15px 0; }
+@media(max-width:480px){.supplier-fields{grid-template-columns:1fr}.supplier-summary{justify-content:space-between;gap:10px}.supplier-rate>div{display:block}.supplier-rate span{display:block;margin-top:4px}}

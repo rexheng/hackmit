@@ -1,4 +1,5 @@
 import {Router, json} from 'express';
+import {damageExampleRoutes} from './damage-examples.js';
 import {z} from 'zod';
 import {VEHICLES} from '../../shared/vehicles.js';
 import {REPAIRS, repairGeometryStatus} from '../../shared/repairs.js';
@@ -63,6 +64,7 @@ export async function requestOpenAIVision({vehicleId, image}, {apiKey, model = '
 export function vehicleVisionRoutes({apiKey = process.env.OPENAI_API_KEY, model = process.env.OPENAI_VISION_MODEL || 'gpt-4.1-mini', analyze = requestOpenAIVision} = {}) {
   const router = Router(), requests = new Map();
   let inFlight = 0;
+  router.use('/examples', damageExampleRoutes({apiKey,model}));
   router.get('/status', (_req,res) => res.json({configured:!!apiKey, model, supportedVehicles:Object.values(VEHICLES).filter(v => v.repairId).map(v => v.id), photoStorage:'No application storage; OpenAI request uses store:false.'}));
   router.post('/analyze', json({limit:'6mb'}), async (req,res) => {
     const parsed = requestSchema.safeParse(req.body);

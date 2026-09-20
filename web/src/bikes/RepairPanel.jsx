@@ -1,4 +1,6 @@
 import React,{useEffect,useRef,useState} from 'react';
+import DamageCase from './DamageCase.jsx';
+import {casesForVehicle} from '../../../shared/damage-cases.js';
 import {repairGeometryStatus} from '../../../shared/repairs.js';
 
 async function imageData(file) {
@@ -11,7 +13,7 @@ async function imageData(file) {
   return canvas.toDataURL('image/jpeg',.88);
 }
 
-export default function RepairPanel({vehicle,recipe,ready,onMap,children}) {
+export default function RepairPanel({vehicle,recipe,ready,onMap,onCaseStep,children}) {
   const [api,setApi]=useState(null),[photo,setPhoto]=useState(null),[busy,setBusy]=useState(false),[result,setResult]=useState(null),[error,setError]=useState('');
   const [confirmed,setConfirmed]=useState(false);
   const input=useRef(null),request=useRef(null),uploadVersion=useRef(0),reference=useRef(null);
@@ -32,6 +34,7 @@ export default function RepairPanel({vehicle,recipe,ready,onMap,children}) {
   }
   const coverage=repairGeometryStatus(recipe);
   return <div className="repair-panel">
+    {casesForVehicle(vehicle.id).map(example=><DamageCase key={example.id} example={example} ready={ready} configured={api?.configured} onStep={onCaseStep}/>)}
     {children}
     <div className="repair-heading"><span className="eyebrow">MANUAL REFERENCE</span><h3>{recipe.name}</h3><p>{recipe.purpose}</p><span className="repair-rating">{recipe.rating}</span></div>
     <div className="repair-document-state" role="status"><span className="eyebrow">TARGET GEOMETRY NOT MAPPED</span><h4>Repair animation unavailable</h4><p>These components are not individually identified in this design: {coverage.missingGeometry.join(', ')}.</p><small>The model above remains the original assembly. Source-mesh inspection does not simulate this repair.</small></div>
