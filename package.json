@@ -1,0 +1,45 @@
+{
+  "name": "bike",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "dev:vehicles": "node server/vehicle-dev.js",
+    "dev": "node server/index.js",
+    "start": "node server/index.js",
+    "build": "npm run build -w web",
+    "test": "vitest run",
+    "ingest": "node ingest/ingest.js",
+    "indexes": "node scripts/createIndexes.js",
+    "sync:elastic": "node scripts/syncElastic.js",
+    "seed:prices": "node scripts/seedPrices.js",
+    "eval": "node scripts/runEval.js",
+    "compress:yzf": "node scripts/bikes/compress-yzf.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.127.0",
+    "@elastic/elasticsearch": "^8.15.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "minisearch": "^7.1.0",
+    "mongodb": "^6.9.0",
+    "mongodb-memory-server": "^10.1.2",
+    "openai": "^4.67.0",
+    "pdfjs-dist": "^4.7.76",
+    "pino": "^9.4.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@gltf-transform/core": "^4.5.0",
+    "@gltf-transform/extensions": "^4.5.0",
+    "meshoptimizer": "^1.2.0",
+    "supertest": "^7.0.0",
+    "vitest": "^2.1.2"
+  }
+}

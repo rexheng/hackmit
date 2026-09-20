@@ -1,0 +1,20 @@
+# Decisions
+
+1. **One score for thresholds on every backend.** MiniSearch, Atlas and Elasticsearch scores are not comparable, so backends only *retrieve*. The pipeline re-ranks with one function (`coverage` in `server/text.js`): the share of the question's meaningful words a document covers, with typo tolerance, plus a bonus when the model code matches and a penalty when it does not. `REFUSAL_THRESHOLD` (default 0.5) applies to that score, so local, atlas and elastic refuse at the same point.
+2. **Refusal is decided before any model call.** Retrieval runs first. If nothing clears the threshold, Bike refuses without routing, so a nonsense question costs nothing.
+3. **Router tie-break.** When a question has both lookup words and procedure words, "how do I / how to" means steps unless it names a torque or part number; anything else is a lookup. The small model is asked only when no rule fires. A wrong number is the costly mistake, so ties lean to lookup.
+4. **The model may name a part, never a quantity.** On the procedure path, any digit the model types itself blocks the answer, except inside model codes that already appear in the retrieved text or the question. Unknown codes are blocked by the guard. Placeholders that do not match a candidate fact also block.
+5. **Guard accepts range end points.** If the manual says "35 - 55 N·m", then "35 N·m" and "55 N·m" pass as well as the range. Units are canonicalized (N·m, Nm, N m are one unit).
+6. **Component words and code prefixes** (rear mech -> RD, crank -> FC, ...) live in `server/pipeline/detect.js`. They only steer search and the clarify question. They are never shown as facts.
+7. **Clarify** fires when the typed code matches more than one kind of part and no component word was given ("r8000 torque").
+8. **Safety-critical** = the fact or its sentence mentions brakes, rotors, stems, handlebars, carbon, forks or steerers; or its model code is a brake or rotor code; or WARNING / CAUTION / DANGER is within 300 characters. The warning shown is the manual's own sentence, copied.
+9. **Compatibility** is "confirmed" or "incompatible" only when a compatibility fact on the cited pages names both the part and the bike model. Otherwise "unknown".
+10. **No MONGODB_URI -> in-memory MongoDB + labeled fixture.** `mongodb-memory-server` downloads a MongoDB binary the first time it runs (at install or first test); after that, tests need no network. The fixture uses real-looking model codes so typo matching can be tested, and says FIXTURE / made-up values in its title, on every page, and in a UI banner.
+11. **DRY_RUN=1** swaps the model for a deterministic stand-in that only uses the placeholders it is given. It exists so the procedure path can be exercised with no key.
+12. **Prices.** `server/config.js` holds the price table. It lists Anthropic list prices only. An unknown model (for example an OpenAI one) is logged with cost 0 and a warning: add its row. Sample part prices from `seed:prices` are placeholders derived from the part number and are always labeled.
+13. **Defaults:** small model `claude-haiku-4-5`, large model `claude-opus-5`. Both come from env.
+14. **PDF text** uses the `pdfjs-dist` legacy build in Node (no native dependencies). The cited page is rendered in the browser with pdf.js from the PDF Express serves at `/manuals`. Nothing is rendered on the server.
+15. **Checkout** uses a strict zod schema (`quoteId`, optional `customerName`) and first rejects any payload with card-like keys or 13 to 19 digit values. Request bodies are never logged.
+16. **sources.csv** has an optional fourth column, `file`. Without it, the title is matched to the filename.
+17. **Eval `stuffed`** truncates the manual to 400,000 characters. With a large model that is roughly $0.50 a question, so `--max-usd` is checked before every call.
+18. **Not done:** no auth, accounts, Docker or CI, as instructed. Atlas and Elasticsearch backends are written to the documented APIs but were not run against live services here (no credentials).

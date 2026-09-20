@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #16181d;
+  --color-paper: #f6f4ef;
+  --color-line: #dedad0;
+  --color-accent: #0f766e;
+  --color-warn: #b45309;
+}
+
+body { background: var(--color-paper); color: var(--color-ink); font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+.card { background: #fff; border: 1px solid var(--color-line); border-radius: 1rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; border-radius: .75rem; padding: .65rem 1rem; font-weight: 600; transition: transform .1s, opacity .1s; }
+.btn:active { transform: scale(.98); } .btn:disabled { opacity: .4; }
+.btn-primary { background: var(--color-ink); color: #fff; } .btn-ghost { border: 1px solid var(--color-line); background: #fff; }
+.answer strong { font-weight: 700; } .answer blockquote { border-left: 3px solid var(--color-accent); padding-left: .75rem; color: #444; margin: .5rem 0; }
+.answer ol { list-style: decimal; padding-left: 1.25rem; } .answer li { margin: .35rem 0; }
+@media print { .no-print { display: none !important; } body { background: #fff; } .card { border: none; } }
