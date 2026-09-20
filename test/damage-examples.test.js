@@ -22,14 +22,14 @@ describe('Online damage examples',()=>{
     expect((await request(api).post('/examples/c8-rear-damper/analyze').send({vehicleId:'corvette-c8',image:'http://localhost/secret'})).status).toBe(400);
     expect((await request(api).post('/examples/c8-rear-damper/analyze').send({vehicleId:'corvette-c8'})).status).toBe(503);expect(analyze).not.toHaveBeenCalled();
   });
-  it('sends both allowlisted photos and requires strict output without provider storage',async()=>{
+  it('sends one allowlisted photo and requires strict output without provider storage',async()=>{
     const fetchImpl=vi.fn(async()=>({ok:true,json:async()=>({output:[{content:[{type:'output_text',text:JSON.stringify(result)}]}]})}));
     const readImage=vi.fn(async()=>Buffer.from('fixture'));
     expect(await analyzeDamageExample(example,{apiKey:'test',fetchImpl,readImage})).toEqual(result);
-    expect(readImage).toHaveBeenCalledTimes(2);
+    expect(readImage).toHaveBeenCalledTimes(1);
     const [url,options]=fetchImpl.mock.calls[0],body=JSON.parse(options.body);
     expect(url).toBe('https://api.openai.com/v1/responses');expect(body.store).toBe(false);expect(body.text.format.strict).toBe(true);
-    expect(body.input[0].content.filter(c=>c.type==='input_image')).toHaveLength(2);
+    expect(body.input[0].content.filter(c=>c.type==='input_image')).toHaveLength(1);
   });
   it('validates output and keeps live findings separate from repair execution',async()=>{
     const response=await request(app({apiKey:'test',analyze:async()=>result})).post('/examples/c8-rear-damper/analyze').send({vehicleId:'corvette-c8'});
