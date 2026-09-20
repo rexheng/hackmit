@@ -22,6 +22,7 @@
     "seed:vendors": "node scripts/seedVendors.js",
     "export:vendors": "node scripts/exportVendors.js",
     "eval": "node scripts/runEval.js",
+    "eval:diagnosis": "node scripts/evaluate-diagnosis.mjs",
     "compress:yzf": "node scripts/bikes/compress-yzf.mjs"
   },
   "dependencies": {

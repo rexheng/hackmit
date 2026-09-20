@@ -135,3 +135,11 @@
 .diagnosis-native-vehicle{display:block;width:100%;padding:17px 14px;margin-top:9px}
 .diagnosis-native-demo{display:block;width:auto;max-width:90%;padding:9px 12px;margin:0 auto 18px}
 .diagnosis-flow select:focus-visible{outline:2px solid #bee8d0;outline-offset:3px}
+
+.diagnosis-next-action{padding:17px 18px;background:#234332;border:1px solid #5c8a69;border-radius:6px;margin:20px 0}
+.diagnosis-next-action>span{font:9px 'IBM Plex Mono',monospace;color:#9dcdb0}
+.diagnosis-next-action h3{font-size:14px;line-height:1.7;margin:9px 0 0}
+.diagnosis-identified{padding:15px 0;border-bottom:1px solid #405f4a;margin-top:14px}
+.diagnosis-identified h3{margin:6px 0;font-size:18px}
+.diagnosis-identified>span{color:#d6c797;font-size:10px}
+.diagnosis-details>div+div{margin-top:15px}
