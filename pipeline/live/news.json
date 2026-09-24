@@ -1,5 +1,5 @@
 {
- "retrieved": "2026-09-23T21:31Z",
+ "retrieved": "2026-09-24T04:53Z",
  "source": "GDELT DOC 2.0 API",
  "counties": {
   "48113": [
@@ -34,7 +34,7 @@
    {
     "title": "Texas Data Center Moratorium: Local Regulation & State Action",
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQeFV6b2hCeXNzZ1pNM1lpbWRMTnVERHdNZ2d0d2ExUUxsZkY3cnA2SGZDTDlQaXZHcEg1LTNuU1NoQW1zb1ZuUVNnZVJ0Q0hGWHhsdUh4QlVkUHREbk5Qc0JLSV9UeXgtUTBDTGdvQ2RSRXB2SWJvQ0pwR2JlM3hWdHJHNzRINjRCak5EUHAtRGREdG9ockdYUkdDaGs?oc=5",
-    "outlet": "multistate.us",
+    "outlet": "MultiState",
     "seen": "19 Aug 2026",
     "via": "Google News RSS"
    },
@@ -48,7 +48,7 @@
    {
     "title": "DFW surpasses Virginia to become No. 1 market for data centers, new study finds",
     "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxONzh1c0FHQmhWdlI2RTRnVmN3RnFsaUpNci1JTVlfb20xNHpFYnRqS29vSVpnd0VpbVJSRUpaMnRsUHpEbVRCenA5eVpWdDJWWXZadmV1WllERXlyT3Fsa1h0YWZ6dHZiaUtMSU4xMm9vTndIaVlpX2RfOUFRRTgyQ05GQk9QNjFJVjZqVlFJWEVBa09neEl0aE5ESnRfWDFjNkhldWkyblNwS1JWWmdoQ3dKZnBYLVhnaEM3LW9MaEUtYl9pWUtYRGdjcmdkQlVlZ2g1bFFiOFpaT21ncThVMjh4VGxQZjc4ZUVsajZyUHQ?oc=5",
-    "outlet": "WFAA",
+    "outlet": "wfaa.com",
     "seen": "19 Aug 2026",
     "via": "Google News RSS"
    },
@@ -67,13 +67,6 @@
     "via": "Google News RSS"
    },
    {
-    "title": "Texans\u2019 fight against 1 million-square-foot data center explained",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNU2dVTkFzRVViakJtejV2dTJuQ1ZFNjlrdkhiTFJ2eE95MUhBQzEyUV9GeWZSV0RnamRuam91RFJtS3YyTGRQZGtGQ3hqRzZYTm8tM2YycEdoSlhZYldQcWdsTUpkbm8tVHVKU1FiSGt2Q3FTX0ZKQVNVejV2am5lVHd5dnd2Z01KZmZLZXY5U2tqYU4tNWxDWVBrT0Nqdw?oc=5",
-    "outlet": "Newsweek",
-    "seen": "27 Aug 2026",
-    "via": "Google News RSS"
-   },
-   {
     "title": "Gov. Greg Abbott broadens moratorium on data center approvals to include environmental permits",
     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSEx1ckpTZnF2SmRVby1uWFkwSUVCd2JDZTZaZzNoZHRNWU9oTzNXUG9kdzRjOFBZcXd4S3lWeTNjNmJyc0R2aU9xRE9IZk01UUxUWXFBRzlUWEFHd3I3bXRpWVFyNXJxYWtjbDRpSElHY2sxUHVxWl9pUUxET25WdzhfMWZDV3NKd0E?oc=5",
     "outlet": "The Texas Tribune",
@@ -81,9 +74,16 @@
     "via": "Google News RSS"
    },
    {
+    "title": "Texans\u2019 fight against 1 million-square-foot data center explained",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNU2dVTkFzRVViakJtejV2dTJuQ1ZFNjlrdkhiTFJ2eE95MUhBQzEyUV9GeWZSV0RnamRuam91RFJtS3YyTGRQZGtGQ3hqRzZYTm8tM2YycEdoSlhZYldQcWdsTUpkbm8tVHVKU1FiSGt2Q3FTX0ZKQVNVejV2am5lVHd5dnd2Z01KZmZLZXY5U2tqYU4tNWxDWVBrT0Nqdw?oc=5",
+    "outlet": "Newsweek",
+    "seen": "27 Aug 2026",
+    "via": "Google News RSS"
+   },
+   {
     "title": "Abbott says his data center pause in Texas is working, as Democrats urge him to call a special session on the issue",
     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOVHdHZnktanhtblI0dnpuaEJoaG40eDllMjJJU1U2YUN4SkN1VHROS0RDeW0xcWVUTWFvbTRKRm1CeG95aWRaVzQ0TlI0azZ5ZlN4S0FyYW83T2ExS3BUcTl5MzNfdExPR2JJR21VS3d6bUVTNTZJa1lYY3EzdURuejFjR05Ha2tOMEp0OHNWMThZUHY3U011ckgyMUgyZFI4S0trSU10elZubzlVMjNuUFRYaWthbGJ5MlRPRFk3WlRHUUE?oc=5",
-    "outlet": "CBS News",
+    "outlet": "cbsnews.com",
     "seen": "24 Aug 2026",
     "via": "Google News RSS"
    }
@@ -132,13 +132,6 @@
     "via": "Google News RSS"
    },
    {
-    "title": "San Antonio City Council debates data center moratorium, stricter development rules",
-    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPcmFYM2V1clRyR0RQc2ViYjVnWTNET1dZdnlsNGdBV0FGWkRtdXRzM0Naem1nV044X3dFd1prQWN2ODA0SWpIMUFyVWszTm50RGlrTXVqcjcwdTlvejBzNVVybW1vUTZyeDBDYUlNWTFCVWE0YUs4aVFhdGZsdFlSb1FwR1diTmN1ZHRwdm16cHRXZWg3dkpZX2VUREFrM3YzM3R3c2pfMkE2aDJ3cGhfaDFXU2hkVFYxMkktSUdOVkVsX1ZpamVCbUl1bw?oc=5",
-    "outlet": "San Antonio Current",
-    "seen": "26 Aug 2026",
-    "via": "Google News RSS"
-   },
-   {
     "title": "Environmental groups threaten lawsuit over West Side San Antonio data centers",
     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNMVc1M1BPMnRnc1VwM1dwZHB1R2s4VGpjR0lUbG1IWExuOUtxR3FXSXN3NFRPb2tNdUdQUXZNdERSeFZ6UVBrMzN4eFhhcDFwQUhnSElXbjl4T2tmRjItenVTVlBIbF9TNkhlU29DQ0FzMkZvZ2lmelFfcWUzU2E1U3VQcVlCU3B5ZEtoSXpoZzJKd2JBSUZFZzhfR0hWdDJLZ0s3M3gzN01NZHhFNnlVa3pXZVMxMHRQQ3licw?oc=5",
     "outlet": "Texas Public Radio | TPR",
@@ -167,6 +160,13 @@
     "via": "Google News RSS"
    },
    {
+    "title": "Amazon\u2019s new Texas data center campus could become nation\u2019s largest polluter",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPY2UweFM2dDB5NHRXUDVsU29GLUNQQVBzU25NSmZPTFk3U1F4TEVNa0xuZ1hqT05DSGNGeGswMzl3a01FbDRjSWZYNkhpbXhyZDU5WWcyWWRjOFNXZEhhVDJnUl9jTHdreGl4ZXFNeDY3UXczaWc2ZjJSNDlvaUFPMmxHbC1MM1lKSWl4N1FndzlZeW9WVHFucnVhM25yXzk2bHRWM3REUlZEOGdQQnNMWVE3OGR5NGM5?oc=5",
+    "outlet": "San Antonio Current",
+    "seen": "10 Aug 2026",
+    "via": "Google News RSS"
+   },
+   {
     "title": "D6 Councilmember Calls for Temporary Moratorium on New Data Centers",
     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTHJ6dGpsTmFVcS1QZ1dIdmdJQjJKMUtYMGIzMElCM1VCYlBxOUNkWlZCS3c1amdxdWJvZm5tc0lRTTV6ZW5WU24zWElwWjdpeF9xX19BVjc1dnV4eVdyUktkSHZpSWJVdG04QktaNU92MHFVTXRfQ3ViZTJJTW95NFVXOTU5UlFmeTJ5QnJucm5kSXpKVjNLazVFNzcza0YzUFI4ZGhxR243Z3dRc1QwWmJKRmpIbWlBYkE?oc=5",
     "outlet": "City of San Antonio (.gov)",
@@ -175,6 +175,18 @@
    }
   ],
   "48453": [
+   {
+    "title": "Stephen Sanders expresses confidence in Lubbock data center resolution",
+    "url": "https://www.fox34.com/2026/09/23/council-members-stephen-sanders-discuss-lubbock-data-center-resolution/",
+    "outlet": "fox34.com",
+    "seen": "20260923T224500Z"
+   },
+   {
+    "title": "Gov . Greg Abbott says end to Iran war would bring down fuel costs",
+    "url": "https://www.ksla.com/2026/09/22/gov-greg-abbott-says-end-iran-war-would-bring-down-fuel-costs/",
+    "outlet": "ksla.com",
+    "seen": "20260923T223000Z"
+   },
    {
     "title": "Construction underway on six - building Claude data center",
     "url": "https://www.newschannel10.com/2026/09/23/construction-underway-six-building-claude-data-center/",
@@ -234,18 +246,6 @@
     "url": "https://newsroomamerica.com/?before=109765",
     "outlet": "newsroomamerica.com",
     "seen": "20260923T041500Z"
-   },
-   {
-    "title": "Gov . Greg Abbott says end to Iran war would bring down fuel costs",
-    "url": "https://www.ktre.com/2026/09/22/abbott-holds-palestine-press-conference-data-center-pause-affordability/",
-    "outlet": "ktre.com",
-    "seen": "20260923T021500Z"
-   },
-   {
-    "title": "Gov . Abbott Orders Halt to Texas Data Center Permits Pending State Audits",
-    "url": "https://sanangelolive.com/news/texas/2026-09-22/gov-abbott-orders-halt-texas-data-center-permits-pending-state-audits",
-    "outlet": "sanangelolive.com",
-    "seen": "20260922T200000Z"
    }
   ],
   "48139": [
@@ -290,76 +290,76 @@
   ],
   "48": [
    {
-    "title": "Data Centers Are a Potent , Bipartisan Battleground in the Midterms",
-    "url": "https://www.wyomingnewsnow.tv/news/national/data-centers-are-a-potent-bipartisan-battleground-in-the-midterms/article_3a86fad5-76d3-54a6-8ef2-1cd122e66f88.html",
-    "outlet": "wyomingnewsnow.tv",
-    "seen": "20260923T210000Z"
+    "title": "US Surpasses China in Gas - Fired Power Capacity to Fuel AI Data Center Boom",
+    "url": "https://www.chiangraitimes.com/environment/us-gas-fired-power/",
+    "outlet": "chiangraitimes.com",
+    "seen": "20260924T041500Z"
    },
    {
-    "title": "\u5fae\u8f6f \u3001 \u8c37\u6b4c\u5728\u6c14\u5019\u5cf0\u4f1a\u4e0a\u6b63\u9762\u56de\u5e94\u6570\u636e\u4e2d\u5fc3\u4e89\u8bae",
-    "url": "https://www.163.com/dy/article/L7IJK3ET05198NMR.html",
+    "title": "Korea Picks A $22 Billion Texas Gas Plant As First Down Payment On Its $350 Billion Pledge To Trump",
+    "url": "https://www.zerohedge.com/energy/korea-picks-22-billion-texas-gas-plant-first-down-payment-its-350-billion-pledge-trump",
+    "outlet": "zerohedge.com",
+    "seen": "20260924T033000Z"
+   },
+   {
+    "title": "Terafab immune to Abbott data center pause",
+    "url": "https://www.kbtx.com/2026/09/24/terafab-may-not-be-impacted-by-gov-abbotts-pause-data-centers/",
+    "outlet": "kbtx.com",
+    "seen": "20260924T021500Z"
+   },
+   {
+    "title": "\u4e9e\u99ac\u905c\u7da0\u80fd\u6295\u8cc7\u9a45\u52d5\u7f8e\u570b\u7d93\u6fdf \u8ca2\u737b GDP \u903e\u767e\u5104\u7f8e\u5143",
+    "url": "https://n.yam.com/Article/20260924876612",
+    "outlet": "n.yam.com",
+    "seen": "20260924T020000Z"
+   },
+   {
+    "title": "\u4e9e\u99ac\u905c\u7da0\u80fd\u6295\u8cc7\u9a45\u52d5\u7f8e\u570b\u7d93\u6fdf \u8ca2\u737b GDP \u903e\u767e\u5104\u7f8e\u5143",
+    "url": "https://n.yam.com/Article/20260924323809",
+    "outlet": "n.yam.com",
+    "seen": "20260924T020000Z"
+   },
+   {
+    "title": "\u4e09\u83f1\u96fb\u6a5f\u304c \u300c \u6db2\u51b7 \u300d \u3067\u81ea\u524d\u4e3b\u7fa9\u3092\u6368\u3066\u53f0\u6e7e \u30fb \u9d3b\u6d77\u3068\u7d44\u3093\u3060\u7406\u7531 \u3002 \u7c73\u56fdAI\u30c7\u30fc\u30bf\u30bb\u30f3\u30bf\u30fc\u5e02\u5834\u3067\u672c\u683c\u5c55\u958b\u6e96\u5099\u4e2d \uff1a \u7d4c\u55b6\u8005\u304c\u8aad\u3080NVIDIA\u306e\u30d5\u30a3\u30b8\u30ab\u30ebAI / ADAS\u696d\u754c\u65e5\u5831 by \u4eca\u6cc9\u5927\u8f14 \uff1a \u30aa\u30eb\u30bf\u30ca\u30c6\u30a3\u30d6 \u30fb \u30d6\u30ed\u30b0",
+    "url": "https://blogs.itmedia.co.jp/serial/2026/09/ai_2062.html",
+    "outlet": "blogs.itmedia.co.jp",
+    "seen": "20260924T013000Z"
+   },
+   {
+    "title": "4 million - Square - Foot Data Center Proposed Near Boise , Idaho",
+    "url": "https://mix106radio.com/ixp/658/p/idaho-data-center-growth-debate/",
+    "outlet": "mix106radio.com",
+    "seen": "20260924T013000Z"
+   },
+   {
+    "title": "Electricity is Emerging as the Next Constraint on America AI Race",
+    "url": "https://www.ibtimes.com/electricity-emerging-next-constraint-americas-ai-race-3807818",
+    "outlet": "ibtimes.com",
+    "seen": "20260924T010000Z"
+   },
+   {
+    "title": "Florida governor race : Fact - checking Byron Donalds , David Jolly at WLRN Sunshine Economy Summit",
+    "url": "https://www.wuft.org/politifact-florida/2026-09-23/florida-governors-race-fact-checking-byron-donalds-david-jolly-at-wlrns-sunshine-economy-summit",
+    "outlet": "wuft.org",
+    "seen": "20260924T010000Z"
+   },
+   {
+    "title": "\u72c4\u8587\u8587 \uff1a MAGA\u9009\u6c11\u662f\u5982\u4f55\u628a\u81ea\u5df1\u5751\u5230\u6570\u636e\u4e2d\u5fc3\u65c1\u8fb9\u7684 \uff1f ",
+    "url": "https://www.163.com/dy/article/L7J0EKL1051481US.html",
     "outlet": "163.com",
-    "seen": "20260923T210000Z"
+    "seen": "20260924T003000Z"
    },
    {
-    "title": "Transcript : Glen Kacher , CIO of Light Street Capital",
-    "url": "https://ritholtz.com/2026/09/transcript-glen-kacher/",
-    "outlet": "ritholtz.com",
-    "seen": "20260923T201500Z"
+    "title": "Florida governor race : Fact - checking Byron Donalds , David Jolly at WLRN Sunshine Economy Summit",
+    "url": "https://www.wlrn.org/government-politics/2026-09-23/florida-governors-race-fact-checking-byron-donalds-david-jolly-at-wlrns-sunshine-economy-summit",
+    "outlet": "wlrn.org",
+    "seen": "20260924T003000Z"
    },
    {
-    "title": "Construction underway on six - building Claude data center",
-    "url": "https://www.newschannel10.com/2026/09/23/construction-underway-six-building-claude-data-center/",
-    "outlet": "newschannel10.com",
-    "seen": "20260923T201500Z"
-   },
-   {
-    "title": "Is China Secret Power Advantage About To Trigger An 89 % Crash In US AI Stocks",
-    "url": "https://www.investmentwatchblog.com/is-chinas-secret-power-advantage-about-to-trigger-an-89-crash-in-us-ai-stocks/",
-    "outlet": "investmentwatchblog.com",
-    "seen": "20260923T201500Z"
-   },
-   {
-    "title": "Red Creek Power Substation One of a Kind",
-    "url": "https://sanangelolive.com/news/business/2026-09-23/red-creek-power-substation-one-kind",
-    "outlet": "sanangelolive.com",
-    "seen": "20260923T194500Z"
-   },
-   {
-    "title": "Data Centers Are a Potent , Bipartisan Battleground in the Midterms",
-    "url": "https://www.hometownregister.com/news/national/data-centers-are-a-potent-bipartisan-battleground-in-the-midterms/article_aed37278-102b-5525-b71c-3608f524afc0.html",
-    "outlet": "hometownregister.com",
-    "seen": "20260923T190000Z"
-   },
-   {
-    "title": "Niagara Falls Project Answers the Concerns Behind New York Data Center Moratorium",
-    "url": "https://niagarafallsreporter.com/niagara-falls-project-answers-the-concerns-behind-new-yorks-data-center-moratorium",
-    "outlet": "niagarafallsreporter.com",
-    "seen": "20260923T184500Z"
-   },
-   {
-    "title": "Ag Policy Roundup : Trump Spikes Chesapeake Bay Order",
-    "url": "https://www.lancasterfarming.com/farming-news/news/ag-policy-roundup-trump-spikes-chesapeake-bay-order/article_747515eb-d7e2-406b-97aa-f39b3a6394be.html",
-    "outlet": "lancasterfarming.com",
-    "seen": "20260923T184500Z"
-   },
-   {
-    "title": "Governer Abbott Orders TCEQ Halt Permits on Data Center Construct",
-    "url": "https://natlawreview.com/article/governor-abbott-orders-tceq-pause-all-permit-issuance-data-center-projects",
-    "outlet": "natlawreview.com",
-    "seen": "20260923T181500Z"
-   },
-   {
-    "title": "Rural Americans Are Fed up With Data Centers - Business Insider",
-    "url": "https://www.businessinsider.com/rural-americans-fed-up-with-data-centers-survey-2026-9",
-    "outlet": "businessinsider.com",
-    "seen": "20260923T181500Z"
-   },
-   {
-    "title": "Utility and Energy Transmission & Distribution News",
-    "url": "https://www.utilitydive.com/?page=2&_sp=2e138ef9-d665-4e1c-8bef-cf45e10ff4d5",
-    "outlet": "utilitydive.com",
-    "seen": "20260923T180000Z"
+    "title": "Digital States 2026 : AI Moves From Experiment to Infrastructure",
+    "url": "https://www.govtech.com/digitalstates2026",
+    "outlet": "govtech.com",
+    "seen": "20260924T001500Z"
    }
   ]
  }
