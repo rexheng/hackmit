@@ -155,17 +155,17 @@
  },
  "registry": {
   "url": "https://comptroller.texas.gov/taxes/data-centers/data-center-lists.php",
-  "certified_facilities": 163,
+  "certified_facilities": 164,
   "by_owner": {
    "Amazon Web Services": 14,
-   "Microsoft": 14,
+   "Microsoft": 15,
    "Google": 13,
    "Meta": 0,
    "Digital Realty": 0,
    "CyrusOne": 3,
    "Equinix": 0,
    "Oracle": 26,
-   "Quality Technology Services": 1
+   "Quality Technology Services": 2
   }
  },
  "counties": {
@@ -407,7 +407,7 @@
      "wue_grade": "C",
      "talk_grade": "D",
      "claims_checked": 5,
-     "state_tax_certificates": 14
+     "state_tax_certificates": 15
     },
     {
      "owner": "CyrusOne",
@@ -506,7 +506,7 @@
      "wue_grade": null,
      "talk_grade": null,
      "claims_checked": 0,
-     "state_tax_certificates": 1
+     "state_tax_certificates": 2
     },
     {
      "owner": "GVTC",
@@ -1050,7 +1050,7 @@
      "wue_grade": null,
      "talk_grade": null,
      "claims_checked": 0,
-     "state_tax_certificates": 1
+     "state_tax_certificates": 2
     },
     {
      "owner": "Rackspace",
@@ -1926,7 +1926,7 @@
      "wue_grade": "C",
      "talk_grade": "D",
      "claims_checked": 5,
-     "state_tax_certificates": 14
+     "state_tax_certificates": 15
     }
    ],
    "overall": "D",
@@ -2579,7 +2579,7 @@
      "wue_grade": null,
      "talk_grade": null,
      "claims_checked": 0,
-     "state_tax_certificates": 1
+     "state_tax_certificates": 2
     },
     {
      "owner": "Aligned Data Centers, LLC",
