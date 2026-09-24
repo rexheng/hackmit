@@ -155,7 +155,7 @@
  },
  "registry": {
   "url": "https://comptroller.texas.gov/taxes/data-centers/data-center-lists.php",
-  "certified_facilities": 164,
+  "certified_facilities": 166,
   "by_owner": {
    "Amazon Web Services": 14,
    "Microsoft": 15,
