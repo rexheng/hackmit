@@ -155,11 +155,11 @@
  },
  "registry": {
   "url": "https://comptroller.texas.gov/taxes/data-centers/data-center-lists.php",
-  "certified_facilities": 166,
+  "certified_facilities": 167,
   "by_owner": {
    "Amazon Web Services": 14,
    "Microsoft": 15,
-   "Google": 13,
+   "Google": 14,
    "Meta": 0,
    "Digital Realty": 0,
    "CyrusOne": 3,
@@ -1401,7 +1401,7 @@
      "wue_grade": null,
      "talk_grade": "D",
      "claims_checked": 6,
-     "state_tax_certificates": 13
+     "state_tax_certificates": 14
     }
    ],
    "overall": "D",
