@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0c0a08" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Handy" />
+  <title>Handy Book</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --amber:#ffb020; --paper:#f3d9a0; --bg:#0c0a08; --metal:#1a1712; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--paper); }
+    body {
+      font: 17px/1.35 "IBM Plex Sans", system-ui, sans-serif;
+      min-height: 100dvh;
+      background:
+        radial-gradient(ellipse 80% 55% at 50% 8%, #3a2a10 0%, transparent 62%),
+        radial-gradient(circle at 50% 120%, #1a1208 0%, var(--bg) 50%);
+    }
+    button, input { font: inherit; color: inherit; }
+    button { cursor: pointer; border: 0; background: none; }
+    :focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+    .app { max-width: 420px; margin: 0 auto; padding: calc(22px + env(safe-area-inset-top)) 20px 40px; min-height: 100dvh; }
+    .brand { font-family: Anton, Impact, sans-serif; letter-spacing: .04em; font-size: 13px; color: var(--amber); text-transform: uppercase; }
+    h1 { font-family: Anton, Impact, sans-serif; font-size: clamp(42px, 12vw, 64px); line-height: .88; margin: 10px 0 28px; font-weight: 400; }
+    .hidden { display: none !important; }
+    .shutter {
+      width: 168px; height: 168px; border-radius: 50%;
+      margin: 8px auto 18px; display: grid; place-items: center;
+      background: radial-gradient(circle at 50% 40%, #2a2418, #100e0b);
+      box-shadow: 0 0 0 10px #16130e, 0 0 0 12px #3a3018, 0 20px 40px #000;
+    }
+    .shutter b {
+      width: 118px; height: 118px; border-radius: 50%;
+      background: var(--amber); color: #1a1004;
+      display: grid; place-items: center; font-weight: 600; font-size: 15px;
+    }
+    .ghost {
+      display: block; width: 100%; text-align: center;
+      padding: 14px; border: 1px solid #3a3428; color: var(--paper);
+    }
+    .typebox { display: flex; gap: 8px; margin-top: 16px; }
+    .typebox input {
+      flex: 1; background: #16130e; border: 1px solid #3a3428;
+      padding: 14px 12px; color: var(--paper);
+    }
+    .typebox button { background: var(--amber); color: #1a1004; padding: 0 16px; font-weight: 600; }
+    .hits { margin: 12px 0 0; padding: 0; list-style: none; }
+    .hits button {
+      width: 100%; text-align: left; padding: 14px 0;
+      border-bottom: 1px solid #2a2418; color: var(--paper);
+    }
+    .hits strong { display: block; font-size: 18px; }
+    .hits span { color: #9a8870; font-size: 14px; }
+    .wait { text-align: center; padding: 80px 10px; font-family: Anton, sans-serif; font-size: 28px; color: var(--amber); }
+    .id { font-family: Anton, sans-serif; font-size: 40px; line-height: .9; margin: 8px 0 6px; }
+    .meta { color: #9a8870; margin: 0 0 22px; }
+    .jobs { display: grid; gap: 8px; }
+    .jobs button {
+      background: #16130e; border: 1px solid #3a3018; padding: 16px 14px; text-align: left; color: var(--paper);
+    }
+    .ticket {
+      background: #16130e; border: 1px dashed var(--amber); padding: 18px 16px; margin: 10px 0 18px;
+    }
+    .ticket em { font-style: normal; color: var(--amber); font-family: Anton, sans-serif; font-size: 34px; letter-spacing: .02em; }
+    .go {
+      display: block; width: 100%; background: var(--amber); color: #1a1004;
+      padding: 16px; font-weight: 600; margin-top: 10px;
+    }
+    .page {
+      background: #efe2b8; color: #1a140c; padding: 22px 20px 28px; min-height: 420px;
+      box-shadow: 0 18px 40px #000;
+    }
+    .page .hdr { display: flex; justify-content: space-between; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+    .page h2 { font-family: Anton, sans-serif; font-size: 28px; margin: 16px 0 8px; font-weight: 400; }
+    .page .fig { margin: 16px 0; border: 1.5px solid #1a140c; padding: 10px; }
+    .parts li { list-style: none; padding: 14px 0; border-bottom: 1px solid #2a2418; }
+    .parts { margin: 0; padding: 0; }
+    .parts b { display: block; }
+    .parts i { font-style: normal; color: var(--amber); }
+    .total { display: flex; justify-content: space-between; font-family: Anton, sans-serif; font-size: 28px; margin: 18px 0; }
+    .back { color: #9a8870; margin-bottom: 18px; font-size: 15px; }
+    .shot { width: 100%; height: 160px; object-fit: cover; display: block; margin: 0 0 16px; filter: sepia(.4) contrast(1.1); }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="brand">Handy Book</div>
+
+    <section id="home">
+      <h1>What’s<br>broken?</h1>
+      <label class="shutter">
+        <input id="photo" type="file" accept="image/*" capture="environment" hidden />
+        <b>Take a photo</b>
+      </label>
+      <button class="ghost" id="typeBtn" type="button">Type the name</button>
+      <form class="typebox hidden" id="typeForm">
+        <input id="q" type="search" enterkeyhint="search" autocomplete="off" placeholder="Yamaha XT250" />
+        <button type="submit">Find</button>
+      </form>
+      <ul class="hits" id="hits"></ul>
+    </section>
+
+    <section id="wait" class="wait hidden">Looking…</section>
+
+    <section id="found" class="hidden">
+      <button class="back" id="backHome" type="button">←</button>
+      <img class="shot hidden" id="shot" alt="" />
+      <div class="id" id="bikeName"></div>
+      <p class="meta" id="bikeMeta"></p>
+      <div class="jobs" id="jobs"></div>
+    </section>
+
+    <section id="book" class="hidden">
+      <button class="back" id="backFound" type="button">←</button>
+      <div class="ticket">
+        <div id="jobName"></div>
+        <em id="pageRef"></em>
+        <div id="figRef"></div>
+      </div>
+      <button class="go" id="openPage" type="button">Open the book</button>
+    </section>
+
+    <section id="page" class="hidden">
+      <button class="back" id="backBook" type="button">←</button>
+      <article class="page">
+        <div class="hdr"><span id="manTitle"></span><span id="manPage"></span></div>
+        <h2 id="manChapter"></h2>
+        <div class="fig">
+          <svg viewBox="0 0 280 110" width="100%" aria-hidden="true">
+            <path d="M20 70h70l18-28h40l12 12h30" fill="none" stroke="#1a140c" stroke-width="3"/>
+            <circle cx="40" cy="78" r="14" fill="none" stroke="#1a140c" stroke-width="3"/>
+            <circle cx="96" cy="78" r="14" fill="none" stroke="#1a140c" stroke-width="3"/>
+            <path d="M178 54c20 0 36 10 48 10" fill="none" stroke="#1a140c" stroke-width="3"/>
+            <rect x="226" y="48" width="34" height="22" fill="none" stroke="#1a140c" stroke-width="3"/>
+          </svg>
+          <div id="manFig"></div>
+        </div>
+      </article>
+      <button class="go" id="toParts" type="button">Parts</button>
+    </section>
+
+    <section id="parts" class="hidden">
+      <button class="back" id="backPage" type="button">←</button>
+      <h1 style="font-size:42px">Parts</h1>
+      <ul class="parts" id="partList"></ul>
+      <div class="total"><span>Total</span><span id="partTotal"></span></div>
+      <button class="go" id="buy" type="button">Get these</button>
+    </section>
+
+    <section id="done" class="hidden">
+      <h1>On the way.</h1>
+      <p class="meta" id="doneNote"></p>
+      <button class="go" id="again" type="button">Start over</button>
+    </section>
+  </div>
+  <script src="../shared/catalog.js"></script>
+  <script>
+    const S = {};
+    const $ = (id) => document.getElementById(id);
+    const show = (id) => {
+      document.querySelectorAll("section").forEach((el) => el.classList.add("hidden"));
+      $(id).classList.remove("hidden");
+    };
+
+    Handy.registerPWA("./sw.js");
+
+    $("typeBtn").onclick = () => $("typeForm").classList.toggle("hidden");
+    $("typeForm").onsubmit = (e) => {
+      e.preventDefault();
+      const hits = Handy.search($("q").value);
+      $("hits").innerHTML = hits.map((b) =>
+        `<li><button type="button" data-id="${b.id}"><strong>${b.name}</strong><span>${b.years}</span></button></li>`
+      ).join("") || "<li>No book for that name.</li>";
+    };
+    $("hits").onclick = (e) => {
+      const btn = e.target.closest("button[data-id]");
+      if (btn) openBike(Handy.bike(btn.dataset.id));
+    };
+    $("photo").onchange = () => {
+      const file = $("photo").files[0];
+      show("wait");
+      if (file) {
+        $("shot").src = URL.createObjectURL(file);
+        $("shot").classList.remove("hidden");
+      }
+      setTimeout(() => openBike(Handy.fromPhoto()), 700);
+    };
+
+    function openBike(bike) {
+      S.bike = bike;
+      $("bikeName").textContent = bike.name;
+      $("bikeMeta").textContent = bike.years;
+      $("jobs").innerHTML = bike.jobs.map((j) =>
+        `<button type="button" data-job="${j.id}">${j.name}</button>`
+      ).join("");
+      show("found");
+    }
+
+    $("jobs").onclick = (e) => {
+      const btn = e.target.closest("button[data-job]");
+      if (!btn) return;
+      S.job = Handy.job(S.bike, btn.dataset.job);
+      $("jobName").textContent = S.job.name;
+      $("pageRef").textContent = "Page " + S.job.page;
+      $("figRef").textContent = "Figure " + S.job.figure;
+      show("book");
+    };
+
+    $("openPage").onclick = () => {
+      $("manTitle").textContent = S.bike.manual.title;
+      $("manPage").textContent = S.job.page + " / " + S.bike.manual.pages;
+      $("manChapter").textContent = S.job.chapter;
+      $("manFig").textContent = "Figure " + S.job.figure;
+      show("page");
+    };
+
+    $("toParts").onclick = () => {
+      const t = Handy.totals(S.job.parts);
+      $("partList").innerHTML = S.job.parts.map((p) =>
+        `<li><b>${p.name}</b><i>${Handy.money(p.price)}</i> · ${p.store} · ${Handy.shipLabel(p)}</li>`
+      ).join("");
+      $("partTotal").textContent = Handy.money(t.all);
+      show("parts");
+    };
+
+    $("buy").onclick = () => {
+      $("doneNote").textContent = S.job.parts.map((p) => p.store).filter((v, i, a) => a.indexOf(v) === i).join(" · ");
+      show("done");
+    };
+
+    $("backHome").onclick = () => show("home");
+    $("backFound").onclick = () => show("found");
+    $("backBook").onclick = () => show("book");
+    $("backPage").onclick = () => show("page");
+    $("again").onclick = () => { $("shot").classList.add("hidden"); $("hits").innerHTML = ""; show("home"); };
+
+  </script>
+</body>
+</html>

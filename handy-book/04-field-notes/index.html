@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2c3024" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Handy" />
+  <title>Handy Book</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Special+Elite&display=swap" rel="stylesheet" />
+  <style>
+    :root { --olive:#3a4030; --canvas:#2c3024; --paper:#d6d2ba; --hi:#c4d64a; --pencil:#2a2618; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: #1c1e16; color: var(--pencil); }
+    body {
+      font: 16px/1.4 "Special Elite", ui-monospace, monospace;
+      min-height: 100dvh;
+      background:
+        radial-gradient(circle at 20% 0%, #3a3e30, #1c1e16 55%);
+    }
+    button, input { font: inherit; color: inherit; }
+    button { cursor: pointer; border: 0; background: none; }
+    :focus-visible { outline: 2px solid var(--hi); outline-offset: 3px; }
+    .pack { max-width: 420px; margin: 0 auto; padding: calc(28px + env(safe-area-inset-top)) 16px 40px; }
+    .cover, .pad {
+      min-height: 78vh; position: relative;
+      box-shadow: 0 16px 0 #1a1c14, 0 22px 40px #000;
+    }
+    .cover {
+      background: var(--olive);
+      background-image:
+        linear-gradient(180deg, rgba(255,255,255,.04), transparent 30%),
+        repeating-linear-gradient(90deg, transparent 0 7px, rgba(0,0,0,.08) 7px 8px);
+      color: var(--hi); padding: 28px 22px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .stencil { font-family: Oswald, sans-serif; letter-spacing: .16em; font-size: 13px; }
+    .cover h1 { font-family: Oswald, sans-serif; font-size: 52px; line-height: .85; margin: 12px 0; font-weight: 600; color: var(--hi); }
+    .band {
+      position: absolute; right: 28px; top: -10px; bottom: -10px; width: 22px;
+      background: linear-gradient(90deg, #111 0 4px, #2a2410 4px 18px, #111 18px);
+      border-radius: 11px; box-shadow: 2px 0 0 #0a0a08;
+    }
+    .pad {
+      background:
+        linear-gradient(90deg, #c9b48a 0 10px, transparent 10px),
+        repeating-linear-gradient(#d6d2ba 0 27px, #c8c4aa 27px 28px);
+      padding: 22px 18px 22px 28px;
+    }
+    .hidden { display: none !important; }
+    .cam, .go {
+      display: block; width: 100%; background: var(--hi); color: #1c1e16;
+      padding: 12px; font-family: Oswald, sans-serif; letter-spacing: .08em; font-weight: 600;
+    }
+    .ghost { display: block; width: 100%; border: 1.5px solid var(--hi); color: var(--hi); padding: 10px; margin-top: 8px; font-family: Oswald, sans-serif; }
+    .write {
+      width: 100%; background: transparent; border: 0; border-bottom: 2px solid var(--pencil);
+      padding: 8px 0; margin: 12px 0;
+    }
+    .hits, .jobs, .gear { margin: 0; padding: 0; }
+    .hits button, .jobs button { display: block; width: 100%; text-align: left; padding: 8px 0; }
+    .stamp {
+      display: inline-block; border: 3px solid #8a2020; color: #8a2020;
+      padding: 4px 10px; font-family: Oswald, sans-serif; letter-spacing: .12em; transform: rotate(-6deg);
+    }
+    .tape {
+      width: 100%; min-height: 120px; border: 1px dashed #2a2618; background: rgba(255,255,255,.15);
+      display: grid; place-items: center; margin: 10px 0;
+    }
+    .tape img { width: 100%; height: 140px; object-fit: cover; }
+    .pg { min-height: 280px; }
+    .pg .no { float: right; font-family: Oswald, sans-serif; }
+    .gear li { list-style: none; padding: 8px 0; border-bottom: 1px solid #b8b49a; }
+    .back { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <div class="pack">
+    <section class="cover" id="cover">
+      <div>
+        <div class="stencil">FIELD / 04</div>
+        <h1>HANDY<br>BOOK</h1>
+        <p>ID the machine.<br>Open the page.<br>Get the part.</p>
+      </div>
+      <div>
+        <button class="cam" id="openPad" type="button">OPEN</button>
+      </div>
+      <div class="band" aria-hidden="true"></div>
+    </section>
+
+    <section class="pad hidden" id="home">
+      <button class="back" id="toCover" type="button">← cover</button>
+      <div class="stencil">ID</div>
+      <label class="tape">
+        <input id="photo" type="file" accept="image/*" capture="environment" hidden />
+        <img id="shot" class="hidden" alt="" />
+        <span id="photoHint">Tape photo</span>
+      </label>
+      <input class="write" id="q" type="search" placeholder="Yamaha XT250" />
+      <button class="cam" id="find" type="button">FIND</button>
+      <ul class="hits" id="hits"></ul>
+    </section>
+
+    <section class="pad hidden" id="found">
+      <button class="back" id="backHome" type="button">← ID</button>
+      <div class="stencil">MACHINE</div>
+      <h2 id="bikeName"></h2>
+      <p id="bikeMeta"></p>
+      <div class="stencil">FAULT</div>
+      <ul class="jobs" id="jobs"></ul>
+    </section>
+
+    <section class="pad hidden" id="book">
+      <button class="back" id="backFound" type="button">← machine</button>
+      <span class="stamp" id="pageRef"></span>
+      <h2 id="jobName"></h2>
+      <p id="figRef"></p>
+      <p id="manFile"></p>
+      <button class="cam" id="openPage" type="button">OPEN PAGE</button>
+    </section>
+
+    <section class="pad hidden" id="page">
+      <button class="back" id="backBook" type="button">← stamp</button>
+      <article class="pg">
+        <span class="no" id="manPage"></span>
+        <div id="manTitle"></div>
+        <h2 id="manChapter"></h2>
+        <svg viewBox="0 0 240 80" width="100%" aria-hidden="true">
+          <path d="M12 60 40 20h50l20 20h40" fill="none" stroke="#2a2618" stroke-width="2"/>
+          <circle cx="200" cy="40" r="18" fill="none" stroke="#2a2618" stroke-width="2"/>
+        </svg>
+        <p id="manFig"></p>
+      </article>
+      <button class="cam" id="toGear" type="button">SUPPLY</button>
+    </section>
+
+    <section class="pad hidden" id="gear">
+      <button class="back" id="backPage" type="button">← page</button>
+      <div class="stencil">GET</div>
+      <ul class="gear" id="gearList"></ul>
+      <p><b>TOTAL <span id="partTotal"></span></b></p>
+      <button class="cam" id="buy" type="button">MARK GOT</button>
+      <button class="ghost hidden" id="again" type="button">NEW PAGE</button>
+    </section>
+  </div>
+  <script src="../shared/catalog.js"></script>
+  <script>
+    const S = {};
+    const $ = (id) => document.getElementById(id);
+    const show = (id) => {
+      document.querySelectorAll(".pack > section").forEach((el) => el.classList.add("hidden"));
+      $(id).classList.remove("hidden");
+    };
+    Handy.registerPWA("./sw.js");
+
+    $("openPad").onclick = () => show("home");
+    $("toCover").onclick = () => show("cover");
+    $("find").onclick = runSearch;
+    $("q").addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); runSearch(); } });
+    function runSearch() {
+      const hits = Handy.search($("q").value);
+      $("hits").innerHTML = hits.map((b) =>
+        `<li><button type="button" data-id="${b.id}">${b.name}</button></li>`
+      ).join("") || "<li>No book.</li>";
+    }
+    $("hits").onclick = (e) => {
+      const btn = e.target.closest("button[data-id]");
+      if (btn) openBike(Handy.bike(btn.dataset.id));
+    };
+    $("photo").onchange = () => {
+      const file = $("photo").files[0];
+      if (file) { $("shot").src = URL.createObjectURL(file); $("shot").classList.remove("hidden"); $("photoHint").classList.add("hidden"); }
+      openBike(Handy.fromPhoto());
+    };
+
+    function openBike(bike) {
+      S.bike = bike;
+      $("bikeName").textContent = bike.name;
+      $("bikeMeta").textContent = bike.years;
+      $("jobs").innerHTML = bike.jobs.map((j) =>
+        `<li><button type="button" data-job="${j.id}">☐ ${j.name}</button></li>`
+      ).join("");
+      show("found");
+    }
+
+    $("jobs").onclick = (e) => {
+      const btn = e.target.closest("button[data-job]");
+      if (!btn) return;
+      S.job = Handy.job(S.bike, btn.dataset.job);
+      $("pageRef").textContent = "P. " + S.job.page;
+      $("jobName").textContent = S.job.name;
+      $("figRef").textContent = "FIG " + S.job.figure;
+      $("manFile").textContent = S.bike.manual.title;
+      show("book");
+    };
+
+    $("openPage").onclick = () => {
+      $("manTitle").textContent = S.bike.manual.title;
+      $("manPage").textContent = S.job.page;
+      $("manChapter").textContent = S.job.chapter;
+      $("manFig").textContent = "Figure " + S.job.figure;
+      show("page");
+    };
+
+    $("toGear").onclick = () => {
+      const t = Handy.totals(S.job.parts);
+      $("gearList").innerHTML = S.job.parts.map((p) =>
+        `<li>☐ ${p.name}<br>${Handy.money(p.price)} · ${p.store} · ${Handy.shipLabel(p)}</li>`
+      ).join("");
+      $("partTotal").textContent = Handy.money(t.all);
+      $("again").classList.add("hidden");
+      $("buy").textContent = "MARK GOT";
+      show("gear");
+    };
+
+    $("buy").onclick = () => { $("buy").textContent = "GOT"; $("again").classList.remove("hidden"); };
+    $("again").onclick = () => show("cover");
+    $("backHome").onclick = () => show("home");
+    $("backFound").onclick = () => show("found");
+    $("backBook").onclick = () => show("book");
+    $("backPage").onclick = () => show("page");
+
+  </script>
+</body>
+</html>
