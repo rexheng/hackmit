@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#a82418" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Handy" />
+  <title>Handy Book</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <style>
+    :root { --tomato:#a82418; --butter:#f6e7c4; --navy:#1d2a44; --rule:#c9b48a; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      min-height: 100dvh;
+      color: var(--navy);
+      font: 18px/1.4 Fraunces, Georgia, serif;
+      background:
+        repeating-linear-gradient(90deg, #ead7b0 0 2px, transparent 2px 14px),
+        repeating-linear-gradient(0deg, #ead7b0 0 2px, transparent 2px 14px),
+        #e4d0a4;
+    }
+    button, input { font: inherit; color: inherit; }
+    button { cursor: pointer; border: 0; background: none; }
+    :focus-visible { outline: 2px solid var(--tomato); outline-offset: 3px; }
+    .cloth { max-width: 920px; margin: 0 auto; padding: calc(18px + env(safe-area-inset-top)) 16px 48px; }
+    .book {
+      display: grid; grid-template-columns: 1fr 1fr; min-height: 72vh;
+      background: var(--butter);
+      box-shadow: 0 18px 0 #c9ae7a, 0 28px 50px rgba(40,20,0,.25);
+      border: 1px solid #d8c49a;
+    }
+    @media (max-width: 740px) { .book { grid-template-columns: 1fr; } }
+    .leaf { padding: 28px 26px 32px; }
+    .leaf.left { background: linear-gradient(90deg, #efe0bc, var(--butter) 18%); }
+    .leaf.right { border-left: 1px solid var(--rule); }
+    @media (max-width: 740px) { .leaf.right { border-left: 0; border-top: 1px solid var(--rule); } }
+    .brand { font-family: "Patrick Hand", cursive; color: var(--tomato); font-size: 22px; }
+    h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1; margin: 8px 0 18px; font-weight: 700; }
+    .hidden { display: none !important; }
+    .photo-well {
+      border: 2px solid var(--navy); height: 180px; display: grid; place-items: center;
+      background: #efe6d0; margin: 0 0 14px;
+    }
+    .photo-well img { width: 100%; height: 180px; object-fit: cover; }
+    .photo-well span { font-family: "Patrick Hand", cursive; font-size: 22px; }
+    .write {
+      width: 100%; border: 0; border-bottom: 2px solid var(--navy);
+      background: transparent; padding: 8px 0; margin: 10px 0;
+    }
+    .ink { color: var(--tomato); font-family: "Patrick Hand", cursive; font-size: 24px; }
+    .card {
+      background: #fff8ea; border: 1px solid var(--navy); padding: 16px 16px 12px; margin: 12px 0;
+      box-shadow: 3px 3px 0 var(--navy);
+    }
+    .card h2 { margin: 0 0 8px; font-size: 26px; }
+    .ing { margin: 0; padding: 0; }
+    .ing li {
+      list-style: none; display: grid; grid-template-columns: 1fr auto;
+      gap: 8px; padding: 7px 0; border-bottom: 1px dotted var(--rule);
+    }
+    .turn {
+      display: block; width: 100%; background: var(--tomato); color: #fff8ea;
+      padding: 14px; font-weight: 700; margin-top: 12px;
+    }
+    .ghost { display: block; width: 100%; border: 1.5px solid var(--navy); padding: 12px; margin-top: 8px; }
+    .jobs { display: flex; flex-wrap: wrap; gap: 8px; }
+    .jobs button { border: 1.5px solid var(--navy); padding: 8px 12px; background: #fff8ea; }
+    .jobs button.on { background: var(--tomato); color: #fff8ea; }
+    .spread-page {
+      min-height: 360px; background: #fffdf6; border: 1px solid var(--navy); padding: 20px;
+    }
+    .spread-page .num { float: right; font-family: "Patrick Hand", cursive; }
+    .hits { margin: 8px 0 0; padding: 0; }
+    .hits button { display: block; width: 100%; text-align: left; padding: 6px 0; }
+    .back { font-family: "Patrick Hand", cursive; font-size: 20px; color: var(--tomato); margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <div class="cloth">
+    <div class="book">
+      <div class="leaf left">
+        <div class="brand">Handy Book</div>
+        <section id="homeL">
+          <h1>What are you fixing?</h1>
+          <label class="photo-well">
+            <input id="photo" type="file" accept="image/*" capture="environment" hidden />
+            <img id="shot" class="hidden" alt="" />
+            <span id="photoHint">Tape a photo here</span>
+          </label>
+          <input class="write" id="q" type="search" placeholder="Name of the bike" />
+          <ul class="hits" id="hits"></ul>
+        </section>
+        <section id="foundL" class="hidden">
+          <button class="back" id="backHome" type="button">← table</button>
+          <h1 id="bikeName"></h1>
+          <p class="ink" id="bikeMeta"></p>
+          <p>What’s wrong?</p>
+          <div class="jobs" id="jobs"></div>
+        </section>
+      </div>
+      <div class="leaf right">
+        <section id="homeR">
+          <p class="ink">Write the name. Or stick a photo on the left.</p>
+        </section>
+        <section id="recipe" class="hidden">
+          <article class="card">
+            <h2 id="jobName"></h2>
+            <p>Turn to <b id="pageRef"></b>. Figure <span id="figRef"></span>.</p>
+            <p class="ink" id="manFile"></p>
+            <button class="turn" id="openPage" type="button">Open that page</button>
+          </article>
+        </section>
+        <section id="pageR" class="hidden">
+          <button class="back" id="backRecipe" type="button">← card</button>
+          <article class="spread-page">
+            <span class="num" id="manPage"></span>
+            <div id="manTitle"></div>
+            <h2 id="manChapter"></h2>
+            <svg viewBox="0 0 260 90" width="100%" aria-hidden="true">
+              <rect x="8" y="18" width="70" height="48" fill="none" stroke="#1d2a44" stroke-width="2"/>
+              <path d="M78 42h90" stroke="#1d2a44" stroke-width="2"/>
+              <circle cx="188" cy="42" r="16" fill="none" stroke="#1d2a44" stroke-width="2"/>
+              <path d="M204 42h40" stroke="#1d2a44" stroke-width="2"/>
+            </svg>
+            <p id="manFig"></p>
+          </article>
+          <button class="turn" id="toShop" type="button">Shopping list</button>
+        </section>
+        <section id="shop" class="hidden">
+          <button class="back" id="backPage" type="button">← page</button>
+          <h2>Get</h2>
+          <ul class="ing" id="ing"></ul>
+          <p><b>Total <span id="partTotal"></span></b></p>
+          <button class="turn" id="buy" type="button">Order</button>
+          <button class="ghost hidden" id="again" type="button">Another job</button>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="../shared/catalog.js"></script>
+  <script>
+    const S = {};
+    const $ = (id) => document.getElementById(id);
+
+    Handy.registerPWA("./sw.js");
+
+    function renderHits() {
+      const hits = Handy.search($("q").value);
+      $("hits").innerHTML = hits.map((b) =>
+        `<li><button type="button" data-id="${b.id}">${b.name}</button></li>`
+      ).join("");
+    }
+    $("q").addEventListener("input", renderHits);
+    $("q").addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); renderHits(); } });
+    $("hits").onclick = (e) => {
+      const btn = e.target.closest("button[data-id]");
+      if (btn) openBike(Handy.bike(btn.dataset.id));
+    };
+    $("photo").onchange = () => {
+      const file = $("photo").files[0];
+      if (file) {
+        $("shot").src = URL.createObjectURL(file);
+        $("shot").classList.remove("hidden");
+        $("photoHint").classList.add("hidden");
+      }
+      setTimeout(() => openBike(Handy.fromPhoto()), 400);
+    };
+
+    function openBike(bike) {
+      S.bike = bike; S.job = null;
+      $("homeL").classList.add("hidden");
+      $("foundL").classList.remove("hidden");
+      $("bikeName").textContent = bike.name;
+      $("bikeMeta").textContent = bike.years;
+      $("jobs").innerHTML = bike.jobs.map((j) =>
+        `<button type="button" data-job="${j.id}">${j.name}</button>`
+      ).join("");
+      $("homeR").classList.remove("hidden");
+      $("recipe").classList.add("hidden");
+      $("pageR").classList.add("hidden");
+      $("shop").classList.add("hidden");
+    }
+
+    $("jobs").onclick = (e) => {
+      const btn = e.target.closest("button[data-job]");
+      if (!btn) return;
+      S.job = Handy.job(S.bike, btn.dataset.job);
+      [...$("jobs").children].forEach((b) => b.classList.toggle("on", b === btn));
+      $("jobName").textContent = S.job.name;
+      $("pageRef").textContent = "page " + S.job.page;
+      $("figRef").textContent = S.job.figure;
+      $("manFile").textContent = S.bike.manual.title;
+      $("homeR").classList.add("hidden");
+      $("recipe").classList.remove("hidden");
+      $("pageR").classList.add("hidden");
+      $("shop").classList.add("hidden");
+    };
+
+    $("openPage").onclick = () => {
+      $("manTitle").textContent = S.bike.manual.title;
+      $("manPage").textContent = S.job.page;
+      $("manChapter").textContent = S.job.chapter;
+      $("manFig").textContent = "Figure " + S.job.figure;
+      $("recipe").classList.add("hidden");
+      $("pageR").classList.remove("hidden");
+    };
+
+    $("toShop").onclick = () => {
+      const t = Handy.totals(S.job.parts);
+      $("ing").innerHTML = S.job.parts.map((p) =>
+        `<li><span>${p.name}<br><small>${p.store} · ${Handy.shipLabel(p)}</small></span><span>${Handy.money(p.price)}</span></li>`
+      ).join("");
+      $("partTotal").textContent = Handy.money(t.all);
+      $("pageR").classList.add("hidden");
+      $("shop").classList.remove("hidden");
+      $("again").classList.add("hidden");
+    };
+
+    $("buy").onclick = () => {
+      $("buy").textContent = "On the list.";
+      $("again").classList.remove("hidden");
+    };
+    $("again").onclick = () => { $("buy").textContent = "Order"; $("shop").classList.add("hidden"); $("homeR").classList.remove("hidden"); };
+    $("backHome").onclick = () => {
+      $("foundL").classList.add("hidden");
+      $("homeL").classList.remove("hidden");
+      $("homeR").classList.remove("hidden");
+      $("recipe").classList.add("hidden");
+      $("pageR").classList.add("hidden");
+      $("shop").classList.add("hidden");
+    };
+    $("backRecipe").onclick = () => { $("pageR").classList.add("hidden"); $("recipe").classList.remove("hidden"); };
+    $("backPage").onclick = () => { $("shop").classList.add("hidden"); $("pageR").classList.remove("hidden"); };
+
+  </script>
+</body>
+</html>
