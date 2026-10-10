@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a6b3c" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Handy" />
+  <title>Handy Book</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --green:#1a6b3c; --formica:#c8c2a8; --manila:#efe3b8; --ink:#1b1a14; --chrome:#8a8c86; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: #9a967e; color: var(--ink); }
+    body {
+      font: 16px/1.3 "Archivo Narrow", sans-serif;
+      min-height: 100dvh;
+      background:
+        linear-gradient(#b8b49a, #b8b49a) 0 0 / 100% 28px no-repeat,
+        repeating-linear-gradient(90deg, #c4bfa6 0 40px, #bbb59a 40px 41px);
+    }
+    button, input { font: inherit; color: inherit; }
+    button { cursor: pointer; border: 0; background: none; }
+    :focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+    .booth { max-width: 430px; margin: 0 auto; min-height: 100dvh; display: flex; flex-direction: column; padding-top: env(safe-area-inset-top); }
+    .sign {
+      background: var(--green); color: var(--manila); text-align: center;
+      padding: 10px 12px 8px; letter-spacing: .18em; font-weight: 700; font-size: 13px;
+    }
+    .glass {
+      flex: 1; background: linear-gradient(180deg, #d8e4dc, #c5d2c8);
+      border-bottom: 10px solid #6a6860; position: relative; padding: 16px 14px 20px;
+      display: flex; flex-direction: column;
+    }
+    .glass::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,.18) 46%, transparent 52%);
+    }
+    .window {
+      background: var(--manila); border: 3px solid #2a2a24; min-height: 220px; padding: 14px;
+      box-shadow: inset 0 0 0 2px #c9b98a; flex: 1;
+    }
+    .ticket {
+      background: #fff; border: 1px dashed #2a2a24; padding: 10px 12px; margin-bottom: 10px;
+      font-family: "IBM Plex Mono", monospace; font-size: 13px;
+    }
+    .ticket b { font-size: 22px; }
+    .hidden { display: none !important; }
+    .counter {
+      background: #6b4a28;
+      background-image: repeating-linear-gradient(90deg, #6b4a28 0 12px, #5c3f22 12px 13px);
+      padding: 14px 12px 24px; border-top: 4px solid #3e2a16;
+    }
+    h1 { font-size: 28px; margin: 0 0 10px; }
+    .row { display: flex; gap: 8px; }
+    .row input {
+      flex: 1; background: #fff; border: 2px solid #2a2a24; padding: 10px 8px;
+      font-family: "IBM Plex Mono", monospace;
+    }
+    .go { background: var(--green); color: #fff; padding: 10px 14px; font-weight: 700; }
+    .cam { display: block; width: 100%; border: 2px solid #2a2a24; background: #efe8c8; padding: 10px; margin-top: 8px; font-weight: 700; }
+    .hits { margin: 8px 0 0; padding: 0; }
+    .hits button { display: block; width: 100%; text-align: left; padding: 8px 0; border-bottom: 1px solid #c9b98a; }
+    .jobs button { display: block; width: 100%; text-align: left; background: #fff; border: 2px solid #2a2a24; padding: 10px; margin: 6px 0; font-weight: 700; }
+    .price {
+      display: inline-block; background: #f2e14a; border: 1px solid #2a2a24;
+      font-family: "IBM Plex Mono", monospace; font-weight: 600; padding: 2px 6px; transform: rotate(-2deg);
+    }
+    .receipt {
+      background: #fff; font-family: "IBM Plex Mono", monospace; font-size: 13px;
+      padding: 14px 12px; border: 2px solid #2a2a24;
+      background-image: repeating-linear-gradient(#fff 0 22px, #f3f0e6 22px 23px);
+    }
+    .receipt .line { display: flex; justify-content: space-between; padding: 3px 0; }
+    .binder { background: #fff; border: 2px solid #2a2a24; padding: 12px; min-height: 240px; }
+    .binder .tab { background: var(--green); color: #fff; display: inline-block; padding: 2px 8px; font-size: 12px; letter-spacing: .1em; }
+    .back { font-family: "IBM Plex Mono", monospace; font-size: 12px; margin-bottom: 8px; }
+    .shot { width: 100%; height: 90px; object-fit: cover; display: block; margin: 6px 0; }
+  </style>
+</head>
+<body>
+  <div class="booth">
+    <div class="sign">HANDY BOOK · PARTS WINDOW</div>
+    <div class="glass">
+      <div class="window">
+        <section id="home">
+          <div class="ticket">Take a number<br><b id="num">A—17</b></div>
+          <h1>Name or photo.</h1>
+          <form class="row" id="form">
+            <input id="q" type="search" placeholder="XT250" autocomplete="off" />
+            <button class="go" type="submit">Find</button>
+          </form>
+          <label class="cam">
+            <input id="photo" type="file" accept="image/*" capture="environment" hidden />
+            Photo
+          </label>
+          <ul class="hits" id="hits"></ul>
+        </section>
+
+        <section id="found" class="hidden">
+          <button class="back" id="backHome" type="button">← WINDOW</button>
+          <img class="shot hidden" id="shot" alt="" />
+          <div class="ticket"><b id="bikeName"></b><br><span id="bikeMeta"></span></div>
+          <div class="jobs" id="jobs"></div>
+        </section>
+
+        <section id="book" class="hidden">
+          <button class="back" id="backFound" type="button">← TICKET</button>
+          <div class="binder">
+            <span class="tab" id="tab"></span>
+            <h1 id="jobName"></h1>
+            <p>Binder page <b id="pageRef"></b></p>
+            <p>Figure <span id="figRef"></span></p>
+            <button class="go" id="openPage" type="button">Open binder</button>
+          </div>
+        </section>
+
+        <section id="page" class="hidden">
+          <button class="back" id="backBook" type="button">← BINDER</button>
+          <div class="binder">
+            <div id="manTitle"></div>
+            <b id="manPage"></b>
+            <h1 id="manChapter"></h1>
+            <svg viewBox="0 0 240 80" width="100%" aria-hidden="true">
+              <path d="M10 50h50l10-20h40" fill="none" stroke="#1b1a14" stroke-width="2"/>
+              <circle cx="30" cy="58" r="10" fill="none" stroke="#1b1a14" stroke-width="2"/>
+              <rect x="160" y="28" width="60" height="28" fill="none" stroke="#1b1a14" stroke-width="2"/>
+            </svg>
+            <p id="manFig"></p>
+            <button class="go" id="toParts" type="button">Price it</button>
+          </div>
+        </section>
+
+        <section id="parts" class="hidden">
+          <button class="back" id="backPage" type="button">← PAGE</button>
+          <div class="receipt" id="receipt"></div>
+          <button class="go" id="buy" type="button" style="width:100%;margin-top:10px">Pay</button>
+        </section>
+
+        <section id="done" class="hidden">
+          <div class="ticket"><b>PAID</b><br><span id="doneNote"></span></div>
+          <button class="go" id="again" type="button">Next customer</button>
+        </section>
+      </div>
+    </div>
+    <div class="counter"></div>
+  </div>
+  <script src="../shared/catalog.js"></script>
+  <script>
+    const S = {};
+    const $ = (id) => document.getElementById(id);
+    const show = (id) => {
+      document.querySelectorAll(".window > section").forEach((el) => el.classList.add("hidden"));
+      $(id).classList.remove("hidden");
+    };
+    Handy.registerPWA("./sw.js");
+    $("num").textContent = "A—" + String(10 + Math.floor(Math.random() * 80)).padStart(2, "0");
+
+    $("form").onsubmit = (e) => {
+      e.preventDefault();
+      const hits = Handy.search($("q").value);
+      $("hits").innerHTML = hits.map((b) =>
+        `<li><button type="button" data-id="${b.id}">${b.name} · ${b.years}</button></li>`
+      ).join("") || "<li>Not in the rack.</li>";
+    };
+    $("hits").onclick = (e) => {
+      const btn = e.target.closest("button[data-id]");
+      if (btn) openBike(Handy.bike(btn.dataset.id));
+    };
+    $("photo").onchange = () => {
+      const file = $("photo").files[0];
+      if (file) { $("shot").src = URL.createObjectURL(file); $("shot").classList.remove("hidden"); }
+      openBike(Handy.fromPhoto());
+    };
+
+    function openBike(bike) {
+      S.bike = bike;
+      $("bikeName").textContent = bike.name;
+      $("bikeMeta").textContent = bike.years;
+      $("jobs").innerHTML = bike.jobs.map((j) =>
+        `<button type="button" data-job="${j.id}">${j.name}</button>`
+      ).join("");
+      show("found");
+    }
+
+    $("jobs").onclick = (e) => {
+      const btn = e.target.closest("button[data-job]");
+      if (!btn) return;
+      S.job = Handy.job(S.bike, btn.dataset.job);
+      $("tab").textContent = S.job.chapter.toUpperCase();
+      $("jobName").textContent = S.job.name;
+      $("pageRef").textContent = S.job.page;
+      $("figRef").textContent = S.job.figure;
+      show("book");
+    };
+
+    $("openPage").onclick = () => {
+      $("manTitle").textContent = S.bike.manual.title;
+      $("manPage").textContent = "p." + S.job.page;
+      $("manChapter").textContent = S.job.chapter;
+      $("manFig").textContent = "Figure " + S.job.figure;
+      show("page");
+    };
+
+    $("toParts").onclick = () => {
+      const t = Handy.totals(S.job.parts);
+      $("receipt").innerHTML =
+        S.job.parts.map((p) =>
+          `<div class="line"><span>${p.name}<br>${p.store} · ${Handy.shipLabel(p)}</span><span class="price">${Handy.money(p.price)}</span></div>`
+        ).join("") +
+        `<div class="line"><b>TOTAL</b><b>${Handy.money(t.all)}</b></div>`;
+      show("parts");
+    };
+
+    $("buy").onclick = () => {
+      $("doneNote").textContent = "Ticket " + $("num").textContent;
+      show("done");
+    };
+    $("backHome").onclick = () => show("home");
+    $("backFound").onclick = () => show("found");
+    $("backBook").onclick = () => show("book");
+    $("backPage").onclick = () => show("page");
+    $("again").onclick = () => { $("shot").classList.add("hidden"); $("hits").innerHTML = ""; $("num").textContent = "A—" + String(10 + Math.floor(Math.random() * 80)).padStart(2, "0"); show("home"); };
+
+  </script>
+</body>
+</html>
