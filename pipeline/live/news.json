@@ -1,5 +1,5 @@
 {
- "retrieved": "2026-10-09T22:39Z",
+ "retrieved": "2026-10-10T05:54Z",
  "source": "GDELT DOC 2.0 API",
  "counties": {
   "48113": [
@@ -330,76 +330,88 @@
   ],
   "48": [
    {
-    "title": "Utility and Energy Transmission & Distribution News",
-    "url": "https://www.utilitydive.com/?page=2&_sp=ebca184b-1404-48cd-a977-57b3620d4f1f",
-    "outlet": "utilitydive.com",
-    "seen": "20261002T074500Z"
+    "title": "ERCOT aims to complete Texas governor\u2019s data center audit by December",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1OTTVLa3d4cnNCQ0RpOVpWeUxZYXVYUUhkZ3UwcHl4RzFxZlVUS2p6Q05heFcxTmE1Q182TGpmQl9sUzdlUm1iOWhrTzhmS3Z3R0lnNFRsWFpQQm5wa1VMQW52VU5EeFdTQXJCWFRjN3VqQTVBU0F2TUJ3ek90OW8?oc=5",
+    "outlet": "Utility Dive",
+    "seen": "21 Aug 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "  \uace0\uae08\ub9ac \u00b7 \uace0\uc720\uac00 \u00b7 \ubb3c\uac00  3\ub300 \uc545\uc7ac\uc5d0\ub3c4 .. \u97d3 \u00b7 \u7f8e \uc99d\uc2dc \ubc84\ud2f0\ub294 \uc774\uc720\ub294 ? ",
-    "url": "https://www.fnnews.com/news/202610021429379866",
-    "outlet": "fnnews.com",
-    "seen": "20261002T073000Z"
+    "title": "Texas Pauses Certain Data Center Approvals Amid Grid, Water, and Community Concerns",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxORllTNk1KZ0Q1bE5Xb21ob1J0VmdrMFdpbGtfaUZPREV4cDVVZlV5bHJtMDQ0OFVZbDFDeWM2d2otN2Z1Y0MwampIYW51MDdYaTlOZG5lc1RNRmhLS1cyUHltc2RSTTgwaHhXSUhNMGxkbkhzRjZTbGZRWHk5dmMxRzVZSE1wMVp6MUFoTHFBenlwczlRM3VlUXZ5dFVidnpGMjBmNWZpQktYczNGa0w5eHRnQ19tWk0?oc=5",
+    "outlet": "Environment, Land & Resources",
+    "seen": "05 Oct 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "South Korea kicks off US investment plan with $22 . 3 billion Texas power project",
-    "url": "https://asianews.network/south-korea-kicks-off-us-investment-plan-with-22-3-billion-texas-power-project/",
-    "outlet": "asianews.network",
-    "seen": "20261002T034500Z"
+    "title": "Texas could penalize data centers for not reporting water use",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNRjlNV0NiOF9HVGVFRE91ajhQSHM0bUhVa2E1LTJHTG1YS3ByX1E2QXpMZHVUODNxcTNESDU3dU1PaXJUUFIyZ1dEZ3c1UVl6MTZLMUt5Vnk4ZWJiVW9jTUxFbWJuZ2dTWHFDdl82ZW1pMjB2WTQ2dU0tRzJubGFnQ29RbVNRbS03SkhGakJXaGlzUjVzeVE?oc=5",
+    "outlet": "The Texas Tribune",
+    "seen": "14 Sep 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Chris Conley Show Links | WSAU News / Talk 550 AM \u00b7 99 . 9 FM",
-    "url": "https://wsau.com/2026/10/01/chris-conleys-substack/",
-    "outlet": "wsau.com",
-    "seen": "20261002T020000Z"
+    "title": "Data center water use in Texas: What's myth, what's reality",
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNdVEwM0trd25mTUZGUmtZLXRpVHY0QnVjM25DRUlBRUpsTDRXNTdJbjQyaGVTUW1ScllxeF9OdTVWdjJmWlR2VjY4WURSQmlXWEFNOTIwOUZDUlE3QlRGUUtaSXRZdTFIWVVMWWdUeTBfc09ONmY2bmxqMkU4WEJlTXNnemtKSlh1akVpM09wRXBUOFp0SExIOGJ5SE03OU9vLWJhVHJuTUNSRGdrVWRERUxOZVVBM3NORVV3anY4eDVPZ1k1cFNnajBKa0tnRDdPcld2UEM5aw?oc=5",
+    "outlet": "KVUE",
+    "seen": "08 Sep 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Congressional candidates address inflation and the rising cost of living",
-    "url": "https://www.wsiu.org/state-of-illinois/2026-10-01/congressional-candidates-address-inflation-and-the-rising-cost-of-living",
-    "outlet": "wsiu.org",
-    "seen": "20261002T010000Z"
+    "title": "Texas moves to penalize data centers for water violations",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQN3ZpQVZzelI5czNGSU12MVhLVjM3cDVDLXlLRXVpdFRRdXFlQXAzeHluNDcxY19vdjYyYjBFWnEtTWw5UmxOamJmXy1GbXhYdXJVdnd5SjVPb0JJbmxzaDJtaFdxZzh1ZFdFZnI3RDJkeVotdWlsaUZwd1VSUVcwSzBZTnNLZzN5SUdMcVc2eFJuNFFxMFpOUm1ZblZ6ZlE3RHhoWlp3?oc=5",
+    "outlet": "Reuters",
+    "seen": "15 Sep 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Texas Governor Abbott Directs TCEQ To Freeze All Data Center Permits In A Whole - of - Government Action",
-    "url": "https://www.mondaq.com:443/unitedstates/environmental-law/1849940/texas-governor-abbott-directs-tceq-to-freeze-all-data-center-permits-in-a-whole-of-government-action",
-    "outlet": "mondaq.com",
-    "seen": "20261001T234500Z"
+    "title": "Gov. Abbott has ordered a \u2018pause\u2019 on data center approvals. Here\u2019s what that means.",
+    "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOWlc1U1A5R0l5SkVRWF9MM0dzRzdpd0JHTU5HeUdQVjQxVmdUWlBIMGRkT0xCc3hQVHYtcC1aRGdkME9wVFdlRU1Yd1J1R21NeUFteHhSR1dTWk9NV0VEMVh6R0tGZHFZYkxnQUg5eHF0ZzA2djBpZHpCYTRfWUd0VEYyX1JkVHZtYWJobks2czEtMU5LWTlKM0pzVHdRR09vaG9DNUlFbDJDNUtyN1ROV1p2STNoaTh4X0xnVl9md1Q4ZEpILXl6RU5UdktPOF9OWW1xYTJrcWhkMERkb29BLUxkQWNWX3F4S1p3enhnQ00ya1V3TGlZ0gH_AUFVX3lxTE12ZzZrSjBqd3BBdU1vNG5Cc2d1SXBCSEt1aXpFZWltX1YxQ3ZzdjBfV3ZIMWhLYkcxRlRodFBueGJjRmotN1kwZTZST19LWmI1cE9uM3lWUXd4THRzR09JZTFlYXB1aVJiOWNDY0MyN2VuZ3h4NFVqTU4xZElRblFlaVJ2TlFhblNwajIyWnYya3M3azRfWURFcEpfbHlidzNVZXNrcXZtankwNUdHYm1CeUVUa3NFckl1WlRQenpXUllyRG4xdEZiUUpLSHNMRFZVLU5YN1ZOUWxBRHlhdVVaTjdRU0dralMyMFpZOUE1Tm9hYndrNUpzVk9SWVBDNA?oc=5",
+    "outlet": "Houston Public Media",
+    "seen": "27 Aug 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Congressional candidates address inflation and the rising cost of living",
-    "url": "https://www.wglt.org/local-news/2026-10-01/congressional-candidates-address-inflation-and-the-rising-cost-of-living",
-    "outlet": "wglt.org",
-    "seen": "20261001T233000Z"
+    "title": "Abbott slaps halt on Texas data center permits",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOd3g3ODI0T1pyUGJQd0dMN2NQbW41TzJKT1RQT2pSbHBGQk9wdVl0enhfajFOcmluN21yMTFmZURfRl90azdVZTJZalVWSFNvTFJyUjlvRXdxT1VJQnJHVXV3QUFhcG5OR2F0RnJPWHJ0S2tiNnBnSkxnWW1EamZoN3Z3bXdBZ2lyWmtaSncwOHM?oc=5",
+    "outlet": "Politico",
+    "seen": "21 Sep 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Talarico says data centers shouldnt be  running over  Texas communities and local governments",
-    "url": "https://www.ktep.org/2026-10-01/talarico-says-data-centers-shouldnt-be-running-over-texas-communities-and-local-governments",
-    "outlet": "ktep.org",
-    "seen": "20261001T220000Z"
+    "title": "Hundreds of Texas data centers under investigation after failing to report water usage",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZjNoblZsYU16QTF3UXFzQTVDMndoRzVwalp4MlBiT0pqX3hCQk05RXFmc3FkRlB3Mkc1LTFISUR6UnBVaUtES2R1dUQ2cWk0ZzYtRmFrb1c4OVFQZjdYbzk3eUFNRlcwdno3ektQV2xsakdCVkFCdjJBVDUxRjhtY0x5Rzl5THQxQ09ZVElUbUMxS1FFSTBTamxhbkZMSV9fX1RCWWVxbHVXSUhxS2JmWVZFRnFmQmhkZk5F0gHAAUFVX3lxTFByT3V2X25UZTFmZHkzRnhKcWFLOWhDQTRERWY2YV9fa3F0b1I1eHFBQ3g4dFVSZ2ZQUWZvdkVTSmMzTVlVaURHb2doVDhBQlJsWWNFUFQ2TVpvUUxtOVVEei11dExrWWFCazlzNDRGNWJPWUg5dFAwR3hXZ0xfYkJpMWgtVnZ1QTNDa0c1VWs0U043NXBqNU9qblV1VDRycUVIYlItOWJxX3lqSkdQWlEtak0yckxCU0ozNWhpX2FGNw?oc=5",
+    "outlet": "KXAN Austin",
+    "seen": "24 Sep 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Environmental Permitting for Data Centers Paused in Texas",
-    "url": "https://natlawreview.com/article/texas-pauses-all-environmental-permitting-data-centers",
-    "outlet": "natlawreview.com",
-    "seen": "20261001T211500Z"
+    "title": "Texas Data Center Moratorium: Local Regulation & State Action",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQeFV6b2hCeXNzZ1pNM1lpbWRMTnVERHdNZ2d0d2ExUUxsZkY3cnA2SGZDTDlQaXZHcEg1LTNuU1NoQW1zb1ZuUVNnZVJ0Q0hGWHhsdUh4QlVkUHREbk5Qc0JLSV9UeXgtUTBDTGdvQ2RSRXB2SWJvQ0pwR2JlM3hWdHJHNzRINjRCak5EUHAtRGREdG9ockdYUkdDaGs?oc=5",
+    "outlet": "MultiState",
+    "seen": "19 Aug 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Data centers pump $340M into rural Texas projects as they try to improve their reputations",
-    "url": "https://www.gilmermirror.com/2026/10/01/data-centers-pump-340m-into-rural-texas-projects-as-they-try-to-improve-their-reputations/",
-    "outlet": "gilmermirror.com",
-    "seen": "20261001T210000Z"
+    "title": "Texas pauses new data center permits as state reviews water and power usage",
+    "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPQlhEaXlHZ2QycjI3eGZXTy1LS19aTk40ZzcxWTVxdThubkd5UTZjYWV3d0g2V1BvcWJreUU4d2lWRGZiV0tuTFV6U1c5T2FMZHZGcDNMRFZXb3pyRW82SklWLTNDQndNd0swc21QbFp1OEl3ZExZUWl6V1JGWnNyeU14cDZ6YWp2cUhFMUlEV2lYNEhpbENFb3lrb3RXalZ3cXVtTUZneWxWRlFPdmIwbDVMcUtiUnBXRlltdlRxUENGSUdNTzNZOVVyaEdaazBWZVI0SFlhV0ppaXNpWkZnb3FOaFgtNzB4emZTZTNsYkxaZFE?oc=5",
+    "outlet": "KSAT",
+    "seen": "25 Sep 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "\u5ee0\u52d9\u93c8\u50b3\u53f0\u7a4d\u8a55\u4f30\u5fb7\u5dde\u5efa\u5ee0 \u5169\u5cb8\u5341\u5e74\u8b8a\u5c40\u4fc3\u7f8e\u64f4\u5927\u722d\u53d6",
-    "url": "https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000769922_U6P8YDJZ3EIT6V1B7VE33&cf=AK2",
-    "outlet": "digitimes.com.tw",
-    "seen": "20261001T191500Z"
+    "title": "Texas Escalates Data Center Oversight with Attorney General Water-Use Investigation",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQbGI1Vm5GdGRUR1laY0FXYnEyNVZZUTBDWFMtUXdPQVlNWWdKeFktZVNQVUZUNEVxWDRIbnE4M1Y4Z081X2Fld3ZiTjMzY2FlSlh0OXprU3NOOWtlcVJjLWJnQTgyemU4N2YwR25lc0FCUkIzMFV2TXhiNk9rWEtHUDBfdTdXbFdEcjl4bUZQaks2WWV0VlUyVXhnQTFuODdaU3hsaFpxUlRubjhMZ0NBZDZheUxXb2phSDdBVWxCNk5NcjQ0SVk1OEFmTzgwQXNRdWc?oc=5",
+    "outlet": "Foley & Lardner LLP",
+    "seen": "24 Sep 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "  Data Center Revolt  tour stops in Brigham City , stressing importance of public involvement",
-    "url": "https://www.ksl.com:443/article/51630637/data-center-revolt-tour-stops-in-brigham-city-stressing-importance-of-public-involvement",
-    "outlet": "ksl.com",
-    "seen": "20261001T190000Z"
+    "title": "ERCOT Says Abbott\u2019s Data Center Audit Will Be Done in December",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPMy0tam8xSlRSb2FtN25nTmNBa2xYZEhtNTdHSDVERW1WQWFQTTBhcmpHanhQU0JraDQwTXFFazFQOGFsSFZjOTRHdF9Iejd1R0FOUV9iN0hxeW5oWll3c092U1kzMHphcE43UWxpbWc4SGVlZENOR1pGLUhUWlF0MVBVdjdCQnc?oc=5",
+    "outlet": "Inside Climate News",
+    "seen": "24 Aug 2026",
+    "via": "Google News RSS"
    }
   ]
  }
