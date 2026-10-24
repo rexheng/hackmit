@@ -1,0 +1,36 @@
+{
+  "site": "QTS Fort Worth FTW1",
+  "operator": "QTS Data Centers",
+  "address": "14100 Park Vista Boulevard, Fort Worth, TX 76177",
+  "dc2_address": "14052 Park Vista Boulevard, Fort Worth, TX 76177",
+  "origin_lat": 32.988821338095235,
+  "origin_lon": -97.25934441904762,
+  "sources": {
+    "osm_way": 507673437,
+    "osm_way_dc2_industrial": 1432175159,
+    "peeringdb": "32.988738, -97.258448",
+    "imagery": "Esri World Imagery WMTS (Cesium-compatible, not Google Maps)",
+    "imagery_zoom": 18,
+    "imagery_tiles": "x 60249-60251, y 105600-105602"
+  },
+  "published": {
+    "campus_acres": 52,
+    "expansion_acres": 12,
+    "critical_mw": 70,
+    "planned_gross_mw": 200,
+    "dc1_gba_sf_tad": 261836,
+    "dc2_sf_tdlr": 471876,
+    "dc2_stories": 2
+  },
+  "dc1_osm_xy_m": [
+    [39.67, 107.97], [45.33, 86.21], [73.46, 93.55], [110.38, -48.02],
+    [83.29, -55.07], [88.99, -76.93], [48.45, -87.5], [42.77, -65.68],
+    [-25.63, -83.52], [-34.76, -48.51], [-52.01, -53.0], [-54.28, -44.3],
+    [-58.48, -45.39], [-59.08, -43.11], [-76.74, -47.72], [-97.19, 30.68],
+    [-57.8, 40.95], [-62.42, 57.93], [6.04, 75.78], [0.33, 97.71]
+  ],
+  "dc2_osm_xy_m": [
+    [-51.5, -189.43], [165.74, -127.59], [150.69, -76.83], [26.1, -108.37],
+    [20.95, -88.17], [-75.03, -111.75]
+  ]
+}
