@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Handy Book — five looks</title>
+  <style>
+    :root { --ink:#16140f; --paper:#f4efe4; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--paper); color: var(--ink); }
+    body { font: 18px/1.35 Georgia, "Times New Roman", serif; padding: 40px 7vw 72px; }
+    h1 { font-size: clamp(36px, 7vw, 64px); line-height: .92; margin: 0 0 10px; }
+    .line { max-width: 36ch; margin: 0 0 28px; }
+    ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+    a { color: inherit; text-decoration: none; display: block; padding: 18px 18px 16px; }
+    a:hover { filter: brightness(1.04); }
+    h2 { margin: 4px 0 0; font-size: 26px; }
+    .k { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
+    .n { font-size: 15px; margin: 6px 0 0; max-width: 42ch; }
+    .note { margin-top: 36px; font-size: 14px; opacity: .7; }
+    .p1 { background: #0c0a08; color: #ffb020; }
+    .p2 { background: #f6e7c4; color: #a82418; }
+    .p3 { background: #1a6b3c; color: #efe3b8; }
+    .p4 { background: #3a4030; color: #c4d64a; }
+    .p5 { background: #242422; color: #f7f4ee; }
+  </style>
+</head>
+<body>
+  <h1>Handy Book</h1>
+  <p class="line">Find the book. Open the page. Get the part.</p>
+  <ol>
+    <li><a class="p1" href="01-night-bench/index.html"><div class="k">01 · roadside</div><h2>Night Bench</h2><p class="n">Dark. One light. Photo first.</p></a></li>
+    <li><a class="p2" href="02-sunday-table/index.html"><div class="k">02 · cookbook</div><h2>Sunday Table</h2><p class="n">The bike is a recipe. Parts are the list.</p></a></li>
+    <li><a class="p3" href="03-parts-counter/index.html"><div class="k">03 · store window</div><h2>Parts Counter</h2><p class="n">Take a number. Price stickers. A receipt.</p></a></li>
+    <li><a class="p4" href="04-field-notes/index.html"><div class="k">04 · trail book</div><h2>Field Notes</h2><p class="n">Waterproof pad. Stamp the page. Check the kit.</p></a></li>
+    <li><a class="p5" href="05-instant-photo/index.html"><div class="k">05 · film</div><h2>Instant Photo</h2><p class="n">The picture develops. The name is on the border.</p></a></li>
+  </ol>
+  <p class="note">Books live in MongoDB. Each look is a PWA. Add it to the home screen.</p>
+</body>
+</html>
