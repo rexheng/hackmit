@@ -1,5 +1,5 @@
 {
- "retrieved": "2026-10-28T12:56Z",
+ "retrieved": "2026-10-28T22:36Z",
  "source": "GDELT DOC 2.0 API",
  "counties": {
   "48113": [
@@ -46,6 +46,20 @@
     "via": "Google News RSS"
    },
    {
+    "title": "DFW Data Center Demand Remains Hot as Pre-Leasing Hits 95%",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOYXpSQ1pReVZYTG1uSHBZVlZWaTEwMW9Jc2ZzdG1rU3dobmVyX3h1eW04cWNmeGZTMVJUTzlhdHZpamJvN1o0bE45WEhKeUdOcm5oRDVERDNJOG9UNnlIRmUzN2pCOWNKbzZCbFBqNTI5dDJOSVVSZnZMSTBveTdrcUFRRzh2d2tqYmRIaGhlYw?oc=5",
+    "outlet": "Dallas Innovates",
+    "seen": "03 Sep 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "JV to Build 54 MW Dallas-Area Data Center",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNYU1oYTZwM1c3cFZPNkdWQ2hxVzllZ0xHbTJQbVJfUk1CZC1XQkRhNGtRV3dkNFpTbTA1LXlPNURIT3hRcnlsSkFodG91UzFUMHpfNF9DSVEtZmRZNWpQQl9yeVVLQTIzaTNRRlJUTVlhbG02RFBpcWlnZnJUUkw0WVBiaFU0bGM?oc=5",
+    "outlet": "CommercialSearch",
+    "seen": "04 Sep 2026",
+    "via": "Google News RSS"
+   },
+   {
     "title": "Infomart owner erects nearly billion-dollar data center near Medical District",
     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQXzlScGNIVVUxY3pDMnVNLUhBSVZXQXhFaGNnTHNHQXFZVEVsQ24zbEdPWXdCY3hLT1VOblAxam16UEZNeVRhQnRCbloyYnhCRFZ4b2hYRjBOUHVVUndoRV9rRS1GS1I4U2JrLU1YMVVETHVYOGswMWxyQW1MZThwakREcTJMcnp4UVVhd3F4VG01ZFZycVUzd3l3SzJoMXV5Z213WQ?oc=5",
     "outlet": "The Business Journals",
@@ -60,13 +74,6 @@
     "via": "Google News RSS"
    },
    {
-    "title": "Joppa residents, advocates call for stronger protections against data centers",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQTGhaWUVwbDBnNE05cS11dDlIUlowWDhRaVJUVDNjb016dUhyZFUtdkkyYWNka3VUN01QOW9nenpWUExDRHpUTWJ6V1N4eWRqWHZjZjVMM3BzNWFxTXNkZ2lPazFqNUV0MVZBN3IyM3VLN0tTX0w5bVFjc1ZxdTlBZ3Z1MDRiSXFUbVo3cmVDR0p5bjVtRk16cHF1UUFzRC1nb2RNdXRGWERkN04zNWc?oc=5",
-    "outlet": "KERA News Breakthroughs",
-    "seen": "02 Oct 2026",
-    "via": "Google News RSS"
-   },
-   {
     "title": "Texas Data Center Tracker: See where 600+ projects are operating or planned across state in interactive map",
     "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPcTUzMVdzdGxNazJOUVRvZ3RpZ090LWcta1NzNjJGTVAzSDNUT3c0Y3VYSHdlRnJjTzJoOVV6QUVmbWM3UjltbEktWW9ZZmNkdGF6dExWRU1tMnhSMWl2WUdGcHdpOUxxOGhJWFFya3RpaTN1eHh2ZVItR2JoZnk2TTItaHU2OHIzeE8zWjd2WWZLVlBBSjBORWRoUElucTdQeHI1Q3VScnFrSzFnLTVYOWFWN01VNnhtRTl3aS1HREhQTnBhb0tPczBvbVNma21IbVJIRw?oc=5",
     "outlet": "KXAN Austin",
@@ -74,17 +81,10 @@
     "via": "Google News RSS"
    },
    {
-    "title": "60 Minutes Transcript: The data center uproar",
-    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1Cb3FLU2d4cUZHUENuOU9WSWdtX05qTC1YZTlNUm1pVGRDTjFYZk53TG50SXJubjRlOWF3YlEtNnNDeklVNGRvNFI0eGE0MjlUTHNYRzBPNXF2TFdkWmYyVmhpSGVOQlJFLXdzWXNzdV92dw?oc=5",
-    "outlet": "CBS News",
-    "seen": "20 Sep 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "It took 3 months to get inside this massive Texas data center \u2014 here\u2019s what we saw",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNXzBlUEFSbXF2Z2RaaXZWMlNRWmc0QnROTE9LRFBsMXgwVnplblBrU2ktNTFYcnhkRUYwN2l2azczNy1YQnJmMk94Z194RWpORDczd1hudDlvUTVQOVJXazNyS1didE1KdzJNcjhVckdJc1kxMTZMRzdjRVNKcG1IeWJ0RGhOR05tb3RLZ19OTjNOLVJkNVVsTlNQc0ZWb2RyY2tB0gGoAUFVX3lxTFB3eW5iN3NCWnM4czBWdTh1dzdBbzBSN2xxMVBpc3JEUGlGb280a0l5OVdhVHBhTXJvYlB0RWkyaXEydmZsdjAyOUtvSDFlYVNOajZUb2hHcWc3SmpWQzM0b0pmSVZwckxmMnJuUlp4V3J0a1dma2xPNnpUeFlra1VHYXRYSElRU2hSdzhiaC0zYUh2dnM2b3UzRnVsR2tvSnp0V3R0S3VVMw?oc=5",
-    "outlet": "Fox News",
-    "seen": "19 Oct 2026",
+    "title": "Dallas enters the data center debate, but Texas should weigh in",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZURBZTVYMkZ1aVNyZXVhX1F0Q2N3dXRDc1JRbnRVc2V3NDV1b0ZVTVVUYVdpRHhmam02VVdPdXdKV2xIODNOY01ocUVWdm9tZWZzYmJTc1I4ZmJJRkc3bzRYWkFVc2lxWDRGYkdoNERGY1VVQXUwWFhacDZ0bUZsS0FDNHFtNlJSZVcwOFNaclpnbVJKeS1BR1pfajhwUVpwZktPSmpKd0UxZDRjUGNkSXJ2SWI1UW8?oc=5",
+    "outlet": "Dallas News",
+    "seen": "06 Sep 2026",
     "via": "Google News RSS"
    }
   ],
@@ -273,10 +273,10 @@
     "via": "Google News RSS"
    },
    {
-    "title": "Google named as customer for Crusoe's data center campus in Amarillo, Texas",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPS2tCdGdKeWhoUmF2OGJPb2VmU3lmWGVjUVFRNS12anZDMnJRY2tKaTZmbko0TEl1SElCdW5kcDU4SmtRUzNXdGszSy1EdE5EdUlEV1dYM2FTVXlMUi1nUlZ4WlRrVmVSUWMwY2FDZjhIOHJoNG5ONlR4RFppaW9adUw2Z1dKVUxUblNqUUZON090Ui1KZTJGamZVSmwzYXZjZlZqeXl1dWQ5bXpETS1pM2t4YnBMbm1j?oc=5",
+    "title": "PowerHouse & Big Watt secure approval for 1GW behind-the-meter campus in Taylor, Texas",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPMVNQXzRCY0FubFpCd0x5MmVYbFRuSnlZZWJ5clVIRzM4T3Mtd01XeHBsVHBheWJNMXRXcnFITWRmX2tpNU5rNmdXdVVndko3bDVoWThNbUxVQWpjd1BiazB2Yl96c1c2bFlKSFdPeEV3T1BETEZzQUk0bEcwdGJhLVA3M0dydFZ6NndhTUt5MWRiUG5kVExmcDN5LW1PZnNmaURTdUhZb2x1R0R2UW9yc1ZZQ0Q4UFJxTGhwUFk3dFR2Z0pZcUE?oc=5",
     "outlet": "Data Center Dynamics",
-    "seen": "30 Sep 2026",
+    "seen": "15 Oct 2026",
     "via": "Google News RSS"
    },
    {
@@ -287,17 +287,17 @@
     "via": "Google News RSS"
    },
    {
-    "title": "PowerHouse & Big Watt secure approval for 1GW behind-the-meter campus in Taylor, Texas",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPMVNQXzRCY0FubFpCd0x5MmVYbFRuSnlZZWJ5clVIRzM4T3Mtd01XeHBsVHBheWJNMXRXcnFITWRmX2tpNU5rNmdXdVVndko3bDVoWThNbUxVQWpjd1BiazB2Yl96c1c2bFlKSFdPeEV3T1BETEZzQUk0bEcwdGJhLVA3M0dydFZ6NndhTUt5MWRiUG5kVExmcDN5LW1PZnNmaURTdUhZb2x1R0R2UW9yc1ZZQ0Q4UFJxTGhwUFk3dFR2Z0pZcUE?oc=5",
-    "outlet": "Data Center Dynamics",
-    "seen": "15 Oct 2026",
-    "via": "Google News RSS"
-   },
-   {
     "title": "Texas counties have no zoning powers over data centers",
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOTDNKMjRRZ0NVblU4R3k4MGxpaUxxY1M3ZlZ2WGItSlN0SGV2SmNDQWRXbFdRYTJOY2Z6bGotcXRNMU9BSDA3aXFYM2ZhdHpNbUZyRFRhNjZNUGppLUpYcU4wdkFsRGRmbWFqRDJ3ZENFQmh1WERyV2ZOVFVrUkh5dzRFYVlERXBrMXFUZmRuSmNubERzWk1IMUg4dU8?oc=5",
     "outlet": "Dallas News",
     "seen": "15 Sep 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "Google named as customer for Crusoe's data center campus in Amarillo, Texas",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPS2tCdGdKeWhoUmF2OGJPb2VmU3lmWGVjUVFRNS12anZDMnJRY2tKaTZmbko0TEl1SElCdW5kcDU4SmtRUzNXdGszSy1EdE5EdUlEV1dYM2FTVXlMUi1nUlZ4WlRrVmVSUWMwY2FDZjhIOHJoNG5ONlR4RFppaW9adUw2Z1dKVUxUblNqUUZON090Ui1KZTJGamZVSmwzYXZjZlZqeXl1dWQ5bXpETS1pM2t4YnBMbm1j?oc=5",
+    "outlet": "Data Center Dynamics",
+    "seen": "30 Sep 2026",
     "via": "Google News RSS"
    },
    {
@@ -310,16 +310,67 @@
   ],
   "48085": [
    {
-    "title": "Paxton receives desperately needed $54 million donation",
-    "url": "https://paisano-online.com/53855/opinion/commentary/paxton-receives-desperately-needed-54-million-donation/",
-    "outlet": "paisano-online.com",
-    "seen": "20260923T124500Z"
+    "title": "From Forney to Corpus Christi, inside the Texas cities cracking down on data centers",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQZVZSMEg3ZERwdlZCOGpFUWk5ejgtUlBwV3NuanJ3RTlSbDVhQWpwN2x6VmVFZkxkeWVJT2Z2SzhkMENDcXkxVnNrNGczOEtJbzQzbmJacU00SGJpMV9qMGp6Y0JsQkU4WFNLTWl6aGtjS203dlJUTlFvUmt6SWhrSkdkWVJwZDVVb2pmc2JXWjlQUklNdWduR0lhbHAwZkpGWUE?oc=5",
+    "outlet": "The Real Deal",
+    "seen": "08 Sep 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Simpson Thacher Sustainability And ESG : Regulatory Update \u2013 August 2026",
-    "url": "https://www.mondaq.com:443/unitedstates/waste-management/1832300/simpson-thacher-sustainability-and-esg-regulatory-update-august-2026",
-    "outlet": "mondaq.com",
-    "seen": "20260818T123000Z"
+    "title": "Data center company eyes land near Princeton, receives approval for a well",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZlVWUXA5U21hdTBHYXBnWXhhQ0V1WnE1NVUwdWJET1gwZDl0Y0hqdXhtc3Q0MU5jSVd1UXlUem1XeFh3V2tNekN2YXU1bjJ4V3NzanVrRVFBR0lRbklGamlLcEhLZ0JlZGFHMzZxWnBQMzNSc2FLVjhRdmMtNUZRcUt4MHh1aG1uRmNfNFhlMURaUVJvVTdqN1Q4UTVmS2c2M2ZVOA?oc=5",
+    "outlet": "Dallas News",
+    "seen": "17 Oct 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "Potter, Randall County data centers among those investigated over water-use survey",
+    "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPSUZ4Ql9oVTMtdW1SQkdkdkp2Ym9MSGxwNFlyc2NUQjVfN1YzeDdkVVZuLWs0SlJQSVZYaWEtRmVKY3JLTEtVWGI4blR4b1ZfUWliSDBzR3ZMTTJHejRwZTk2X083Tm1Oa1NFa1VnN1YzRnZaNjd3MUVmOXN2NGxWYlZvRGstYm1aNlRVbEFqRzBZSEpwVW5HdzZzNUo2eFJsVF9sYVlFSkhhU1lvcXZwZkN3VUUtQ0drQjY2Z05PMk53V0RNbWdjWmhmZ0Q3WXppUXM2TExvU1RvOVlEcWUxWXZ0Ty1fdXpSV2hFYlhTc2hvSUxBMGk4NTg4cm1RbE1PaHd6U3hyV0JaS0s2YlNQb2gzVE4xeXMtY1VDMkE3bW45Q015eERDMg?oc=5",
+    "outlet": "KVII",
+    "seen": "24 Sep 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "Prosper Planning and Zoning Commission unanimously denies controversial data center rezoning request",
+    "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQeW9waWpHbjZaRml4cUppYVJkaUkzc2VXdmtiMm80X0xqc1otU3FLS2NvZTh0azRYM3Z3LWpMQzdTUkhaWDNaUU8wZUF2QUNtOVU5VFNFU0Q1djI5SnNtTUViOENsc0IySlJLVmtMWWQxVzAxT1JSOUR3OTlLX0ctYzA5Q2lPUlUxWW5LLVo3MlBTdVVFYXpLeUJNU214TmF3WG1IOTBmb0ZhR2hFcmpZcTBtdC1GSndhRUNmMGlWNFBjcjNocWFkYzdBY21RZUxiajczZTVrT0lfaExHODJ3XzdsZy0zSlRzZWJUWDZPVFZZMGV5MVhzcEw3Y2k0ZHRpZV9tUGZxYXlCOXc?oc=5",
+    "outlet": "WFAA",
+    "seen": "01 Sep 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "What the Data-Center Backlash Could Cost Us",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNUTRFRk1GUmxkUUlkellHVFJ0c0FSNE0xUlhtbUhGNm1wLVYzNFpvbmx1ZDRJd2xkYzNSbnBhN0drcEZTY3NzRXplaEpPMmJoN09SdEFJZWVjUktKUW01TFdVNjVXSmVKWXppSTI3VTlXMnhZSk1EUzB0TkhnSDR1ZDBXRQ?oc=5",
+    "outlet": "City Journal",
+    "seen": "31 Aug 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "Town of Prosper fights back against $580M Project Tomahawk data center",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQZGl3S00xWHR5TWx5R0c2UmlvSnF2b1VFamtuYi1PWXlhcDFUU1dfZWVfbFlYSXkybDluMWRCTkFnWGVpUlpJa19veFhmUnI1RTI1MkVGMjVaUWhzOTdHVXVyTUw4ck1jMGlNUGFzZnIwVi0wZFdGdE1vWUJkaXYyQ3A4Y2ltSXVDd0FJYkc5WTNheXFMY0xoQXI1dXgtcXBzVndyM3VYRUh1RHJz?oc=5",
+    "outlet": "Audacy",
+    "seen": "02 Sep 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "Data Center Firm Wins Woodbine Well Permit Near Princeton as Texas Freezes New Projects",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNOTcxbUM5R1BWUGxLWE9fQmd2eGIwbGs5S3pCMThVMFFaVGpybGtFQUQxUDBFUjJMSHBzUFBLZU5RcnpKMElFbV9iTjI5a1JDeVJ0NDUtV3k4eWE4UWdYRl9CczhMNmdfNTZtcjh3bkxBMmdJYkItUU9nNWtjMTNCNldHc0xOaGRzTGp6QWRYSS00UDNhVWRVZnRMVU1IYThmVFJ1U2t5dWtDM0RkVE43VmY3WW9iZlRq?oc=5",
+    "outlet": "Hoodline",
+    "seen": "17 Oct 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "Some North Texas governments feel unprepared for rapid data center growth, survey finds",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZ1F0NDVOZnhoRUhtWE84alZ0RmhfNWs1X1ZFUlRuczFacTRmUWprcmp3OGZjQnRIWHczTW5JQ3ZxMlBfUWczaXdkT0tPZ2FzZFhfc3haaHgzZFZXQlZGMVZaTWxxNkJ2UnFROXpUYmU3Q0ZGdUE0aE1NSUlyRVZLeDFIXzZBdXRqZEp4SnQwT0w1S0JYb2tKS1ctMU9LU1lDOWU0eENxQ2R3RFotbjZERnVxdDZ2Y3I1UW85UVYxc2JWOWhSU3c?oc=5",
+    "outlet": "Dallas News",
+    "seen": "01 Sep 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "Prosper data center project blocked by zoning board",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObWFsbkV6ZldHQl9MdGFGaks4MWczbVVpd2FwdnNNQXdid3FHUUt1MEltYVppbk0yM2w3UWJIUVdfcUpqdUV5RFNybTdITEJZVzlkRGVNbFMzMW1NR3FTYmoxTWN1MTh6NVNOUWQwdERHWlo4OGQ2bzlab1AzbmZ1LXdQWlZLTzF0dndZLWtkN0ZEOGVsTHg5eHhuLU40dzN3?oc=5",
+    "outlet": "Dallas News",
+    "seen": "02 Sep 2026",
+    "via": "Google News RSS"
    }
   ],
   "48": [
