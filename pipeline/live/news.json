@@ -1,5 +1,5 @@
 {
- "retrieved": "2026-11-02T15:55Z",
+ "retrieved": "2026-11-03T00:58Z",
  "source": "GDELT DOC 2.0 API",
  "counties": {
   "48113": [
@@ -284,13 +284,6 @@
     "via": "Google News RSS"
    },
    {
-    "title": "Open house held as data center impact concerns grow in Armstrong County",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQRU1wUG5nOUN0OUhPc2R1NzlpNmRoSnI5V05zc29IcWZ0YkdhM1YyQ1BRMGpmdjRUbm96UUtfUWRqN2xDNmxMNDhQZUZDRUZuS3l6cU4xclVwTU5VMUlBSFFNNXNHSjBCQ29KaVZFanJHTVlrLWFlZTZOVFF1LVp5UGpCc1BDUFF2ZnBaeS1pSTd6YXI1bHJ1R21TV3Nkd1RqYWNqSm52cnYyZlg2MGNpYVNMX3VGY2h1eGhEUDhpNTJzUVdUS1FMcjBrSjhlTGpw?oc=5",
-    "outlet": "KVII",
-    "seen": "22 Sep 2026",
-    "via": "Google News RSS"
-   },
-   {
     "title": "Texas puts a brake on its data centre boom",
     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSHF2b2hGRktBREl0R0JBM0xrVUM0c1UwUnFTMFBHV0pEU0lOWUY2MmYya1E3Sk1pa2dGeHA3RU1oOFJvcHAzTmhmNV9vdG1xdnJtcDZBRXdzYmVkc3VlOE9sNnFvQ3JCRVU5aFdZRTVxNUNMLWtSTG0zbV9JUHVhVFVIM0M?oc=5",
     "outlet": "Financial Times",
@@ -302,6 +295,13 @@
     "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxORUVta0tyT0tncDdXYTRjcGhBSXAxVGstVGM0cW9pNTV2V3l5R0Y2YVVubGZWWU8wSmQ5SThLS09mcXlwMUZJTjc3YXhYR05OU3dTSVJSN1BFamlwZ1pTaTJUcURrSXkxUl9teWFPaFRCY0oyUzJCVmF2V1o0U3hid1VGZEpjdmpmbjdLbllqX0toU0VqbTFzcUcyZmVwTk9rZk5sUmdDT2prbkctOGkwdUJBeS16OFp0VXRMbTVUMVpDaUxfaG53SnRsWktBSW1tMVVCb3NTREoyLWVLQVF4eU5qR0J4OGRTcDFsMUlyZUd1dy1uZ1E?oc=5",
     "outlet": "WFAA",
     "seen": "15 Sep 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "Open house held as data center impact concerns grow in Armstrong County",
+    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQRU1wUG5nOUN0OUhPc2R1NzlpNmRoSnI5V05zc29IcWZ0YkdhM1YyQ1BRMGpmdjRUbm96UUtfUWRqN2xDNmxMNDhQZUZDRUZuS3l6cU4xclVwTU5VMUlBSFFNNXNHSjBCQ29KaVZFanJHTVlrLWFlZTZOVFF1LVp5UGpCc1BDUFF2ZnBaeS1pSTd6YXI1bHJ1R21TV3Nkd1RqYWNqSm52cnYyZlg2MGNpYVNMX3VGY2h1eGhEUDhpNTJzUVdUS1FMcjBrSjhlTGpw?oc=5",
+    "outlet": "KVII",
+    "seen": "22 Sep 2026",
     "via": "Google News RSS"
    },
    {
@@ -319,38 +319,17 @@
     "via": "Google News RSS"
    },
    {
-    "title": "Dems hope to clinch the state by flipping Collin County, Paxton\u2019s homebase and a longtime GOP bastion",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOYlRTWVIxV1RLbEc0SV84RW1SUlRlbVN5YU05QVI2cDFPOUtrV1gyVUw3VlhNUENjWmJJYk53Z3drYTd3T1lzUE55cFhsNG1ZX29MN1RuQk1OaDZZZEU5RnV3eHdCSlhXY0gzd2p0VExpS1d4azEtRTUwa0gzdjdFRUwtN0R4OEs5S201ZDg0bnAwSFA3MUVMUDJMdWEteXU4NEFtLQ?oc=5",
-    "outlet": "The Texas Tribune",
-    "seen": "27 Oct 2026",
+    "title": "Collin County's new voting system passes early test despite glitches",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOa3RCclVSZmNRNlZqVkwzellWS0xmSDVFWC11QVYtckU0cWdRQWtNLVZYclR0aXpLUnlUY3FOenEyQXA1NFB3bGdMMkNvQU90TzdneGJFNE1iYUplTXJiOUU3SzV1N3l1NUZMM19USWZZb0htY3JTWXkzSnVmVW8zS293LWlSb0ZjWGNnU1lrOFBiSUhYOTVhZ0FxY0dOUmFnbnNnbmxiSQ?oc=5",
+    "outlet": "CBS News",
+    "seen": "23 Oct 2026",
     "via": "Google News RSS"
    },
    {
-    "title": "Market Chatter: Texas Developer Seeks $3.5 Billion in Private Financing for AT&T Global Headquarters",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMlktOU9nSTl6ZFo4NVF5MlpCc0NDTzR5MTJqZm95VF8wZXI0b0xiRUJDX0lrc19ONWpPMTNuTE9hZ1JPb29nTE1LM0pRczJjcmFUZENaVUFNX1dFd1dZMDNhNmdsRy1iZFlQcW8yb283djUtdHI5MUEtWUhyYWdQVzZKZXAzVzZ2TW15VHROa2ZaVFpRWjlNaVhhSzZjY0E?oc=5",
-    "outlet": "Yahoo Finance",
-    "seen": "22 Oct 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Restraining order dissolved in Westlake-Keller data center lawsuit",
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNOElLd19uaDBtbjZ2T3JUODZheE5ZZEF1b05hVUNEWWZoWHloMFg5Qm4xdUtUMmxiMW5MZGUxdWEtVXBXSTdpVWlDWllKd1ZOLVpyTkVZYWs4TzFzTUpjc1pnd2xzSEVzZzQwRXh1X29MRUhMdTFPWVNLSEZhNDhfMHJ2OXVKYzVyNGxtbVlhLTB6RGY4MGJfWWJlelNHdlJGVDVna3FOMDBTaUt0eFdVZk5B?oc=5",
+    "title": "Collin College receives $2.5 million grant to expand electrical training",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPRVlvTzdid1hWYTRlcThwT3YwZmswT0pOY0JZRTVxWEVuQTgzWVNkZ05Cb1o2V2hSTkhVUDFNb2gtcU1JbnZvRmxScnVxMlVZMkdBampqQzBBaDYxQVk2MEJKZ3ZGeUZ2RGRobE1JdGFlUkVNRmVVNkxiOUg1YU8ySE1mQ0ZrMmpfVGxBUFVCWmJjazE0Tzh5cEEydkJ2aVFnZFQ2OHJJRmc?oc=5",
     "outlet": "Dallas News",
-    "seen": "28 Sep 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "2026 Midterm Election: Key races in North Texas and sample ballots - FOX 4 News Dallas-Fort Worth",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPejlCRVl6MGpQeVpKTzh5VUxaeW0yelpaRWYzTUlUeDlpQUcydHRNUzZUMXZZdEJHTEpiX1N0Q1NFbUtDNEdEalpYNWg5RjFtcHBkMHpybnlSZV8zQy1TbzFrZ0xNUzdkRUJ1UUU0bmJnTXBwSnZ0US1TS21WYmFQWlpZYzQzei1Odmtaek91UUU0Nm9Icldj?oc=5",
-    "outlet": "FOX 4 News Dallas-Fort Worth",
-    "seen": "19 Oct 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Grassroots America to introduce Texas Conservative Grassroots Coalition leaders Sept. 15",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQUhSZ0U4OWFZNUVLb1JJeUdGdDZyRTZfd0RLOGdmZGE3MTk0X2o0Q041WXFZcTl6ZTRoeGFFa2ttMVNqeWJwZnFhaHlHN0lyMk0xZ3lEOXFqcGM0V2Y4SVRTZ1Fkc05xTy1uZDBtUTJfZXdhMmRyWjVxQWNyN0ZnaDBTZVZTWVZaVm01SlBiOHpuQmVXbml1dzhZV05PQlNYRlVBTlVoRkUyTUY0WHN3QUlrX05NWlJ2NTNON0xfaw?oc=5",
-    "outlet": "Tyler Morning Telegraph",
-    "seen": "07 Sep 2026",
+    "seen": "15 Sep 2026",
     "via": "Google News RSS"
    }
   ],
@@ -398,13 +377,6 @@
     "via": "Google News RSS"
    },
    {
-    "title": "New Texas coalition raises concerns about data centers\u2019 water use",
-    "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPRkxnX3FEUVRQMm0tV2xtc0FYOUV5RkxfRzRBa1c1VnRjaEF6ZUVVTllEQzB2aDI3dmN3ZVFrbjNpOGJobXo1S1JsTUNzLTZkMTdtQVBDdjBibTJBcFhHSDE4VTFXeEZqVUs1eXVOMU5ZU0dXblZidHVPVXVyR1ZkWE15ZEVLcnpzMUhfM2l2Y2l4emVwYnFoanlPcGNiNXVOYVdEdzZFYWVGVDZiRjl6SDNmeF81Mm1DUzFxR0pRNjB5M3lRUnNpZkp4MHhleTBVTU93N0I1TnhneUdmbUgwa3RIZ0xlRUdvZ1lGODRJYzlpaEE?oc=5",
-    "outlet": "KVUE",
-    "seen": "28 Sep 2026",
-    "via": "Google News RSS"
-   },
-   {
     "title": "45 Texas lawmakers back limits on data center water use",
     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPUUNKdXZSM2dTa1pFZ1VndThFNzFJNWdXa0lhZzVsZW5QT19LVW43NUhlMTh0QWRuNEM1d293c3Vma19NR3Vldk5YWmZIX1o5UW4xUkx0Y0JSbFdVWVpOVWNlOGNyZHBIeTdvb2NIS0dMU2l2aDh4cWJPVy1RUTFTS0ZnZUVFQU1yam96T2xWZ0lrWlBHQ0hOZ2s1b0hqZGJ0VlpqZml5QjdlUEluUVM3V3kwUWlIYl81Zm9hbzYwT2ZZMUZPTURqaHVGZw?oc=5",
     "outlet": "Click2Houston",
@@ -433,10 +405,17 @@
     "via": "Google News RSS"
    },
    {
-    "title": "New coalition warns data center growth could strain Texas water supplies",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZWtOQjZvNkxiSWp5c0lvQjNjUng1VHJvamZubHVNRVB1bFdZWTFXMk1WY1FQNFpzZFBMSWwzV01Oa0RpemNPZTBkQ0hGMGtkMjltTU5ZdDUyc3J5QWJSZVJSRFowMGVYU25pTVQydjhJckVUREttcWoyZFdUZTU1M1VyaURnUERqNFJmc21VT0tPbHo1MmJFNGNBSnR1a3F2OUZHeEZwYVTSAa4BQVVfeXFMTzBuVjJ2NGlESTNuZkdIMzFqTjc3ZV9Edm5MZ2VMdk11ZVY2NjZzOVFGTE5YMUlEOUZwT0lmVktxOFlaV3JBX2VvOXczN2QyXy1QbjdNZlZGRTVBNW45eGRhWjlnZ1lKZjllWVRTUmZJZEZJMWlQeU8zTTVDQkdHT3IyaXpKSFBTWmkyU3h0V2U0blhWSW9qNWFtVU1zMXpobmlwblpneWo1U2lyTEFB?oc=5",
-    "outlet": "KXAN Austin",
-    "seen": "28 Sep 2026",
+    "title": "Abbott halts new Texas data center permits pending ERCOT audit",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMzEtMjdMcVJYRTJWQXV6emtDcWpXZ1NWSWhKZVdxNkl5MUZKRkpjX0d4anBHUnVjUS13Zl8yWjV0ZC1jeGNQRjBjdkp4V25pSXB0VDEwdmJlQjU1TkdJdG5zWjZEc3dwRkdEV0NnUUlGc3c4UHk4R0ZlRGFfaVR4VjBHRlY4V2FMOUxGMXZMbkowbV9kMFhodWFLRnUyMjFDRl9kSW9LOWYxdw?oc=5",
+    "outlet": "Data Center Dynamics",
+    "seen": "23 Sep 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "Texas Attorney General Probes Data Center Projects Over Water Usage",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOLUU0bXZfVnFBckJIV0FOUGNGbkhyUFBHQmRHUVBGSkhIZVV2WGlzdFM4czhoWVhqOVExdnkxU3dpQ1FsWEt2SURWY0IxUGF6cnpneldiSGJJSUdkNkJMT2JtNG9nTnAxNzlkTFh6RkpUakY1MTNwUFc2Nm1SUWI5RXZlR0p6TkEwWWFHTUFFQjhfMm9GQ1hMaU5YdGk3NmJNRl9jZHU1QnFWbEpMSlZINFktUDkzTE8yeWc?oc=5",
+    "outlet": "Bloomberg.com",
+    "seen": "24 Sep 2026",
     "via": "Google News RSS"
    }
   ]
