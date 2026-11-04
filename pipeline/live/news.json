@@ -1,79 +1,91 @@
 {
- "retrieved": "2026-11-04T06:24Z",
+ "retrieved": "2026-11-04T19:46Z",
  "source": "GDELT DOC 2.0 API",
  "counties": {
   "48113": [
    {
-    "title": "Young men who helped get Trump elected are  blackpilling  out of politics \u2013 The Willits News",
-    "url": "https://www.willitsnews.com/2026/10/23/young-men-who-helped-get-trump-elected-are-blackpilling-out-of-politics/",
-    "outlet": "willitsnews.com",
-    "seen": "20261025T124500Z"
+    "title": "How DFW could become the center of America's largest data center market - NBC 5 Dallas-Fort Worth",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWk1FV2tneldNTENUbW9oOE41a0JWTGFLV3NuMWhYYUN0TG84d2hUcm1lRVZBbDFGdDctYzhiX2Ywa3RVNHUwR0VJLVN6MUF1ZTBMZVcxM3VLTE1wSWdXRk1DSnhkSEhyMVdJbkI0T2h2SjNNM1h2dm1fdlEwZHRrUVhQSVJWNWV3Z2JNT1FiTEhBcEQwU2NQMlc0MjBKRmFLU25IZ3NXSy1yZDBCeXRRYVVtM2Ywald60gHAAUFVX3lxTFBVeDlLQllheElvSGhnODA1R2tMUTJyRXZXR2JyaWJ3WHVzRzljTENRQVBoSG1HRVl1MnMyX3BsRjBJQVpIZTR2V3B2cVAwc3o2bmNVQUJtN0ZXU1pyY2FNR0lndk9jYUt5c0pKWjZMTDBJM0NYbW5GclNTekRRalV3bENKM0VySF9pam9oZ0lYRmZFNkdmZ01MWFloQjdhSUxQeVpzdDgyWlNnQWtpMDlPbHZkdTgxSXVLNl9XY2l0bw?oc=5",
+    "outlet": "NBC 5 Dallas-Fort Worth",
+    "seen": "30 Oct 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Young men who helped get Trump elected are  blackpilling  out of politics \u2013 Colorado Hometown Weekly",
-    "url": "https://www.coloradohometownweekly.com/2026/10/23/young-men-who-helped-get-trump-elected-are-blackpilling-out-of-politics/",
-    "outlet": "coloradohometownweekly.com",
-    "seen": "20261025T081500Z"
+    "title": "JV plans 54MW data center in Dallas, Texas",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQcGctQ1lMZ2xjX1VZTUxtdzhGMFFXN0lBZnlCVmFvZUhRZWN0dndYdWtOdE8yclB1VW5nWHlfa0o2R2pOMWxQZE8xOFBaQ0pFR2xGQldYZXIzdWs4ME1CNXRnTDZHUWdRRWhiNHVXczRTV3NaMGs4TXJwMV9Ha2xlTXJ6cGw3OUcwRFdSTkpB?oc=5",
+    "outlet": "Data Center Dynamics",
+    "seen": "07 Sep 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Carrier $600M Fort Worth Plant Brings 1 , 500 Planned Jobs Into Texa Data Center Debate",
-    "url": "https://www.wbap.com/2026/10/24/carriers-600m-fort-worth-plant-brings-1500-planned-jobs-into-texas-data-center-debate/",
-    "outlet": "wbap.com",
-    "seen": "20261024T171500Z"
+    "title": "$1.2 billion in D-FW data center projects filed in recent weeks",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOR3JhRGFLQTE4dzJQandacm9ia2ROdDNXem1QZEpURUxBTE5aMXJONTVWM0cyUlFtM1JiWm84bWhlWGMtalBkSnIwUGdVb243bEVuTkp1Sm1wdU9jeV9YcUNrY2x3RlNpLU41dGVQYkVvYkcxc1dtal9yS1p5WHo0aWNONXZldThQVE5uUHNFdERSNE5UMWhqSjVFUWdIdldjMm9DRXZXWWhzNFBtQ1NnRFhn?oc=5",
+    "outlet": "Dallas News",
+    "seen": "16 Sep 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Young men who helped get Trump elected are  blackpilling  out of politics \u2013 Paradise Post",
-    "url": "https://www.paradisepost.com/2026/10/23/young-men-who-helped-get-trump-elected-are-blackpilling-out-of-politics/",
-    "outlet": "paradisepost.com",
-    "seen": "20261024T171500Z"
+    "title": "As Republicans gather in Dallas, the data center backlash is coming from their own voters",
+    "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNUHlCLTl4V2F2bVhma3lfUFE1R29wam9kcXBvcDRGRTNXXzBzVGVhSXZwSEkyMUNueUtVcS13NTY0cUVRekV3TFgzaGtEU2VRZXNhbElaUGhZa2ZNYTBCMF9PUndKZjNySWdSNGotZXhLNWt6NHA4ZEl0NTJabmNjZ1FEQThSYUFfZDJvZ2NpT1puQ3dJMWdjbERTUE1WcXkwQlpVRUpoWHVrcU5sYWRqUnh6RW94LU9UdkEtSldBVGlYdGhSdTFaWHBaVlBXTHJhVHVQM1ZlV3YyWWlUWTk4V1dTR01DRHRnWGZULUJFMG1fT0pTTHhNOWFtbTByS0Y3MUE?oc=5",
+    "outlet": "WFAA",
+    "seen": "09 Sep 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Young men who helped get Trump elected are  blackpilling  out of politics \u2013 Fort Bragg Advocate - News",
-    "url": "https://www.advocate-news.com/2026/10/23/young-men-who-helped-get-trump-elected-are-blackpilling-out-of-politics/",
-    "outlet": "advocate-news.com",
-    "seen": "20261024T151500Z"
+    "title": "Abbott slaps halt on Texas data center permits",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOd3g3ODI0T1pyUGJQd0dMN2NQbW41TzJKT1RQT2pSbHBGQk9wdVl0enhfajFOcmluN21yMTFmZURfRl90azdVZTJZalVWSFNvTFJyUjlvRXdxT1VJQnJHVXV3QUFhcG5OR2F0RnJPWHJ0S2tiNnBnSkxnWW1EamZoN3Z3bXdBZ2lyWmtaSncwOHM?oc=5",
+    "outlet": "Politico",
+    "seen": "21 Sep 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Young men who helped get Trump elected are  blackpilling  out of politics \u2013 San Gabriel Valley Tribune",
-    "url": "https://www.sgvtribune.com/2026/10/23/young-men-who-helped-get-trump-elected-are-blackpilling-out-of-politics/",
-    "outlet": "sgvtribune.com",
-    "seen": "20261024T023000Z"
+    "title": "What exactly is a data center?",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOdEJhNDJJaVZKX3ZlVkhWc2lMZmd1S1VZM016MG00TjhnMTcxZnVPM054LVJldkdtNlEtWWNuOWRBZlcteno5NnZwNU5US3g0NDBsRGlSQzlRTGpVb2szNndpSWRmZGxubVBOTFFoWlZabjhfNDZTajNULUdBS1FZVVNNcVpxNFVnbkhiOTNXYw?oc=5",
+    "outlet": "Spectrum News",
+    "seen": "21 Sep 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Young men who helped get Trump elected are  blackpilling  out of politics \u2013 Press Telegram",
-    "url": "https://www.presstelegram.com/2026/10/23/young-men-who-helped-get-trump-elected-are-blackpilling-out-of-politics/",
-    "outlet": "presstelegram.com",
-    "seen": "20261024T023000Z"
+    "title": "Joppa residents, advocates call for stronger protections against data centers",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQTGhaWUVwbDBnNE05cS11dDlIUlowWDhRaVJUVDNjb016dUhyZFUtdkkyYWNka3VUN01QOW9nenpWUExDRHpUTWJ6V1N4eWRqWHZjZjVMM3BzNWFxTXNkZ2lPazFqNUV0MVZBN3IyM3VLN0tTX0w5bVFjc1ZxdTlBZ3Z1MDRiSXFUbVo3cmVDR0p5bjVtRk16cHF1UUFzRC1nb2RNdXRGWERkN04zNWc?oc=5",
+    "outlet": "KERA News Breakthroughs",
+    "seen": "02 Oct 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "2026 Election : Former Ann Richards staffer hears familiar echo on current campaign trail",
-    "url": "https://www.fox7austin.com/news/2026-election-former-ann-richards-staffer-hears-familiar-echo-current-campaign-trail",
-    "outlet": "fox7austin.com",
-    "seen": "20261024T003000Z"
+    "title": "It took 3 months to get inside this massive Texas data center \u2014 here\u2019s what we saw",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNXzBlUEFSbXF2Z2RaaXZWMlNRWmc0QnROTE9LRFBsMXgwVnplblBrU2ktNTFYcnhkRUYwN2l2azczNy1YQnJmMk94Z194RWpORDczd1hudDlvUTVQOVJXazNyS1didE1KdzJNcjhVckdJc1kxMTZMRzdjRVNKcG1IeWJ0RGhOR05tb3RLZ19OTjNOLVJkNVVsTlNQc0ZWb2RyY2tB0gGoAUFVX3lxTFB3eW5iN3NCWnM4czBWdTh1dzdBbzBSN2xxMVBpc3JEUGlGb280a0l5OVdhVHBhTXJvYlB0RWkyaXEydmZsdjAyOUtvSDFlYVNOajZUb2hHcWc3SmpWQzM0b0pmSVZwckxmMnJuUlp4V3J0a1dma2xPNnpUeFlra1VHYXRYSElRU2hSdzhiaC0zYUh2dnM2b3UzRnVsR2tvSnp0V3R0S3VVMw?oc=5",
+    "outlet": "Fox News",
+    "seen": "19 Oct 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Young men who helped get Trump elected are  blackpilling  out of politics \u2013 Loveland Reporter - Herald",
-    "url": "https://www.reporterherald.com/2026/10/23/young-men-who-helped-get-trump-elected-are-blackpilling-out-of-politics/",
-    "outlet": "reporterherald.com",
-    "seen": "20261024T003000Z"
+    "title": "60 Minutes Transcript: The data center uproar",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1Cb3FLU2d4cUZHUENuOU9WSWdtX05qTC1YZTlNUm1pVGRDTjFYZk53TG50SXJubjRlOWF3YlEtNnNDeklVNGRvNFI0eGE0MjlUTHNYRzBPNXF2TFdkWmYyVmhpSGVOQlJFLXdzWXNzdV92dw?oc=5",
+    "outlet": "CBS News",
+    "seen": "20 Sep 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Young men who helped get Trump elected are  blackpilling  out of politics \u2013 Troy Record",
-    "url": "https://www.troyrecord.com/2026/10/23/young-men-who-helped-get-trump-elected-are-blackpilling-out-of-politics/",
-    "outlet": "troyrecord.com",
-    "seen": "20261024T003000Z"
+    "title": "Despite tough talk from Abbott and Paxton, Texas penalties for data center violations are light",
+    "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNUDFNa2lGNlB6QUdhZ1NGZ0E2YU1IakNOWG54aktaMnpCVHA2ZkFLYm1DbHU3S3dLa2hOY3A2VW5KMWxzV3RacDdIdzIzTTZKYWpKWUJ2TzA0NURmMXdtV2RPNjNkQ2h3VFJzYVJYaUp6M21ESm1rdDg5bkdGNUUzMEhXX1p6V3VrM3VUQUZ1ZjZ2QUl2S29NZE91aXJuZmNaTkpFRmIyaktjSDR2TUVpRWtkS293U1ZuX3Y3MWR6eEthMXNQb0JScnp5aGlndkFEcWd5YkNXTi1KSExSOXBWb1hYV0VDSml0eTM4UEw0ckhfODJvdU5xN01MRWJzV00y0gGIAkFVX3lxTFBpM1FwX3h2Mm1YaUtnTy1TZEY2RFUzTjZid2FsVnZVVFhSOGVCWDhNU3o3LXQxamhwMnpsRXZET3FhdmVyN1dlcHZvSkZJT1ZabzhsSVo4UlEtZHE2OFY2R3JpNFlNRXdUdGlXUENLSmlQVldWNnhaTk5sbTVkTkVRQlZzNENrNGlGZXhZMlNVWjFKZ3pEX1RIT0tDTzFpSF82SmZXWEUzZ1g4R1NPLUdWd0o3MU9MVkRqVUFuN0x5ZnRPc1oyQnZ4SkwyWE1PMk9oSkpmZVNSWUgxQjJ2Mk5LNjh0YUVUdERORzFlU0pXSmYwZUdwa1JmZUV6Vy1Wekljek9FTWY1OA?oc=5",
+    "outlet": "Houston Public Media",
+    "seen": "14 Oct 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Young men who helped get Trump elected are  blackpilling  out of politics \u2013 Redlands Daily Facts",
-    "url": "https://www.redlandsdailyfacts.com/2026/10/23/young-men-who-helped-get-trump-elected-are-blackpilling-out-of-politics/",
-    "outlet": "redlandsdailyfacts.com",
-    "seen": "20261024T003000Z"
+    "title": "Infomart owner erects nearly billion-dollar data center near Medical District",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQXzlScGNIVVUxY3pDMnVNLUhBSVZXQXhFaGNnTHNHQXFZVEVsQ24zbEdPWXdCY3hLT1VOblAxam16UEZNeVRhQnRCbloyYnhCRFZ4b2hYRjBOUHVVUndoRV9rRS1GS1I4U2JrLU1YMVVETHVYOGswMWxyQW1MZThwakREcTJMcnp4UVVhd3F4VG01ZFZycVUzd3l3SzJoMXV5Z213WQ?oc=5",
+    "outlet": "The Business Journals",
+    "seen": "30 Sep 2026",
+    "via": "Google News RSS"
    },
    {
-    "title": "Young men who helped get Trump elected are  blackpilling  out of politics \u2013 The Mercury News",
-    "url": "https://www.mercurynews.com/2026/10/23/young-men-who-helped-get-trump-elected-are-blackpilling-out-of-politics/",
-    "outlet": "mercurynews.com",
-    "seen": "20261024T003000Z"
+    "title": "'People are big mad in Texas': Hinojosa challenges Abbott's data center policies - FOX 4 News Dallas-Fort Worth",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQMGU2R2k0dFZ0WkRGNHJwby01Ui1ESmtBeVQ3eVVDenBOellkV0FPRU50bFJRZUVETGlhMUJsZGNUT0hZazcxUnZVZVZ0Nk5FaDIwR01rTTRSRlJhZkItZ2NPRHpjYk1RX3J4S0lLX2k2Tk5TOWJHSnk1UzFNYjBvQWJPSTVldzM0anlodmVRanpnM3Bsc2wtZTR6bkt5WW8?oc=5",
+    "outlet": "FOX 4 News Dallas-Fort Worth",
+    "seen": "13 Oct 2026",
+    "via": "Google News RSS"
    }
   ],
   "48029": [
@@ -82,6 +94,13 @@
     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTmFrbVpSakoyT3BkVE9uREY5a3VGalFuZjBxNFVZNV9OSTdaSm5SWUxSMGdjWHB0Yl9hNXBKR005OWtfUU5mLVQycmQ1aGhmaVRhcTdWNTFMTWh6Tkd6Unh2QWhaM2MtZTlXbHF0d1FEeHdETGU4YVQ1YVhLaENHTmVlVjIyR3ViZzZCN3ppUUMwcUlnV1BvcjRYcUs1NXVfUFNDQ1F3YWo2RmhzOXFFamNkbGdPMF9hVHZseQ?oc=5",
     "outlet": "KSAT",
     "seen": "29 Oct 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "How Texas Research Park became San Antonio's data center hub - San Antonio Express-News",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUzdSajBCTnQxa2J0VHNubElGVS1lOHhwaHdER2ZmblNxb0xKTWJtdEJFTDVTTkd1SXJvRmRCbDlZaWZLZThoNW1pNUlsaFJKSk10OFl3RnpmaGk2T0dBLVBzX2xaVHJnZ0QwTl9Yam1vVmRsN004T1ZxRDc5NkdYVGV4dVBpQi1qOWt6MlVqaWZYcENPOXB5RU40Tkc0b3c2V01xaVlfVTU1czY0OEs2cGttbEk?oc=5",
+    "outlet": "San Antonio Express-News",
+    "seen": "09 Oct 2026",
     "via": "Google News RSS"
    },
    {
@@ -96,20 +115,6 @@
     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRW4zV0k2Z1NZRkJoYW1JWFZ0ckhQUUJEWFRZRkJnRTh2NFBWTl9GRzYtWEpMQWMwWS11R1dnYjEySjAxeHpINURCb1pWcnNQUml0THR4czNJRUNId3dmam5SaTI4cVhTa05iRUsxNmtoc3hLNVhmRFNJU1dJYWVlLTl1MHg2TFQySnlGVG13c3FzWE4xaWIyanpnanJfOVNaZG8wZnByaDhrRy1DZXQyR3NRVURtcHRwUkpyeEY0dlhsQ0lSSTVLLXdCRnF2VE5n?oc=5",
     "outlet": "San Antonio Current",
     "seen": "06 Oct 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "How Texas Research Park became San Antonio's data center hub - San Antonio Express-News",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUzdSajBCTnQxa2J0VHNubElGVS1lOHhwaHdER2ZmblNxb0xKTWJtdEJFTDVTTkd1SXJvRmRCbDlZaWZLZThoNW1pNUlsaFJKSk10OFl3RnpmaGk2T0dBLVBzX2xaVHJnZ0QwTl9Yam1vVmRsN004T1ZxRDc5NkdYVGV4dVBpQi1qOWt6MlVqaWZYcENPOXB5RU40Tkc0b3c2V01xaVlfVTU1czY0OEs2cGttbEk?oc=5",
-    "outlet": "San Antonio Express-News",
-    "seen": "09 Oct 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Weighing the options: Council discusses data center regulation",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxORkYtaUhSUVp0TF9wYzVIcWFRRDBtb1RPNDQzWkxURXR2Q3R1ZmY2N2tLWERXVEo1SzZnamlBaFVsWHFtQ00wWHlIWTlQUWR3eGRZU05WT2JoMmp1UjBycFc1NlpOWm43NXpha1ZwUGlaeWRRbXVQZ0hKeUxZSk9PdXdUaV9rMUZibzhNNVBOSjQwQ1JmZ3BMZ3ZzYmdueDg?oc=5",
-    "outlet": "KABB",
-    "seen": "14 Oct 2026",
     "via": "Google News RSS"
    },
    {
@@ -141,10 +146,17 @@
     "via": "Google News RSS"
    },
    {
-    "title": "Data center battleground emerges between Austin, San Antonio",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQ0ZXRnBUQTZ0TGEtNjU2TjBDYS1DX3N3eWNFMml4Tm9BbEN4bTdiN0JLRVYxc3djSmdUUG43SkZMVVBJZ3U3Sjd3QldoZVlyOHMtd2o4enprejY3bTFyQnVBSEE5bzZoTTR5NGw1cVBKajdTTG1RMWFabmQyVmU1a1Y2dFBzLXRWY3djLVVwWHpWVEJSd2lYZTh2LUVyU0Y4bC01M1Jjbw?oc=5",
-    "outlet": "The Business Journals",
-    "seen": "01 Oct 2026",
+    "title": "Despite Abbott moratorium, Texas kept issuing data center permits",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNQ1pUZkczQU5XY3cxc1hwMkVfUy1IZFQyQ24tWkMwdXY0TnBtanpmVUZyaEhpMU5XTDg5Tm9tU0NJdWJsRDFfTVJCUEVZUnFwVTkwTENSTkJSUWRaVlFFd3pHRVpEb0dwM3ZOWHJLVm4zN3ZXQVRtYTlMazFvSUpnUlRSYU1YcmpneGU1Q0twTXVyZTdOYzlZaG03Wkk?oc=5",
+    "outlet": "San Antonio Report",
+    "seen": "22 Oct 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "Investigation finds Gov. Greg Abbott\u2019s \u2018pause\u2019 on data centers isn\u2019t a pause at all",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOQWhyWWZlMWZRMktVMkNfeURQaEJoNEJmLTQxNUdFS3NHZjNtTlJoa3lvQ3VXZEtYSktSanFQRGppOV92ZXhjWWJwTjdnWDI2bl9uS0dMMjBLNHFZc2RiRGI5VTJkaS1mVGJNSE80UVhva3dTQW5odERJRHBoYVcyTXg1NDlwSTBIZVcyVVRaYzkycnNXUU8wOWM3d1lRaVNxcEl4c01CZHB3aVpZODZQVnZrUHJIS0c5UnVha1RwSjQ3OG0xdmtMVTlldVJrdw?oc=5",
+    "outlet": "San Antonio Current",
+    "seen": "19 Oct 2026",
     "via": "Google News RSS"
    },
    {
@@ -155,10 +167,10 @@
     "via": "Google News RSS"
    },
    {
-    "title": "Despite Abbott moratorium, Texas kept issuing data center permits",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNQ1pUZkczQU5XY3cxc1hwMkVfUy1IZFQyQ24tWkMwdXY0TnBtanpmVUZyaEhpMU5XTDg5Tm9tU0NJdWJsRDFfTVJCUEVZUnFwVTkwTENSTkJSUWRaVlFFd3pHRVpEb0dwM3ZOWHJLVm4zN3ZXQVRtYTlMazFvSUpnUlRSYU1YcmpneGU1Q0twTXVyZTdOYzlZaG03Wkk?oc=5",
-    "outlet": "San Antonio Report",
-    "seen": "22 Oct 2026",
+    "title": "San Antonio was weighing 2 data center proposals. Then the mayor added a third. - San Antonio Express-News",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOVnZSd3hjNWs3a18zQi1XQ0diWk0ycHRfd3AwQ3ZIbUZrVnQ4cTVXRkpETU85amNackJHRGRiY1lkS2ZlRWFNZ19aRTRPUzVqZ2h5ckJudlA2QnNFYmttaEZmdXJWSzl2Zk9jbHNRRXp6N3B1ck5OVktVYVM2R3Vkb25BRzZacWtxOTJVS3J1WlZxekNqampoOGFwZkw4ay1PVC1ORg?oc=5",
+    "outlet": "San Antonio Express-News",
+    "seen": "14 Oct 2026",
     "via": "Google News RSS"
    }
   ],
@@ -238,38 +250,84 @@
   ],
   "48139": [
    {
-    "title": "Texas Continued Permitting Data Centers After Abbott\u2019s Pause, Report Finds",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZWlicmpMMVBCWDkwQWc2QS1KOEd5SFdPX3NEb2o1U0pRZ3R0WXFsSVlQeGVxeUYySmNHX3B1RWJwcHh6VXRlVzRfcWdmVHRsTFJiYm9zOS1sTlNJaUhJZzhZVE5sODhVd1FqTW1OWWZUYzVldzBraWJJQzdjMDRuQ0JWTjQ2X2NHRHFMaDd5R0ZkU3Z1eGZsbEFFOVN5YlhEVlVn?oc=5",
-    "outlet": "Inside Climate News",
-    "seen": "19 Oct 2026",
+    "title": "It took 3 months to get inside this massive Texas data center here what we saw",
+    "url": "https://www.fox5atlanta.com/news/took-3-months-get-inside-massive-texas-data-center-heres-what-we-saw",
+    "outlet": "fox5atlanta.com",
+    "seen": "20261019T191500Z"
+   },
+   {
+    "title": "It took 3 months to get inside this massive Texas data center here what we saw",
+    "url": "https://www.fox4news.com/news/took-3-months-get-inside-massive-texas-data-center-heres-what-we-saw",
+    "outlet": "fox4news.com",
+    "seen": "20261019T173000Z"
+   },
+   {
+    "title": "It took 3 months to get inside this massive Texas data center here what we saw",
+    "url": "https://foxwilmington.com/it-took-3-months-to-get-inside-this-massive-texas-data-center-heres-what-we-saw/",
+    "outlet": "foxwilmington.com",
+    "seen": "20261019T151500Z"
+   },
+   {
+    "title": "It took 3 months to get inside this massive Texas data center here what we saw",
+    "url": "https://www.fox10phoenix.com/news/took-3-months-get-inside-massive-texas-data-center-heres-what-we-saw",
+    "outlet": "fox10phoenix.com",
+    "seen": "20261019T144500Z"
+   },
+   {
+    "title": "Compass Datacenters says AI boom is creating blue - collar jobs in Texas",
+    "url": "https://www.foxnews.com/politics/took-3-months-get-inside-massive-texas-data-center-heres-what-we-saw",
+    "outlet": "foxnews.com",
+    "seen": "20261019T103000Z"
+   }
+  ],
+  "48085": [
+   {
+    "title": "From Forney to Corpus Christi, inside the Texas cities cracking down on data centers",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQZVZSMEg3ZERwdlZCOGpFUWk5ejgtUlBwV3NuanJ3RTlSbDVhQWpwN2x6VmVFZkxkeWVJT2Z2SzhkMENDcXkxVnNrNGczOEtJbzQzbmJacU00SGJpMV9qMGp6Y0JsQkU4WFNLTWl6aGtjS203dlJUTlFvUmt6SWhrSkdkWVJwZDVVb2pmc2JXWjlQUklNdWduR0lhbHAwZkpGWUE?oc=5",
+    "outlet": "The Real Deal",
+    "seen": "08 Sep 2026",
     "via": "Google News RSS"
    },
    {
-    "title": "Data centers pump $340M into rural Texas projects as they try to improve their reputations",
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUE9sQXB5c0Y0VHZpQ0tBLTdHazduWlZCUURuVV84eE15ZDBhcmZRX2trVkllMjBJdWtpQjdPa0x1UkpMdWRDX19tV2dDcUZETmhCTlE5YjMwallwVnhmWDFYRXBvRnFuWFFDTTFwY0g2bUQ2N0FjT2YtaWt3WDBsOFhnYmhZemUxQlpRWnNYVUZLYWhm?oc=5",
-    "outlet": "The Texas Tribune",
-    "seen": "01 Oct 2026",
+    "title": "Data center company eyes land near Princeton, receives approval for a well",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZlVWUXA5U21hdTBHYXBnWXhhQ0V1WnE1NVUwdWJET1gwZDl0Y0hqdXhtc3Q0MU5jSVd1UXlUem1XeFh3V2tNekN2YXU1bjJ4V3NzanVrRVFBR0lRbklGamlLcEhLZ0JlZGFHMzZxWnBQMzNSc2FLVjhRdmMtNUZRcUt4MHh1aG1uRmNfNFhlMURaUVJvVTdqN1Q4UTVmS2c2M2ZVOA?oc=5",
+    "outlet": "Dallas News",
+    "seen": "17 Oct 2026",
     "via": "Google News RSS"
    },
    {
-    "title": "It took 3 months to get inside this massive Texas data center \u2014 here\u2019s what we saw",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNN250dVVEa3hsSEZjX0c1bEM1US1mdnZZNWUyOWF5dVc5MnpUMlpmZExabVBJdlBtbEM2UVNSaVBodW1sa2UzMHBjSDJEWjd1aEd1Zmp4YmktMWtqd21BVTdIZDl1bTZxRGFmZHhPMWNJR0JfdE1EZERCMlhnOEVlSFd1R0pfYjZfNVdqY2JKR0thOUZxMFlYQjdkRlY?oc=5",
-    "outlet": "FOX 5 New York",
-    "seen": "19 Oct 2026",
+    "title": "Collin County officials discuss creating more guardrails for data center development",
+    "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxORUVta0tyT0tncDdXYTRjcGhBSXAxVGstVGM0cW9pNTV2V3l5R0Y2YVVubGZWWU8wSmQ5SThLS09mcXlwMUZJTjc3YXhYR05OU3dTSVJSN1BFamlwZ1pTaTJUcURrSXkxUl9teWFPaFRCY0oyUzJCVmF2V1o0U3hid1VGZEpjdmpmbjdLbllqX0toU0VqbTFzcUcyZmVwTk9rZk5sUmdDT2prbkctOGkwdUJBeS16OFp0VXRMbTVUMVpDaUxfaG53SnRsWktBSW1tMVVCb3NTREoyLWVLQVF4eU5qR0J4OGRTcDFsMUlyZUd1dy1uZ1E?oc=5",
+    "outlet": "WFAA",
+    "seen": "15 Sep 2026",
     "via": "Google News RSS"
    },
    {
-    "title": "Data center developer tried to \"razzle dazzle\" while sharing few specifics, Texas county commissioner says",
-    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE8xclFmb3M0d3VITExieG92ZURxSV90UG1UOWtvUHp0UkEteXVKaXRNenVJQXpvSWktTDZfQTBuRUJpd1NQM0tEVV9nOFdJSHdkeFVXRF9tMGdPUHlPZE5QSHRuSC1mRllmQkFUSXNsX3dWS3FyV0JTRm9jMA?oc=5",
+    "title": "Data Center Firm Wins Woodbine Well Permit Near Princeton as Texas Freezes New Projects",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNOTcxbUM5R1BWUGxLWE9fQmd2eGIwbGs5S3pCMThVMFFaVGpybGtFQUQxUDBFUjJMSHBzUFBLZU5RcnpKMElFbV9iTjI5a1JDeVJ0NDUtV3k4eWE4UWdYRl9CczhMNmdfNTZtcjh3bkxBMmdJYkItUU9nNWtjMTNCNldHc0xOaGRzTGp6QWRYSS00UDNhVWRVZnRMVU1IYThmVFJ1U2t5dWtDM0RkVE43VmY3WW9iZlRq?oc=5",
+    "outlet": "Hoodline",
+    "seen": "17 Oct 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "Dallas enters the data center debate, but Texas should weigh in",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZURBZTVYMkZ1aVNyZXVhX1F0Q2N3dXRDc1JRbnRVc2V3NDV1b0ZVTVVUYVdpRHhmam02VVdPdXdKV2xIODNOY01ocUVWdm9tZWZzYmJTc1I4ZmJJRkc3bzRYWkFVc2lxWDRGYkdoNERGY1VVQXUwWFhacDZ0bUZsS0FDNHFtNlJSZVcwOFNaclpnbVJKeS1BR1pfajhwUVpwZktPSmpKd0UxZDRjUGNkSXJ2SWI1UW8?oc=5",
+    "outlet": "Dallas News",
+    "seen": "06 Sep 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "Collin County's new voting system passes early test despite glitches",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOa3RCclVSZmNRNlZqVkwzellWS0xmSDVFWC11QVYtckU0cWdRQWtNLVZYclR0aXpLUnlUY3FOenEyQXA1NFB3bGdMMkNvQU90TzdneGJFNE1iYUplTXJiOUU3SzV1N3l1NUZMM19USWZZb0htY3JTWXkzSnVmVW8zS293LWlSb0ZjWGNnU1lrOFBiSUhYOTVhZ0FxY0dOUmFnbnNnbmxiSQ?oc=5",
     "outlet": "CBS News",
-    "seen": "20 Sep 2026",
+    "seen": "23 Oct 2026",
     "via": "Google News RSS"
    },
    {
-    "title": "Stack files for second building at Lancaster campus, Texas",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZF9FbVJoNFNTNEpDdlh4cVNEbHRVM2M5Uy1fMFJMdnRaZ2pxUGdFVUJDd1VNOWJRQlhqNUg4d24xZlcyLVJjS3lkSUdGdGJnTldfdkE0R1dESExHcXhPUlFFVEFDbTh5UEh3V1Rjem5mTlBadGFZalRXSzNNOVlQQjFIdzV4TzNjZ1daYUJIUlJ6WVRlV3RsQjZqc1VwU2liQ2tv?oc=5",
-    "outlet": "Data Center Dynamics",
-    "seen": "19 Oct 2026",
+    "title": "Restraining order dissolved in Westlake-Keller data center lawsuit",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNOElLd19uaDBtbjZ2T3JUODZheE5ZZEF1b05hVUNEWWZoWHloMFg5Qm4xdUtUMmxiMW5MZGUxdWEtVXBXSTdpVWlDWllKd1ZOLVpyTkVZYWs4TzFzTUpjc1pnd2xzSEVzZzQwRXh1X29MRUhMdTFPWVNLSEZhNDhfMHJ2OXVKYzVyNGxtbVlhLTB6RGY4MGJfWWJlelNHdlJGVDVna3FOMDBTaUt0eFdVZk5B?oc=5",
+    "outlet": "Dallas News",
+    "seen": "28 Sep 2026",
     "via": "Google News RSS"
    },
    {
@@ -280,60 +338,11 @@
     "via": "Google News RSS"
    },
    {
-    "title": "Crusoe Reveals Developer Role at Google\u2019s Texas AI Data Center Campus",
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZi1UTFhIVXJrVjY4UkI1Z0ZERFdnZzhtQUV4Mm5vVkZNNmdiZ3NVSVI4YnlBYVh3Y2lwUjJHYVBTSk5RMW9CSlQ2aG5Wb1ZreVZJWTIzaTdtcHFPcUNfQklEa0lCMFFFZWhINFRPQ2d3YnF4RjJTdngxeGFjbWItaFBwMlBqMjhGRnM5aExrVmRQSUJh?oc=5",
-    "outlet": "Unite.AI",
-    "seen": "28 Sep 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Texas wages: Study reveals where workers are making the most money",
-    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5EQTJIRkVpcnJnemRCbDVmZ2ZzZlRMVGozQ2UtWGVxdmlxTlAyWFp6N2JRdFdQYWVOamozeS1CZzBhUk9kaU1DQm9wMWh5ZzNKNzdSTzlsZnNQd09mYnFEY0R2WEk?oc=5",
-    "outlet": "FOX 7 Austin",
-    "seen": "06 Oct 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Hinojosa visits Red Oak, speaks on data centers",
-    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQdWZ1bDFIZm9yd0FOOFUyaXdUR1NMSER2d1g1aFRSS2gwdE10T0NMUGhSUzJ5MEMxUXl5TEIzVnRZTDRWM0JZV1hQQ2R4WGlDQXQ0UWRyZmEwYlV2RUxaVThYeTBGaUJQeGtVRVA3ZTNxMnNnaFVnajlUOFZIcDdsWWdfSmc4bGpjV19oTEczbTZGUFpkcUhfQzdDWVFwUnByS2laM0d4M3Zhc0VJeGlhTXVMNXQtRy05eXJTMF9ZNUw4ZVJiQnI1c25IOA?oc=5",
-    "outlet": "Waxahachie Sun",
-    "seen": "22 Sep 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Google named as customer for Crusoe's data center campus in Amarillo, Texas",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPS2tCdGdKeWhoUmF2OGJPb2VmU3lmWGVjUVFRNS12anZDMnJRY2tKaTZmbko0TEl1SElCdW5kcDU4SmtRUzNXdGszSy1EdE5EdUlEV1dYM2FTVXlMUi1nUlZ4WlRrVmVSUWMwY2FDZjhIOHJoNG5ONlR4RFppaW9adUw2Z1dKVUxUblNqUUZON090Ui1KZTJGamZVSmwzYXZjZlZqeXl1dWQ5bXpETS1pM2t4YnBMbm1j?oc=5",
-    "outlet": "Data Center Dynamics",
-    "seen": "30 Sep 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Texas counties have no zoning powers over data centers",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOTDNKMjRRZ0NVblU4R3k4MGxpaUxxY1M3ZlZ2WGItSlN0SGV2SmNDQWRXbFdRYTJOY2Z6bGotcXRNMU9BSDA3aXFYM2ZhdHpNbUZyRFRhNjZNUGppLUpYcU4wdkFsRGRmbWFqRDJ3ZENFQmh1WERyV2ZOVFVrUkh5dzRFYVlERXBrMXFUZmRuSmNubERzWk1IMUg4dU8?oc=5",
+    "title": "What Texas can and can\u2019t tell us about data center jobs",
+    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOdW1yc3d4UEQ5RUZPczcxNTYxTFlvVk5mNjBtRTA1djBHSEx4eTFvclZlMm9PZWxHT2dvSVBIYjNUMGpwVThUb2NSeUhRZDR4a3c0b2l0eERZRWhmMXo0QWNpRUczT21PbnF0ako4RUZsZldDMVluUWRydUwzWS1XZktQdFpsMi16WXliXw?oc=5",
     "outlet": "Dallas News",
-    "seen": "15 Sep 2026",
+    "seen": "17 Sep 2026",
     "via": "Google News RSS"
-   },
-   {
-    "title": "60 Minutes Transcript: The data center uproar",
-    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1Cb3FLU2d4cUZHUENuOU9WSWdtX05qTC1YZTlNUm1pVGRDTjFYZk53TG50SXJubjRlOWF3YlEtNnNDeklVNGRvNFI0eGE0MjlUTHNYRzBPNXF2TFdkWmYyVmhpSGVOQlJFLXdzWXNzdV92dw?oc=5",
-    "outlet": "CBS News",
-    "seen": "20 Sep 2026",
-    "via": "Google News RSS"
-   }
-  ],
-  "48085": [
-   {
-    "title": "Paxton receives desperately needed $54 million donation",
-    "url": "https://paisano-online.com/53855/opinion/commentary/paxton-receives-desperately-needed-54-million-donation/",
-    "outlet": "paisano-online.com",
-    "seen": "20260923T124500Z"
-   },
-   {
-    "title": "Simpson Thacher Sustainability And ESG : Regulatory Update \u2013 August 2026",
-    "url": "https://www.mondaq.com:443/unitedstates/waste-management/1832300/simpson-thacher-sustainability-and-esg-regulatory-update-august-2026",
-    "outlet": "mondaq.com",
-    "seen": "20260818T123000Z"
    }
   ],
   "48": [
