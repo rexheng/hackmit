@@ -155,11 +155,11 @@
  },
  "registry": {
   "url": "https://comptroller.texas.gov/taxes/data-centers/data-center-lists.php",
-  "certified_facilities": 178,
+  "certified_facilities": 181,
   "by_owner": {
    "Amazon Web Services": 14,
-   "Microsoft": 15,
-   "Google": 15,
+   "Microsoft": 16,
+   "Google": 17,
    "Meta": 0,
    "Digital Realty": 0,
    "CyrusOne": 3,
@@ -407,7 +407,7 @@
      "wue_grade": "C",
      "talk_grade": "D",
      "claims_checked": 5,
-     "state_tax_certificates": 15
+     "state_tax_certificates": 16
     },
     {
      "owner": "CyrusOne",
@@ -1401,7 +1401,7 @@
      "wue_grade": null,
      "talk_grade": "D",
      "claims_checked": 6,
-     "state_tax_certificates": 15
+     "state_tax_certificates": 17
     }
    ],
    "overall": "D",
@@ -1926,7 +1926,7 @@
      "wue_grade": "C",
      "talk_grade": "D",
      "claims_checked": 5,
-     "state_tax_certificates": 15
+     "state_tax_certificates": 16
     }
    ],
    "overall": "D",

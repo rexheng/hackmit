@@ -1,5 +1,5 @@
 {
- "retrieved": "2026-11-09T06:32Z",
+ "retrieved": "2026-11-09T22:22Z",
  "source": "GDELT DOC 2.0 API",
  "counties": {
   "48113": [
@@ -67,13 +67,6 @@
     "via": "Google News RSS"
    },
    {
-    "title": "Texas was the new epicenter of the AI data center buildout. That might be kaput.",
-    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOcEJJcnItVEJsTFR6cjFwUS1ISF9FX2tpNmJWSU1OS2EzOXJaQjhnRGpTaE96YVZHdzU1VXNmTGJSWnhhWWN1eFp6SXhtNlNGdmVoSUtWbWxNY09BY3Q4RlplUm1MNEVKNF9pcGNlREMzU0pnSzM3QXVTTzlfSjV5emFkMk1TenllYUhDVUNzN29uT2N5UDZQWllPOG5wcTdjTDZfWFRTWGp6aTIxdTlXM2hiVW1teFBuU21CUG9QMklpREVNR1hfMmoxONIB0AFBVV95cUxQMkVSejhoRkZXQlBLVTBPNE1WbHhxTk10TE5vcmdranlJSXdYcjZUeTJfLVhpWGNTQzNuX1lJdzVBVGdEajA2bGVjUFRpVU5STlJNaGhWZ1FXb1Jiek1PZkI1cV9VeE4zWG0tWmpzUTdSWDh1bFAzVEgxMEdtVTVTRjlidTVWNXlIRlplbkZXYnlfV3hqZXdId3pOTHhRbXYyWnJqZ0VmdFI4VWNCRnA2TjNGMDRRdEJHRC1Td0NxR0d5Sm1YYU1fZzJmZGs3b3lO?oc=5",
-    "outlet": "MIT Technology Review",
-    "seen": "04 Nov 2026",
-    "via": "Google News RSS"
-   },
-   {
     "title": "Despite tough talk from Abbott and Paxton, Texas penalties for data center violations are light",
     "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNUDFNa2lGNlB6QUdhZ1NGZ0E2YU1IakNOWG54aktaMnpCVHA2ZkFLYm1DbHU3S3dLa2hOY3A2VW5KMWxzV3RacDdIdzIzTTZKYWpKWUJ2TzA0NURmMXdtV2RPNjNkQ2h3VFJzYVJYaUp6M21ESm1rdDg5bkdGNUUzMEhXX1p6V3VrM3VUQUZ1ZjZ2QUl2S29NZE91aXJuZmNaTkpFRmIyaktjSDR2TUVpRWtkS293U1ZuX3Y3MWR6eEthMXNQb0JScnp5aGlndkFEcWd5YkNXTi1KSExSOXBWb1hYV0VDSml0eTM4UEw0ckhfODJvdU5xN01MRWJzV00y0gGIAkFVX3lxTFBpM1FwX3h2Mm1YaUtnTy1TZEY2RFUzTjZid2FsVnZVVFhSOGVCWDhNU3o3LXQxamhwMnpsRXZET3FhdmVyN1dlcHZvSkZJT1ZabzhsSVo4UlEtZHE2OFY2R3JpNFlNRXdUdGlXUENLSmlQVldWNnhaTk5sbTVkTkVRQlZzNENrNGlGZXhZMlNVWjFKZ3pEX1RIT0tDTzFpSF82SmZXWEUzZ1g4R1NPLUdWd0o3MU9MVkRqVUFuN0x5ZnRPc1oyQnZ4SkwyWE1PMk9oSkpmZVNSWUgxQjJ2Mk5LNjh0YUVUdERORzFlU0pXSmYwZUdwa1JmZUV6Vy1Wekljek9FTWY1OA?oc=5",
     "outlet": "Houston Public Media",
@@ -85,6 +78,13 @@
     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQMGU2R2k0dFZ0WkRGNHJwby01Ui1ESmtBeVQ3eVVDenBOellkV0FPRU50bFJRZUVETGlhMUJsZGNUT0hZazcxUnZVZVZ0Nk5FaDIwR01rTTRSRlJhZkItZ2NPRHpjYk1RX3J4S0lLX2k2Tk5TOWJHSnk1UzFNYjBvQWJPSTVldzM0anlodmVRanpnM3Bsc2wtZTR6bkt5WW8?oc=5",
     "outlet": "FOX 4 News Dallas-Fort Worth",
     "seen": "13 Oct 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "Gov. Greg Abbott broadens moratorium on data center approvals to include environmental permits",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSEx1ckpTZnF2SmRVby1uWFkwSUVCd2JDZTZaZzNoZHRNWU9oTzNXUG9kdzRjOFBZcXd4S3lWeTNjNmJyc0R2aU9xRE9IZk01UUxUWXFBRzlUWEFHd3I3bXRpWVFyNXJxYWtjbDRpSElHY2sxUHVxWl9pUUxET25WdzhfMWZDV3NKd0E?oc=5",
+    "outlet": "The Texas Tribune",
+    "seen": "21 Sep 2026",
     "via": "Google News RSS"
    }
   ],
@@ -164,6 +164,12 @@
   ],
   "48453": [
    {
+    "title": "\uba38\uc2a4\ud06c \ubc18\ub3c4\uccb4 \uacf5\uc7a5  \ud14c\ub77c\ud339  \uc2e0\ud638\ud0c4 \u2026 \uc124\ube44 \uc870\ub2ec\ub2f4\ub2f9 \uadf9\ube44 \ubc29\uc77c  ",
+    "url": "https://www.hani.co.kr/arti/international/international_general/1286423.html",
+    "outlet": "hani.co.kr",
+    "seen": "20261109T063000Z"
+   },
+   {
     "title": "SouthState Bank Bets on Banker Hiring as It Eyes Faster Loan Growth in 2027",
     "url": "https://www.dailypolitical.com/2026/11/08/southstate-bank-bets-on-banker-hiring-as-it-eyes-faster-loan-growth-in-2027.html",
     "outlet": "dailypolitical.com",
@@ -228,12 +234,6 @@
     "url": "https://www.zerohedge.com/ai/texas-governor-elect-wants-data-center-pause-white-house-says-communities-should-decide",
     "outlet": "zerohedge.com",
     "seen": "20261107T050000Z"
-   },
-   {
-    "title": "Texas Ag commissioner Sid Miller calls for Texas GOP chair to resign after election losses",
-    "url": "https://www.ktre.com/2026/11/06/texas-ag-commissioner-sid-miller-calls-texas-gop-chair-resign-after-election-losses/",
-    "outlet": "ktre.com",
-    "seen": "20261107T000000Z"
    }
   ],
   "48139": [
@@ -336,6 +336,13 @@
     "via": "Google News RSS"
    },
    {
+    "title": "Gov. Abbott\u2019s data center audit is underway. Here\u2019s what ERCOT is asking.",
+    "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNcHFNbkNoSzNkdnNyN3FIMnVyNzBna3Y1SG84cTFGYkNXQ21yVVFNcnIwTFpiYWx5Z0YyQkl3LW5oVG1JdXM3Z0FiMzhuazFVMERCbDJDc3ZTY3k2cmo5WXR0ODhDaVVSUjNrMURHTnJyWEpuMjJ0cE5DZTFUT05OcUdYM3lPdlZyUGdLQ2JXeVdJTl9Qcm1EcHZsOGJHbDE0UFhmZU5CRHhUZ3JlVm5UWmszdndEVFhyLW1Qa3ZKNXNaRzZXVHlpVVhvWkpmUjl4MTJGdGdzQWJkNWtvcDZPOUlYazdZVXUwTXdF0gHzAUFVX3lxTE1tOWVYZk1NSzVZZTlWTUZsWXZUeW1Cazc2bmZwNjA2TXpLdmlUd0NpMGZraG9ieXF4X1N5SG9CeU85NEpDZGppYlViakEwTE9PUDhZUko5ODBfSC1UTVlBQkdqWTA0ZnV6ako1bkRlYmZEbUNFY1c2WDBTaC1qVUw1dmE5RHZNZmc4VDBrU2pfX3BvQUI2ZVB5U000SXEyNjZjb0VJcVgtLWwzblNCNEt5dk5fZWdVZTFJSEpaU2R0NTRxRlhsN3VxdmU0bjgtSExyM2hMMXkzSTUyVkxXOTRMbFd1MDQybUZTT1dtYl9yNXlsUQ?oc=5",
+    "outlet": "Houston Public Media",
+    "seen": "18 Sep 2026",
+    "via": "Google News RSS"
+   },
+   {
     "title": "Texas Gov. Abbott orders data center permit halt weeks after issuing moratorium",
     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSVJvaHJuMzNxRXo2WE9SVHk3RXFMZ0t5QnRzV20zQi1CeEhoYXUxQVRqcGtrdjlHX3dhcDhpRUdSOGpia1QzbUlDSzdXdmszaGVreklianEyX0JVU0xONnI3OHRXakNPd3FGVFJhQ3RHeVc5QWZTRUpxcWNEa0daekxHcTlzbHVF0gGOAUFVX3lxTE5vVTQ4Wml3TmtzMUJ2M1FoVXFFVGw1Y05UbVB5LTl4bE40RElnSHlzRlRyS21ON0FrM0NCVVZfZklhSXBVRXR6MnBiaXdkRVVOaEl3c1lua0c1RkNPMHo1ZExXYklmaUh2TjZUMGdncF9faG5uTU00U2t0M21VTXAyVzBHRHZYbUVYRjVpQVE?oc=5",
     "outlet": "CNBC",
@@ -368,13 +375,6 @@
     "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPRkxnX3FEUVRQMm0tV2xtc0FYOUV5RkxfRzRBa1c1VnRjaEF6ZUVVTllEQzB2aDI3dmN3ZVFrbjNpOGJobXo1S1JsTUNzLTZkMTdtQVBDdjBibTJBcFhHSDE4VTFXeEZqVUs1eXVOMU5ZU0dXblZidHVPVXVyR1ZkWE15ZEVLcnpzMUhfM2l2Y2l4emVwYnFoanlPcGNiNXVOYVdEdzZFYWVGVDZiRjl6SDNmeF81Mm1DUzFxR0pRNjB5M3lRUnNpZkp4MHhleTBVTU93N0I1TnhneUdmbUgwa3RIZ0xlRUdvZ1lGODRJYzlpaEE?oc=5",
     "outlet": "KVUE",
     "seen": "28 Sep 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Texas needs greater transparency on data centers\u2019 water and air impacts",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWUtwaXZ3Uk4zSjdHcG5najRpYW9XeTVjWG03U3BKMXpUZzE2YXJ3T0ZJUEpnT05BN3RQbVVBUlItNDlfMkJBSXhVMThnZDVVZ3J1T0JWaDFhZzFRMGVQWWdTdFJndGFJaFEtYkUxTVZOSGJCajVycmdGdENPT2NlSG10OU4zcWZ3eC1OaGNkRTRiU0lQMVlrR2I0QkZzQkdWVFVfdzZZSFAtUFdOak5sakMtYnBzZm9ZcHhz?oc=5",
-    "outlet": "Environmental Defense Fund",
-    "seen": "10 Sep 2026",
     "via": "Google News RSS"
    },
    {
