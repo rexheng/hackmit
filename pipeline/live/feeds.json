@@ -1,5 +1,5 @@
 {
- "retrieved": "2026-11-14T06:25Z",
+ "retrieved": "2026-11-14T18:03Z",
  "every": "6 hours",
  "feeds": [
   {
@@ -9,7 +9,7 @@
   },
   {
    "kind": "Local news",
-   "count": 57,
+   "count": 61,
    "what": "headlines by county, GDELT then Google News"
   },
   {
