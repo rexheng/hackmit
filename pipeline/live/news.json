@@ -1,5 +1,5 @@
 {
- "retrieved": "2026-11-15T06:33Z",
+ "retrieved": "2026-11-15T18:52Z",
  "source": "GDELT DOC 2.0 API",
  "counties": {
   "48113": [
@@ -11,17 +11,17 @@
     "via": "Google News RSS"
    },
    {
-    "title": "Texas data centers face investigation after not answering water survey",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdDVSNkFhTUFPaXh3Q0pId2VTNTVYZEV5V2lTV3RXYk1aR0lMY3l3TWRnb0t6QXpVVk1lRFhFcnlacU1tbUo3Mk5lcVNBdHBTR2NFVWJGakNLclB0c0tpaDVRb0RFcFlFZm5oZWdFQi0tcmVySWU0ZDFFMTJwSWMtbFB4YlpwalZmYkllZVFmTndZaC1ZUEI2a0hfOXdydkQtV1djMlRsR1JkVnZGOVJ3?oc=5",
-    "outlet": "Dallas News",
-    "seen": "24 Sep 2026",
-    "via": "Google News RSS"
-   },
-   {
     "title": "What exactly is a data center?",
     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOdEJhNDJJaVZKX3ZlVkhWc2lMZmd1S1VZM016MG00TjhnMTcxZnVPM054LVJldkdtNlEtWWNuOWRBZlcteno5NnZwNU5US3g0NDBsRGlSQzlRTGpVb2szNndpSWRmZGxubVBOTFFoWlZabjhfNDZTajNULUdBS1FZVVNNcVpxNFVnbkhiOTNXYw?oc=5",
     "outlet": "Spectrum News",
     "seen": "21 Sep 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "Texas data centers face investigation after not answering water survey",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdDVSNkFhTUFPaXh3Q0pId2VTNTVYZEV5V2lTV3RXYk1aR0lMY3l3TWRnb0t6QXpVVk1lRFhFcnlacU1tbUo3Mk5lcVNBdHBTR2NFVWJGakNLclB0c0tpaDVRb0RFcFlFZm5oZWdFQi0tcmVySWU0ZDFFMTJwSWMtbFB4YlpwalZmYkllZVFmTndZaC1ZUEI2a0hfOXdydkQtV1djMlRsR1JkVnZGOVJ3?oc=5",
+    "outlet": "Dallas News",
+    "seen": "24 Sep 2026",
     "via": "Google News RSS"
    },
    {
@@ -90,88 +90,76 @@
   ],
   "48029": [
    {
-    "title": "San Antonio restricts data centers, requires council approval on new projects",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTmFrbVpSakoyT3BkVE9uREY5a3VGalFuZjBxNFVZNV9OSTdaSm5SWUxSMGdjWHB0Yl9hNXBKR005OWtfUU5mLVQycmQ1aGhmaVRhcTdWNTFMTWh6Tkd6Unh2QWhaM2MtZTlXbHF0d1FEeHdETGU4YVQ1YVhLaENHTmVlVjIyR3ViZzZCN3ppUUMwcUlnV1BvcjRYcUs1NXVfUFNDQ1F3YWo2RmhzOXFFamNkbGdPMF9hVHZseQ?oc=5",
-    "outlet": "KSAT",
-    "seen": "29 Oct 2026",
-    "via": "Google News RSS"
+    "title": "\u524d\u77bb\u5168\u7403\u4ea7\u4e1a\u65e9\u62a5 \uff1a \u5929\u5bab\u5c06\u8fce\u9996\u4f4d\u5916\u7c4d\u822a\u5929\u5458 _ \u4ea7\u7ecf _ \u524d\u77bb\u7ecf\u6d4e\u5b66\u4eba",
+    "url": "https://t.qianzhan.com/caijing/detail/261109-e14d77f4.html",
+    "outlet": "t.qianzhan.com",
+    "seen": "20261110T050000Z"
    },
    {
-    "title": "How can San Antonio regulate data centers? Breaking down the options in front of City Council.",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQczVoZmNDV3Nqd0kybnlKWl9OejE2eEVLT2pmejM3LUd6cE5NQUJvdGZHZzhnVXczaGpSMVdRdks3S0pKVkVEVkpxWjVVY3ZnZG0tWnJfTGVBOUliem9qNkVJb3I5VnpJR0thOVFIc3BwLUx2QTJnMEowUjhGRGdCbmRHR0htODFNeGE3Mi1TT2VNaUFVaHVGR0QwTzRhSlN1NmNST2RZRkpEOXJINUxHdlREekFTbThUMFVwNjU5NA?oc=5",
-    "outlet": "San Antonio Report",
-    "seen": "25 Oct 2026",
-    "via": "Google News RSS"
+    "title": "Hyperscale data centers and powerful opposition testimony",
+    "url": "https://www.hendersondispatch.com/archives/hyperscale-data-centers-and-powerful-opposition-testimony/article_d73042a8-4c54-516d-94d2-ba344390a5bf.html",
+    "outlet": "hendersondispatch.com",
+    "seen": "20261110T003000Z"
    },
    {
-    "title": "How Texas Research Park became San Antonio's data center hub - San Antonio Express-News",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUzdSajBCTnQxa2J0VHNubElGVS1lOHhwaHdER2ZmblNxb0xKTWJtdEJFTDVTTkd1SXJvRmRCbDlZaWZLZThoNW1pNUlsaFJKSk10OFl3RnpmaGk2T0dBLVBzX2xaVHJnZ0QwTl9Yam1vVmRsN004T1ZxRDc5NkdYVGV4dVBpQi1qOWt6MlVqaWZYcENPOXB5RU40Tkc0b3c2V01xaVlfVTU1czY0OEs2cGttbEk?oc=5",
-    "outlet": "San Antonio Express-News",
-    "seen": "09 Oct 2026",
-    "via": "Google News RSS"
+    "title": "\uc564\ud2b8\ub85c\ud53d , \ub370\uc774\ud130\uc13c\ud130 \uc804\ub825 \uc9c1\uc811 \uacf5\uae09 ... \uac00\uc2a4 \ubc1c\uc804\uae30 4 . 6\uc870\uc6d0\uc5d0 \ud655\ubcf4",
+    "url": "https://www.etnews.com/20261109000006",
+    "outlet": "etnews.com",
+    "seen": "20261109T010000Z"
    },
    {
-    "title": "San Antonio City Council Sets New Data Center Regulations",
-    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQQ3V0Sk1ReWsyTUM1bFV2ck1WaFdJOHdXX1l6WWZpTFdDUVRZR2tDZklRRzZlTk5sRElwb2ZoVndFZldvdHlMMzRJdkxsTnpmNG81Z3VFQXRXc3pkLWNkcVQ1UU1tdDlsRmswbGd5SkRPOFhVQ05tZ0dpNVluUEthYzVCS2p1SFZOM0pRNTExTVNXQ0lKOWc?oc=5",
-    "outlet": "Texas Scorecard",
-    "seen": "30 Oct 2026",
-    "via": "Google News RSS"
+    "title": "Anthropic\u65a5\u8d4434\u4ebf\u7f8e\u5143\u91c7\u8d2d\u71c3\u6c14\u53d1\u7535\u8bbe\u5907 \uff0c \u4e3a\u6570\u636e\u4e2d\u5fc3\u4f9b\u7535",
+    "url": "https://wallstreetcn.com/articles/3785493",
+    "outlet": "wallstreetcn.com",
+    "seen": "20261108T160000Z"
    },
    {
-    "title": "Investigation finds Gov. Greg Abbott\u2019s \u2018pause\u2019 on data centers isn\u2019t a pause at all",
-    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOQWhyWWZlMWZRMktVMkNfeURQaEJoNEJmLTQxNUdFS3NHZjNtTlJoa3lvQ3VXZEtYSktSanFQRGppOV92ZXhjWWJwTjdnWDI2bl9uS0dMMjBLNHFZc2RiRGI5VTJkaS1mVGJNSE80UVhva3dTQW5odERJRHBoYVcyTXg1NDlwSTBIZVcyVVRaYzkycnNXUU8wOWM3d1lRaVNxcEl4c01CZHB3aVpZODZQVnZrUHJIS0c5UnVha1RwSjQ3OG0xdmtMVTlldVJrdw?oc=5",
-    "outlet": "San Antonio Current",
-    "seen": "19 Oct 2026",
-    "via": "Google News RSS"
+    "title": "AI\u516c\u53f8\u8fc4\u4eca\u6700\u5927\u53d1\u7535\u8bbe\u5907\u91c7\u8d2d\u8ba2\u5355 \uff1a \u66ddAnthropic\u783834\u4ebf\u7f8e\u5143\u4e70\u71c3\u6c14\u53d1\u7535\u673a",
+    "url": "https://www.163.com/dy/article/LB84TT8H0511B8LM.html",
+    "outlet": "163.com",
+    "seen": "20261108T130000Z"
+   },
+   {
+    "title": "Glaciers retreat , Texas democrats rise",
+    "url": "https://www.klcc.org/podcast/oregon-on-the-record/2026-11-05/glacial-retreat-texas-democrats-rise",
+    "outlet": "klcc.org",
+    "seen": "20261106T030000Z"
+   },
+   {
+    "title": "Texas Republicans scramble to rein in powers of governor and lieutenant governor before Dems take over",
+    "url": "https://www.sacurrent.com/news/texas-news/texas-republicans-scramble-to-rein-in-powers-of-governor-and-lieutenant-governor-before-dems-take-over/",
+    "outlet": "sacurrent.com",
+    "seen": "20261106T010000Z"
+   },
+   {
+    "title": "Fed up with data centers and Big Tech , rural Republican crossover could decide Democrat fate in Texas",
+    "url": "https://www.sacurrent.com/news/texas-news/fed-up-with-data-centers-and-big-tech-rural-republican-crossover-could-decide-democrats-fate-in-texas/",
+    "outlet": "sacurrent.com",
+    "seen": "20261023T230000Z"
    },
    {
     "title": "Texas data center boom could erase decades of progress on air quality",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQaTdYZGk4WnBiRFB1Z2tVRVc4MGhKR193TzQ3SjhHdU5sRzhMU0FoeXItaGZHd2gtMnVpbDZkUWJLSkhrMjRwYVA4Smx3SFIwa25TTWFTODYwNHp6cl9rOEp0OWVVTzZBUjFBV3Q0TWxYdkNGTURXRlNVVldGd2YyaWxkR1pLMThHRkZTcDBpMEZINlctb3BxZnM4MW9BbzFXaXR3?oc=5",
-    "outlet": "The Texas Tribune",
-    "seen": "20 Oct 2026",
-    "via": "Google News RSS"
+    "url": "https://www.kwtx.com/2026/10/20/texas-data-center-boom-could-erase-decades-progress-air-quality/",
+    "outlet": "kwtx.com",
+    "seen": "20261021T013000Z"
    },
    {
-    "title": "Data centers will now have to seek San Antonio City Council approval after leaders OK zoning changes",
-    "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQTlJKRFdTdWdoQ0ZhUTluZl9HaE9wcTluRWthdV9mLXJPYmt1dTFTekVkNUc0LTdic19xWVVWOGhHdFFGaWIxY1l2Q3A1ZFl5dk1oM3lzTWRSTDNRSjRtWFRxMkVTbzlpQ1A4T1lEMV80Y21HVzdQRWpDVHFOT2wySzJzLXRkZ1FzNlZTZGZ3Ulc3NVVhRmhDZlJjVG1vbC1JN2lKWm9CZmRMTXBVRkhXVnBGRTh6S214Q3N0dFp3bnhrRWEyWUQzTEswQXFqSmV6YnZENXhLWC0tVExUb3Zpdkd5RnV2TDRGYUhQTVFycjNrc0F5VnpxTFdxczluZw?oc=5",
-    "outlet": "kens5.com",
-    "seen": "29 Oct 2026",
-    "via": "Google News RSS"
+    "title": "Texas Data Center Boom Threatens Progress on Air Quality",
+    "url": "https://www.insurancejournal.com/news/southcentral/2026/10/20/889686.htm",
+    "outlet": "insurancejournal.com",
+    "seen": "20261020T163000Z"
    },
    {
-    "title": "More data centers headed to San Antonio. City Council will vote on data center regulations",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQWm9wdTV0TmNtLUg1RWlWbk13YWFmQU1FOE9COEN6RXJIT0s5ZWtyLXBmbmRVRFFsRDVfWDZyOTkyYkE2c0tfci1sVkt0enJoSEZIUk5oMEFxVU1QdEV3eWtQbGZQT0g1cmVqRFA1Rm1JcExlS0szNmU1eFlibmNBcEZTeFBQbVNhSHN1a3ZELVExVzJXMnlHVzF0YWFmWmtQUWZLRFNoUWRDZXpxUlZheHA4NFRHR0Fva3l3ampsTkZQZ21wcGc0?oc=5",
-    "outlet": "WOAI",
-    "seen": "13 Oct 2026",
-    "via": "Google News RSS"
+    "title": "Texas data center boom could erase decades of progress on air quality",
+    "url": "https://www.click2houston.com/news/texas/2026/10/20/texas-data-center-boom-could-erase-decades-of-progress-on-air-quality/",
+    "outlet": "click2houston.com",
+    "seen": "20261020T161500Z"
    },
    {
-    "title": "San Antonio has new rules for building data centers",
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQYTlyZHU2QVVHa3ZKLVlhXzZHVS1sejdBTTZSdEdUSFN0NXJBZUNBamhQcm5ZZHE3QUQ4RWd6UE1kaUlTby1KV21ZVmtxeTktLWlaZmZ3bDJjRGJqR0lPN28zQ3dxSDE4ZEdRUzVyTFMzM3ZFU1lpSlNqUUVEVnVCMjlZcW4xdmlJNmJiYVlBZDk?oc=5",
-    "outlet": "San Antonio Report",
-    "seen": "29 Oct 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Texas data center pause isn't stopping construction of facilities, including one just outside San Antonio",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRW4zV0k2Z1NZRkJoYW1JWFZ0ckhQUUJEWFRZRkJnRTh2NFBWTl9GRzYtWEpMQWMwWS11R1dnYjEySjAxeHpINURCb1pWcnNQUml0THR4czNJRUNId3dmam5SaTI4cVhTa05iRUsxNmtoc3hLNVhmRFNJU1dJYWVlLTl1MHg2TFQySnlGVG13c3FzWE4xaWIyanpnanJfOVNaZG8wZnByaDhrRy1DZXQyR3NRVURtcHRwUkpyeEY0dlhsQ0lSSTVLLXdCRnF2VE5n?oc=5",
-    "outlet": "San Antonio Current",
-    "seen": "06 Oct 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "San Antonio was weighing 2 data center proposals. Then the mayor added a third. - San Antonio Express-News",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOVnZSd3hjNWs3a18zQi1XQ0diWk0ycHRfd3AwQ3ZIbUZrVnQ4cTVXRkpETU85amNackJHRGRiY1lkS2ZlRWFNZ19aRTRPUzVqZ2h5ckJudlA2QnNFYmttaEZmdXJWSzl2Zk9jbHNRRXp6N3B1ck5OVktVYVM2R3Vkb25BRzZacWtxOTJVS3J1WlZxekNqampoOGFwZkw4ay1PVC1ORg?oc=5",
-    "outlet": "San Antonio Express-News",
-    "seen": "14 Oct 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "San Antonio Mayor Jones pushes tougher data center rules, more funding for neighborhoods",
-    "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxQTk00NUEtZ0hicC1yLWx3amJzWERxOVloczdiOHB4cWJ4RWhrTmpIU3ljNEZOTjBnb3E5cWtrRG1qREp1aXBrTVMxU2IyMXNPQ0lpYUNsTUdiaUw2LUk0VUhIZm9VcGlxeTVGbDE1YVVIMEFxUjd0OHhhZ0k1SnRjeHhoZnNibnhyWjhEMDJINEZReUE5Vno5UUk2M0NsQzVHZkZoX3Q5SjNjc0pSc2tZX2YwS3M3NVhHbzF5OWI3WXZRM2ZSR3B1cTBicTE3M0VEMU05MzJtSWFwOWh2clJ6UW5ESGJSVkZhQXNBX2Q2Y2JmVW82cE9DbVpPcGxnYmlFX3NRLWhGTzBfdEkwN3duWlNaa01DMzZpMGFDb0FHNFF6elRJWnpGbWtSQWJ2bzJOdmZmZWNzVDJvRWZaVlA5Y0xSWUUzNEV2aVY2ZQ?oc=5",
-    "outlet": "WOAI",
-    "seen": "27 Oct 2026",
-    "via": "Google News RSS"
+    "title": "Texas data center boom could erase decades of progress on air quality",
+    "url": "https://www.ksat.com/news/texas/2026/10/20/texas-data-center-boom-could-erase-decades-of-progress-on-air-quality/",
+    "outlet": "ksat.com",
+    "seen": "20261020T160000Z"
    }
   ],
   "48453": [
@@ -190,10 +178,10 @@
     "via": "Google News RSS"
    },
    {
-    "title": "$1.2 billion data centers to break ground this year in Central Texas",
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPM0VvOFRabXFGUFNiRWdGd3BmQTVoMlQtRVJzTnhDeUs4MjZpT3RxLWxuVzlaRFV3cjJnTkFMZUpIbzB5dkpZeFctRGdxTllTNzljeDFTaW5jeUdjUU1iNW1kU1JXblJ5UFRxeVpfSjZHeUc0RHV0REJkV2p6dlBhYkg3ZFBGdFF5WGJzUFdn?oc=5",
-    "outlet": "MySA",
-    "seen": "17 Sep 2026",
+    "title": "Study warns Texas data center boom could reverse decades of air quality gains",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNeWFqazJVRmR0YncyQzc2QVpKZFJySld3azI1b25rSmNUQlRwRC0yNFlpc0xNa1FCQ0RYZmxsLS1WLW5zZmxRYU84SXc4czJSakZyRnNmUGVXOGNGSk56Yk5sX3RuMmgtMlBkS0ltbUVnM2puTWFBcXZlcld3b01fbDRTcHBhQklNMEFLVDg0QzNQcGtDNVE2a0tuekUyRlhqc0NTeXNLbUIyUWhvR0ln?oc=5",
+    "outlet": "KEYE",
+    "seen": "21 Oct 2026",
     "via": "Google News RSS"
    },
    {
@@ -204,17 +192,17 @@
     "via": "Google News RSS"
    },
    {
-    "title": "What exactly is a data center?",
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOdEJhNDJJaVZKX3ZlVkhWc2lMZmd1S1VZM016MG00TjhnMTcxZnVPM054LVJldkdtNlEtWWNuOWRBZlcteno5NnZwNU5US3g0NDBsRGlSQzlRTGpVb2szNndpSWRmZGxubVBOTFFoWlZabjhfNDZTajNULUdBS1FZVVNNcVpxNFVnbkhiOTNXYw?oc=5",
-    "outlet": "Spectrum News",
-    "seen": "21 Sep 2026",
-    "via": "Google News RSS"
-   },
-   {
     "title": "Anthropic-linked $366m data center project filed for in Cedar Creek, Texas",
     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSHlHSmp3WG1TRzZJVnRfZEdndmhUZUFJa1RqX05RMC1LTEd0UXJxa0hCeXROVGlLV3NTNk5vWjN1U3I3RGxncklwaFhGX3FWejBKOWU1UXJER0U5aEl2cGlFS280dDJGN2d4N3VsWDBXSlhyLWZsMXhvVDZBZlhVbFpNaFpIZU9zLTB2clZyN25Nazc0RkxBWWJja19HLUVZZEpaU3JxTTF6WGt5Rjl0ZVhqeDB3T2M?oc=5",
     "outlet": "Data Center Dynamics",
     "seen": "09 Oct 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "What exactly is a data center?",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOdEJhNDJJaVZKX3ZlVkhWc2lMZmd1S1VZM016MG00TjhnMTcxZnVPM054LVJldkdtNlEtWWNuOWRBZlcteno5NnZwNU5US3g0NDBsRGlSQzlRTGpVb2szNndpSWRmZGxubVBOTFFoWlZabjhfNDZTajNULUdBS1FZVVNNcVpxNFVnbkhiOTNXYw?oc=5",
+    "outlet": "Spectrum News",
+    "seen": "21 Sep 2026",
     "via": "Google News RSS"
    },
    {
@@ -225,10 +213,10 @@
     "via": "Google News RSS"
    },
    {
-    "title": "Taylor City Council greenlights 664-Acre Data Center Project",
-    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWkQ2MGxhSEN4TWJjNE5tZTlRZG5zZmlmMkludnRadUlpMXZral9zb3Z2SzFVX28wb3B6N2FyWGRRQWVrQk5XcXhmSWVFT1ZJZGxOTlE1NE44X01aTnJtOUU3QWFEa1lyTWNLTlFfeHU1SEhqLVpqNGoxNHVlR3BhbzhYdHhFYzVBWWNTbFFwZk5yZ0VqUU82UzBXU0ctdVEx?oc=5",
-    "outlet": "KEYE",
-    "seen": "08 Oct 2026",
+    "title": "Data center backlash cracks rural Texas Republican wall",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQVWJpeWppVk44UXNoeGVWbzJPYnVRUEw3eXRPV3k0bUQ4SDc2ZDRoa3dyS3Rqb2NBOWdmdVE3Zk1VaFVPOWw2djJXXzJ0SlE2dU03T1JvZnhTak5leVNHcHFWR3ZYTkVGNEJYQkF0dnNIOFg0anQ1cXJ6aWluQ0Nfb0VSbnAtV0dJX0YzcnpQeEVvcDh2UUJicl9PZ3JENmtWZ3c5VmhWcw?oc=5",
+    "outlet": "The Texas Tribune",
+    "seen": "23 Oct 2026",
     "via": "Google News RSS"
    },
    {
@@ -239,10 +227,10 @@
     "via": "Google News RSS"
    },
    {
-    "title": "Data center backlash cracks rural Texas Republican wall",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQVWJpeWppVk44UXNoeGVWbzJPYnVRUEw3eXRPV3k0bUQ4SDc2ZDRoa3dyS3Rqb2NBOWdmdVE3Zk1VaFVPOWw2djJXXzJ0SlE2dU03T1JvZnhTak5leVNHcHFWR3ZYTkVGNEJYQkF0dnNIOFg0anQ1cXJ6aWluQ0Nfb0VSbnAtV0dJX0YzcnpQeEVvcDh2UUJicl9PZ3JENmtWZ3c5VmhWcw?oc=5",
-    "outlet": "The Texas Tribune",
-    "seen": "23 Oct 2026",
+    "title": "$1.2 billion data centers to break ground this year in Central Texas",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPM0VvOFRabXFGUFNiRWdGd3BmQTVoMlQtRVJzTnhDeUs4MjZpT3RxLWxuVzlaRFV3cjJnTkFMZUpIbzB5dkpZeFctRGdxTllTNzljeDFTaW5jeUdjUU1iNW1kU1JXblJ5UFRxeVpfSjZHeUc0RHV0REJkV2p6dlBhYkg3ZFBGdFF5WGJzUFdn?oc=5",
+    "outlet": "MySA",
+    "seen": "17 Sep 2026",
     "via": "Google News RSS"
    },
    {
@@ -253,10 +241,10 @@
     "via": "Google News RSS"
    },
    {
-    "title": "Study warns Texas data center boom could reverse decades of air quality gains",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNeWFqazJVRmR0YncyQzc2QVpKZFJySld3azI1b25rSmNUQlRwRC0yNFlpc0xNa1FCQ0RYZmxsLS1WLW5zZmxRYU84SXc4czJSakZyRnNmUGVXOGNGSk56Yk5sX3RuMmgtMlBkS0ltbUVnM2puTWFBcXZlcld3b01fbDRTcHBhQklNMEFLVDg0QzNQcGtDNVE2a0tuekUyRlhqc0NTeXNLbUIyUWhvR0ln?oc=5",
-    "outlet": "KEYE",
-    "seen": "21 Oct 2026",
+    "title": "America got the anti-data-center wave it voted for. Here come the economic consequences",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE45eE5aUXhYMVFkZ0lRNzk1UTdrUkFYYkxGdHVVMlE3dm9OaXAyQ3ZSWGl5ZmZueUd3SXgxU1BLNUE4Zm1sUy1WaGdpb05aZDZHbHhmT2EteGRpWmFZdFJCUGxWSTQxWW90VEdVZVBHZDZUYWs?oc=5",
+    "outlet": "CNN",
+    "seen": "05 Nov 2026",
     "via": "Google News RSS"
    }
   ],
@@ -334,17 +322,17 @@
     "via": "Google News RSS"
    },
    {
-    "title": "How Much Water? Paxton Demands Answers From 156 Texas Data Center Projects",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMVlOMTU0cFQwczdvYnFwM202akd5NElsRWJldmdoSWh6MXhjb0NfRmdfckJTc3pOX0tNVndzN0d6QUFBcmRaVFd6ZTZiWmYzdTI2b0dfcmp1ck5GMjJlV3p1ZlhoekpFUGllelhTM0RvRkkwc1psRFlnNUpWcGc1M0k2VTZrbi1zNldLaXZTTzMtRDNtVDZaNFQ2cjJzem5jcUJCZWpwU1pUdw?oc=5",
-    "outlet": "Dallas Express",
-    "seen": "17 Oct 2026",
-    "via": "Google News RSS"
-   },
-   {
     "title": "Talarico says data centers shouldn\u2019t be \u2018running over\u2019 Texas communities and local governments",
     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPa0FxVkVBZTZEUmttV3VkeTNGMU5MMm5xT3U3emNFaWdRWnhiWG8wXzVKYUtwMWdrVV9zb0c5cUUwUjJrV1ZHZFRTYzVWUTVQdDhVMjhiVm8tcUd0N0h1QVdYa3U3OEFUZ3RwTEdBdmpPeDFEaWlrZWUxREU5Z1FreVBNMzJDOGl5WkMyOUVFakl4TGhmV2ZXWDB3Z0lZbndVS1VRSU5oanJJdU1GZDVsdEdReWxFUjByYTllOWVZV1g3VWFYOFZKYk1fQ1BPbTFlSUhKR0J30gHeAUFVX3lxTE5GODl6MkZMWGdISW9qZUFGZkdFMUt0aG5ZQUJ2TElxdjRiVGplM2puU283eDBBaTBxVXdZeE5NSnFZTEFDanFmc25OLWRJNmd5NXowSm9oLXNaUXY0S3NuTTlZZUIwS3VyQS1kSjVCc1BwTUNYV18zYUdxSDVJdnk5ZWYwMnNtUmpBci0teWtBY3V4YzRNNWgtRmtZY3V2SENFbVdzN3p3eDkxSXM4UnNPY3dPeGRnVjBoZDdoTUdCeEhvMW5lYmVEUTNrQVYyZVNVQ2EzZm5LYy12WGNsdw?oc=5",
     "outlet": "Houston Public Media",
     "seen": "30 Sep 2026",
+    "via": "Google News RSS"
+   },
+   {
+    "title": "How Much Water? Paxton Demands Answers From 156 Texas Data Center Projects",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMVlOMTU0cFQwczdvYnFwM202akd5NElsRWJldmdoSWh6MXhjb0NfRmdfckJTc3pOX0tNVndzN0d6QUFBcmRaVFd6ZTZiWmYzdTI2b0dfcmp1ck5GMjJlV3p1ZlhoekpFUGllelhTM0RvRkkwc1psRFlnNUpWcGc1M0k2VTZrbi1zNldLaXZTTzMtRDNtVDZaNFQ2cjJzem5jcUJCZWpwU1pUdw?oc=5",
+    "outlet": "Dallas Express",
+    "seen": "17 Oct 2026",
     "via": "Google News RSS"
    },
    {
@@ -369,10 +357,10 @@
     "via": "Google News RSS"
    },
    {
-    "title": "Texas data centers face investigation after not answering water survey",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdDVSNkFhTUFPaXh3Q0pId2VTNTVYZEV5V2lTV3RXYk1aR0lMY3l3TWRnb0t6QXpVVk1lRFhFcnlacU1tbUo3Mk5lcVNBdHBTR2NFVWJGakNLclB0c0tpaDVRb0RFcFlFZm5oZWdFQi0tcmVySWU0ZDFFMTJwSWMtbFB4YlpwalZmYkllZVFmTndZaC1ZUEI2a0hfOXdydkQtV1djMlRsR1JkVnZGOVJ3?oc=5",
+    "title": "Tarrant County data center fight holds lessons for Texas",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQWGZUMUthS0cxSlhOTWpqakZTdWVSUHFlNXo0ekZvTGNSb2gyck9TVnhkbnY5amNaOVY5S3VwSlRVVjFJY1pxQ1NnQ0tQMmo0dHNXbDBoQVJwSXRpNU13VkJKcGY1eTQ5aTBHX3ZJcDVJZmxkbFpHZzR1LW93RVlHb0syQnI4VXFrYy10WmdkcW5mSmFDZXkwTDV3Q3dPc3JfejNnYWZhOFg?oc=5",
     "outlet": "Dallas News",
-    "seen": "24 Sep 2026",
+    "seen": "12 Nov 2026",
     "via": "Google News RSS"
    },
    {
@@ -383,17 +371,10 @@
     "via": "Google News RSS"
    },
    {
-    "title": "How Texas Turned Against Ken Paxton: County Results Explained",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPYjc0QzlrUUVvOTVKMjR3akMyUjdXWVNhMGk5MHUzZTlGcmNVaDdXaWlBckVkTUtQNzlfUXFmdDFQVzBtQ3Fza1I2SXJ1c0ZlTnJNaGs3LUo3RHZ4R1pyb3o3MEhOX3ZrcG82OEN6b0hvM3ZpRTUtWjIwM085cVpKUGN5QTlDWkZsU1NtV0Z6Ml9DSzA?oc=5",
+    "title": "Texas Early Voting Breaks County Records in Warning Sign to Republicans",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOX1FfNUlfYThhNnNxTnRlUm1GSGJqMzRSemRfNlZBQXYzdVFQOXNpWGRxMi1FQ3FKT01TeEE1RHkyV0pMcWxVS21RVmdnMlp5WURXOUd0aDhJZV9IOFFuNzF3YmltMVBIRldCUGVmS3FudDJwZHZIVVVwT0pVSTBydWs1Nl9rWGJaOG41aFJDcERmTVhkWGM2ZmdWMTZob1RuR2tzNTRYNjZYZk1RdnpZR1pCSGE?oc=5",
     "outlet": "Newsweek",
-    "seen": "05 Nov 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Tarrant County data center fight holds lessons for Texas",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQWGZUMUthS0cxSlhOTWpqakZTdWVSUHFlNXo0ekZvTGNSb2gyck9TVnhkbnY5amNaOVY5S3VwSlRVVjFJY1pxQ1NnQ0tQMmo0dHNXbDBoQVJwSXRpNU13VkJKcGY1eTQ5aTBHX3ZJcDVJZmxkbFpHZzR1LW93RVlHb0syQnI4VXFrYy10WmdkcW5mSmFDZXkwTDV3Q3dPc3JfejNnYWZhOFg?oc=5",
-    "outlet": "Dallas News",
-    "seen": "12 Nov 2026",
+    "seen": "20 Oct 2026",
     "via": "Google News RSS"
    },
    {
@@ -409,92 +390,87 @@
     "outlet": "Dallas News",
     "seen": "17 Sep 2026",
     "via": "Google News RSS"
+   },
+   {
+    "title": "$430M data center project planned for Fort Worth, state filing shows",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMHYxLUdOZ21GYUFpeHl4NnF2Y2dyeV8tWFh6enRFN0c5T0tzMml1Q29Hb1NHazM4Z3ZkYTZiZEtKLXlIam5MYThxd1NucDVnd1JuTkFfYklMcGdWd1psbmpVdnl1YVJ5TUhBc2pPRGp0SmJTS0taU1V5NmhYVDNYN003aWowclMtbjNobTVsejdaOVBHQ09NOXBtbVpnck04ZW1BNEg3cGVNZw?oc=5",
+    "outlet": "Dallas News",
+    "seen": "24 Sep 2026",
+    "via": "Google News RSS"
    }
   ],
   "48": [
    {
-    "title": "Texas Pauses Certain Data Center Approvals Amid Grid, Water, and Community Concerns",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxORllTNk1KZ0Q1bE5Xb21ob1J0VmdrMFdpbGtfaUZPREV4cDVVZlV5bHJtMDQ0OFVZbDFDeWM2d2otN2Z1Y0MwampIYW51MDdYaTlOZG5lc1RNRmhLS1cyUHltc2RSTTgwaHhXSUhNMGxkbkhzRjZTbGZRWHk5dmMxRzVZSE1wMVp6MUFoTHFBenlwczlRM3VlUXZ5dFVidnpGMjBmNWZpQktYczNGa0w5eHRnQ19tWk0?oc=5",
-    "outlet": "Environment, Land & Resources",
-    "seen": "05 Oct 2026",
-    "via": "Google News RSS"
+    "title": "Voters rejected data centers . Many will be built anyway . ",
+    "url": "https://www.texarkanagazette.com/news/2026/nov/14/voters-rejected-data-centers-many-will-be-built/",
+    "outlet": "texarkanagazette.com",
+    "seen": "20261115T074500Z"
    },
    {
-    "title": "Texas pauses new data center permits as state reviews water and power usage",
-    "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPQlhEaXlHZ2QycjI3eGZXTy1LS19aTk40ZzcxWTVxdThubkd5UTZjYWV3d0g2V1BvcWJreUU4d2lWRGZiV0tuTFV6U1c5T2FMZHZGcDNMRFZXb3pyRW82SklWLTNDQndNd0swc21QbFp1OEl3ZExZUWl6V1JGWnNyeU14cDZ6YWp2cUhFMUlEV2lYNEhpbENFb3lrb3RXalZ3cXVtTUZneWxWRlFPdmIwbDVMcUtiUnBXRlltdlRxUENGSUdNTzNZOVVyaEdaazBWZVI0SFlhV0ppaXNpWkZnb3FOaFgtNzB4emZTZTNsYkxaZFE?oc=5",
-    "outlet": "KSAT",
-    "seen": "25 Sep 2026",
-    "via": "Google News RSS"
+    "title": "How data centers lost in the midterm elections",
+    "url": "https://www.fox32chicago.com/news/how-data-centers-lost-big-midterm-elections",
+    "outlet": "fox32chicago.com",
+    "seen": "20261115T074500Z"
    },
    {
-    "title": "Abbott slaps halt on Texas data center permits",
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOd3g3ODI0T1pyUGJQd0dMN2NQbW41TzJKT1RQT2pSbHBGQk9wdVl0enhfajFOcmluN21yMTFmZURfRl90azdVZTJZalVWSFNvTFJyUjlvRXdxT1VJQnJHVXV3QUFhcG5OR2F0RnJPWHJ0S2tiNnBnSkxnWW1EamZoN3Z3bXdBZ2lyWmtaSncwOHM?oc=5",
-    "outlet": "Politico",
-    "seen": "21 Sep 2026",
-    "via": "Google News RSS"
+    "title": "Data center diaspora : Democrat blue wave wins could send AI buildout out of US | News",
+    "url": "http://www.thedailytimes.com/news/data-center-diaspora-democrats-blue-wave-wins-could-send-ai-buildout-out-of-us/article_d4f73402-6cf0-5101-9ba0-a99e495487bb.html",
+    "outlet": "thedailytimes.com",
+    "seen": "20261115T074500Z"
    },
    {
-    "title": "Texas Escalates Data Center Oversight with Attorney General Water-Use Investigation",
-    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQbGI1Vm5GdGRUR1laY0FXYnEyNVZZUTBDWFMtUXdPQVlNWWdKeFktZVNQVUZUNEVxWDRIbnE4M1Y4Z081X2Fld3ZiTjMzY2FlSlh0OXprU3NOOWtlcVJjLWJnQTgyemU4N2YwR25lc0FCUkIzMFV2TXhiNk9rWEtHUDBfdTdXbFdEcjl4bUZQaks2WWV0VlUyVXhnQTFuODdaU3hsaFpxUlRubjhMZ0NBZDZheUxXb2phSDdBVWxCNk5NcjQ0SVk1OEFmTzgwQXNRdWc?oc=5",
-    "outlet": "Foley & Lardner LLP",
-    "seen": "24 Sep 2026",
-    "via": "Google News RSS"
+    "title": "Will We Really Put Data Centers in Space ? ",
+    "url": "https://www.forethought.org/research/will-we-really-put-data-centers-in-space",
+    "outlet": "forethought.org",
+    "seen": "20261114T210000Z"
    },
    {
-    "title": "45 Texas lawmakers back limits on data center water use",
-    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPUUNKdXZSM2dTa1pFZ1VndThFNzFJNWdXa0lhZzVsZW5QT19LVW43NUhlMTh0QWRuNEM1d293c3Vma19NR3Vldk5YWmZIX1o5UW4xUkx0Y0JSbFdVWVpOVWNlOGNyZHBIeTdvb2NIS0dMU2l2aDh4cWJPVy1RUTFTS0ZnZUVFQU1yam96T2xWZ0lrWlBHQ0hOZ2s1b0hqZGJ0VlpqZml5QjdlUEluUVM3V3kwUWlIYl81Zm9hbzYwT2ZZMUZPTURqaHVGZw?oc=5",
-    "outlet": "Click2Houston",
-    "seen": "07 Oct 2026",
-    "via": "Google News RSS"
+    "title": "As Democrats seek changes to bill on energy permits , divisions emerge",
+    "url": "https://wtvbam.com/2026/11/14/as-democrats-seek-changes-to-bill-on-energy-permits-divisions-emerge/",
+    "outlet": "wtvbam.com",
+    "seen": "20261114T200000Z"
    },
    {
-    "title": "Gov. Greg Abbott broadens moratorium on data center approvals to include environmental permits",
-    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSEx1ckpTZnF2SmRVby1uWFkwSUVCd2JDZTZaZzNoZHRNWU9oTzNXUG9kdzRjOFBZcXd4S3lWeTNjNmJyc0R2aU9xRE9IZk01UUxUWXFBRzlUWEFHd3I3bXRpWVFyNXJxYWtjbDRpSElHY2sxUHVxWl9pUUxET25WdzhfMWZDV3NKd0E?oc=5",
-    "outlet": "The Texas Tribune",
-    "seen": "21 Sep 2026",
-    "via": "Google News RSS"
+    "title": "As Democrats seek changes to bill on energy permits , divisions emerge",
+    "url": "https://wkzo.com/2026/11/14/as-democrats-seek-changes-to-bill-on-energy-permits-divisions-emerge/",
+    "outlet": "wkzo.com",
+    "seen": "20261114T200000Z"
    },
    {
-    "title": "Texas Gov. Abbott orders data center permit halt weeks after issuing moratorium",
-    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSVJvaHJuMzNxRXo2WE9SVHk3RXFMZ0t5QnRzV20zQi1CeEhoYXUxQVRqcGtrdjlHX3dhcDhpRUdSOGpia1QzbUlDSzdXdmszaGVreklianEyX0JVU0xONnI3OHRXakNPd3FGVFJhQ3RHeVc5QWZTRUpxcWNEa0daekxHcTlzbHVF0gGOAUFVX3lxTE5vVTQ4Wml3TmtzMUJ2M1FoVXFFVGw1Y05UbVB5LTl4bE40RElnSHlzRlRyS21ON0FrM0NCVVZfZklhSXBVRXR6MnBiaXdkRVVOaEl3c1lua0c1RkNPMHo1ZExXYklmaUh2TjZUMGdncF9faG5uTU00U2t0M21VTXAyVzBHRHZYbUVYRjVpQVE?oc=5",
-    "outlet": "CNBC",
-    "seen": "21 Sep 2026",
-    "via": "Google News RSS"
+    "title": "Residents in CA Agricultural Town Face Down ICE Facility and Amazon Data Center",
+    "url": "https://truthout.org/articles/residents-in-ca-agricultural-town-face-down-ice-facility-and-amazon-data-center/",
+    "outlet": "truthout.org",
+    "seen": "20261114T200000Z"
    },
    {
-    "title": "Texas Democrats promised to rein in data centers. Now they have their chance",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxORWprZG1LMWdLUzFEQVI4UUI0eE9EZjYwRGRkNlgxZFYtNVFkdGw3UTdISnlkUDB5a2QxQjBGRGdYMFF4MTNBSndqQzRuTzdXVVZLUURtNkoxWFZzYUQzdVVsRmdIOEFveWlnN0J6SWxPWXFtY2hISFRWd3ExaHJMRmY4bWhMZUp0cl9FcEV3WGc0X3M4TmxxaXBXdE5IWFZnT04zMXducw?oc=5",
-    "outlet": "KUT",
-    "seen": "12 Nov 2026",
-    "via": "Google News RSS"
+    "title": "Data center diaspora : Democrat blue wave wins could send AI buildout out of U . S . | News",
+    "url": "http://www.grandrapidsmn.com/news/data-center-diaspora-democrats-blue-wave-wins-could-send-ai-buildout-out-of-u-s/article_c8e8c0e2-5ca6-4a62-90f6-abc9168ac1ae.html",
+    "outlet": "grandrapidsmn.com",
+    "seen": "20261114T200000Z"
    },
    {
-    "title": "NAACP Warns Texas Data Center Audit Leaves Major Regulatory Loopholes, Demands Real Moratorium and Community Protections",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQR2dkZmZtc2lrM184QVZVOXYyMmlrNU9ma2RtSUJnU202NWNqNnRnVV8yclZ4SlplaEREOHBDVnhLYTVFOEwyNUpEZnoyMXFKSC0wWTNYZENCZjA5dmlaak9XYktHay1iMVFkdkVwWTNKMF83QU8wbWFHaFhtY3pmWV9LRFNYWmo2cUEtem9sTG84OUJ0WDd5TTRWdURuVHhRcDRvWmhJQzZXZ3d1TWc?oc=5",
-    "outlet": "NAACP",
-    "seen": "29 Sep 2026",
-    "via": "Google News RSS"
+    "title": "\u65e9\u62a5\u4e28\u9ec4\u4ec1\u52cb\u5378\u4efb\u79bb\u573a \uff0c \u7f8e\u56fd\u53f8\u6cd5\u90e8\u5c06\u8c03\u67e5\u82f1\u4f1f\u8fbe \uff1b \u7279\u65af\u62c9\u4e0eSpaceX\u5408\u5e76\u63a8\u8fdb \uff0c \u6700\u5feb12\u6708\u516c\u5e03 \uff1b \u601d\u79d1\u4e0a\u8c03\u5168\u5e74\u6307\u5f15 \uff0c \u5e94\u7528\u6750\u6599\u4ea4\u51fa\u4eae\u773c\u4e1a\u7ee9 _ \u4e1c\u65b9\u8d22\u5bcc\u7f51",
+    "url": "https://finance.eastmoney.com/a/202611133930295541.html",
+    "outlet": "finance.eastmoney.com",
+    "seen": "20261113T004500Z"
    },
    {
-    "title": "Abbott halts new Texas data center permits pending ERCOT audit",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMzEtMjdMcVJYRTJWQXV6emtDcWpXZ1NWSWhKZVdxNkl5MUZKRkpjX0d4anBHUnVjUS13Zl8yWjV0ZC1jeGNQRjBjdkp4V25pSXB0VDEwdmJlQjU1TkdJdG5zWjZEc3dwRkdEV0NnUUlGc3c4UHk4R0ZlRGFfaVR4VjBHRlY4V2FMOUxGMXZMbkowbV9kMFhodWFLRnUyMjFDRl9kSW9LOWYxdw?oc=5",
-    "outlet": "Data Center Dynamics",
-    "seen": "23 Sep 2026",
-    "via": "Google News RSS"
+    "title": "\u9ec4\u4ec1\u52cb\u843d\u5e55 \uff01 \u566a\u97f3 \u3001 \u6c61\u67d3 \u3001 \u7535\u8d39\u5355 \u2026\u2026 \u7f8e\u56fd\u4eba\u4e3a\u4ec0\u4e48\u8ba8\u538cAI\u6570\u636e\u4e2d\u5fc3 \uff1f _ \u4e1c\u65b9\u8d22\u5bcc\u7f51",
+    "url": "https://finance.eastmoney.com/a/202611133930089651.html",
+    "outlet": "finance.eastmoney.com",
+    "seen": "20261113T004500Z"
    },
    {
-    "title": "Why Texas Is Making Data Centers Wait",
-    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9fcngwT3pSbUxvb051TV9PUUl1OTZESVdzQzd6NGhGMUNfN3V1T3F3ZmwyNHBQRDJ2NEtrYmF1ZWVHVW0tZFBGR05kektVd3YzbnByTGNOazZobHFNelBtMTl1ZXRkZw?oc=5",
-    "outlet": "Andreessen Horowitz",
-    "seen": "07 Oct 2026",
-    "via": "Google News RSS"
+    "title": "\u7f8e\u80a1\u6536\u76d8 \uff1a AMD  \u4e94\u8fde\u9633  \u7d2f\u6da8\u8d8540 % \u79d1\u6280\u786c\u4ef6\u94fe\u76d8\u540e\u5229\u597d\u9891\u51fa _ \u817e\u8baf\u65b0\u95fb",
+    "url": "https://news.qq.com/rain/a/20261113A02W4J00",
+    "outlet": "news.qq.com",
+    "seen": "20261113T004500Z"
    },
    {
-    "title": "New Texas coalition raises concerns about data centers\u2019 water use",
-    "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPRkxnX3FEUVRQMm0tV2xtc0FYOUV5RkxfRzRBa1c1VnRjaEF6ZUVVTllEQzB2aDI3dmN3ZVFrbjNpOGJobXo1S1JsTUNzLTZkMTdtQVBDdjBibTJBcFhHSDE4VTFXeEZqVUs1eXVOMU5ZU0dXblZidHVPVXVyR1ZkWE15ZEVLcnpzMUhfM2l2Y2l4emVwYnFoanlPcGNiNXVOYVdEdzZFYWVGVDZiRjl6SDNmeF81Mm1DUzFxR0pRNjB5M3lRUnNpZkp4MHhleTBVTU93N0I1TnhneUdmbUgwa3RIZ0xlRUdvZ1lGODRJYzlpaEE?oc=5",
-    "outlet": "KVUE",
-    "seen": "28 Sep 2026",
-    "via": "Google News RSS"
+    "title": "8\u70b91\u6c2a\u4e28\u82f1\u4f1f\u8fbe\u5ba3\u5e03CEO\u9ec4\u4ec1\u52cb\u8f9e\u804c \uff0c \u7279\u6717\u666e \uff1a \u5efa\u8bae\u5e93\u514b\u63a5\u4efb \uff1b \u817e\u8baf  \u88c1\u545850 %\uff1f \u77e5\u60c5\u4eba\u58eb\u56de\u5e94 \uff1b \u5ba3\u626c\u9519\u8bef\u5a5a\u604b\u89c2 \uff0c \u5fb7\u8299\u4ee3\u8fd0\u8425\u65b9\u88ab\u7f5a80\u4e07|\u77e5\u540d\u4f01\u4e1a|\u8482\u59c6 \u00b7 \u5e93\u514b|\u5510\u7eb3 \u00b7 \u5ddd\u666e",
+    "url": "https://www.163.com/dy/article/LBJP2QG805118DFD.html",
+    "outlet": "163.com",
+    "seen": "20261113T004500Z"
    }
   ]
  }
