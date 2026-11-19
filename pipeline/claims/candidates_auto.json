@@ -111,7 +111,7 @@
   "owner": "Meta",
   "url": "https://sustainability.atmeta.com/energy/",
   "source_kind": "marketing",
-  "text": "Since 2020, we have matched 100% of our annual electricity use with new clean and renewable energy.",
+  "text": "Since 2020, we have matched 100% of our annual electricity use with clean and renewable energy.",
   "claim_type": "renewable_100",
   "basis": "annual",
   "target_year": null
@@ -120,17 +120,8 @@
   "owner": "Meta",
   "url": "https://sustainability.atmeta.com/energy/",
   "source_kind": "marketing",
-  "text": "Learn more about our progress as we work to achieve net zero emissions across our value chain and become water positive in 2030.",
-  "claim_type": "water",
-  "basis": "annual",
-  "target_year": 2030
- },
- {
-  "owner": "Meta",
-  "url": "https://sustainability.atmeta.com/energy/",
-  "source_kind": "marketing",
-  "text": "Over the last decade, we have contracted for more than 30 GW of new clean and renewable energy across the globe, making us one of the world's largest corporate buyers.",
-  "claim_type": "other",
+  "text": "We are committed to climate action and a pathway to net zero across our value chain.",
+  "claim_type": "net_zero",
   "basis": "unspecified",
   "target_year": null
  },
@@ -138,25 +129,7 @@
   "owner": "Meta",
   "url": "https://sustainability.atmeta.com/energy/",
   "source_kind": "marketing",
-  "text": "In June 2025, Meta signed a 20-year agreement with Constellation to secure the long-term operations of the Clinton Clean Energy Center, which provides 1,121 MW of emissions-free nuclear energy.",
-  "claim_type": "other",
-  "basis": "unspecified",
-  "target_year": null
- },
- {
-  "owner": "Meta",
-  "url": "https://sustainability.atmeta.com/energy/",
-  "source_kind": "marketing",
-  "text": "We aim to expand electric grids and embrace new sources of reliable, clean and renewable energy.",
-  "claim_type": "other",
-  "basis": "unspecified",
-  "target_year": null
- },
- {
-  "owner": "Meta",
-  "url": "https://sustainability.atmeta.com/energy/",
-  "source_kind": "marketing",
-  "text": "This is key to maintaining net zero emissions for our operations.",
+  "text": "While our climate strategy prioritizes emissions reduction, any residual emissions we cannot eliminate will require carbon removal projects to reach net zero emissions.",
   "claim_type": "net_zero",
   "basis": "unspecified",
   "target_year": null
@@ -165,25 +138,7 @@
   "owner": "Meta",
   "url": "https://sustainability.atmeta.com/water/",
   "source_kind": "marketing",
-  "text": "Learn more about our progress as we work to achieve net zero emissions across our value chain and become water positive in 2030.",
-  "claim_type": "water",
-  "basis": "annual",
-  "target_year": 2030
- },
- {
-  "owner": "Meta",
-  "url": "https://sustainability.atmeta.com/water/",
-  "source_kind": "marketing",
-  "text": "We have set a goal to become water positive in 2030.",
-  "claim_type": "water",
-  "basis": "annual",
-  "target_year": 2030
- },
- {
-  "owner": "Meta",
-  "url": "https://sustainability.atmeta.com/water/",
-  "source_kind": "marketing",
-  "text": "At the watershed level, we aim to restore 200% of consumption in high-water stress regions and 100% of consumption in medium-water stress regions.",
+  "text": "As part of our water positive goal, we aim to restore 200% of water consumption in high water stress regions and 100% of water consumption in medium water stress regions.",
   "claim_type": "water",
   "basis": "unspecified",
   "target_year": null
@@ -192,25 +147,7 @@
   "owner": "Meta",
   "url": "https://sustainability.atmeta.com/water/",
   "source_kind": "marketing",
-  "text": "Becoming water positive means that Meta will return more water than we consume in our operations through water restoration initiatives that address shared water challenges and support water stewardship in medium and high water stress watersheds where we operate.",
-  "claim_type": "water",
-  "basis": "unspecified",
-  "target_year": null
- },
- {
-  "owner": "Meta",
-  "url": "https://sustainability.atmeta.com/water/",
-  "source_kind": "marketing",
-  "text": "Water restoration \u2013 As we work toward achieving our water positive goal, we are investing in water conservation and restoration projects.",
-  "claim_type": "water",
-  "basis": "unspecified",
-  "target_year": null
- },
- {
-  "owner": "Meta",
-  "url": "https://sustainability.atmeta.com/water/",
-  "source_kind": "marketing",
-  "text": "This map highlights our renewable energy procurement and deployment efforts worldwide, water stewardship efforts in the communities we operate in, and other sustainability features across our global portfolio of data centers.",
+  "text": "We aim to share clear, accessible information on our water use and progress toward our 2030 water positive goal.",
   "claim_type": "water",
   "basis": "unspecified",
   "target_year": null

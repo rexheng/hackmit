@@ -60,66 +60,6 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-005",
-  "site_id": null,
-  "owner": "Meta",
-  "text": "Since 2020, we have matched 100% of our annual electricity use with new clean and renewable energy.",
-  "source_url": "https://sustainability.atmeta.com/energy/",
-  "source_date": "2026-11-19",
-  "page": null,
-  "claim_type": "renewable_100",
-  "basis": "annual",
-  "target_year": null,
-  "source_kind": "marketing",
-  "checkable": true,
-  "source_date_note": "date the page was retrieved; the page shows no publication date"
- },
- {
-  "id": "claim-006",
-  "site_id": null,
-  "owner": "Meta",
-  "text": "This is key to maintaining net zero emissions for our operations.",
-  "source_url": "https://sustainability.atmeta.com/energy/",
-  "source_date": "2026-11-19",
-  "page": null,
-  "claim_type": "net_zero",
-  "basis": "unspecified",
-  "target_year": null,
-  "source_kind": "marketing",
-  "checkable": false,
-  "source_date_note": "date the page was retrieved; the page shows no publication date"
- },
- {
-  "id": "claim-007",
-  "site_id": null,
-  "owner": "Meta",
-  "text": "We have set a goal to become water positive in 2030.",
-  "source_url": "https://sustainability.atmeta.com/water/",
-  "source_date": "2026-11-19",
-  "page": null,
-  "claim_type": "water",
-  "basis": "unspecified",
-  "target_year": 2030,
-  "source_kind": "marketing",
-  "checkable": false,
-  "source_date_note": "date the page was retrieved; the page shows no publication date"
- },
- {
-  "id": "claim-008",
-  "site_id": null,
-  "owner": "Meta",
-  "text": "In 2024 alone, these operational water restoration projects returned more than 1.6 billion gallons of water to high- and medium-water stress regions.",
-  "source_url": "https://sustainability.atmeta.com/water/",
-  "source_date": "2026-11-19",
-  "page": null,
-  "claim_type": "water",
-  "basis": "annual",
-  "target_year": null,
-  "source_kind": "marketing",
-  "checkable": false,
-  "source_date_note": "date the page was retrieved; the page shows no publication date"
- },
- {
   "id": "claim-009",
   "site_id": null,
   "owner": "Microsoft",
@@ -363,26 +303,26 @@
   "id": "claim-026",
   "site_id": null,
   "owner": "Meta",
-  "text": "Learn more about our progress as we work to achieve net zero emissions across our value chain and become water positive in 2030.",
+  "text": "Since 2020, we have matched 100% of our annual electricity use with clean and renewable energy.",
   "source_url": "https://sustainability.atmeta.com/energy/",
   "source_date": "2026-11-19",
   "page": null,
-  "claim_type": "water",
+  "claim_type": "renewable_100",
   "basis": "annual",
-  "target_year": 2030,
+  "target_year": null,
   "source_kind": "marketing",
-  "checkable": false,
+  "checkable": true,
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
   "id": "claim-027",
   "site_id": null,
   "owner": "Meta",
-  "text": "Over the last decade, we have contracted for more than 30 GW of new clean and renewable energy across the globe, making us one of the world's largest corporate buyers.",
+  "text": "We are committed to climate action and a pathway to net zero across our value chain.",
   "source_url": "https://sustainability.atmeta.com/energy/",
   "source_date": "2026-11-19",
   "page": null,
-  "claim_type": "other",
+  "claim_type": "net_zero",
   "basis": "unspecified",
   "target_year": null,
   "source_kind": "marketing",
@@ -393,11 +333,11 @@
   "id": "claim-028",
   "site_id": null,
   "owner": "Meta",
-  "text": "In June 2025, Meta signed a 20-year agreement with Constellation to secure the long-term operations of the Clinton Clean Energy Center, which provides 1,121 MW of emissions-free nuclear energy.",
+  "text": "While our climate strategy prioritizes emissions reduction, any residual emissions we cannot eliminate will require carbon removal projects to reach net zero emissions.",
   "source_url": "https://sustainability.atmeta.com/energy/",
   "source_date": "2026-11-19",
   "page": null,
-  "claim_type": "other",
+  "claim_type": "net_zero",
   "basis": "unspecified",
   "target_year": null,
   "source_kind": "marketing",
@@ -408,11 +348,11 @@
   "id": "claim-029",
   "site_id": null,
   "owner": "Meta",
-  "text": "We aim to expand electric grids and embrace new sources of reliable, clean and renewable energy.",
-  "source_url": "https://sustainability.atmeta.com/energy/",
+  "text": "As part of our water positive goal, we aim to restore 200% of water consumption in high water stress regions and 100% of water consumption in medium water stress regions.",
+  "source_url": "https://sustainability.atmeta.com/water/",
   "source_date": "2026-11-19",
   "page": null,
-  "claim_type": "other",
+  "claim_type": "water",
   "basis": "unspecified",
   "target_year": null,
   "source_kind": "marketing",
@@ -423,79 +363,19 @@
   "id": "claim-030",
   "site_id": null,
   "owner": "Meta",
-  "text": "Learn more about our progress as we work to achieve net zero emissions across our value chain and become water positive in 2030.",
+  "text": "We aim to share clear, accessible information on our water use and progress toward our 2030 water positive goal.",
   "source_url": "https://sustainability.atmeta.com/water/",
   "source_date": "2026-11-19",
   "page": null,
   "claim_type": "water",
-  "basis": "annual",
-  "target_year": 2030,
+  "basis": "unspecified",
+  "target_year": null,
   "source_kind": "marketing",
   "checkable": false,
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
   "id": "claim-031",
-  "site_id": null,
-  "owner": "Meta",
-  "text": "At the watershed level, we aim to restore 200% of consumption in high-water stress regions and 100% of consumption in medium-water stress regions.",
-  "source_url": "https://sustainability.atmeta.com/water/",
-  "source_date": "2026-11-19",
-  "page": null,
-  "claim_type": "water",
-  "basis": "unspecified",
-  "target_year": null,
-  "source_kind": "marketing",
-  "checkable": false,
-  "source_date_note": "date the page was retrieved; the page shows no publication date"
- },
- {
-  "id": "claim-032",
-  "site_id": null,
-  "owner": "Meta",
-  "text": "Becoming water positive means that Meta will return more water than we consume in our operations through water restoration initiatives that address shared water challenges and support water stewardship in medium and high water stress watersheds where we operate.",
-  "source_url": "https://sustainability.atmeta.com/water/",
-  "source_date": "2026-11-19",
-  "page": null,
-  "claim_type": "water",
-  "basis": "unspecified",
-  "target_year": null,
-  "source_kind": "marketing",
-  "checkable": false,
-  "source_date_note": "date the page was retrieved; the page shows no publication date"
- },
- {
-  "id": "claim-033",
-  "site_id": null,
-  "owner": "Meta",
-  "text": "Water restoration \u2013 As we work toward achieving our water positive goal, we are investing in water conservation and restoration projects.",
-  "source_url": "https://sustainability.atmeta.com/water/",
-  "source_date": "2026-11-19",
-  "page": null,
-  "claim_type": "water",
-  "basis": "unspecified",
-  "target_year": null,
-  "source_kind": "marketing",
-  "checkable": false,
-  "source_date_note": "date the page was retrieved; the page shows no publication date"
- },
- {
-  "id": "claim-034",
-  "site_id": null,
-  "owner": "Meta",
-  "text": "This map highlights our renewable energy procurement and deployment efforts worldwide, water stewardship efforts in the communities we operate in, and other sustainability features across our global portfolio of data centers.",
-  "source_url": "https://sustainability.atmeta.com/water/",
-  "source_date": "2026-11-19",
-  "page": null,
-  "claim_type": "water",
-  "basis": "unspecified",
-  "target_year": null,
-  "source_kind": "marketing",
-  "checkable": false,
-  "source_date_note": "date the page was retrieved; the page shows no publication date"
- },
- {
-  "id": "claim-035",
   "site_id": null,
   "owner": "Microsoft",
   "text": "Become water positive by 2030 by reducing water use, replenishing more than we withdraw, expanding access to water and sanitation, and supporting stronger water stewardship.",
@@ -510,7 +390,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-036",
+  "id": "claim-032",
   "site_id": null,
   "owner": "Google",
   "text": "From 2010 to 2025, we signed more than 240 agreements to purchase nearly 35 GW of new clean energy, with more than 12 GW contracted in 2025 alone 1 \u2014the largest annual total in our history and more than our total procurement from the previous two years combined.",
@@ -525,7 +405,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-037",
+  "id": "claim-033",
   "site_id": null,
   "owner": "Google",
   "text": "Mature carbon-free energy sources, such as solar, wind, and hydropower, remain our most critical operational lever for addressing the environmental impact of the AI era.",
@@ -540,7 +420,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-038",
+  "id": "claim-034",
   "site_id": null,
   "owner": "Google",
   "text": "We're also advancing the next generation of carbon-free energy sources like advanced nuclear and enhanced geothermal while making long-term bets on breakthrough technologies like fusion.",
@@ -555,7 +435,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-039",
+  "id": "claim-035",
   "site_id": null,
   "owner": "Google",
   "text": "Furthermore, we actively aim to replenish more freshwater than we consume to support the ecological health and vitality of local water systems where we operate.",
@@ -570,7 +450,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-040",
+  "id": "claim-036",
   "site_id": null,
   "owner": "Google",
   "text": "The total GW figure represents clean energy procured through power purchase agreements, energy storage agreements, and agreements under which Google receives environmental attribute certificates.",
@@ -585,7 +465,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-041",
+  "id": "claim-037",
   "site_id": null,
   "owner": "Equinix",
   "text": "Our strategy centers on expanding clean and renewable energy (96% coverage across its retail IBX data centers in 2025), implementing energy efficiency initiatives ($36M invested in 2025), piloting low-carbon energy solutions and collaborating with suppliers to address embodied carbon across our value chain.",
@@ -600,7 +480,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-042",
+  "id": "claim-038",
   "site_id": null,
   "owner": "Equinix",
   "text": "We have SBTi-approved targets to reach net-zero by 2040.",
@@ -615,7 +495,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-043",
+  "id": "claim-039",
   "site_id": null,
   "owner": "Equinix",
   "text": "We have externally validated science-based emissions reductions targets that guide how we decarbonize our business through alternative energy solutions, clean and renewable energy sources and collaborating with our suppliers.",
@@ -630,7 +510,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-044",
+  "id": "claim-040",
   "site_id": null,
   "owner": "Digital Realty",
   "text": "Powering with renewables We've contracted 1.7 GW of new renewable energy capacity while adding onsite solar, hydropower, and other clean energy solutions across key markets.",
@@ -645,7 +525,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-045",
+  "id": "claim-041",
   "site_id": null,
   "owner": "Digital Realty",
   "text": "Our 2025 Impact Report shows how we're expanding clean energy coverage, improving water performance, reducing Scope 1 and 2 emissions, and certifying new facilities to recognized sustainable building standards.",
@@ -660,7 +540,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-046",
+  "id": "claim-042",
   "site_id": null,
   "owner": "Digital Realty",
   "text": "We partner with energy producers, developers, and utilities to provide renewable energy and meet the clean energy goals of our clients.",
@@ -675,7 +555,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-047",
+  "id": "claim-043",
   "site_id": null,
   "owner": "Digital Realty",
   "text": "Browse our Impact Reports and CDP disclosures to track progress across clean energy, conservation, and community efforts.",
@@ -690,7 +570,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-048",
+  "id": "claim-044",
   "site_id": null,
   "owner": "Amazon Web Services",
   "text": "In 2025, we continued to match 100% of electricity consumed by our global operations with renewable energy sources and worked with utilities and regulators on green tariffs so that more companies can buy carbon-free energy directly from renewable energy projects.",
@@ -705,7 +585,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-049",
+  "id": "claim-045",
   "site_id": null,
   "owner": "Amazon Web Services",
   "text": "Amazon's energy supply from utilities, combined with the renewable energy we invest in, means that 100% of electricity consumed by 25 AWS data center regions was matched by renewable energy sources in 2025.",
@@ -720,7 +600,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-050",
+  "id": "claim-046",
   "site_id": null,
   "owner": "Amazon Web Services",
   "text": "We're proud that 100% of electricity consumed by Amazon was matched with renewable energy sources in 2025, for the third consecutive year.",
@@ -735,7 +615,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-051",
+  "id": "claim-047",
   "site_id": null,
   "owner": "Amazon Web Services",
   "text": "This list reflects AWS regions matched by carbon-free energy as of 2025.",
@@ -750,7 +630,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-052",
+  "id": "claim-048",
   "site_id": null,
   "owner": "Amazon Web Services",
   "text": "This list reflects AWS regions matched by carbon-free energy as of 2024.",
@@ -765,7 +645,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-053",
+  "id": "claim-049",
   "site_id": null,
   "owner": "Amazon Web Services",
   "text": "In 2024, we transitioned AWS backup generators to renewable diesel in parts of Europe and the U.S.",
@@ -780,7 +660,7 @@
   "source_date_note": "date the page was retrieved; the page shows no publication date"
  },
  {
-  "id": "claim-054",
+  "id": "claim-050",
   "site_id": null,
   "owner": "Microsoft",
   "text": "We're sharing our latest progress, challenges, and learnings to accelerate global progress towards net zero.",

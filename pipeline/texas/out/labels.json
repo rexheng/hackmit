@@ -2556,7 +2556,7 @@
      "wue": null,
      "wue_grade": null,
      "talk_grade": "D",
-     "claims_checked": 13,
+     "claims_checked": 5,
      "state_tax_certificates": 0
     },
     {
@@ -2715,13 +2715,13 @@
      "id": "talk",
      "name": "STRAIGHT TALK",
      "grade": "D",
-     "plain_big": "0 of 13",
+     "plain_big": "0 of 5",
      "plain_unit": "owner claims confirmed",
-     "plain": "1 hold on paper only \u00b7 0 don't hold up \u00b7 12 can't be checked.",
+     "plain": "1 hold on paper only \u00b7 0 don't hold up \u00b7 4 can't be checked.",
      "technical": [
       {
        "label": "Score",
-       "value": 0.27,
+       "value": 0.3,
        "unit": "of 1",
        "grade": "D"
       }
