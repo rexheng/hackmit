@@ -1,5 +1,5 @@
 {
- "retrieved": "2026-11-22T06:49Z",
+ "retrieved": "2026-11-22T19:41Z",
  "source": "GDELT DOC 2.0 API",
  "counties": {
   "48113": [
@@ -258,91 +258,37 @@
   ],
   "48085": [
    {
-    "title": "Data center company eyes land near Princeton, receives approval for a well",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZlVWUXA5U21hdTBHYXBnWXhhQ0V1WnE1NVUwdWJET1gwZDl0Y0hqdXhtc3Q0MU5jSVd1UXlUem1XeFh3V2tNekN2YXU1bjJ4V3NzanVrRVFBR0lRbklGamlLcEhLZ0JlZGFHMzZxWnBQMzNSc2FLVjhRdmMtNUZRcUt4MHh1aG1uRmNfNFhlMURaUVJvVTdqN1Q4UTVmS2c2M2ZVOA?oc=5",
-    "outlet": "Dallas News",
-    "seen": "17 Oct 2026",
-    "via": "Google News RSS"
+    "title": "Did You Miss It ? Texas Turns Blue , 37 CAIR Action Picks Win And Dallas Breaks A 48 - Year Streak",
+    "url": "https://www.wbap.com/2026/11/08/did-you-miss-it-texas-turns-blue-37-cair-action-picks-win-and-dallas-breaks-a-48-year-streak/",
+    "outlet": "wbap.com",
+    "seen": "20261108T183000Z"
    },
    {
-    "title": "Political Divisions, Texas Power Struggles and the Future of Data Centers",
-    "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNRkJBamlRbHVKLV95RFIyS3M3aWFOWXZLMl9xQVFHTkhyQlJRNFpqaXN2YUY5UEhEUlNvX3VGb01KSkVkZ1FvNFFVdE13V1RtdllPVnhJc0FGeDc4c2ZTQ2laNXB4ajRtNTFPUkZfM3BIbEtOZVh6WnBwOTJEajR6SjdDY1NYTm1jUFFfYUFZWm0tS0NweUVFUlVoeXkwTFFWVmw2dnNqSWRhczlENmw2ZF9NdC1HVnNTdWFIcEdMczdoVzFpUEhBTmJZZWExWElNakYzaVJ1LXFQSzFmUXZtSDlwY3dsX2lCNjFxMdIB9AFBVV95cUxPZUJNNlZJVWUwNUhBYzJJMFU5ZU1CV09YNVI5V2JyOUJGNi14bVRrVV9SN0ZjaEJERTlwQThZMlgtcG03N1hDOGE4aHNOLTBqbXREcldkSDFVRGlSV1VIaUFzTDlhVDVzUDVvdWVfazNLLWI4OEc2TURqS0l2YnZneVY5UWZLVnV5cHJLdEN5SEFiVnJhRXhNeVVwY0VycmV4QXVQcTNWbTQtTmNkSC1RUHBBbEhQMnJQV3RUS1B4b0ZYbUNrNjRLa21wWHdrMkZDVnlHTzdWNmJtT1J6MGhldUYzVnp2MnJTOHU4WG9KUlF1eW5S?oc=5",
-    "outlet": "Houston Public Media",
-    "seen": "20 Nov 2026",
-    "via": "Google News RSS"
+    "title": "Did You Miss It ? Texas Turns Blue , 37 CAIR Action Picks Win And Dallas Breaks A 48 - Year Streak",
+    "url": "https://www.klif.com/2026/11/08/did-you-miss-it-texas-turns-blue-37-cair-action-picks-win-and-dallas-breaks-a-48-year-streak/",
+    "outlet": "klif.com",
+    "seen": "20261108T183000Z"
    },
    {
-    "title": "How Much Water? Paxton Demands Answers From 156 Texas Data Center Projects",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMVlOMTU0cFQwczdvYnFwM202akd5NElsRWJldmdoSWh6MXhjb0NfRmdfckJTc3pOX0tNVndzN0d6QUFBcmRaVFd6ZTZiWmYzdTI2b0dfcmp1ck5GMjJlV3p1ZlhoekpFUGllelhTM0RvRkkwc1psRFlnNUpWcGc1M0k2VTZrbi1zNldLaXZTTzMtRDNtVDZaNFQ2cjJzem5jcUJCZWpwU1pUdw?oc=5",
-    "outlet": "Dallas Express",
-    "seen": "17 Oct 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Google data centers reshape rural life in Haskell County TX",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOelpHY2ZjTTF5QVNYRnNLMExFbzB1ZmNoZVdZUEVUTmd4V280Wksyc2tMX2dmLTVfdWJlQlRONEJiU1V2aXVIbHFLdTFKZl9wRGRJRXhDQlRuX005bzFVcEstM0hQQ0pNSmJidER3ZHNjMFI5WWxOTG9peGp6d1dkMHgyRUUxZS1UNzQ5YXo4a21uNE1QNnh0cHFaWERKaEw2b1hDOEVsbw?oc=5",
-    "outlet": "Dallas News",
-    "seen": "19 Nov 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Collin County election results signal shift in longtime GOP stronghold - NBC 5 Dallas-Fort Worth",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQVmxvWkV5a2V3N1M2MXJ6Skoyd0RtSXpTWnRRV0hEckY4XzYyME9LT045QTJHUkJUU2h1bWlmWEYzQ1NiU2tzdVRZQ0FnZEdKVmo0V2YzcUwwRDJMcUdCQ0VyRVp0RWU3ZEdSWVhDeDNFZUxqVjBlamVpclYxS1NudmRXOHAxLXc0bFBOMVBqY2RqSTV2RlZ0OWhDRDJhNVRIelgwUk9uTU1DekE1UHhNTDhXX05HWEFob3B30gHDAUFVX3lxTE5sSF8xejFqUWF0cEtNbHpVMEI1VDdMclhfQXRaQU5CRHZ6LUV3T2dxcVVwZWhSeHJpdmJnbEV2LW5zV3F2cEM1dC1WX291VXUtR2ZFbWR1U0NXS0hrR3NCdFRQQjJrRW9LSDg3c0ZQYm1lQWpSWmFxVTk5b3dhNzQ3ekwtWjlIRGtuajRiWlZRc1QwaGlucUhUWGhzdHZlRlBiNVFoc1R4cEM5cFU5NFdQUXlnRVFGZ3RlcEotMEJnRlZ6SQ?oc=5",
-    "outlet": "NBC 5 Dallas-Fort Worth",
-    "seen": "04 Nov 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Talarico says data centers shouldn\u2019t be \u2018running over\u2019 Texas communities and local governments",
-    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPa0FxVkVBZTZEUmttV3VkeTNGMU5MMm5xT3U3emNFaWdRWnhiWG8wXzVKYUtwMWdrVV9zb0c5cUUwUjJrV1ZHZFRTYzVWUTVQdDhVMjhiVm8tcUd0N0h1QVdYa3U3OEFUZ3RwTEdBdmpPeDFEaWlrZWUxREU5Z1FreVBNMzJDOGl5WkMyOUVFakl4TGhmV2ZXWDB3Z0lZbndVS1VRSU5oanJJdU1GZDVsdEdReWxFUjByYTllOWVZV1g3VWFYOFZKYk1fQ1BPbTFlSUhKR0J30gHeAUFVX3lxTE5GODl6MkZMWGdISW9qZUFGZkdFMUt0aG5ZQUJ2TElxdjRiVGplM2puU283eDBBaTBxVXdZeE5NSnFZTEFDanFmc25OLWRJNmd5NXowSm9oLXNaUXY0S3NuTTlZZUIwS3VyQS1kSjVCc1BwTUNYV18zYUdxSDVJdnk5ZWYwMnNtUmpBci0teWtBY3V4YzRNNWgtRmtZY3V2SENFbVdzN3p3eDkxSXM4UnNPY3dPeGRnVjBoZDdoTUdCeEhvMW5lYmVEUTNrQVYyZVNVQ2EzZm5LYy12WGNsdw?oc=5",
-    "outlet": "Houston Public Media",
-    "seen": "30 Sep 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Texas data centers face investigation after not answering water survey",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdDVSNkFhTUFPaXh3Q0pId2VTNTVYZEV5V2lTV3RXYk1aR0lMY3l3TWRnb0t6QXpVVk1lRFhFcnlacU1tbUo3Mk5lcVNBdHBTR2NFVWJGakNLclB0c0tpaDVRb0RFcFlFZm5oZWdFQi0tcmVySWU0ZDFFMTJwSWMtbFB4YlpwalZmYkllZVFmTndZaC1ZUEI2a0hfOXdydkQtV1djMlRsR1JkVnZGOVJ3?oc=5",
-    "outlet": "Dallas News",
-    "seen": "24 Sep 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Tarrant County data center fight holds lessons for Texas",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQWGZUMUthS0cxSlhOTWpqakZTdWVSUHFlNXo0ekZvTGNSb2gyck9TVnhkbnY5amNaOVY5S3VwSlRVVjFJY1pxQ1NnQ0tQMmo0dHNXbDBoQVJwSXRpNU13VkJKcGY1eTQ5aTBHX3ZJcDVJZmxkbFpHZzR1LW93RVlHb0syQnI4VXFrYy10WmdkcW5mSmFDZXkwTDV3Q3dPc3JfejNnYWZhOFg?oc=5",
-    "outlet": "Dallas News",
-    "seen": "12 Nov 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Restraining order dissolved in Westlake-Keller data center lawsuit",
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNOElLd19uaDBtbjZ2T3JUODZheE5ZZEF1b05hVUNEWWZoWHloMFg5Qm4xdUtUMmxiMW5MZGUxdWEtVXBXSTdpVWlDWllKd1ZOLVpyTkVZYWs4TzFzTUpjc1pnd2xzSEVzZzQwRXh1X29MRUhMdTFPWVNLSEZhNDhfMHJ2OXVKYzVyNGxtbVlhLTB6RGY4MGJfWWJlelNHdlJGVDVna3FOMDBTaUt0eFdVZk5B?oc=5",
-    "outlet": "Dallas News",
-    "seen": "28 Sep 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Hood County commissioners vote to deny data center proposal",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNDdtMTZaUzZBQ3BfVk9DZ3FjazFqN2QtNUJYZGlNR1BCall6Y0FHb1BhSk1vSTBobXZjRnRFWDlaYmFXUGF0UnFMMG54c01DbDNHdWxLRjlyQTI3Um1ZcGFEaDY0VkFuZmZRN2JndGhBX3BldHFIRVhzc3F0akpBR1BLN2N4cmhsdHVxMmk4bmdVMm9lTjRiZXpRbFUxbEV3ZGUyR200NGtoUkc0?oc=5",
-    "outlet": "Dallas News",
-    "seen": "13 Oct 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Letters to the Editor \u2013 Water, Social Security, Palestine, Epstein",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPdUhadzF6aXlXOTl6dXhabi1qcjdEbWp5YklpSmVFVlBtNTE4WFZ0THhMRlN1QVlxZzVNcng5LXFqUV9LRU1iaWhzd3dPdU9CLXdOdjdDMHo4NUtDbTdlT2JOaVd1UXJNMnB2eTktUmZqc2VzWVNYWDEwLWpDNzc0NDk4SVFWTUwzSmpFWi1yejRHQkdTVjMwa2szdXNTMFRXVjgyclFGUWhyeWNQcTJKMFlrbmM?oc=5",
-    "outlet": "Dallas News",
-    "seen": "23 Oct 2026",
-    "via": "Google News RSS"
-   },
-   {
-    "title": "Data Center Firm Wins Woodbine Well Permit Near Princeton as Texas Freezes New Projects",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNOTcxbUM5R1BWUGxLWE9fQmd2eGIwbGs5S3pCMThVMFFaVGpybGtFQUQxUDBFUjJMSHBzUFBLZU5RcnpKMElFbV9iTjI5a1JDeVJ0NDUtV3k4eWE4UWdYRl9CczhMNmdfNTZtcjh3bkxBMmdJYkItUU9nNWtjMTNCNldHc0xOaGRzTGp6QWRYSS00UDNhVWRVZnRMVU1IYThmVFJ1U2t5dWtDM0RkVE43VmY3WW9iZlRq?oc=5",
-    "outlet": "Hoodline",
-    "seen": "17 Oct 2026",
-    "via": "Google News RSS"
+    "title": "Paxton receives desperately needed $54 million donation",
+    "url": "https://paisano-online.com/53855/opinion/commentary/paxton-receives-desperately-needed-54-million-donation/",
+    "outlet": "paisano-online.com",
+    "seen": "20260923T124500Z"
    }
   ],
   "48": [
+   {
+    "title": "\u767d\u5bab\u6b32\u63a8  \u672c\u571f\u5316 \uff0c \u5730\u65b9\u9009\u4e3e\u5374\u4eae\u7ea2\u706f \uff1a \u7f8e\u56fdAI\u6570\u636e\u4e2d\u5fc3\u5efa\u8bbe\u8981\u8e29\u5239\u8f66\u4e86\u5417 \uff1f |\u56fd\u4f1a|\u7279\u6717\u666e|\u4e2d\u671f\u9009\u4e3e",
+    "url": "https://www.163.com/dy/article/LCBVPH260519DDQ2.html",
+    "outlet": "163.com",
+    "seen": "20261122T103000Z"
+   },
+   {
+    "title": "\u5b59\u6b63\u4e49 \uff0c \u53c8\u60ac\u4e86 - \u80a1\u7968 - \u91d1\u878d\u754c",
+    "url": "https://stock.jrj.com.cn/2026/11/22173159226424.shtml",
+    "outlet": "stock.jrj.com.cn",
+    "seen": "20261122T103000Z"
+   },
    {
     "title": "\u7279\u6717\u666e\u4e00\u53e5\u8bdd \uff0c \u7f8e\u56fdAI\u5de8\u5934\u96c6\u4f53\u614c\u4e86",
     "url": "https://www.163.com/dy/article/LC9MNGDU055280CT.html",
@@ -402,18 +348,6 @@
     "url": "https://news4sanantonio.com/news/local/texas-resumes-data-center-permit-reviews-before-ercot-community-impact-report-is-out",
     "outlet": "news4sanantonio.com",
     "seen": "20261120T033000Z"
-   },
-   {
-    "title": "Texas resumes data center permit reviews before ERCOT community impact report is out",
-    "url": "https://foxsanantonio.com/newsletter-daily/texas-resumes-data-center-permit-reviews-before-ercot-community-impact-report-is-out",
-    "outlet": "foxsanantonio.com",
-    "seen": "20261120T024500Z"
-   },
-   {
-    "title": "A rural Texas county was shrinking . Then Google brought two hyperscale data center campuses",
-    "url": "https://www.spokesman.com/stories/2026/nov/19/a-rural-texas-county-was-shrinking-then-google-bro/",
-    "outlet": "spokesman.com",
-    "seen": "20261119T234500Z"
    }
   ]
  }
