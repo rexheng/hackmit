@@ -1,0 +1,1908 @@
+{
+  "summary": {
+    "episodes": 12,
+    "first_avg": 66.67,
+    "last_avg": 100.0,
+    "last_score": 100.0,
+    "lessons": {
+      "timing_window_days": 1,
+      "match_on_vendor": 1,
+      "auto_post_bank_fees": 1,
+      "fx_tolerance": 1,
+      "fuzzy_duplicate": 1,
+      "require_po": 1,
+      "callback_payee_changes": 1,
+      "require_pdf": 1,
+      "investigate_pnl": 1
+    },
+    "policy": {
+      "timing_window_days": 1,
+      "match_on_vendor": true,
+      "fx_tolerance": 0.04,
+      "auto_post_bank_fees": true,
+      "fuzzy_duplicate": true,
+      "require_po": true,
+      "callback_payee_changes": true,
+      "require_pdf": true,
+      "investigate_pnl": true,
+      "escalate_material": 50000.0
+    }
+  },
+  "episodes": [
+    {
+      "i": 0,
+      "seed": 11,
+      "score": 0.0,
+      "balanced": false,
+      "failures": [
+        {
+          "code": "BANK_FEE",
+          "why": "Chase analysis fee $42.50 hit the bank and was never booked in the GL.",
+          "station": "desk"
+        },
+        {
+          "code": "TIMING_WINDOW",
+          "why": "Deloitte Tax settled 2026-08-13 vs GL date mismatch; matcher used same-day key.",
+          "station": "planter"
+        },
+        {
+          "code": "TIMING_WINDOW",
+          "why": "Microsoft Azure settled 2026-08-19 vs GL date mismatch; matcher used same-day key.",
+          "station": "planter"
+        },
+        {
+          "code": "TIMING_WINDOW",
+          "why": "Siemens Switchgear settled 2026-08-20 vs GL date mismatch; matcher used same-day key.",
+          "station": "planter"
+        },
+        {
+          "code": "TIMING_WINDOW",
+          "why": "Crane County PILOT settled 2026-08-08 vs GL date mismatch; matcher used same-day key.",
+          "station": "planter"
+        },
+        {
+          "code": "TIMING_WINDOW",
+          "why": "ADP Payroll settled 2026-08-10 vs GL date mismatch; matcher used same-day key.",
+          "station": "planter"
+        },
+        {
+          "code": "TIMING_WINDOW",
+          "why": "Marsh McLennan settled 2026-08-09 vs GL date mismatch; matcher used same-day key.",
+          "station": "planter"
+        },
+        {
+          "code": "TIMING_WINDOW",
+          "why": "Equinix Cross-Connect settled 2026-08-06 vs GL date mismatch; matcher used same-day key.",
+          "station": "planter"
+        },
+        {
+          "code": "FX_VARIANCE",
+          "why": "Crane County PILOT EUR booked at 1.12; bank cleared at 1.08.",
+          "station": "desk"
+        },
+        {
+          "code": "PAYEE_CHANGE",
+          "why": "Equinix Cross-Connect changed bank details without a validated W-9 / callback.",
+          "station": "chair"
+        },
+        {
+          "code": "MISSING_PO",
+          "why": "ERCOT invoice INV-8012 has no purchase order; 3-way match fails.",
+          "station": "chair"
+        },
+        {
+          "code": "MISSING_PO",
+          "why": "Equinix Cross-Connect invoice INV-8017 has no purchase order; 3-way match fails.",
+          "station": "chair"
+        },
+        {
+          "code": "DUP_INVOICE",
+          "why": "Duplicate AP invoice INV-DUP-A clones INV-DUP.",
+          "station": "sideboard"
+        },
+        {
+          "code": "MISSING_PO",
+          "why": "Turner Construction invoice INV-NOPO has no purchase order; 3-way match fails.",
+          "station": "chair"
+        },
+        {
+          "code": "PAYEE_CHANGE",
+          "why": "Siemens Switchgear changed bank details without a validated W-9 / callback.",
+          "station": "chair"
+        },
+        {
+          "code": "AUDIT_GAP",
+          "why": "No invoice PDF / hash on INV-PDFX; audit support incomplete.",
+          "station": "bookshelf"
+        },
+        {
+          "code": "UNEXPECTED_CHANGE",
+          "why": "Revenue +$790k vs July. Source: Oncor interconnection true-up, not run-rate.",
+          "station": "desk"
+        }
+      ],
+      "patches": [
+        "Learned: bank ACH can settle T+1 \u2014 open a 1-day matching window.",
+        "Learned: pair timing breaks on vendor, not just amount+date.",
+        "Learned: auto-post account-analysis fees under $100.",
+        "Learned: allow 4% FX tolerance and flag the rate source.",
+        "Learned: collapse INV-n / INV-n-A duplicates before paying.",
+        "Learned: block 3-way match failures instead of posting.",
+        "Learned: callback + W-9 before any payee-bank change.",
+        "Learned: no close without invoice PDF hash in the audit pack.",
+        "Learned: explain material P&L deltas in the close memo."
+      ],
+      "waypoints": [
+        "door",
+        "door",
+        "planter",
+        "desk",
+        "planter",
+        "planter",
+        "planter",
+        "planter",
+        "planter",
+        "planter",
+        "planter",
+        "desk",
+        "sideboard",
+        "chair",
+        "chair",
+        "chair",
+        "sideboard",
+        "chair",
+        "chair",
+        "bookshelf",
+        "desk",
+        "bookshelf",
+        "coffee_table",
+        "floor"
+      ],
+      "tools": [
+        {
+          "name": "ingest_sources",
+          "station": "door",
+          "detail": "Load 2026-08 bank / GL / AP / payments",
+          "ok": true
+        },
+        {
+          "name": "match_bank_gl",
+          "station": "planter",
+          "detail": "Reconcile bank against cash GL",
+          "ok": true
+        },
+        {
+          "name": "post_bank_fee",
+          "station": "desk",
+          "detail": "Fee unbooked \u2014 cash will not tie",
+          "ok": false
+        },
+        {
+          "name": "investigate_timing",
+          "station": "planter",
+          "detail": "Deloitte Tax T+1 settlement missed",
+          "ok": false
+        },
+        {
+          "name": "investigate_timing",
+          "station": "planter",
+          "detail": "Microsoft Azure T+1 settlement missed",
+          "ok": false
+        },
+        {
+          "name": "investigate_timing",
+          "station": "planter",
+          "detail": "Siemens Switchgear T+1 settlement missed",
+          "ok": false
+        },
+        {
+          "name": "investigate_timing",
+          "station": "planter",
+          "detail": "Crane County PILOT T+1 settlement missed",
+          "ok": false
+        },
+        {
+          "name": "investigate_timing",
+          "station": "planter",
+          "detail": "ADP Payroll T+1 settlement missed",
+          "ok": false
+        },
+        {
+          "name": "investigate_timing",
+          "station": "planter",
+          "detail": "Marsh McLennan T+1 settlement missed",
+          "ok": false
+        },
+        {
+          "name": "investigate_timing",
+          "station": "planter",
+          "detail": "Equinix Cross-Connect T+1 settlement missed",
+          "ok": false
+        },
+        {
+          "name": "investigate_fx",
+          "station": "desk",
+          "detail": "EUR rate 1.12 vs 1.08 unexplained",
+          "ok": false
+        },
+        {
+          "name": "review_ap_exceptions",
+          "station": "sideboard",
+          "detail": "28 invoices",
+          "ok": true
+        },
+        {
+          "name": "release_payment",
+          "station": "chair",
+          "detail": "Unsafe payee change on INV-8005",
+          "ok": false
+        },
+        {
+          "name": "three_way_match",
+          "station": "chair",
+          "detail": "INV-8012 posted without PO",
+          "ok": false
+        },
+        {
+          "name": "three_way_match",
+          "station": "chair",
+          "detail": "INV-8017 posted without PO",
+          "ok": false
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Missed duplicate INV-DUP-A",
+          "ok": false
+        },
+        {
+          "name": "three_way_match",
+          "station": "chair",
+          "detail": "INV-NOPO posted without PO",
+          "ok": false
+        },
+        {
+          "name": "release_payment",
+          "station": "chair",
+          "detail": "Unsafe payee change on INV-PAYX",
+          "ok": false
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Audit pack missing INV-PDFX",
+          "ok": false
+        },
+        {
+          "name": "investigate_variance",
+          "station": "desk",
+          "detail": "Revenue \u0394 $790,000 vs July",
+          "ok": true
+        },
+        {
+          "name": "attach_trueup_memo",
+          "station": "bookshelf",
+          "detail": "Variance unexplained in the close memo",
+          "ok": false
+        },
+        {
+          "name": "emit_cash_report",
+          "station": "coffee_table",
+          "detail": "Close BLOCKED \u2014 exceptions still open",
+          "ok": false
+        }
+      ],
+      "policy": {
+        "timing_window_days": 1,
+        "match_on_vendor": true,
+        "fx_tolerance": 0.04,
+        "auto_post_bank_fees": true,
+        "fuzzy_duplicate": true,
+        "require_po": true,
+        "callback_payee_changes": true,
+        "require_pdf": true,
+        "investigate_pnl": true,
+        "escalate_material": 50000.0
+      }
+    },
+    {
+      "i": 1,
+      "seed": 12,
+      "score": 100.0,
+      "balanced": true,
+      "failures": [],
+      "patches": [
+        "Close clean. Policy held. Dampen thrusters."
+      ],
+      "waypoints": [
+        "door",
+        "door",
+        "planter",
+        "desk",
+        "sideboard",
+        "sideboard",
+        "bookshelf",
+        "sideboard",
+        "chair",
+        "sideboard",
+        "chair",
+        "chair",
+        "bookshelf",
+        "desk",
+        "bookshelf",
+        "coffee_table"
+      ],
+      "tools": [
+        {
+          "name": "ingest_sources",
+          "station": "door",
+          "detail": "Load 2026-08 bank / GL / AP / payments",
+          "ok": true
+        },
+        {
+          "name": "match_bank_gl",
+          "station": "planter",
+          "detail": "Reconcile bank against cash GL",
+          "ok": true
+        },
+        {
+          "name": "post_bank_fee",
+          "station": "desk",
+          "detail": "Auto-post Chase analysis fee $42.50",
+          "ok": true
+        },
+        {
+          "name": "review_ap_exceptions",
+          "station": "sideboard",
+          "detail": "30 invoices",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8001-A into INV-8001",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-8002",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8013-A into INV-8013",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Turner Construction bank change",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-DUP-A into INV-DUP",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-NOPO pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Siemens Switchgear bank change",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-PDFX",
+          "ok": true
+        },
+        {
+          "name": "investigate_variance",
+          "station": "desk",
+          "detail": "Revenue \u0394 $790,000 vs July",
+          "ok": true
+        },
+        {
+          "name": "attach_trueup_memo",
+          "station": "bookshelf",
+          "detail": "Oncor interconnection true-up \u2014 not run-rate",
+          "ok": true
+        },
+        {
+          "name": "emit_cash_report",
+          "station": "coffee_table",
+          "detail": "Cash ties at bank -1,122,304.81",
+          "ok": true
+        }
+      ],
+      "policy": {
+        "timing_window_days": 1,
+        "match_on_vendor": true,
+        "fx_tolerance": 0.04,
+        "auto_post_bank_fees": true,
+        "fuzzy_duplicate": true,
+        "require_po": true,
+        "callback_payee_changes": true,
+        "require_pdf": true,
+        "investigate_pnl": true,
+        "escalate_material": 50000.0
+      }
+    },
+    {
+      "i": 2,
+      "seed": 13,
+      "score": 100.0,
+      "balanced": true,
+      "failures": [],
+      "patches": [
+        "Close clean. Policy held. Dampen thrusters."
+      ],
+      "waypoints": [
+        "door",
+        "door",
+        "planter",
+        "desk",
+        "sideboard",
+        "chair",
+        "sideboard",
+        "chair",
+        "sideboard",
+        "sideboard",
+        "chair",
+        "chair",
+        "bookshelf",
+        "desk",
+        "bookshelf",
+        "coffee_table"
+      ],
+      "tools": [
+        {
+          "name": "ingest_sources",
+          "station": "door",
+          "detail": "Load 2026-08 bank / GL / AP / payments",
+          "ok": true
+        },
+        {
+          "name": "match_bank_gl",
+          "station": "planter",
+          "detail": "Reconcile bank against cash GL",
+          "ok": true
+        },
+        {
+          "name": "post_bank_fee",
+          "station": "desk",
+          "detail": "Auto-post Chase analysis fee $42.50",
+          "ok": true
+        },
+        {
+          "name": "review_ap_exceptions",
+          "station": "sideboard",
+          "detail": "30 invoices",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-8002 pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8004-A into INV-8004",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-8008 pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8017-A into INV-8017",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-DUP-A into INV-DUP",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-NOPO pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Siemens Switchgear bank change",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-PDFX",
+          "ok": true
+        },
+        {
+          "name": "investigate_variance",
+          "station": "desk",
+          "detail": "Revenue \u0394 $790,000 vs July",
+          "ok": true
+        },
+        {
+          "name": "attach_trueup_memo",
+          "station": "bookshelf",
+          "detail": "Oncor interconnection true-up \u2014 not run-rate",
+          "ok": true
+        },
+        {
+          "name": "emit_cash_report",
+          "station": "coffee_table",
+          "detail": "Cash ties at bank -1,313,331.08",
+          "ok": true
+        }
+      ],
+      "policy": {
+        "timing_window_days": 1,
+        "match_on_vendor": true,
+        "fx_tolerance": 0.04,
+        "auto_post_bank_fees": true,
+        "fuzzy_duplicate": true,
+        "require_po": true,
+        "callback_payee_changes": true,
+        "require_pdf": true,
+        "investigate_pnl": true,
+        "escalate_material": 50000.0
+      }
+    },
+    {
+      "i": 3,
+      "seed": 14,
+      "score": 100.0,
+      "balanced": true,
+      "failures": [],
+      "patches": [
+        "Close clean. Policy held. Dampen thrusters."
+      ],
+      "waypoints": [
+        "door",
+        "door",
+        "planter",
+        "desk",
+        "sideboard",
+        "chair",
+        "bookshelf",
+        "sideboard",
+        "chair",
+        "sideboard",
+        "sideboard",
+        "sideboard",
+        "chair",
+        "chair",
+        "bookshelf",
+        "desk",
+        "bookshelf",
+        "coffee_table"
+      ],
+      "tools": [
+        {
+          "name": "ingest_sources",
+          "station": "door",
+          "detail": "Load 2026-08 bank / GL / AP / payments",
+          "ok": true
+        },
+        {
+          "name": "match_bank_gl",
+          "station": "planter",
+          "detail": "Reconcile bank against cash GL",
+          "ok": true
+        },
+        {
+          "name": "post_bank_fee",
+          "station": "desk",
+          "detail": "Auto-post Chase analysis fee $42.50",
+          "ok": true
+        },
+        {
+          "name": "review_ap_exceptions",
+          "station": "sideboard",
+          "detail": "31 invoices",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-8002 pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-8007",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8009-A into INV-8009",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated ERCOT bank change",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8017-A into INV-8017",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8019-A into INV-8019",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-DUP-A into INV-DUP",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-NOPO pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Siemens Switchgear bank change",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-PDFX",
+          "ok": true
+        },
+        {
+          "name": "investigate_variance",
+          "station": "desk",
+          "detail": "Revenue \u0394 $790,000 vs July",
+          "ok": true
+        },
+        {
+          "name": "attach_trueup_memo",
+          "station": "bookshelf",
+          "detail": "Oncor interconnection true-up \u2014 not run-rate",
+          "ok": true
+        },
+        {
+          "name": "emit_cash_report",
+          "station": "coffee_table",
+          "detail": "Cash ties at bank -1,235,674.88",
+          "ok": true
+        }
+      ],
+      "policy": {
+        "timing_window_days": 1,
+        "match_on_vendor": true,
+        "fx_tolerance": 0.04,
+        "auto_post_bank_fees": true,
+        "fuzzy_duplicate": true,
+        "require_po": true,
+        "callback_payee_changes": true,
+        "require_pdf": true,
+        "investigate_pnl": true,
+        "escalate_material": 50000.0
+      }
+    },
+    {
+      "i": 4,
+      "seed": 15,
+      "score": 100.0,
+      "balanced": true,
+      "failures": [],
+      "patches": [
+        "Close clean. Policy held. Dampen thrusters."
+      ],
+      "waypoints": [
+        "door",
+        "door",
+        "planter",
+        "desk",
+        "sideboard",
+        "sideboard",
+        "chair",
+        "chair",
+        "bookshelf",
+        "sideboard",
+        "sideboard",
+        "sideboard",
+        "chair",
+        "chair",
+        "bookshelf",
+        "desk",
+        "bookshelf",
+        "coffee_table"
+      ],
+      "tools": [
+        {
+          "name": "ingest_sources",
+          "station": "door",
+          "detail": "Load 2026-08 bank / GL / AP / payments",
+          "ok": true
+        },
+        {
+          "name": "match_bank_gl",
+          "station": "planter",
+          "detail": "Reconcile bank against cash GL",
+          "ok": true
+        },
+        {
+          "name": "post_bank_fee",
+          "station": "desk",
+          "detail": "Auto-post Chase analysis fee $42.50",
+          "ok": true
+        },
+        {
+          "name": "review_ap_exceptions",
+          "station": "sideboard",
+          "detail": "31 invoices",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8001-A into INV-8001",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Equinix Cross-Connect bank change",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-8006 pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-8013",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8018-A into INV-8018",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8022-A into INV-8022",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-DUP-A into INV-DUP",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-NOPO pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Siemens Switchgear bank change",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-PDFX",
+          "ok": true
+        },
+        {
+          "name": "investigate_variance",
+          "station": "desk",
+          "detail": "Revenue \u0394 $790,000 vs July",
+          "ok": true
+        },
+        {
+          "name": "attach_trueup_memo",
+          "station": "bookshelf",
+          "detail": "Oncor interconnection true-up \u2014 not run-rate",
+          "ok": true
+        },
+        {
+          "name": "emit_cash_report",
+          "station": "coffee_table",
+          "detail": "Cash ties at bank -1,473,756.85",
+          "ok": true
+        }
+      ],
+      "policy": {
+        "timing_window_days": 1,
+        "match_on_vendor": true,
+        "fx_tolerance": 0.04,
+        "auto_post_bank_fees": true,
+        "fuzzy_duplicate": true,
+        "require_po": true,
+        "callback_payee_changes": true,
+        "require_pdf": true,
+        "investigate_pnl": true,
+        "escalate_material": 50000.0
+      }
+    },
+    {
+      "i": 5,
+      "seed": 16,
+      "score": 100.0,
+      "balanced": true,
+      "failures": [],
+      "patches": [
+        "Close clean. Policy held. Dampen thrusters."
+      ],
+      "waypoints": [
+        "door",
+        "door",
+        "planter",
+        "desk",
+        "sideboard",
+        "chair",
+        "sideboard",
+        "chair",
+        "chair",
+        "chair",
+        "sideboard",
+        "sideboard",
+        "chair",
+        "chair",
+        "bookshelf",
+        "desk",
+        "bookshelf",
+        "coffee_table"
+      ],
+      "tools": [
+        {
+          "name": "ingest_sources",
+          "station": "door",
+          "detail": "Load 2026-08 bank / GL / AP / payments",
+          "ok": true
+        },
+        {
+          "name": "match_bank_gl",
+          "station": "planter",
+          "detail": "Reconcile bank against cash GL",
+          "ok": true
+        },
+        {
+          "name": "post_bank_fee",
+          "station": "desk",
+          "detail": "Auto-post Chase analysis fee $42.50",
+          "ok": true
+        },
+        {
+          "name": "review_ap_exceptions",
+          "station": "sideboard",
+          "detail": "30 invoices",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Turner Construction bank change",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8005-A into INV-8005",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Marsh McLennan bank change",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Siemens Switchgear bank change",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated ERCOT bank change",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8019-A into INV-8019",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-DUP-A into INV-DUP",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-NOPO pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Siemens Switchgear bank change",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-PDFX",
+          "ok": true
+        },
+        {
+          "name": "investigate_variance",
+          "station": "desk",
+          "detail": "Revenue \u0394 $790,000 vs July",
+          "ok": true
+        },
+        {
+          "name": "attach_trueup_memo",
+          "station": "bookshelf",
+          "detail": "Oncor interconnection true-up \u2014 not run-rate",
+          "ok": true
+        },
+        {
+          "name": "emit_cash_report",
+          "station": "coffee_table",
+          "detail": "Cash ties at bank -1,073,720.54",
+          "ok": true
+        }
+      ],
+      "policy": {
+        "timing_window_days": 1,
+        "match_on_vendor": true,
+        "fx_tolerance": 0.04,
+        "auto_post_bank_fees": true,
+        "fuzzy_duplicate": true,
+        "require_po": true,
+        "callback_payee_changes": true,
+        "require_pdf": true,
+        "investigate_pnl": true,
+        "escalate_material": 50000.0
+      }
+    },
+    {
+      "i": 6,
+      "seed": 17,
+      "score": 100.0,
+      "balanced": true,
+      "failures": [],
+      "patches": [
+        "Close clean. Policy held. Dampen thrusters."
+      ],
+      "waypoints": [
+        "door",
+        "door",
+        "planter",
+        "desk",
+        "sideboard",
+        "chair",
+        "sideboard",
+        "bookshelf",
+        "chair",
+        "chair",
+        "sideboard",
+        "chair",
+        "bookshelf",
+        "sideboard",
+        "chair",
+        "chair",
+        "bookshelf",
+        "desk",
+        "bookshelf",
+        "coffee_table"
+      ],
+      "tools": [
+        {
+          "name": "ingest_sources",
+          "station": "door",
+          "detail": "Load 2026-08 bank / GL / AP / payments",
+          "ok": true
+        },
+        {
+          "name": "match_bank_gl",
+          "station": "planter",
+          "detail": "Reconcile bank against cash GL",
+          "ok": true
+        },
+        {
+          "name": "post_bank_fee",
+          "station": "desk",
+          "detail": "Auto-post Chase analysis fee $42.50",
+          "ok": true
+        },
+        {
+          "name": "review_ap_exceptions",
+          "station": "sideboard",
+          "detail": "30 invoices",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Oncor Electric bank change",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8003-A into INV-8003",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-8004",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-8005 pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Marsh McLennan bank change",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8010-A into INV-8010",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Trane Comfort bank change",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-8019",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-DUP-A into INV-DUP",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-NOPO pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Siemens Switchgear bank change",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-PDFX",
+          "ok": true
+        },
+        {
+          "name": "investigate_variance",
+          "station": "desk",
+          "detail": "Revenue \u0394 $790,000 vs July",
+          "ok": true
+        },
+        {
+          "name": "attach_trueup_memo",
+          "station": "bookshelf",
+          "detail": "Oncor interconnection true-up \u2014 not run-rate",
+          "ok": true
+        },
+        {
+          "name": "emit_cash_report",
+          "station": "coffee_table",
+          "detail": "Cash ties at bank -1,105,956.77",
+          "ok": true
+        }
+      ],
+      "policy": {
+        "timing_window_days": 1,
+        "match_on_vendor": true,
+        "fx_tolerance": 0.04,
+        "auto_post_bank_fees": true,
+        "fuzzy_duplicate": true,
+        "require_po": true,
+        "callback_payee_changes": true,
+        "require_pdf": true,
+        "investigate_pnl": true,
+        "escalate_material": 50000.0
+      }
+    },
+    {
+      "i": 7,
+      "seed": 18,
+      "score": 100.0,
+      "balanced": true,
+      "failures": [],
+      "patches": [
+        "Close clean. Policy held. Dampen thrusters."
+      ],
+      "waypoints": [
+        "door",
+        "door",
+        "planter",
+        "desk",
+        "sideboard",
+        "chair",
+        "chair",
+        "chair",
+        "chair",
+        "chair",
+        "sideboard",
+        "sideboard",
+        "chair",
+        "chair",
+        "bookshelf",
+        "desk",
+        "bookshelf",
+        "coffee_table"
+      ],
+      "tools": [
+        {
+          "name": "ingest_sources",
+          "station": "door",
+          "detail": "Load 2026-08 bank / GL / AP / payments",
+          "ok": true
+        },
+        {
+          "name": "match_bank_gl",
+          "station": "planter",
+          "detail": "Reconcile bank against cash GL",
+          "ok": true
+        },
+        {
+          "name": "post_bank_fee",
+          "station": "desk",
+          "detail": "Auto-post Chase analysis fee $42.50",
+          "ok": true
+        },
+        {
+          "name": "review_ap_exceptions",
+          "station": "sideboard",
+          "detail": "29 invoices",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-8004 pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Equinix Cross-Connect bank change",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-8008 pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated ERCOT bank change",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Equinix Cross-Connect bank change",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8019-A into INV-8019",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-DUP-A into INV-DUP",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-NOPO pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Siemens Switchgear bank change",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-PDFX",
+          "ok": true
+        },
+        {
+          "name": "investigate_variance",
+          "station": "desk",
+          "detail": "Revenue \u0394 $790,000 vs July",
+          "ok": true
+        },
+        {
+          "name": "attach_trueup_memo",
+          "station": "bookshelf",
+          "detail": "Oncor interconnection true-up \u2014 not run-rate",
+          "ok": true
+        },
+        {
+          "name": "emit_cash_report",
+          "station": "coffee_table",
+          "detail": "Cash ties at bank -1,105,347.31",
+          "ok": true
+        }
+      ],
+      "policy": {
+        "timing_window_days": 1,
+        "match_on_vendor": true,
+        "fx_tolerance": 0.04,
+        "auto_post_bank_fees": true,
+        "fuzzy_duplicate": true,
+        "require_po": true,
+        "callback_payee_changes": true,
+        "require_pdf": true,
+        "investigate_pnl": true,
+        "escalate_material": 50000.0
+      }
+    },
+    {
+      "i": 8,
+      "seed": 19,
+      "score": 100.0,
+      "balanced": true,
+      "failures": [],
+      "patches": [
+        "Close clean. Policy held. Dampen thrusters."
+      ],
+      "waypoints": [
+        "door",
+        "door",
+        "planter",
+        "desk",
+        "sideboard",
+        "sideboard",
+        "chair",
+        "chair",
+        "chair",
+        "chair",
+        "sideboard",
+        "sideboard",
+        "sideboard",
+        "chair",
+        "chair",
+        "bookshelf",
+        "desk",
+        "bookshelf",
+        "coffee_table"
+      ],
+      "tools": [
+        {
+          "name": "ingest_sources",
+          "station": "door",
+          "detail": "Load 2026-08 bank / GL / AP / payments",
+          "ok": true
+        },
+        {
+          "name": "match_bank_gl",
+          "station": "planter",
+          "detail": "Reconcile bank against cash GL",
+          "ok": true
+        },
+        {
+          "name": "post_bank_fee",
+          "station": "desk",
+          "detail": "Auto-post Chase analysis fee $42.50",
+          "ok": true
+        },
+        {
+          "name": "review_ap_exceptions",
+          "station": "sideboard",
+          "detail": "31 invoices",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8003-A into INV-8003",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-8004 pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-8005 pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Marsh McLennan bank change",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Trane Comfort bank change",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8019-A into INV-8019",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8020-A into INV-8020",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-DUP-A into INV-DUP",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-NOPO pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Siemens Switchgear bank change",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-PDFX",
+          "ok": true
+        },
+        {
+          "name": "investigate_variance",
+          "station": "desk",
+          "detail": "Revenue \u0394 $790,000 vs July",
+          "ok": true
+        },
+        {
+          "name": "attach_trueup_memo",
+          "station": "bookshelf",
+          "detail": "Oncor interconnection true-up \u2014 not run-rate",
+          "ok": true
+        },
+        {
+          "name": "emit_cash_report",
+          "station": "coffee_table",
+          "detail": "Cash ties at bank -1,172,265.30",
+          "ok": true
+        }
+      ],
+      "policy": {
+        "timing_window_days": 1,
+        "match_on_vendor": true,
+        "fx_tolerance": 0.04,
+        "auto_post_bank_fees": true,
+        "fuzzy_duplicate": true,
+        "require_po": true,
+        "callback_payee_changes": true,
+        "require_pdf": true,
+        "investigate_pnl": true,
+        "escalate_material": 50000.0
+      }
+    },
+    {
+      "i": 9,
+      "seed": 20,
+      "score": 100.0,
+      "balanced": true,
+      "failures": [],
+      "patches": [
+        "Close clean. Policy held. Dampen thrusters."
+      ],
+      "waypoints": [
+        "door",
+        "door",
+        "planter",
+        "desk",
+        "sideboard",
+        "chair",
+        "chair",
+        "chair",
+        "sideboard",
+        "sideboard",
+        "chair",
+        "sideboard",
+        "chair",
+        "chair",
+        "bookshelf",
+        "desk",
+        "bookshelf",
+        "coffee_table"
+      ],
+      "tools": [
+        {
+          "name": "ingest_sources",
+          "station": "door",
+          "detail": "Load 2026-08 bank / GL / AP / payments",
+          "ok": true
+        },
+        {
+          "name": "match_bank_gl",
+          "station": "planter",
+          "detail": "Reconcile bank against cash GL",
+          "ok": true
+        },
+        {
+          "name": "post_bank_fee",
+          "station": "desk",
+          "detail": "Auto-post Chase analysis fee $42.50",
+          "ok": true
+        },
+        {
+          "name": "review_ap_exceptions",
+          "station": "sideboard",
+          "detail": "30 invoices",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Marsh McLennan bank change",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Crane County PILOT bank change",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated ADP Payroll bank change",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8013-A into INV-8013",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8016-A into INV-8016",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Crane County PILOT bank change",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-DUP-A into INV-DUP",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-NOPO pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Siemens Switchgear bank change",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-PDFX",
+          "ok": true
+        },
+        {
+          "name": "investigate_variance",
+          "station": "desk",
+          "detail": "Revenue \u0394 $790,000 vs July",
+          "ok": true
+        },
+        {
+          "name": "attach_trueup_memo",
+          "station": "bookshelf",
+          "detail": "Oncor interconnection true-up \u2014 not run-rate",
+          "ok": true
+        },
+        {
+          "name": "emit_cash_report",
+          "station": "coffee_table",
+          "detail": "Cash ties at bank -923,159.45",
+          "ok": true
+        }
+      ],
+      "policy": {
+        "timing_window_days": 1,
+        "match_on_vendor": true,
+        "fx_tolerance": 0.04,
+        "auto_post_bank_fees": true,
+        "fuzzy_duplicate": true,
+        "require_po": true,
+        "callback_payee_changes": true,
+        "require_pdf": true,
+        "investigate_pnl": true,
+        "escalate_material": 50000.0
+      }
+    },
+    {
+      "i": 10,
+      "seed": 21,
+      "score": 100.0,
+      "balanced": true,
+      "failures": [],
+      "patches": [
+        "Close clean. Policy held. Dampen thrusters."
+      ],
+      "waypoints": [
+        "door",
+        "door",
+        "planter",
+        "desk",
+        "sideboard",
+        "chair",
+        "bookshelf",
+        "chair",
+        "chair",
+        "sideboard",
+        "bookshelf",
+        "chair",
+        "sideboard",
+        "chair",
+        "chair",
+        "bookshelf",
+        "desk",
+        "bookshelf",
+        "coffee_table"
+      ],
+      "tools": [
+        {
+          "name": "ingest_sources",
+          "station": "door",
+          "detail": "Load 2026-08 bank / GL / AP / payments",
+          "ok": true
+        },
+        {
+          "name": "match_bank_gl",
+          "station": "planter",
+          "detail": "Reconcile bank against cash GL",
+          "ok": true
+        },
+        {
+          "name": "post_bank_fee",
+          "station": "desk",
+          "detail": "Auto-post Chase analysis fee $42.50",
+          "ok": true
+        },
+        {
+          "name": "review_ap_exceptions",
+          "station": "sideboard",
+          "detail": "29 invoices",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-8004 pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-8005",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-8007 pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Siemens Switchgear bank change",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8012-A into INV-8012",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-8013",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-8019 pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-DUP-A into INV-DUP",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-NOPO pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Siemens Switchgear bank change",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-PDFX",
+          "ok": true
+        },
+        {
+          "name": "investigate_variance",
+          "station": "desk",
+          "detail": "Revenue \u0394 $790,000 vs July",
+          "ok": true
+        },
+        {
+          "name": "attach_trueup_memo",
+          "station": "bookshelf",
+          "detail": "Oncor interconnection true-up \u2014 not run-rate",
+          "ok": true
+        },
+        {
+          "name": "emit_cash_report",
+          "station": "coffee_table",
+          "detail": "Cash ties at bank -1,189,482.33",
+          "ok": true
+        }
+      ],
+      "policy": {
+        "timing_window_days": 1,
+        "match_on_vendor": true,
+        "fx_tolerance": 0.04,
+        "auto_post_bank_fees": true,
+        "fuzzy_duplicate": true,
+        "require_po": true,
+        "callback_payee_changes": true,
+        "require_pdf": true,
+        "investigate_pnl": true,
+        "escalate_material": 50000.0
+      }
+    },
+    {
+      "i": 11,
+      "seed": 22,
+      "score": 100.0,
+      "balanced": true,
+      "failures": [],
+      "patches": [
+        "Close clean. Policy held. Dampen thrusters."
+      ],
+      "waypoints": [
+        "door",
+        "door",
+        "planter",
+        "desk",
+        "sideboard",
+        "sideboard",
+        "sideboard",
+        "bookshelf",
+        "chair",
+        "chair",
+        "sideboard",
+        "chair",
+        "chair",
+        "bookshelf",
+        "desk",
+        "bookshelf",
+        "coffee_table"
+      ],
+      "tools": [
+        {
+          "name": "ingest_sources",
+          "station": "door",
+          "detail": "Load 2026-08 bank / GL / AP / payments",
+          "ok": true
+        },
+        {
+          "name": "match_bank_gl",
+          "station": "planter",
+          "detail": "Reconcile bank against cash GL",
+          "ok": true
+        },
+        {
+          "name": "post_bank_fee",
+          "station": "desk",
+          "detail": "Auto-post Chase analysis fee $42.50",
+          "ok": true
+        },
+        {
+          "name": "review_ap_exceptions",
+          "station": "sideboard",
+          "detail": "30 invoices",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8000-A into INV-8000",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-8002-A into INV-8002",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-8003",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-8004 pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Equinix Cross-Connect bank change",
+          "ok": true
+        },
+        {
+          "name": "collapse_duplicate",
+          "station": "sideboard",
+          "detail": "Collapsed INV-DUP-A into INV-DUP",
+          "ok": true
+        },
+        {
+          "name": "request_po",
+          "station": "chair",
+          "detail": "Held INV-NOPO pending PO \u2014 documented",
+          "ok": true
+        },
+        {
+          "name": "callback_vendor",
+          "station": "chair",
+          "detail": "Validated Siemens Switchgear bank change",
+          "ok": true
+        },
+        {
+          "name": "pull_invoice_pdf",
+          "station": "bookshelf",
+          "detail": "Archived PDF for INV-PDFX",
+          "ok": true
+        },
+        {
+          "name": "investigate_variance",
+          "station": "desk",
+          "detail": "Revenue \u0394 $790,000 vs July",
+          "ok": true
+        },
+        {
+          "name": "attach_trueup_memo",
+          "station": "bookshelf",
+          "detail": "Oncor interconnection true-up \u2014 not run-rate",
+          "ok": true
+        },
+        {
+          "name": "emit_cash_report",
+          "station": "coffee_table",
+          "detail": "Cash ties at bank -1,330,680.69",
+          "ok": true
+        }
+      ],
+      "policy": {
+        "timing_window_days": 1,
+        "match_on_vendor": true,
+        "fx_tolerance": 0.04,
+        "auto_post_bank_fees": true,
+        "fuzzy_duplicate": true,
+        "require_po": true,
+        "callback_payee_changes": true,
+        "require_pdf": true,
+        "investigate_pnl": true,
+        "escalate_material": 50000.0
+      }
+    }
+  ]
+}
