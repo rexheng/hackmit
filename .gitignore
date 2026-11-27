@@ -1,6 +1,7 @@
 .playwright-mcp/
 *.png
 !prototypes/03-compute-works/shots/*.png
+!handy-book/**/*.png
 .DS_Store
 Thumbs.db
 
